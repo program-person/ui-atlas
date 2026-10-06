@@ -1,0 +1,28 @@
+{
+  "name": "ui-atlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "node scripts/check-catalog.ts",
+    "test": "node --test src/catalog/catalog.test.ts",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "26.6.4",
+    "@vitejs/plugin-react": "6.1.2",
+    "typescript": "7.0.2",
+    "vite": "8.3.3"
+  }
+}

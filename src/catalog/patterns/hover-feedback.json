@@ -1,0 +1,21 @@
+{
+  "id": "hover-feedback", "nameJa": "ホバーと押下の反応", "nameEn": "Hover & press feedback",
+  "aliases": ["マウスを乗せる", "浮き上がる", "光る", "押す", "ボタンの反応"],
+  "tags": ["アニメーション", "フィードバック", "ボタン"], "category": "動き",
+  "summary": "触れたときと押したときに、操作の手応えを返す。",
+  "description": "ポインターを乗せる・キーボードでフォーカスする・押すといった操作に、見た目の変化を返すパターン。浮き上がる、影が強くなる、枠が強くなる反応を比較できる。",
+  "useCases": ["押せるボタンを分かりやすくする", "カードの選択を示す", "操作への短い反応を付ける"],
+  "cautions": ["ホバーだけで機能や情報を提供しない。", "タッチ操作とキーボード操作でも手応えを返す。", "大きな移動や長い動きは操作を妨げる場合がある。"],
+  "relatedIds": [], "demoId": "hover-feedback",
+  "controls": [
+    { "id": "effect", "label": "反応の種類", "help": "ボタンに触れて違いを確かめる。", "default": "lift", "options": [
+      { "value": "lift", "label": "少し浮き上がる", "promptValue": "少し浮き上がる変化" }, { "value": "glow", "label": "影を強くする", "promptValue": "影を強くする変化" }, { "value": "outline", "label": "枠を強くする", "promptValue": "枠を強くする変化" }
+    ] },
+    { "id": "duration", "label": "変化の速さ", "help": "動きの長さを指定する。", "default": "200", "options": [
+      { "value": "120", "label": "すばやく · 120ms", "promptValue": "120ms" }, { "value": "200", "label": "標準 · 200ms", "promptValue": "200ms" }, { "value": "400", "label": "ゆっくり · 400ms", "promptValue": "400ms" }
+    ] }
+  ],
+  "prompt": "ボタンにホバーと押下のフィードバックを付けてください。ホバーとキーボードのフォーカスでは{{effect}}を{{duration}}で行い、押下中は少し沈む反応を返してください。タッチでも押下の反応が分かるようにしてください。フォーカスの枠は常に見えるようにし、動きを減らす設定では移動とアニメーションを抑えてください。ホバーだけで利用できる機能は作らないでください。",
+  "references": [{ "title": "MDN · prefers-reduced-motion", "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion", "checkedAt": "2026-10-07" }],
+  "verifiedAt": "2026-10-07"
+}

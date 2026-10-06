@@ -1,0 +1,17 @@
+{
+  "id": "modal", "nameJa": "モーダル", "nameEn": "Modal dialog",
+  "aliases": ["ダイアログ", "ポップアップ", "確認画面", "中央に開く"],
+  "tags": ["確認", "集中", "オーバーレイ"], "category": "部品",
+  "summary": "背景の操作を止めて、ひとつの判断に集中する。",
+  "description": "現在の画面の上にダイアログを開き、操作をその中に限定するパターン。短い確認や補助的な入力に向く。このデモは架空のノートへのラベル付けを確認する。",
+  "useCases": ["操作前に確認する", "短い補助入力を行う", "重要な判断に集中する"],
+  "cautions": ["長い作業や複雑な手順を詰め込まない。", "閉じ方と戻る場所を明確にする。", "背景クリックで閉じる場合、未保存の入力が失われないか検討する。"],
+  "relatedIds": ["drawer"], "demoId": "modal",
+  "controls": [{ "id": "dismiss", "label": "背景クリック", "help": "背景から閉じられるかを選ぶ。", "default": "allow", "options": [
+    { "value": "allow", "label": "クリックで閉じる", "promptValue": "背景のクリックでも閉じられるように" },
+    { "value": "deny", "label": "背景では閉じない", "promptValue": "背景のクリックでは閉じないように" }
+  ] }],
+  "prompt": "短い確認を行う中央のモーダルダイアログを実装してください。開いている間は背景を操作できないようにし、Tabの移動先をモーダル内に限定してください。{{dismiss}}してください。閉じるボタンとEscキーで閉じ、開いたボタンにフォーカスを戻してください。スマホでは画面端に余白を残し、内容が長い場合はダイアログ内でスクロールできるようにしてください。",
+  "references": [{ "title": "WAI-ARIA APG · Dialog (Modal)", "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/", "checkedAt": "2026-10-07" }],
+  "verifiedAt": "2026-10-07"
+}

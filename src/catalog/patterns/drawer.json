@@ -1,0 +1,21 @@
+{
+  "id": "drawer", "nameJa": "ドロワー", "nameEn": "Drawer",
+  "aliases": ["横から開く", "スライドパネル", "引き出し", "サイドシート"],
+  "tags": ["詳細", "設定", "オーバーレイ"], "category": "部品",
+  "summary": "画面の端から、詳細や補助操作を引き出す。",
+  "description": "元の画面を背景に残しながら、横から補助パネルを開くパターン。詳細確認や絞り込み条件の入力に使える。このデモはフォーカスをパネル内に保つモーダル形式で、閉じると元の操作に戻る。",
+  "useCases": ["一覧から詳細を確認する", "補助的な設定を開く", "検索の絞り込み条件を入力する"],
+  "cautions": ["長い作業や大量の入力は専用画面も検討する。", "開いている間に背景を操作できるか、仕様を決める。このデモは背景操作を止める。"],
+  "relatedIds": ["modal", "sidebar"], "demoId": "drawer",
+  "controls": [
+    { "id": "direction", "label": "開く方向", "help": "パネルが出てくる側を選ぶ。", "default": "right", "options": [
+      { "value": "right", "label": "右から", "promptValue": "右側" }, { "value": "left", "label": "左から", "promptValue": "左側" }
+    ] },
+    { "id": "duration", "label": "開く速さ", "help": "短いほどすばやく開く。", "default": "200", "options": [
+      { "value": "120", "label": "すばやく · 120ms", "promptValue": "120ms" }, { "value": "200", "label": "標準 · 200ms", "promptValue": "200ms" }, { "value": "400", "label": "ゆっくり · 400ms", "promptValue": "400ms" }
+    ] }
+  ],
+  "prompt": "一覧から項目を選ぶと、{{direction}}から詳細ドロワーを開いてください。開く動きは{{duration}}とし、動きを減らす設定ではアニメーションを抑えてください。開いている間は背景の操作を止め、フォーカスをドロワー内に保ってください。閉じるボタン・背景のクリック・Escキーで閉じ、元の項目にフォーカスを戻してください。一覧のスクロール位置を保持し、スマホでは幅いっぱいに表示してください。",
+  "references": [{ "title": "WAI-ARIA APG · モーダルダイアログの操作", "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/", "checkedAt": "2026-10-07" }],
+  "verifiedAt": "2026-10-07"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "sidebar", "nameJa": "サイドバー", "nameEn": "Sidebar navigation",
+  "aliases": ["左メニュー", "縦メニュー", "ナビゲーション", "折りたたみ"],
+  "tags": ["画面構成", "移動", "管理画面"], "category": "レイアウト",
+  "summary": "よく使う移動先を、画面の横にまとめる。",
+  "description": "複数の画面への移動先を縦に並べるレイアウト。現在地を示し、アイコンだけに折りたたむ表示も試せる。デモ内では架空のワークスペースの移動を体験できる。",
+  "useCases": ["管理画面のナビゲーション", "複数の機能を持つ個人用ツール", "移動先を常に表示したい画面"],
+  "cautions": ["移動先が少ないなら上部のメニューも検討する。", "アイコンだけでも名称が伝わるラベルを用意する。", "スマホでは本文の幅を確保し、メニューを開閉できるようにする。"],
+  "relatedIds": ["drawer"], "demoId": "sidebar",
+  "controls": [{ "id": "initialState", "label": "最初の表示", "help": "PC幅での初期状態。狭い画面ではメニューに切り替わる。", "default": "expanded", "options": [
+    { "value": "expanded", "label": "ラベル付き", "promptValue": "ラベル付きの展開状態" }, { "value": "collapsed", "label": "アイコンのみ", "promptValue": "アイコンのみの折りたたみ状態" }
+  ] }],
+  "prompt": "左側にサイドバーナビゲーションを置き、PCでは{{initialState}}から開始してください。ボタンで展開・折りたたみを切り替え、現在の移動先を文字と背景で示してください。アイコンのみのときもアクセシブルな名前を付けてください。スマホではサイドバーを常時表示せず、メニューボタンで開くダイアログに切り替えて本文の幅を確保してください。キーボードで操作でき、メニューを閉じると開いたボタンに戻れるようにしてください。",
+  "references": [{ "title": "shadcn/ui · Sidebar", "url": "https://ui.shadcn.com/docs/components/sidebar", "checkedAt": "2026-10-07" }],
+  "verifiedAt": "2026-10-07"
+}
