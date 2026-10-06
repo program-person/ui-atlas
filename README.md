@@ -2,6 +2,9 @@
 
 触って選べるUI/UX辞典。名前や用途で探し、操作デモで確かめて、選んだ設定に対応するAIへの指示文をコピーできます。
 
+- [サイトを開く](https://program-person.github.io/ui-atlas/)
+- [GitHubリポジトリ](https://github.com/program-person/ui-atlas)
+
 ## 最初の版
 
 5項目：サイドバー、モーダル、ドロワー、ホバーと押下の反応、検索と絞り込み。

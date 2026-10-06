@@ -105,5 +105,9 @@ export function Demo({ pattern, settings }: { pattern: Pattern; settings: Settin
     case 'sidebar': return <SidebarDemo settings={settings} />;
     case 'hover-feedback': return <HoverDemo settings={settings} />;
     case 'search-filter': return <SearchDemo settings={settings} />;
+    default: {
+      const unsupportedDemo: never = pattern.demoId;
+      throw new Error(`デモが未実装です：${unsupportedDemo}`);
+    }
   }
 }
