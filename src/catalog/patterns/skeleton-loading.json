@@ -1,0 +1,85 @@
+{
+  "nameJa": "読み込み中の仮表示",
+  "nameEn": "Skeleton loading",
+  "aliases": [
+    "スケルトン",
+    "ローディング",
+    "読み込み",
+    "プレースホルダー"
+  ],
+  "tags": [
+    "待機",
+    "失敗",
+    "再試行"
+  ],
+  "category": "UXの流れ",
+  "summary": "読み込み後の形を仮表示し、完了・失敗までを案内する。",
+  "description": "読み込み中に内容の配置を仮の面で示し、完了したら実際の内容へ切り替える。このデモはタイマーで架空の3件を表示し、初回失敗と再試行も試せる。検索と絞り込みのような結果の選別とは異なり、待っている間の状態を扱う。",
+  "useCases": [
+    "一覧の読み込み待ち",
+    "カードの配置を先に示す",
+    "失敗から再試行する流れ"
+  ],
+  "cautions": [
+    "仮表示だけで長時間放置しない。",
+    "実際の内容と形が違いすぎると切り替え時に配置が動く。",
+    "装飾用の仮表示を読み上げ対象にせず、読み込み状況は文章で知らせる。"
+  ],
+  "relatedIds": [
+    "search-filter"
+  ],
+  "controls": [
+    {
+      "id": "delay",
+      "label": "待ち時間",
+      "help": "架空の読み込み時間です。通信は行いません。",
+      "default": "700",
+      "options": [
+        {
+          "value": "700",
+          "label": "700ms",
+          "promptValue": "700ms"
+        },
+        {
+          "value": "1500",
+          "label": "1500ms",
+          "promptValue": "1500ms"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "label": "読み込み結果",
+      "help": "初回失敗の場合、再試行で成功します。",
+      "default": "success",
+      "options": [
+        {
+          "value": "success",
+          "label": "成功",
+          "promptValue": "読み込みは成功させてください"
+        },
+        {
+          "value": "fail-first",
+          "label": "初回失敗 → 再試行で成功",
+          "promptValue": "初回は失敗を表示し、「再試行」で成功させてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "一覧の読み込みを始めるボタンと、カードと同じ形のスケルトンを実装してください。デモの待ち時間は{{delay}}とし、{{result}}。読み込み中は二重実行を防ぎ、aria-busyと文章の状態通知を付けてください。完了したら仮表示を3件の架空のノートに置き換えてください。仮表示は読み上げ対象から除き、失敗は文章で案内してください。リセット・画面切り替えでタイマーを停止してください。スマホでは1列で折り返し、動きを減らす設定では点滅させないでください。実通信は不要です。",
+  "references": [
+    {
+      "title": "W3C · Status Messages",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "MDN · prefers-reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "skeleton-loading",
+  "demoId": "skeleton-loading",
+  "verifiedAt": "2026-10-07"
+}

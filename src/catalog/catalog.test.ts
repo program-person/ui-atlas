@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readCatalog } from '../../scripts/read-catalog.ts';
 import { validateCatalog, searchPatterns, buildPrompt, defaultSettings } from './logic.ts';
+import { MAX_NOTE_LABEL_LENGTH, validateNoteLabel } from '../demos/demo-logic.ts';
 
 const patterns = validateCatalog(readCatalog());
 const drawer = patterns.find((pattern) => pattern.id === 'drawer')!;
@@ -32,11 +33,11 @@ test('欠損・重複・関連ID・設定の不整合を掲載前に検出する
   assert.throws(() => validateCatalog([{ ...drawer, prompt: '{{missing}}' }]), /指示文/);
 });
 
-test('タブとアコーディオンは別名検索でき、全設定の組み合わせを指示文へ反映する', () => {
-  for (const [id, query] of [['tabs', '　ＴＡＢＳ　'], ['accordion', '折りたたみ']] as const) {
-    const pattern = patterns.find((candidate) => candidate.id === id)!;
-    assert.ok(pattern);
-    assert.ok(searchPatterns(patterns, query, '部品').some((candidate) => candidate.id === id));
+test('全掲載項目を日本語・英語・別名で探せ、全設定の組み合わせが指示文に反映される', () => {
+  for (const pattern of patterns) {
+    for (const query of [pattern.nameJa, pattern.nameEn.toUpperCase(), ...pattern.aliases]) {
+      assert.ok(searchPatterns(patterns, `　${query}　`, pattern.category).some((candidate) => candidate.id === pattern.id), `${pattern.id}: ${query}`);
+    }
     const combinations = pattern.controls.reduce<Record<string, string>[]>((settingsList, control) =>
       settingsList.flatMap((settings) => control.options.map((option) => ({ ...settings, [control.id]: option.value }))), [{}]);
     for (const settings of combinations) {
@@ -46,5 +47,15 @@ test('タブとアコーディオンは別名検索でき、全設定の組み�
         assert.ok(prompt.includes(control.options.find((option) => option.value === settings[control.id])!.promptValue));
       }
     }
+  }
+});
+
+test('ノートラベルは空白・日本語・Unicodeコードポイントの上限を検証する', () => {
+  assert.match(validateNoteLabel(''), /入力してください/);
+  assert.match(validateNoteLabel('　 \t\n'), /入力してください/);
+  assert.equal(validateNoteLabel('　画面のアイデア　'), '');
+  for (const character of ['あ', 'A', '🌱']) {
+    assert.equal(validateNoteLabel(character.repeat(MAX_NOTE_LABEL_LENGTH)), '');
+    assert.match(validateNoteLabel(character.repeat(MAX_NOTE_LABEL_LENGTH + 1)), /12文字以内/);
   }
 });

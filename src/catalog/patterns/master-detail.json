@@ -1,0 +1,68 @@
+{
+  "nameJa": "一覧と詳細",
+  "nameEn": "Master-detail",
+  "aliases": [
+    "マスター詳細",
+    "マスターディテール",
+    "選択して読む",
+    "一覧に戻る"
+  ],
+  "tags": [
+    "選択",
+    "位置保持",
+    "戻る"
+  ],
+  "category": "レイアウト",
+  "summary": "一覧から詳細を開き、見ていた位置へ戻れるようにする。",
+  "description": "項目の一覧と、選んだ1件の詳細を組み合わせるパターン。広い幅では並べ、狭い幅では一覧と詳細を切り替える。このデモは一覧のスクロール位置と選択したボタンを戻り先として保持する。分割画面の縦並びとは、狭い幅での戻る操作が異なる。",
+  "useCases": [
+    "ノートの一覧と本文",
+    "記録の一覧と詳細",
+    "ファイルの選択と内容確認"
+  ],
+  "cautions": [
+    "狭い画面では戻る操作を見つけやすくする。",
+    "詳細から戻ったときに一覧の位置を見失わせない。",
+    "選択状態とキーボードフォーカスを区別する。"
+  ],
+  "relatedIds": [
+    "split-view",
+    "drawer"
+  ],
+  "controls": [
+    {
+      "id": "density",
+      "label": "一覧の情報量",
+      "help": "一覧の行間を変え、位置保持を試せます。",
+      "default": "relaxed",
+      "options": [
+        {
+          "value": "relaxed",
+          "label": "ゆったり",
+          "promptValue": "一覧の行の高さを64px以上"
+        },
+        {
+          "value": "compact",
+          "label": "コンパクト",
+          "promptValue": "一覧の行の高さを48px以上"
+        }
+      ]
+    }
+  ],
+  "prompt": "ノートの一覧と選択した1件の詳細を表示するMaster-detailを実装してください。{{density}}にしてください。広い幅では一覧と詳細を横に並べ、領域の幅400px以下では一覧から詳細へ切り替えてください。詳細に「一覧に戻る」を置き、戻ったら一覧のスクロール位置を復元し、選択したボタンへスクロールを動かさずフォーカスを戻してください。詳細を開いたら見出しへフォーカスを移し、選択中の項目を明示してください。入力内容を外部へ送らず、長い文字は折り返してください。",
+  "references": [
+    {
+      "title": "MDN · grid-template-columns",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "WAI-ARIA APG · Keyboard Interface",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "master-detail",
+  "demoId": "master-detail",
+  "verifiedAt": "2026-10-07"
+}

@@ -1,0 +1,85 @@
+{
+  "nameJa": "ミニマル",
+  "nameEn": "Minimal",
+  "aliases": [
+    "シンプル",
+    "余白",
+    "すっきり",
+    "ミニマリズム"
+  ],
+  "tags": [
+    "白",
+    "文字",
+    "枠線"
+  ],
+  "category": "見た目",
+  "summary": "余白と文字の強弱で、必要な情報を静かに整理する。",
+  "description": "装飾を控え、余白・文字サイズ・細い区切りで情報の順番を表す。このデモではノートカードの余白と区切り線を調整する。装飾を減らしても、ボタンと操作状態を判別できるようにする。",
+  "useCases": [
+    "ノートや文章を読む画面",
+    "要素の少ない設定画面",
+    "情報の順序を強調したい画面"
+  ],
+  "cautions": [
+    "薄すぎる文字や小さすぎるボタンで読みやすさを失わない。",
+    "余白を増やすほど画面内に収まる情報量は減る。",
+    "操作できる要素を装飾と区別する。"
+  ],
+  "relatedIds": [
+    "tabs"
+  ],
+  "controls": [
+    {
+      "id": "spacing",
+      "label": "余白",
+      "help": "情報量と読みやすさのバランスを試す。",
+      "default": "relaxed",
+      "options": [
+        {
+          "value": "relaxed",
+          "label": "ゆったり",
+          "promptValue": "カード内と情報の間の余白を広めに取ってください"
+        },
+        {
+          "value": "compact",
+          "label": "コンパクト",
+          "promptValue": "情報の間の余白を短くし、ボタンの高さ44px以上は保ってください"
+        }
+      ]
+    },
+    {
+      "id": "divider",
+      "label": "区切り",
+      "help": "線と余白の使い分けを試す。",
+      "default": "line",
+      "options": [
+        {
+          "value": "line",
+          "label": "細い線",
+          "promptValue": "メタ情報の前後を細い枠線で区切ってください"
+        },
+        {
+          "value": "space",
+          "label": "余白だけ",
+          "promptValue": "メタ情報は線を使わず余白で区切ってください"
+        }
+      ]
+    }
+  ],
+  "prompt": "白背景と控えめな色のミニマルなノートカードを実装してください。見出し・本文・メタ情報に文字の強弱を付けてください。{{spacing}}。{{divider}}。保存ボタンで保存前と保存済みを切り替え、状態を文字と押下状態で伝えてください。スマホでは1列にし、文章を折り返してください。フォーカスを明示し、キーボードでも操作できるようにしてください。装飾と動きに依存させないでください。",
+  "references": [
+    {
+      "title": "MDN · The box model",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "W3C · Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "minimal",
+  "demoId": "minimal",
+  "verifiedAt": "2026-10-07"
+}

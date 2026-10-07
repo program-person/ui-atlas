@@ -1,0 +1,85 @@
+{
+  "nameJa": "ガラス風",
+  "nameEn": "Glassmorphism",
+  "aliases": [
+    "グラスモーフィズム",
+    "すりガラス",
+    "半透明",
+    "透ける"
+  ],
+  "tags": [
+    "ぼかし",
+    "背景",
+    "レイヤー"
+  ],
+  "category": "見た目",
+  "summary": "ぼかした背景と半透明の面で、重なりを表す。",
+  "description": "背景をぼかして透かし、面の重なりを表す見た目。このデモでは同じノートカードで、寒色・暖色の背景と面の透過度を切り替える。見た目の効果と文字の読みやすさを別々に確認する。",
+  "useCases": [
+    "小さな補助カード",
+    "背景の雰囲気を残すパネル",
+    "重なりを表す画面"
+  ],
+  "cautions": [
+    "背景の色によって文字のコントラストが変わる。",
+    "ぼかしを多用すると描画負荷が増える場合がある。",
+    "対応しない環境では不透明な背景へ切り替える。"
+  ],
+  "relatedIds": [
+    "minimal"
+  ],
+  "controls": [
+    {
+      "id": "opacity",
+      "label": "面の不透明度",
+      "help": "低いほど背景が透けます。",
+      "default": "0.7",
+      "options": [
+        {
+          "value": "0.7",
+          "label": "70%",
+          "promptValue": "白い面の不透明度を70%"
+        },
+        {
+          "value": "0.9",
+          "label": "90%",
+          "promptValue": "白い面の不透明度を90%"
+        }
+      ]
+    },
+    {
+      "id": "background",
+      "label": "背景の色",
+      "help": "背景が変わったときの文字の読みやすさを確認する。",
+      "default": "cool",
+      "options": [
+        {
+          "value": "cool",
+          "label": "寒色",
+          "promptValue": "青と緑の淡いグラデーション背景"
+        },
+        {
+          "value": "warm",
+          "label": "暖色",
+          "promptValue": "桃色と橙色の淡いグラデーション背景"
+        }
+      ]
+    }
+  ],
+  "prompt": "半透明の白い面と12pxの背景ぼかしを使うガラス風のノートカードを実装してください。{{opacity}}にしてください。{{background}}を使い、濃い文字と明確なボタンで読みやすさを保ってください。ぼかし非対応の環境では不透明な白背景へフォールバックしてください。保存ボタンで保存前・保存済みを文字と押下状態で伝えてください。スマホでは1列にして画面内に収め、キーボード操作とフォーカス表示に対応してください。アニメーションは必須にしないでください。",
+  "references": [
+    {
+      "title": "MDN · backdrop-filter",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "W3C · Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "glassmorphism",
+  "demoId": "glassmorphism",
+  "verifiedAt": "2026-10-07"
+}

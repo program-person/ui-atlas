@@ -1,0 +1,67 @@
+{
+  "nameJa": "操作と取り消し",
+  "nameEn": "Undo feedback",
+  "aliases": [
+    "アンドゥ",
+    "元に戻す",
+    "取り消す",
+    "非表示を戻す"
+  ],
+  "tags": [
+    "通知",
+    "復帰",
+    "やり直し"
+  ],
+  "category": "UXの流れ",
+  "summary": "操作したことを知らせ、その場で取り消せるようにする。",
+  "description": "操作の結果を通知し、戻す手段を近くに置く流れ。このデモは架空のメモリ上のノートを非表示にして取り消す。ファイルや永続データには触れない。受付を5秒にする方式と、期限を設けない方式を比較できる。",
+  "useCases": [
+    "軽い整理操作を戻す",
+    "誤操作から復帰する",
+    "操作の結果を知らせる"
+  ],
+  "cautions": [
+    "取り消せる期間と対象を明示する。",
+    "連続操作で前の取り消しが消えないように扱う。",
+    "重大な操作が必ず取り消せるとは限らないため、実データでは復元方法を設計する。"
+  ],
+  "relatedIds": [
+    "modal"
+  ],
+  "controls": [
+    {
+      "id": "window",
+      "label": "取り消しの受付",
+      "help": "受付中はほかの非表示ボタンを止めます。",
+      "default": "manual",
+      "options": [
+        {
+          "value": "manual",
+          "label": "期限なし",
+          "promptValue": "取り消すかリセットするまで受付を維持してください"
+        },
+        {
+          "value": "5000",
+          "label": "5秒間",
+          "promptValue": "取り消しは5秒間受け付け、期限が過ぎたら終了を通知してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のメモリ上のリストで項目を非表示にし、その結果と「取り消す」ボタンを近くに表示するデモを実装してください。{{window}}。受付中は次の非表示操作を無効にし、取り消し対象を明確にしてください。取り消したら元の順番へ戻し、その項目のボタンにフォーカスを戻してください。期限切れで操作中のボタンが無効になる場合は、次の操作先へフォーカスを移してください。リセットで全件を復元し、画面切り替え時にタイマーを停止してください。スマホでも通知とボタンを読めるように折り返してください。ファイルの削除、永続データの削除、外部への書き込みは不要です。",
+  "references": [
+    {
+      "title": "W3C WAI · Provide undo functionality",
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/#provide-undo-functionality",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "W3C · Status Messages",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "undo-feedback",
+  "demoId": "undo-feedback",
+  "verifiedAt": "2026-10-07"
+}

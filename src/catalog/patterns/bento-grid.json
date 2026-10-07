@@ -1,0 +1,62 @@
+{
+  "nameJa": "Bentoグリッド",
+  "nameEn": "Bento grid",
+  "aliases": [
+    "弁当箱",
+    "ベントー",
+    "カード配置",
+    "大小のカード"
+  ],
+  "tags": [
+    "グリッド",
+    "ダッシュボード",
+    "面積"
+  ],
+  "category": "レイアウト",
+  "summary": "大小のカードを組み合わせ、情報のまとまりを並べる。",
+  "description": "箱を組み合わせるように情報を配置するレイアウト。このデモではノートやアイデアの架空の件数を並べ、先頭を大きくする配置と均等な配置を切り替える。分割画面のような2領域の作業ではなく、複数の情報を俯瞰する用途を想定する。",
+  "useCases": [
+    "小さなダッシュボード",
+    "情報のまとまりを俯瞰する",
+    "機能や記録の入口を並べる"
+  ],
+  "cautions": [
+    "面積の違いが重要度と合っているか確認する。",
+    "見た目の順番とキーボードの順番を揃える。",
+    "スマホではカードを1列にして読める順番を保つ。"
+  ],
+  "relatedIds": [
+    "split-view"
+  ],
+  "controls": [
+    {
+      "id": "emphasis",
+      "label": "カードの配分",
+      "help": "先頭の情報を大きくするかを選ぶ。",
+      "default": "featured",
+      "options": [
+        {
+          "value": "featured",
+          "label": "先頭を大きく",
+          "promptValue": "PC幅では先頭のカードを2列分の幅にしてください"
+        },
+        {
+          "value": "equal",
+          "label": "均等に並べる",
+          "promptValue": "PC幅ではすべてのカードを同じ幅で2列に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "関連する情報をカードに分けたBentoグリッドを実装してください。{{emphasis}}。カードの背景色を控えめに変え、見出し・架空の件数・短い説明を表示してください。カードをクリックまたはキーボードで選べ、選択状態を枠線と押下状態で伝えてください。領域の幅400px以下では元の順番のまま1列にしてください。視覚的な並び順とTab順を一致させ、横にはみ出さないようにしてください。アニメーションは必須にしないでください。",
+  "references": [
+    {
+      "title": "MDN · grid-template-columns",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "bento-grid",
+  "demoId": "bento-grid",
+  "verifiedAt": "2026-10-07"
+}

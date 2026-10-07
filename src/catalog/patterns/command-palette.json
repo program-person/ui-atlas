@@ -1,0 +1,68 @@
+{
+  "nameJa": "コマンドパレット",
+  "nameEn": "Command palette",
+  "aliases": [
+    "コマンド検索",
+    "ランチャー",
+    "Ctrl+K",
+    "クイック操作"
+  ],
+  "tags": [
+    "検索",
+    "候補",
+    "キーボード"
+  ],
+  "category": "部品",
+  "summary": "操作を検索し、候補から選んでその場で実行する。",
+  "description": "操作名を入力して候補を絞り、キーボードやクリックで実行する部品。このデモは架空のワークスペースの操作を選び、結果を画面内に表示する。検索と絞り込みは情報を探す流れ、コマンドパレットは実行する操作を探す点が異なる。",
+  "useCases": [
+    "頻繁に使う操作の呼び出し",
+    "多いメニューの操作検索",
+    "キーボード中心のツール"
+  ],
+  "cautions": [
+    "普通のメニューやボタンからも操作へ辿れるようにする。",
+    "ショートカットをページ全体へ無条件に奪わない。",
+    "0件・日本語変換中・閉じた後の戻り先を扱う。"
+  ],
+  "relatedIds": [
+    "search-filter",
+    "modal"
+  ],
+  "controls": [
+    {
+      "id": "scope",
+      "label": "候補の範囲",
+      "help": "画面への移動だけに絞るかを選ぶ。",
+      "default": "all",
+      "options": [
+        {
+          "value": "all",
+          "label": "すべての操作",
+          "promptValue": "移動と表示切り替えを含む全操作を候補にしてください"
+        },
+        {
+          "value": "navigation",
+          "label": "移動だけ",
+          "promptValue": "画面への移動だけを候補にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "操作名から候補を検索して実行するコマンドパレットを実装してください。{{scope}}。ボタンとデモ内に限定したCtrl+K / ⌘Kで開き、検索欄へフォーカスしてください。日本語・英語・前後空白・英字大小を扱い、候補を↑↓で循環してEnterまたはクリックで実行してください。日本語変換中のEnterで実行しないでください。combobox・listbox・optionを関連付け、入力欄のフォーカスを保ちながら候補を選んでください。0件の案内を表示し、Esc・閉じるボタン・背景クリックで閉じて起点へフォーカスを戻してください。Tabをダイアログ内で循環させ、スマホでも画面内に収めてください。実行結果は架空のワークスペース内に表示してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Combobox",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "WAI-ARIA APG · Dialog",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "command-palette",
+  "demoId": "command-palette",
+  "verifiedAt": "2026-10-07"
+}

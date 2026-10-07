@@ -1,0 +1,73 @@
+{
+  "nameJa": "順番に表示する動き",
+  "nameEn": "Staggered reveal",
+  "aliases": [
+    "スタガー",
+    "時間差",
+    "順番に出る",
+    "段階表示"
+  ],
+  "tags": [
+    "遅延",
+    "一覧",
+    "動き"
+  ],
+  "category": "動き",
+  "summary": "項目の出現を少しずつ遅らせ、並びを見せる。",
+  "description": "同じ動きを項目ごとに時間差で始める表現。このデモは4件を各300msで表示し、項目間の遅延と全体の待ち時間を比較する。フェードとスライドが1件の動きなのに対し、こちらは一覧全体の時間配分を扱う。",
+  "useCases": [
+    "短い一覧の出現",
+    "少数のカードを順番に見せる",
+    "画面内のまとまりを示す"
+  ],
+  "cautions": [
+    "件数が多いと全体の待ち時間が長くなる。",
+    "キーボードフォーカスが当たった項目を見えないままにしない。",
+    "読み込みの進捗を示す仕組みの代わりにはしない。"
+  ],
+  "relatedIds": [
+    "fade-slide",
+    "skeleton-loading"
+  ],
+  "controls": [
+    {
+      "id": "delay",
+      "label": "項目間の遅延",
+      "help": "4件・各300ms。全体は300ms＋遅延×3です。",
+      "default": "120",
+      "options": [
+        {
+          "value": "0",
+          "label": "0ms（同時）",
+          "promptValue": "0ms（全体300ms）"
+        },
+        {
+          "value": "120",
+          "label": "120ms",
+          "promptValue": "120ms（全体660ms）"
+        },
+        {
+          "value": "240",
+          "label": "240ms",
+          "promptValue": "240ms（全体1020ms）"
+        }
+      ]
+    }
+  ],
+  "prompt": "4件のカードを各300msのフェードと下12pxからのスライドで順番に表示してください。項目間の遅延は{{delay}}にしてください。再生ボタンで最初から再生し直せるようにし、全体の待ち時間を文章で示してください。カードをクリックまたはキーボードで選べ、選択状態を明示してください。遅延中でもキーボードフォーカスが当たった項目は即時表示してください。prefers-reduced-motionがreduceなら遅延・移動・フェードを省いて全件を即時表示してください。スマホでは元の順番を保って1列に並べてください。通信やデータ取得の進捗とは別に扱ってください。",
+  "references": [
+    {
+      "title": "MDN · animation-delay",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/animation-delay",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "MDN · prefers-reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "stagger",
+  "demoId": "stagger",
+  "verifiedAt": "2026-10-07"
+}

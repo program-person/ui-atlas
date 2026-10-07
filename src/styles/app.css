@@ -234,6 +234,50 @@ h3 { font-weight: 600; }
 .mini-tabs span:first-child { color: #2457c5; border-bottom: 2px solid #2e62df; background: #f0f4ff; }
 .mini-tabs b { display: block; height: 4px; background: #e3e8f1; margin: 7px 0; border-radius: 2px; }
 .mini-tabs b:last-child { width: 65%; }
+.mini-stagger { width: 150px; }
+.mini-stagger i { display: block; height: 17px; width: 90%; margin: 6px 0; background: #d3def6; border-radius: 3px; }
+.mini-stagger i:nth-child(2) { margin-left: 7px; opacity: .75; }
+.mini-stagger i:nth-child(3) { margin-left: 14px; opacity: .45; }
+.mini-fade { width: 150px; min-height: 80px; position: relative; }
+.mini-fade b { display: block; background: #e2e8fa; border: 1px solid #cad7f1; height: 60px; width: 115px; border-radius: 7px; margin: 0 auto; box-shadow: 0 14px 0 -5px #e2e8fa77; }
+.mini-fade span { position: absolute; right: 0; top: 18px; color: #7592c6; font-size: 24px; }
+.mini-command { width: 170px; padding: 12px; background: white; border: 1px solid #dce3ee; border-radius: 7px; box-shadow: 0 6px 15px #182e5714; color: #61718d; font-size: 8px; }
+.mini-command div { border-bottom: 1px solid #dce3ee; padding-bottom: 7px; }
+.mini-command span { display: block; padding: 5px; }
+.mini-command span:first-of-type { background: #e5edfc; color: #2457c5; }
+.mini-undo { width: 170px; background: #fff; padding: 12px; border-radius: 6px; font-size: 9px; color: #61718d; }
+.mini-undo b { display: block; height: 5px; margin: 7px 0; background: #dce3ee; }
+.mini-undo div { margin-top: 13px; padding: 6px; background: #e5f2e9; color: #315e4b; }
+.mini-skeleton { width: 170px; padding: 10px; background: white; border-radius: 6px; }
+.mini-skeleton div { margin: 6px 0; padding: 5px; border: 1px solid #e3e8f1; border-radius: 4px; }
+.mini-skeleton b { display: block; height: 5px; margin: 5px 0; background: #dce3ee; border-radius: 3px; }
+.mini-skeleton b:last-child { width: 60%; }
+.mini-validation { padding: 12px; width: 170px; background: white; border-radius: 6px; font-size: 9px; color: #61718d; }
+.mini-validation b { display: block; border: 1px solid #b83d51; padding: 5px; border-radius: 3px; margin: 7px 0; color: #35445c; }
+.mini-validation span { display: block; color: #aa3044; font-size: 8px; }
+.mini-bento { width: 150px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.mini-bento i { height: 28px; background: #e5eafa; border: 1px solid #d1dcf2; border-radius: 5px; }
+.mini-bento i:first-child { grid-column: span 2; height: 38px; background: #cdddf9; }
+.mini-bento i:last-child { background: #e3f0e9; }
+.mini-layout { display: grid; grid-template-columns: 1fr 2fr; width: 100%; max-width: 180px; min-height: 80px; border: 1px solid #dce3ee; background: white; border-radius: 5px; color: #61718d; font-size: 9px; }
+.mini-layout > div { padding: 12px 8px; background: #edf2fc; border-right: 1px solid #dce3ee; }
+.mini-layout > section { padding: 12px; }
+.mini-layout b { display: block; height: 4px; background: #c8d7f0; margin: 7px 0; }
+.thumbnail-neobrutalism { background: #fff2cb; }
+.mini-brutal { border: 2px solid #202430; background: #f9d458; border-radius: 0; box-shadow: 4px 4px 0 #202430; }
+.mini-brutal i { background: white; color: #202430; border: 1px solid #202430; box-shadow: 2px 2px 0 #202430; }
+.thumbnail-glassmorphism { background: linear-gradient(135deg, #afbbf8, #c2e8de); }
+.mini-glass { background: #ffffffb8; border: 1px solid white; border-radius: 12px; box-shadow: 0 6px 18px #30477518; }
+.mini-style { width: 100%; max-width: 170px; padding: 14px; border-radius: 5px; background: white; color: #35445c; }
+.mini-style strong { display: block; font-size: 11px; margin: 5px 0 9px; }
+.mini-style > span { font-size: 7px; letter-spacing: 1px; }
+.mini-style b { display: block; height: 4px; background: #dce3ee; margin: 7px 0; }
+.mini-style i { display: inline-block; padding: 4px 10px; background: #26364e; color: white; font-size: 7px; font-style: normal; border-radius: 2px; }
+.mini-popover { width: 140px; color: #61718d; font-size: 9px; }
+.mini-popover b, .mini-popover div { display: block; padding: 9px; background: white; border: 1px solid #dce3ee; }
+.mini-popover b { border-bottom: 0; border-radius: 5px 5px 0 0; }
+.mini-popover div { border-top: 0; border-radius: 0 0 5px 5px; box-shadow: 0 5px 12px #182e5714; }
+.mini-popover span { display: inline-block; margin-top: 8px; background: #fff; padding: 5px 8px; border-radius: 4px; }
 .mini-accordion { width: 100%; max-width: 180px; padding: 5px 10px; background: #fff; border: 1px solid #dce3ee; border-radius: 6px; }
 .mini-accordion > span { display: flex; justify-content: space-between; padding: 7px 0; font-size: 8px; color: #61718d; }
 .mini-accordion > span + span { border-top: 1px solid #e3e8f1; }

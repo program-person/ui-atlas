@@ -1,0 +1,85 @@
+{
+  "nameJa": "フェードとスライド",
+  "nameEn": "Fade & slide",
+  "aliases": [
+    "ふわっと表示",
+    "フェードイン",
+    "スライドイン",
+    "出現アニメーション"
+  ],
+  "tags": [
+    "距離",
+    "時間",
+    "動き"
+  ],
+  "category": "動き",
+  "summary": "透明度と小さな移動を組み合わせ、内容の出現を示す。",
+  "description": "内容が表示される際に透明度と位置を変える動き。このデモでは移動なしのフェードと16pxのスライド、短い・長い時間を比較する。ホバーのようなポインターへの反応ではなく、内容の出現を扱う。非表示は即時に行う。",
+  "useCases": [
+    "短いカードの出現",
+    "補助情報の表示",
+    "状態変化を穏やかに示す"
+  ],
+  "cautions": [
+    "動きのために操作や情報の表示を長く待たせない。",
+    "大きな移動や頻繁な再生を避ける。",
+    "動きを減らす設定では即時に表示する。"
+  ],
+  "relatedIds": [
+    "hover-feedback"
+  ],
+  "controls": [
+    {
+      "id": "duration",
+      "label": "表示にかける時間",
+      "help": "再生ボタンで速度の違いを確かめます。",
+      "default": "200",
+      "options": [
+        {
+          "value": "200",
+          "label": "200ms",
+          "promptValue": "200ms"
+        },
+        {
+          "value": "600",
+          "label": "600ms",
+          "promptValue": "600ms"
+        }
+      ]
+    },
+    {
+      "id": "distance",
+      "label": "移動する距離",
+      "help": "0pxでは透明度だけが変わります。",
+      "default": "16",
+      "options": [
+        {
+          "value": "16",
+          "label": "16px",
+          "promptValue": "下16pxの位置から元の位置へ移動"
+        },
+        {
+          "value": "0",
+          "label": "0px（フェードのみ）",
+          "promptValue": "位置を動かさず透明度だけを変更"
+        }
+      ]
+    }
+  ],
+  "prompt": "カードを表示するとき、透明度0から1へ{{duration}}で変えるフェードを実装してください。同時に{{distance}}してください。表示・即時の非表示・再生し直す操作をボタンで試せるようにしてください。内容の表示状態を文章で知らせ、操作ボタンは動かさずキーボードで使えるようにしてください。スマホでも移動距離を含めてはみ出さないようにし、prefers-reduced-motionがreduceなら移動・フェードを省いて即時に表示してください。",
+  "references": [
+    {
+      "title": "MDN · prefers-reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion",
+      "checkedAt": "2026-10-07"
+    },
+    {
+      "title": "MDN · CSS animations",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "fade-slide",
+  "demoId": "fade-slide",
+  "verifiedAt": "2026-10-07"
+}

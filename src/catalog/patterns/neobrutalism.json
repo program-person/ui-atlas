@@ -1,0 +1,82 @@
+{
+  "nameJa": "ネオブルータリズム",
+  "nameEn": "Neobrutalism",
+  "aliases": [
+    "ネオブルータリスト",
+    "太い枠",
+    "くっきり",
+    "ベタ塗り",
+    "ブルータリズム"
+  ],
+  "tags": [
+    "影",
+    "大胆",
+    "色"
+  ],
+  "category": "見た目",
+  "summary": "太い枠・ぼかさない影・強い色で、要素をはっきり見せる。",
+  "description": "この辞典では太い輪郭、ベタ塗りの色、ずらした硬い影を持つ表現として紹介する。デモではノートカードの影の距離とアクセント色を切り替える。ガラス風の透過やぼかしと比較し、同じ内容で印象の違いを試せる。",
+  "useCases": [
+    "少数の要素を強調する画面",
+    "特徴のあるノートやツール",
+    "短いメッセージを目立たせる"
+  ],
+  "cautions": [
+    "強い色と影を増やしすぎると情報の優先度が分かりにくい。",
+    "装飾が大きくても操作ボタンのフォーカスを別に表示する。",
+    "スマホでは影の分も画面内に収める。"
+  ],
+  "relatedIds": [
+    "minimal",
+    "glassmorphism"
+  ],
+  "controls": [
+    {
+      "id": "shadow",
+      "label": "影の距離",
+      "help": "ぼかしのない影のずれを調整する。",
+      "default": "6",
+      "options": [
+        {
+          "value": "6",
+          "label": "6px",
+          "promptValue": "ぼかしなし・右下6pxの硬い影"
+        },
+        {
+          "value": "3",
+          "label": "3px",
+          "promptValue": "ぼかしなし・右下3pxの硬い影"
+        }
+      ]
+    },
+    {
+      "id": "accent",
+      "label": "カードの色",
+      "help": "同じ内容で色の印象を比較する。",
+      "default": "yellow",
+      "options": [
+        {
+          "value": "yellow",
+          "label": "黄色",
+          "promptValue": "黄色のカードと淡いクリーム色の背景"
+        },
+        {
+          "value": "pink",
+          "label": "桃色",
+          "promptValue": "桃色のカードと淡い桃色の背景"
+        }
+      ]
+    }
+  ],
+  "prompt": "3pxの濃い枠線、太い見出し、{{shadow}}を持つネオブルータリズム風のノートカードを実装してください。{{accent}}を使ってください。保存ボタンには2pxの枠と3pxの影を付け、押している間は影をなくしてください。保存前・保存済みを文字と押下状態で伝えてください。スマホでは1列にし、影を含めて画面内に収めてください。キーボード操作と、装飾と区別できるフォーカス表示を用意してください。アニメーションに依存させないでください。",
+  "references": [
+    {
+      "title": "MDN · box-shadow",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow",
+      "checkedAt": "2026-10-07"
+    }
+  ],
+  "id": "neobrutalism",
+  "demoId": "neobrutalism",
+  "verifiedAt": "2026-10-07"
+}

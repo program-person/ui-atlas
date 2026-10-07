@@ -4,6 +4,19 @@ import type { Pattern, Settings } from '../types.ts';
 import { Icon } from '../components/Icon.tsx';
 import { normalizeSearch } from '../catalog/logic.ts';
 import { TabsDemo } from './TabsDemo.tsx';
+import { StaggerDemo } from './StaggerDemo.tsx';
+import { FadeSlideDemo } from './FadeSlideDemo.tsx';
+import { CommandPaletteDemo } from './CommandPaletteDemo.tsx';
+import { UndoFeedbackDemo } from './UndoFeedbackDemo.tsx';
+import { SkeletonLoadingDemo } from './SkeletonLoadingDemo.tsx';
+import { InlineValidationDemo } from './InlineValidationDemo.tsx';
+import { MasterDetailDemo } from './MasterDetailDemo.tsx';
+import { BentoGridDemo } from './BentoGridDemo.tsx';
+import { SplitViewDemo } from './SplitViewDemo.tsx';
+import { NeobrutalismDemo } from './NeobrutalismDemo.tsx';
+import { GlassDemo } from './GlassDemo.tsx';
+import { MinimalDemo } from './MinimalDemo.tsx';
+import { PopoverDemo } from './PopoverDemo.tsx';
 import { AccordionDemo } from './AccordionDemo.tsx';
 
 function isBackdropClick(event: MouseEvent<HTMLDialogElement>): boolean {
@@ -109,6 +122,19 @@ export function Demo({ pattern, settings }: { pattern: Pattern; settings: Settin
     case 'search-filter': return <SearchDemo settings={settings} />;
     case 'tabs': return <TabsDemo settings={settings} />;
     case 'accordion': return <AccordionDemo settings={settings} />;
+    case 'popover': return <PopoverDemo settings={settings} />;
+    case 'minimal': return <MinimalDemo settings={settings} />;
+    case 'glassmorphism': return <GlassDemo settings={settings} />;
+    case 'neobrutalism': return <NeobrutalismDemo settings={settings} />;
+    case 'split-view': return <SplitViewDemo settings={settings} />;
+    case 'bento-grid': return <BentoGridDemo settings={settings} />;
+    case 'master-detail': return <MasterDetailDemo settings={settings} />;
+    case 'inline-validation': return <InlineValidationDemo settings={settings} />;
+    case 'skeleton-loading': return <SkeletonLoadingDemo settings={settings} />;
+    case 'undo-feedback': return <UndoFeedbackDemo settings={settings} />;
+    case 'command-palette': return <CommandPaletteDemo settings={settings} />;
+    case 'fade-slide': return <FadeSlideDemo settings={settings} />;
+    case 'stagger': return <StaggerDemo settings={settings} />;
     default: {
       const unsupportedDemo: never = pattern.demoId;
       throw new Error(`デモが未実装です：${unsupportedDemo}`);
