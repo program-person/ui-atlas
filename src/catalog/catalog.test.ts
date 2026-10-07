@@ -31,3 +31,20 @@ test('欠損・重複・関連ID・設定の不整合を掲載前に検出する
   assert.throws(() => validateCatalog([changed]), /初期値/);
   assert.throws(() => validateCatalog([{ ...drawer, prompt: '{{missing}}' }]), /指示文/);
 });
+
+test('タブとアコーディオンは別名検索でき、全設定の組み合わせを指示文へ反映する', () => {
+  for (const [id, query] of [['tabs', '　ＴＡＢＳ　'], ['accordion', '折りたたみ']] as const) {
+    const pattern = patterns.find((candidate) => candidate.id === id)!;
+    assert.ok(pattern);
+    assert.ok(searchPatterns(patterns, query, '部品').some((candidate) => candidate.id === id));
+    const combinations = pattern.controls.reduce<Record<string, string>[]>((settingsList, control) =>
+      settingsList.flatMap((settings) => control.options.map((option) => ({ ...settings, [control.id]: option.value }))), [{}]);
+    for (const settings of combinations) {
+      const prompt = buildPrompt(pattern, settings);
+      assert.doesNotMatch(prompt, /\{\{/);
+      for (const control of pattern.controls) {
+        assert.ok(prompt.includes(control.options.find((option) => option.value === settings[control.id])!.promptValue));
+      }
+    }
+  }
+});

@@ -3,6 +3,8 @@ import type { CSSProperties, MouseEvent, KeyboardEvent } from 'react';
 import type { Pattern, Settings } from '../types.ts';
 import { Icon } from '../components/Icon.tsx';
 import { normalizeSearch } from '../catalog/logic.ts';
+import { TabsDemo } from './TabsDemo.tsx';
+import { AccordionDemo } from './AccordionDemo.tsx';
 
 function isBackdropClick(event: MouseEvent<HTMLDialogElement>): boolean {
   if (event.target !== event.currentTarget) return false;
@@ -105,6 +107,8 @@ export function Demo({ pattern, settings }: { pattern: Pattern; settings: Settin
     case 'sidebar': return <SidebarDemo settings={settings} />;
     case 'hover-feedback': return <HoverDemo settings={settings} />;
     case 'search-filter': return <SearchDemo settings={settings} />;
+    case 'tabs': return <TabsDemo settings={settings} />;
+    case 'accordion': return <AccordionDemo settings={settings} />;
     default: {
       const unsupportedDemo: never = pattern.demoId;
       throw new Error(`デモが未実装です：${unsupportedDemo}`);
