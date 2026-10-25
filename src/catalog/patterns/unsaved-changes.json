@@ -1,0 +1,78 @@
+{
+  "id": "unsaved-changes",
+  "nameJa": "未保存の変更への案内",
+  "nameEn": "Unsaved changes",
+  "category": "UXの流れ",
+  "summary": "未反映の下書きがある切替で、残るか戻して進むかを選ぶ。",
+  "description": "編集中の値と反映済みの値を区別し、別の記録へ切り替える時に確認する流れ。実行前の一般的な確認と異なり、変更の有無で確認の必要性が変わる。ブラウザ終了には介入しない。",
+  "aliases": [
+    "未反映の変更",
+    "編集途中の移動",
+    "ダーティフォーム"
+  ],
+  "tags": [
+    "未反映の変更",
+    "編集途中の移動",
+    "ダーティフォーム"
+  ],
+  "useCases": [
+    "記録間を切り替える編集画面",
+    "下書きを失う操作の案内"
+  ],
+  "cautions": [
+    "確認が不要な時には妨げない。",
+    "確認をやめた時には下書きと元の位置を保つ。"
+  ],
+  "relatedIds": [
+    "confirmation-flow",
+    "inline-edit"
+  ],
+  "demoId": "unsaved-changes",
+  "controls": [
+    {
+      "id": "first",
+      "label": "最初のメモ",
+      "help": "切替はデモ内の状態だけ。",
+      "default": "layout",
+      "options": [
+        {
+          "value": "layout",
+          "label": "配置の案",
+          "promptValue": "配置の案から始めてください"
+        },
+        {
+          "value": "color",
+          "label": "配色の案",
+          "promptValue": "配色の案から始めてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の変更状態",
+      "help": "反映済みと下書きを区別する。",
+      "default": "clean",
+      "options": [
+        {
+          "value": "clean",
+          "label": "変更なし",
+          "promptValue": "反映済みの内容と同じ値で始めてください"
+        },
+        {
+          "value": "dirty",
+          "label": "未反映あり",
+          "promptValue": "修正中の案という未反映の下書きから始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空メモ2件を切り替える未反映変更の案内デモを実装してください。{{first}}。{{initial}}。下書きと反映済みの値を別に持ち、変更がない時は直接切り替えてください。変更がある時は本文内に確認を出し、最初に移動をやめるボタンへフォーカスしてください。確認中は欄を読み取り専用にし、移動をやめる・Escでは下書きを保持し、明示の確認後だけ変更を戻して別のメモへ移ってください。終了後は起点へフォーカスを戻し、外部保存・beforeunload・ブラウザ履歴には触れないでください。",
+  "references": [
+    {
+      "title": "GOV.UK · Check answers（変更内容を確認する考え方の参考）",
+      "url": "https://design-system.service.gov.uk/patterns/check-answers/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

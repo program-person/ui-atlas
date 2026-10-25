@@ -1,0 +1,47 @@
+.workflow-panel { margin: 18px 0; padding: 20px; border: 1px solid #dce3ee; border-radius: 9px; background: #fafbfe; }
+.workflow-panel h2 { font-size: 18px; overflow-wrap: anywhere; }
+.workflow-panel p, .workflow-demo > p[role], .workflow-demo .demo-muted { font-size: 13px; overflow-wrap: anywhere; }
+.workflow-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.workflow-field { display: grid; gap: 8px; margin: 16px 0; font-size: 13px; }
+.workflow-field input, .workflow-field select { width: 100%; min-width: 0; min-height: 44px; padding: 10px; border: 1px solid #b6c3d8; border-radius: 6px; background: white; color: #27354d; font: inherit; }
+.workflow-error { min-height: 24px; color: #a52c40; font-size: 12px; }
+.workflow-text-button { min-height: 44px; padding: 10px 0; border: 0; background: transparent; color: #1746b5; text-decoration: underline; font-size: 13px; }
+.workflow-check { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 13px; }
+.workflow-check input { flex: 0 0 auto; width: 20px; height: 20px; }
+.workflow-fieldset { min-width: 0; padding: 16px; margin: 20px 0; border: 1px solid #b6c3d8; border-radius: 8px; }
+.workflow-fieldset legend { padding: 0 6px; font-size: 14px; font-weight: 700; }
+.conditional-panel { padding-left: 16px; border-left: 3px solid #adbfdf; margin-bottom: 20px; }
+.transfer-lists { display: grid; gap: 12px; margin: 20px 0; }
+.transfer-lists .workflow-fieldset { margin: 0; }
+.transfer-lists p { font-size: 13px; }
+.bulk-list { list-style: none; padding: 0; margin: 20px 0; }
+.bulk-list li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px; border-bottom: 1px solid #dce3ee; }
+.bulk-list li > span { font-size: 12px; color: #415577; }
+.split-control { position: relative; display: flex; width: 100%; max-width: 320px; margin: 20px 0; }
+.split-control > button { min-height: 44px; padding: 10px 14px; border: 1px solid #235de5; background: #235de5; color: white; font-size: 13px; }
+.split-primary { flex: 1; min-width: 0; border-radius: 6px 0 0 6px; }
+.split-control .split-menu-trigger { min-width: 44px; border-left-color: #b4cbff; border-radius: 0 6px 6px 0; }
+.split-menu { position: absolute; top: calc(100% + 8px); z-index: 2; width: 220px; max-width: 100%; padding: 4px; border: 1px solid #a4b4cd; border-radius: 7px; background: white; box-shadow: 0 5px 20px #20365422; }
+.split-menu.menu-start { left: 0; } .split-menu.menu-end { right: 0; }
+.split-menu button { display: block; width: 100%; min-height: 44px; padding: 9px; border: 0; border-radius: 4px; background: white; text-align: left; font-size: 13px; }
+.split-menu button:hover, .split-menu button:focus-visible { background: #eaf0ff; }
+.workflow-panel.split-outlined { outline: 3px dashed #235de5; outline-offset: -6px; }
+.metric-card { margin: 20px 0; padding: 24px; border: 1px solid #c2cfe6; border-radius: 12px; background: #f3f6fd; overflow-wrap: anywhere; }
+.metric-card h2 { font-size: 18px; }
+.metric-value { display: block; margin: 16px 0; color: #1c3f82; font-size: 42px; font-weight: 700; line-height: 1.2; }
+.metric-card p { font-size: 13px; }
+.metric-difference { font-weight: 700; color: #304b76; }
+.chart-figure { margin: 20px 0; }
+.bar-plot { display: block; width: 100%; max-width: 520px; height: auto; }
+.bar-plot text { fill: #25364e; font-size: 14px; }
+.chart-figure figcaption { margin-top: 10px; font-size: 12px; color: #425674; overflow-wrap: anywhere; }
+.chart-table { width: 100%; margin: 20px 0; border-collapse: collapse; font-size: 13px; }
+.chart-table caption { margin-bottom: 10px; text-align: left; font-weight: 700; }
+.chart-table th, .chart-table td { padding: 10px; border-bottom: 1px solid #dce3ee; text-align: left; }
+.chart-table td { text-align: right; }
+.donut-plot { display: block; width: 240px; max-width: 100%; height: auto; }
+.chart-color-key { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 2px; }
+@media (min-width: 560px) { .transfer-columns { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+.workflow-demo button[aria-disabled="true"] { opacity: .55; cursor: default; }
+.mini-workflow { width: 82%; padding: 14px; border: 1px solid #dce3ee; border-radius: 8px; background: white; font-size: 10px; color: #405271; }
+.mini-workflow span { display: block; margin-bottom: 6px; }

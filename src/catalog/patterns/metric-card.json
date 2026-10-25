@@ -1,0 +1,78 @@
+{
+  "id": "metric-card",
+  "nameJa": "指標カード",
+  "nameEn": "Metric card",
+  "category": "部品",
+  "summary": "大きな数値に期間・比較対象・増減を添えて、意味を読み取れるようにする。",
+  "description": "単独の数値を大きく見せるだけでなく、何の値か、どの期間か、何と比べたかを示す。デモは固定の架空件数を使い、増加・減少・変化なしを文字で区別する。",
+  "aliases": [
+    "KPIカード",
+    "統計カード",
+    "数値のサマリー"
+  ],
+  "tags": [
+    "KPIカード",
+    "統計カード",
+    "数値のサマリー"
+  ],
+  "useCases": [
+    "件数の概要を表示",
+    "比較対象を伴う指標"
+  ],
+  "cautions": [
+    "期間や単位のない数値だけにしない。",
+    "増減の意味を色や矢印だけに頼らない。"
+  ],
+  "relatedIds": [
+    "description-list",
+    "data-table"
+  ],
+  "demoId": "metric-card",
+  "controls": [
+    {
+      "id": "metric",
+      "label": "表示する指標",
+      "help": "実データを取得しない。",
+      "default": "notes",
+      "options": [
+        {
+          "value": "notes",
+          "label": "作成メモ数",
+          "promptValue": "作成メモ数を表示してください"
+        },
+        {
+          "value": "reviews",
+          "label": "確認項目数",
+          "promptValue": "確認した項目数を表示してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の期間",
+      "help": "直近とその前の同じ長さの期間を比べる。",
+      "default": "week",
+      "options": [
+        {
+          "value": "week",
+          "label": "7日間",
+          "promptValue": "直近7日間から始めてください"
+        },
+        {
+          "value": "month",
+          "label": "30日間",
+          "promptValue": "直近30日間から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "固定の架空件数を示す指標カードを実装してください。{{metric}}。{{initial}}。作成メモ数は7日間12対9件・30日間30対32件、確認項目数は7日間8対8件・30日間20対15件にしてください。主値はdata要素へ数値を持たせ、件という単位と期間、前の同じ長さの期間を明記してください。増減と変化なしを文字で示し、7日間と30日間の切替ボタンを置き、外部取得はしないでください。",
+  "references": [
+    {
+      "title": "MDN · data（数値と表示の対応）",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/data",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

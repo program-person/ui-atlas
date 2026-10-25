@@ -1,0 +1,78 @@
+{
+  "id": "split-button",
+  "nameJa": "主操作と追加操作",
+  "nameEn": "Split button",
+  "category": "部品",
+  "summary": "主操作を直接実行し、関連する追加操作は隣のメニューから選ぶ。",
+  "description": "1つのまとまりの中で主操作とメニューのトリガーを分ける部品。文脈メニューと異なり、主操作をメニューを開かずに実行できる。デモは架空ノートだけを操作する。",
+  "aliases": [
+    "スプリットボタン",
+    "分割ボタン",
+    "ドロップダウン付きボタン"
+  ],
+  "tags": [
+    "スプリットボタン",
+    "分割ボタン",
+    "ドロップダウン付きボタン"
+  ],
+  "useCases": [
+    "よく使う操作と関連操作の併置",
+    "主操作へすぐ進める小さな操作群"
+  ],
+  "cautions": [
+    "主操作のクリックでメニューを開かない。",
+    "メニューのボタンにも目的が分かる名前を付ける。"
+  ],
+  "relatedIds": [
+    "context-menu",
+    "toolbar"
+  ],
+  "demoId": "split-button",
+  "controls": [
+    {
+      "id": "primary",
+      "label": "主操作",
+      "help": "隣のメニューとは独立して実行する。",
+      "default": "preview",
+      "options": [
+        {
+          "value": "preview",
+          "label": "プレビュー",
+          "promptValue": "主操作をプレビューの表示にしてください"
+        },
+        {
+          "value": "confirm",
+          "label": "確認済み",
+          "promptValue": "主操作を確認済みへの変更にしてください"
+        }
+      ]
+    },
+    {
+      "id": "alignment",
+      "label": "追加メニューの揃え",
+      "help": "枠内に収まる幅で配置する。",
+      "default": "start",
+      "options": [
+        {
+          "value": "start",
+          "label": "左揃え",
+          "promptValue": "追加メニューを左端へ揃えてください"
+        },
+        {
+          "value": "end",
+          "label": "右揃え",
+          "promptValue": "追加メニューを右端へ揃えてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空ノートのスプリットボタンを実装してください。{{primary}}。{{alignment}}。主操作と追加の操作という別ボタンを置き、メニューには要点の表示と補助枠の切替を用意してください。トリガーにaria-haspopup・expanded・controlsを付け、Enter・Space・下矢印で先頭、上矢印で末尾へ開いてください。メニュー内は上下・Home・End、Esc・実行後は起点へ戻し、Tabと外側クリックでも閉じてください。主操作はメニューを開かずに実行し、結果は文字とプレビューに反映してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Menu Button",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

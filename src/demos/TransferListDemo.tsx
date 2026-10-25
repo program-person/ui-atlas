@@ -1,0 +1,10 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+const samples = [{id:'layout',label:'配置の案'},{id:'color',label:'配色の案'},{id:'notes',label:'要点メモ'}];
+export function TransferListDemo({ settings }: { settings: Settings }) {
+  const [assigned, setAssigned] = useState<string[]>(settings.initial === 'one' ? ['notes'] : []); const [marked, setMarked] = useState<string[]>([]); const [status, setStatus] = useState('チェックして移動する項目を選べます。');
+  const left = samples.filter((item) => !assigned.includes(item.id)); const right = samples.filter((item) => assigned.includes(item.id));
+  function move(toRight: boolean) { const moving = (toRight ? left : right).filter((item) => marked.includes(item.id)).map((item) => item.id); if (!moving.length) return; setAssigned(toRight ? [...assigned,...moving] : assigned.filter((id) => !moving.includes(id))); setMarked([]); setStatus(`${moving.length}件を${toRight ? '採用' : '候補'}へ移しました。`); }
+  function list(items: typeof samples, title: string) { return <fieldset className="workflow-fieldset"><legend>{title}（{items.length}件）</legend>{items.length ? items.map((item) => <label key={item.id} className="workflow-check"><input type="checkbox" checked={marked.includes(item.id)} onChange={(event) => setMarked(event.target.checked ? [...marked,item.id] : marked.filter((id) => id !== item.id))} />{item.label}</label>) : <p>{title}は空です。</p>}</fieldset>; }
+  return <div className="expanded-demo workflow-demo"><span className="demo-kicker">MOVE A SELECTION BETWEEN LISTS</span><h1>候補と採用の間で移す</h1><p className="demo-muted">項目の重複や消失を防ぎ、移動後はチェックを解除します。</p><div className={`transfer-lists transfer-${settings.layout}`}>{list(left,'候補')}{list(right,'採用')}</div><div className="workflow-actions"><button className="demo-secondary" aria-disabled={!left.some((item) => marked.includes(item.id))} onClick={() => move(true)}>採用へ移す</button><button className="demo-secondary" aria-disabled={!right.some((item) => marked.includes(item.id))} onClick={() => move(false)}>候補へ戻す</button></div><p role="status">{status}</p></div>;
+}

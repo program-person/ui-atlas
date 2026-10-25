@@ -1,0 +1,78 @@
+{
+  "id": "donut-chart",
+  "nameJa": "ドーナツグラフ",
+  "nameEn": "Donut chart",
+  "category": "部品",
+  "summary": "全体に対する割合を円環で示し、件数と割合を表でも読む。",
+  "description": "カテゴリの構成比を自作SVGの円環で表す。件数そのものを比較する棒グラフと違い、全体に占める部分を読む。合計0件は割合を算出せず、明確な空の状態にする。",
+  "aliases": [
+    "円環グラフ",
+    "構成比",
+    "ドーナツチャート"
+  ],
+  "tags": [
+    "円環グラフ",
+    "構成比",
+    "ドーナツチャート"
+  ],
+  "useCases": [
+    "少数カテゴリの構成比",
+    "全体と部分の関係"
+  ],
+  "cautions": [
+    "合計0で割らず、構成比がないことを示す。",
+    "色だけでカテゴリを区別せず、件数と割合を併記する。"
+  ],
+  "relatedIds": [
+    "bar-chart",
+    "meter"
+  ],
+  "demoId": "donut-chart",
+  "controls": [
+    {
+      "id": "width",
+      "label": "円環の太さ",
+      "help": "外側の半径は70で固定。",
+      "default": "12",
+      "options": [
+        {
+          "value": "12",
+          "label": "12px相当",
+          "promptValue": "viewBox上の線幅を12にしてください"
+        },
+        {
+          "value": "24",
+          "label": "24px相当",
+          "promptValue": "viewBox上の線幅を24にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初のデータ",
+      "help": "合計0件も比較できる。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "10件",
+          "promptValue": "確認済み6・確認中3・未着手1件から始めてください"
+        },
+        {
+          "value": "empty",
+          "label": "0件",
+          "promptValue": "すべて0件から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空データのドーナツグラフを自作SVGで実装してください。{{width}}。{{initial}}。半径70、pathLength=100のcircleに割合のdasharrayと累積offsetを適用し、上端から構成比を描いてください。合計が0なら割合を計算せず、色付きの円弧を描かずデータなしを表示してください。サンプルと0件の切替ボタン、図の題名と説明、カテゴリ名・件数・割合を併記したHTML表を置き、図と表とstatusを同時に更新してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images / Charts and tables",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

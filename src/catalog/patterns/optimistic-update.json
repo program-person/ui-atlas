@@ -1,0 +1,78 @@
+{
+  "id": "optimistic-update",
+  "nameJa": "結果を先に反映",
+  "nameEn": "Optimistic update",
+  "category": "UXの流れ",
+  "summary": "表示を先に更新し、処理の失敗時には確定済みの状態へ戻す。",
+  "description": "処理の完了を待つ前に表示へ反映する流れ。待機中のボタン表示とは異なり、表示中と確定済みの値を分ける。デモはタイマーによる疑似処理で、外部の更新は行わない。",
+  "aliases": [
+    "楽観的更新",
+    "先行反映",
+    "ロールバック"
+  ],
+  "tags": [
+    "楽観的更新",
+    "先行反映",
+    "ロールバック"
+  ],
+  "useCases": [
+    "軽い状態切替の体感待ち時間を比べる",
+    "失敗時に戻せる操作"
+  ],
+  "cautions": [
+    "失敗時の戻り先を確定済みの値として保持する。",
+    "取り消せない操作や重大な結果を伴う処理への適用は別に検討する。"
+  ],
+  "relatedIds": [
+    "loading-button",
+    "undo-feedback"
+  ],
+  "demoId": "optimistic-update",
+  "controls": [
+    {
+      "id": "result",
+      "label": "疑似処理の結果",
+      "help": "約1.5秒後に結果を返す。",
+      "default": "success",
+      "options": [
+        {
+          "value": "success",
+          "label": "成功",
+          "promptValue": "結果を成功にして先の表示を確定してください"
+        },
+        {
+          "value": "error",
+          "label": "失敗",
+          "promptValue": "結果を失敗にして元の確定値へ戻してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期のピン留め",
+      "help": "表示値と確定値を同じ状態から始める。",
+      "default": "off",
+      "options": [
+        {
+          "value": "off",
+          "label": "未固定",
+          "promptValue": "初期は未固定にしてください"
+        },
+        {
+          "value": "on",
+          "label": "固定中",
+          "promptValue": "初期は固定中にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空ノートのピン留めを楽観的に更新するデモを実装してください。{{result}}。{{initial}}。押した直後に表示値を変え、1.5秒のタイマー後に確定または直前の確定値へ復帰してください。表示値と確定値を別に保持し、待機中は同期ガードとaria-disabledで重複実行を防ぎ、aria-busyを設定してください。固定ラベルとaria-pressed、試行回数と結果の文字表示を用意し、フォーカスを保持して外部通信せず、アンマウント時はタイマーを解除してください。",
+  "references": [
+    {
+      "title": "React · useOptimistic（概念の参考。デモは明示した状態とタイマーで実装）",
+      "url": "https://react.dev/reference/react/useOptimistic",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

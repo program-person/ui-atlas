@@ -1,0 +1,78 @@
+{
+  "id": "inline-edit",
+  "nameJa": "その場で編集",
+  "nameEn": "Inline edit",
+  "category": "UXの流れ",
+  "summary": "表示値をその場で入力欄へ切り替え、反映か取り消しかを選ぶ。",
+  "description": "表示と編集を同じ場所で切り替える。入力の検証だけとは異なり、元の値を保持して反映・取り消しを選ぶ流れ。デモは架空の題名だけを扱う。",
+  "aliases": [
+    "インライン編集",
+    "その場編集",
+    "表示値の編集"
+  ],
+  "tags": [
+    "インライン編集",
+    "その場編集",
+    "表示値の編集"
+  ],
+  "useCases": [
+    "短いラベルの修正",
+    "画面を離れずに値を変更"
+  ],
+  "cautions": [
+    "意図しないblur保存は避け、反映条件を明確にする。",
+    "取り消しで元の値を保ち、編集開始位置へ戻す。"
+  ],
+  "relatedIds": [
+    "inline-validation",
+    "confirmation-flow"
+  ],
+  "demoId": "inline-edit",
+  "controls": [
+    {
+      "id": "appearance",
+      "label": "編集ボタンの見た目",
+      "help": "どちらも通常のbutton。",
+      "default": "button",
+      "options": [
+        {
+          "value": "button",
+          "label": "枠付き",
+          "promptValue": "編集の起点を枠付きボタンにしてください"
+        },
+        {
+          "value": "text",
+          "label": "文字ボタン",
+          "promptValue": "編集の起点を下線付きの文字ボタンにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の題名",
+      "help": "架空の短い題名。",
+      "default": "layout",
+      "options": [
+        {
+          "value": "layout",
+          "label": "配置の案",
+          "promptValue": "初期の題名を配置の案にしてください"
+        },
+        {
+          "value": "color",
+          "label": "配色の案",
+          "promptValue": "初期の題名を配色の案にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の題名のインライン編集を実装してください。{{appearance}}。{{initial}}。編集開始で現在値を下書きへコピーし、入力欄へフォーカスして選択してください。明示の反映と取り消しを用意し、Enterで反映、Escで取り消し、blurだけでは反映しないでください。前後の空白を除き1〜12コードポイントを検証し、変換中のEnter・Escは処理しないでください。終了後は編集の起点へフォーカスを戻し、外部保存はしないでください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Button（編集開始とフォーカスの参考）",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

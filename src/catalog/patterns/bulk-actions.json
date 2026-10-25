@@ -1,0 +1,78 @@
+{
+  "id": "bulk-actions",
+  "nameJa": "一覧の一括操作",
+  "nameEn": "Bulk actions",
+  "category": "UXの流れ",
+  "summary": "一覧で選んだ項目だけを対象に、同じ操作をまとめて実行する。",
+  "description": "選択集合と操作対象を結び付ける流れ。全選択そのものとは異なり、対象数を確認し、選択した行だけの状態を変更する。デモは永続データを持たない。",
+  "aliases": [
+    "バッチ操作",
+    "まとめて操作",
+    "複数行操作"
+  ],
+  "tags": [
+    "バッチ操作",
+    "まとめて操作",
+    "複数行操作"
+  ],
+  "useCases": [
+    "一覧の状態変更",
+    "対象を選んだ後の一括処理"
+  ],
+  "cautions": [
+    "対象数と実行内容を分かるようにする。",
+    "未選択の項目へ影響しないことを確認する。"
+  ],
+  "relatedIds": [
+    "checkbox",
+    "data-table"
+  ],
+  "demoId": "bulk-actions",
+  "controls": [
+    {
+      "id": "action",
+      "label": "実行する操作",
+      "help": "架空の行の状態を変更する。",
+      "default": "complete",
+      "options": [
+        {
+          "value": "complete",
+          "label": "確認済みにする",
+          "promptValue": "選んだ行を確認済みにしてください"
+        },
+        {
+          "value": "hold",
+          "label": "保留にする",
+          "promptValue": "選んだ行を保留にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の選択",
+      "help": "状態はすべて未確認から始める。",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "選択なし",
+          "promptValue": "行を未選択にしてください"
+        },
+        {
+          "value": "two",
+          "label": "先頭2件",
+          "promptValue": "先頭2件を選択して始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空メモ4件の一括操作を実装してください。{{action}}。{{initial}}。各行のチェックと、すべて選択・選択を解除・実行ボタンを置いてください。選択数を明示し、実行は選択した行だけへ適用してから選択を解除してください。0件時はaria-disabledと実行ガードで抑止し、実行後も起点へフォーカスを保ってください。結果をstatusで知らせ、行の削除や外部保存はしないでください。",
+  "references": [
+    {
+      "title": "Carbon · Data table / Batch actions",
+      "url": "https://carbondesignsystem.com/components/data-table/usage/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

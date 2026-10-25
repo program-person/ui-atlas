@@ -1,0 +1,78 @@
+{
+  "id": "dependent-select",
+  "nameJa": "連動する選択欄",
+  "nameEn": "Dependent selects",
+  "category": "UXの流れ",
+  "summary": "先に選んだ分類に合わせて次の候補を変え、不整合な選択を残さない。",
+  "description": "親の分類と子の候補を連動させる流れ。単独のselectとは異なり、親の変更時に子を再選択させる。サンプルは画面パターンの分類だけを使う。",
+  "aliases": [
+    "連動セレクト",
+    "親子選択",
+    "カスケード選択"
+  ],
+  "tags": [
+    "連動セレクト",
+    "親子選択",
+    "カスケード選択"
+  ],
+  "useCases": [
+    "分類から候補を選ぶ",
+    "関連する値の組み合わせ"
+  ],
+  "cautions": [
+    "親の変更で子の以前の値を残さない。",
+    "候補0件と、親が未選択の状態を区別する。"
+  ],
+  "relatedIds": [
+    "select",
+    "conditional-fields"
+  ],
+  "demoId": "dependent-select",
+  "controls": [
+    {
+      "id": "catalog",
+      "label": "分類の構成",
+      "help": "準備中の分類は候補0件。",
+      "default": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "通常の2分類",
+          "promptValue": "候補のある2分類を用意してください"
+        },
+        {
+          "value": "with-empty",
+          "label": "候補0件も含む",
+          "promptValue": "候補がない準備中の分類も加えてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の選択",
+      "help": "親子の開始値。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "未選択",
+          "promptValue": "分類と候補を未選択にしてください"
+        },
+        {
+          "value": "sample",
+          "label": "選択済み",
+          "promptValue": "レイアウトとグリッドを選択済みにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "分類とパターンを選ぶ2つの標準selectを実装してください。{{catalog}}。{{initial}}。レイアウトはグリッドと分割、見た目は単色とグラデーションを候補にしてください。分類変更時に子の値を未選択へ戻し、親のフォーカスを保ってください。親未選択と候補0件では子を無効にし、理由を選択欄に表示してください。確定時に整合した組だけを受理し、問題に応じた欄へフォーカスしてください。",
+  "references": [
+    {
+      "title": "MDN · select（標準選択欄の仕様）",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

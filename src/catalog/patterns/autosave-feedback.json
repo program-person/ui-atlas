@@ -1,0 +1,78 @@
+{
+  "id": "autosave-feedback",
+  "nameJa": "自動保存の案内",
+  "nameEn": "Autosave feedback",
+  "category": "UXの流れ",
+  "summary": "入力が止まった後の疑似処理を通じて、待機・成功・失敗を区別する。",
+  "description": "入力の停止を待って処理し、現在の下書きと疑似保存済みの値を区別する流れ。処理中ボタンと違い、明示的な開始操作を必要としない。外部保存・ブラウザ保存は行わない。",
+  "aliases": [
+    "オートセーブ",
+    "保存状態の案内",
+    "入力のデバウンス"
+  ],
+  "tags": [
+    "オートセーブ",
+    "保存状態の案内",
+    "入力のデバウンス"
+  ],
+  "useCases": [
+    "編集内容の処理状態を伝える",
+    "連続入力の待ち時間を比較"
+  ],
+  "cautions": [
+    "実際に保存した範囲と結果を誤解させない。",
+    "変換中に処理せず、古いタイマーを解除する。"
+  ],
+  "relatedIds": [
+    "loading-button",
+    "inline-edit"
+  ],
+  "demoId": "autosave-feedback",
+  "controls": [
+    {
+      "id": "delay",
+      "label": "入力停止後の待ち時間",
+      "help": "最新の有効な値だけを疑似処理する。",
+      "default": "500",
+      "options": [
+        {
+          "value": "500",
+          "label": "500ms",
+          "promptValue": "入力停止から500ms待ってください"
+        },
+        {
+          "value": "1000",
+          "label": "1000ms",
+          "promptValue": "入力停止から1000ms待ってください"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "label": "疑似処理の結果",
+      "help": "失敗時は前の値を保持する。",
+      "default": "success",
+      "options": [
+        {
+          "value": "success",
+          "label": "成功",
+          "promptValue": "疑似保存を成功にしてください"
+        },
+        {
+          "value": "error",
+          "label": "失敗",
+          "promptValue": "疑似保存を失敗にして再試行を用意してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "実保存を行わない自動保存の案内デモを実装してください。{{delay}}。{{result}}。初期の架空ラベルを余白のメモとし、下書きとメモリ内の疑似保存済み値を分けてください。前後の空白を除く1〜12コードポイントだけを対象とし、入力・変換開始・アンマウント時に古いタイマーを解除してください。変換中は処理せず、変換確定後に待ち直してください。成功時だけ疑似保存済み値を更新し、失敗では前の値と下書きを保持してください。再試行ボタンとstatusを置き、永続保存・通信をしないことを明記してください。",
+  "references": [
+    {
+      "title": "MDN · setTimeout（遅延処理とタイマー解除の参考）",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setTimeout",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

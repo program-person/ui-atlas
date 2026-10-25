@@ -2,6 +2,18 @@ import type { DemoId } from '../types.ts';
 
 export function Thumbnail({ id }: { id: DemoId }) {
   return <div className={`thumbnail thumbnail-${id}`} aria-hidden="true">
+    {id === 'donut-chart' && <div className="mini-workflow"><div style={{position:"relative",width:52,height:52,borderRadius:"50%",background:"conic-gradient(#235de5 0 60%, #9c6200 60% 90%, #64758f 90% 100%)"}}><i style={{position:"absolute",inset:10,borderRadius:"50%",background:"white"}} /></div><span>確認済み60%・確認中30%</span><b>合計10件</b></div>}
+    {id === 'bar-chart' && <div className="mini-workflow"><div style={{display:"flex",alignItems:"end",gap:10,height:55}}><i style={{display:"block",width:24,height:18,background:"#235de5"}} /><i style={{display:"block",width:24,height:36,background:"#235de5"}} /><i style={{display:"block",width:24,height:54,background:"#235de5"}} /></div><span>配置4　配色8　要点12</span></div>}
+    {id === 'metric-card' && <div className="mini-workflow"><span>作成メモ数 / 7日間</span><b style={{fontSize:24}}>12件</b><span>前の期間より3件多い</span></div>}
+    {id === 'split-button' && <div className="mini-workflow"><b>プレビューを表示 │ ▾</b><span>要点を表示</span><span>補助枠を切り替え</span></div>}
+    {id === 'unsaved-changes' && <div className="mini-workflow"><b>未反映の変更があります</b><span>移動をやめる</span><span>変更を戻して移動</span></div>}
+    {id === 'autosave-feedback' && <div className="mini-workflow"><span>架空のラベル　入力中…</span><b>入力停止を待機</b><span>疑似保存済みの値を別に表示</span></div>}
+    {id === 'optimistic-update' && <div className="mini-workflow"><span>表示中：固定中</span><span>確定済み：未固定</span><b>処理の結果を待機…</b></div>}
+    {id === 'bulk-actions' && <div className="mini-workflow"><b>2件選択　まとめて確認</b><span>☑ 配置の案　未確認</span><span>☑ 配色の案　未確認</span></div>}
+    {id === 'transfer-list' && <div className="mini-workflow"><span>候補　☑ 配置の案</span><b>採用へ移す →</b><span>採用　要点メモ</span></div>}
+    {id === 'dependent-select' && <div className="mini-workflow"><span>分類：レイアウト ⌄</span><b>パターン：グリッド ⌄</b><span>親の選択で候補を更新</span></div>}
+    {id === 'conditional-fields' && <div className="mini-workflow"><span>○ 基本だけ　● 補足も入力</span><b>補足の入力欄</b><span>選択に応じて表示</span></div>}
+    {id === 'inline-edit' && <div className="mini-workflow"><span>配置の案　編集</span><b>題名を入力…</b><span>変更を反映　取り消す</span></div>}
     {id === 'focus-ring' && <div className="mini-exploration"><span>Tabで操作位置を確認</span><b style={{display:"inline-block",outline:"2px solid #1746b5",outlineOffset:2,padding:6}}>案1</b><span>選択とは別の枠線</span></div>}
     {id === 'spacing-scale' && <div className="mini-exploration"><b>4px × 1・2・4</b><span style={{marginTop:12}}>見出しと本文</span><span>余白を揃える</span></div>}
     {id === 'gradient-surface' && <div className="mini-exploration" style={{background:"linear-gradient(45deg,#dce9ff,#eae1ff)",color:"#25364e"}}><span>青から紫へ</span><b>余白から広がる</b><span>方向 45度</span></div>}

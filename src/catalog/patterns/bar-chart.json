@@ -1,0 +1,78 @@
+{
+  "id": "bar-chart",
+  "nameJa": "棒グラフ",
+  "nameEn": "Bar chart",
+  "category": "部品",
+  "summary": "0を基点とする棒の長さで、分類ごとの数値を比較する。",
+  "description": "分類別の件数を自作SVGの棒と数表で示す。割合を表すメーターや表の並べ替えとは異なり、複数の分類の大きさを比較する。",
+  "aliases": [
+    "バーチャート",
+    "件数の比較",
+    "縦棒と横棒"
+  ],
+  "tags": [
+    "バーチャート",
+    "件数の比較",
+    "縦棒と横棒"
+  ],
+  "useCases": [
+    "分類別件数の比較",
+    "期間を切り替えて差を見る"
+  ],
+  "cautions": [
+    "棒の基点を0にし、期間間で同じ目盛を使う。",
+    "図と同じ正確な数値を表でも提供する。"
+  ],
+  "relatedIds": [
+    "data-table",
+    "metric-card"
+  ],
+  "demoId": "bar-chart",
+  "controls": [
+    {
+      "id": "orientation",
+      "label": "棒の向き",
+      "help": "目盛はどちらも0〜20件。",
+      "default": "vertical",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "縦棒",
+          "promptValue": "縦棒で表示してください"
+        },
+        {
+          "value": "horizontal",
+          "label": "横棒",
+          "promptValue": "横棒で表示してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初のデータ",
+      "help": "固定の架空値。",
+      "default": "week",
+      "options": [
+        {
+          "value": "week",
+          "label": "週間",
+          "promptValue": "週間の4・8・12件から始めてください"
+        },
+        {
+          "value": "month",
+          "label": "月間",
+          "promptValue": "月間の10・0・18件から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "分類ごとの架空件数を比較する棒グラフを自作SVGで実装してください。{{orientation}}。{{initial}}。配置・配色・要点の3分類にし、両期間で0〜20件の同じ目盛と0基点を維持してください。棒と数値ラベルを表示し、0件では棒の長さを0にしてください。図に題名と説明を関連付け、同じ値をcaptionと見出し付きのHTML表にも表示してください。期間切替は図・表・statusを同時に更新し、外部グラフライブラリや通信は使わないでください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images / Charts and tables",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

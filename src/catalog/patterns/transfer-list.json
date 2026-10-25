@@ -1,0 +1,78 @@
+{
+  "id": "transfer-list",
+  "nameJa": "2つのリスト間で移動",
+  "nameEn": "Transfer list",
+  "category": "部品",
+  "summary": "候補と採用を分け、チェックした項目を反対のリストへ移す。",
+  "description": "複数の項目を2つの集合の間で移す部品。単に複数選択するだけでなく、どちらの集合へ属するかを変える。デモは3件の架空のメモだけを使う。",
+  "aliases": [
+    "トランスファーリスト",
+    "デュアルリスト",
+    "シャトルリスト"
+  ],
+  "tags": [
+    "トランスファーリスト",
+    "デュアルリスト",
+    "シャトルリスト"
+  ],
+  "useCases": [
+    "候補から採用する項目を決める",
+    "2つの集合の構成を調整"
+  ],
+  "cautions": [
+    "項目の重複・消失を防ぐ。",
+    "空のリストと移動できない理由を示す。"
+  ],
+  "relatedIds": [
+    "multi-select",
+    "checkbox"
+  ],
+  "demoId": "transfer-list",
+  "controls": [
+    {
+      "id": "layout",
+      "label": "リストの配置",
+      "help": "狭い幅ではどちらも縦に並べる。",
+      "default": "columns",
+      "options": [
+        {
+          "value": "columns",
+          "label": "左右",
+          "promptValue": "560px以上で2つのリストを左右に置いてください"
+        },
+        {
+          "value": "stack",
+          "label": "上下",
+          "promptValue": "2つのリストを上下に置いてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の採用項目",
+      "help": "3件全体の数は維持する。",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "採用なし",
+          "promptValue": "3件すべてを候補にしてください"
+        },
+        {
+          "value": "one",
+          "label": "要点メモを採用",
+          "promptValue": "要点メモだけを採用にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "3件の架空項目を候補と採用へ分けるトランスファーリストを実装してください。{{layout}}。{{initial}}。各リストをlegend付きfieldsetで示し、チェックした項目を採用へ移す・候補へ戻すボタンで移動してください。データの順序は元の3件順とし、重複と消失を防いでください。移動後はチェックを解除し、空の状態と移動件数を示してください。移動不可のボタンはaria-disabledと処理ガードで操作を抑止し、移動後も起点のフォーカスを保ってください。",
+  "references": [
+    {
+      "title": "GOV.UK · Checkboxes（集合内の複数選択の参考）",
+      "url": "https://design-system.service.gov.uk/components/checkboxes/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

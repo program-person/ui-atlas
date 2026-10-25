@@ -1,0 +1,78 @@
+{
+  "id": "conditional-fields",
+  "nameJa": "条件に応じた入力欄",
+  "nameEn": "Conditional fields",
+  "category": "UXの流れ",
+  "summary": "選択に応じて必要な欄を表示し、隠れた欄を検証対象から外す。",
+  "description": "関連する選択が必要になった時だけ入力欄を表示する。単に内容を開閉する部品と異なり、表示条件・検証・確定結果を一緒に扱う。",
+  "aliases": [
+    "条件付き入力",
+    "プログレッシブディスクロージャー",
+    "入力の段階的表示"
+  ],
+  "tags": [
+    "条件付き入力",
+    "プログレッシブディスクロージャー",
+    "入力の段階的表示"
+  ],
+  "useCases": [
+    "選択に関連する補足入力",
+    "不要な入力を求めないフォーム"
+  ],
+  "cautions": [
+    "表示の変化でフォーカスを勝手に動かさない。",
+    "隠した値の扱いと確定対象を明示する。"
+  ],
+  "relatedIds": [
+    "radio-group",
+    "fieldset"
+  ],
+  "demoId": "conditional-fields",
+  "controls": [
+    {
+      "id": "retention",
+      "label": "隠した時の値",
+      "help": "確定結果には表示中の欄だけ含める。",
+      "default": "keep",
+      "options": [
+        {
+          "value": "keep",
+          "label": "保持する",
+          "promptValue": "補足欄を隠しても下書きを保持してください"
+        },
+        {
+          "value": "reset",
+          "label": "空欄に戻す",
+          "promptValue": "補足欄を隠す時は下書きを空欄に戻してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の表示",
+      "help": "架空のメモだけを扱う。",
+      "default": "basic",
+      "options": [
+        {
+          "value": "basic",
+          "label": "基本だけ",
+          "promptValue": "基本だけを選択して始めてください"
+        },
+        {
+          "value": "detailed",
+          "label": "補足あり",
+          "promptValue": "補足ありを選択し、余白を広くするという値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空メモの条件付き入力を実装してください。{{retention}}。{{initial}}。基本だけ・補足も入力のラジオを置き、補足の選択時だけ欄を表示してください。補足は表示中だけ1〜20コードポイントを検証し、確定結果へ含めてください。選択変更時にはフォーカスを動かさず、表示条件と欄をaria-controlsで関連付けてください。隠した欄を検証せず、古い結果とエラーは編集時に解除してください。",
+  "references": [
+    {
+      "title": "GOV.UK · Radios / Conditional reveal",
+      "url": "https://design-system.service.gov.uk/components/radios/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}
