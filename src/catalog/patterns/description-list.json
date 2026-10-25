@@ -1,0 +1,78 @@
+{
+  "id": "description-list",
+  "nameJa": "説明リスト",
+  "nameEn": "Description list",
+  "category": "部品",
+  "summary": "ラベルと値を組にして、1件の記録を読みやすく並べる。",
+  "description": "dl・dt・ddで項目名と説明や値を対応させる。複数行を同じ列で比較するデータテーブルとは異なり、1件の属性を読むための部品。",
+  "aliases": [
+    "定義リスト",
+    "属性一覧",
+    "dl"
+  ],
+  "tags": [
+    "定義リスト",
+    "属性一覧",
+    "dl"
+  ],
+  "useCases": [
+    "記録の属性表示",
+    "用語と説明の対応"
+  ],
+  "cautions": [
+    "列同士を比較する表の代わりにはしない。",
+    "値が長い場合も折り返せる配置にする。"
+  ],
+  "relatedIds": [
+    "data-table",
+    "master-detail"
+  ],
+  "demoId": "description-list",
+  "controls": [
+    {
+      "id": "layout",
+      "label": "ラベルと値の配置",
+      "help": "横並びは狭い幅で縦へ戻る。",
+      "default": "columns",
+      "options": [
+        {
+          "value": "columns",
+          "label": "2列",
+          "promptValue": "520px以上でラベルと値を2列にしてください"
+        },
+        {
+          "value": "stack",
+          "label": "縦積み",
+          "promptValue": "すべての幅でラベルの下に値を置いてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の記録",
+      "help": "内容だけが異なる2件の架空データ。",
+      "default": "spacing",
+      "options": [
+        {
+          "value": "spacing",
+          "label": "余白の記録",
+          "promptValue": "余白の記録から始めてください"
+        },
+        {
+          "value": "layout",
+          "label": "配置のスケッチ",
+          "promptValue": "配置のスケッチから始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の記録1件の題名・種類・状態・補足をdl・dt・ddで表示してください。{{layout}}。{{initial}}。別のサンプルを見るボタンで内容を切り替え、表示中の題名を文字で知らせてください。長い説明は折り返し、ラベルと値の意味上の対応を保ち、ボタン操作でフォーカスを奪わないでください。",
+  "references": [
+    {
+      "title": "MDN · dl",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dl",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

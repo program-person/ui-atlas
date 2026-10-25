@@ -1,0 +1,78 @@
+{
+  "id": "fieldset",
+  "nameJa": "入力欄のグループ",
+  "nameEn": "Fieldset",
+  "category": "部品",
+  "summary": "関連する入力を見出しでまとめ、一括で操作可否を変える。",
+  "description": "fieldsetとlegendで入力のグループ名を伝える。個々の入力を並べるだけでなく、関連性と利用不可の範囲を示す。デモはチェックと間隔の選択を同じグループにする。",
+  "aliases": [
+    "フィールドセット",
+    "入力グループ",
+    "legend"
+  ],
+  "tags": [
+    "フィールドセット",
+    "入力グループ",
+    "legend"
+  ],
+  "useCases": [
+    "関連する設定のまとまり",
+    "複数の入力の一括無効化"
+  ],
+  "cautions": [
+    "見た目だけの枠ではなくlegendで名前を付ける。",
+    "利用不可でも値を消すとは限らない。挙動を明確にする。"
+  ],
+  "relatedIds": [
+    "checkbox",
+    "select"
+  ],
+  "demoId": "fieldset",
+  "controls": [
+    {
+      "id": "availability",
+      "label": "初期の操作可否",
+      "help": "グループ外のボタンで変更できる。",
+      "default": "enabled",
+      "options": [
+        {
+          "value": "enabled",
+          "label": "操作可能",
+          "promptValue": "グループを操作可能にしてください"
+        },
+        {
+          "value": "disabled",
+          "label": "利用不可",
+          "promptValue": "グループをdisabledにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の設定値",
+      "help": "無効化しても値を保持する。",
+      "default": "plain",
+      "options": [
+        {
+          "value": "plain",
+          "label": "グリッドなし・8px",
+          "promptValue": "初期値をグリッドなし・間隔8pxにしてください"
+        },
+        {
+          "value": "guides",
+          "label": "グリッドあり・16px",
+          "promptValue": "初期値をグリッドあり・間隔16pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の表示設定をfieldsetとlegendでグループ化してください。{{availability}}。{{initial}}。補助グリッドのチェックボックスとカード間隔のselectを含め、グループ外のボタンでfieldset.disabledを切り替えてください。利用不可にしても値を保持し、有効に戻すと同じ値を操作できるようにしてください。値はプレビューへ即時反映し、操作可否と値をstatusで示してください。",
+  "references": [
+    {
+      "title": "MDN · fieldset",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/fieldset",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

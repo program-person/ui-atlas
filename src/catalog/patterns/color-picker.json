@@ -1,0 +1,78 @@
+{
+  "id": "color-picker",
+  "nameJa": "カラーピッカー",
+  "nameEn": "Color picker",
+  "aliases": [
+    "色の選択",
+    "アクセント色",
+    "配色の入力"
+  ],
+  "tags": [
+    "色",
+    "入力",
+    "プレビュー"
+  ],
+  "category": "部品",
+  "summary": "プリセットや標準の色入力から、アクセント色を選ぶ。",
+  "description": "色を指定する入力部品。デモでは3色のプリセットとブラウザ標準の色入力を用意し、サンプルの色面と枠線へ即時反映する。任意の色の上に文字を重ねず、色の値も表示する。",
+  "useCases": [
+    "アクセント色の指定",
+    "色を試して比べる設定"
+  ],
+  "cautions": [
+    "色だけで選択状態を伝えない。",
+    "標準の色選択画面はブラウザやOSによって異なる。文字色を変える場合は別途コントラストも確認する。"
+  ],
+  "relatedIds": [
+    "minimal",
+    "glassmorphism"
+  ],
+  "demoId": "color-picker",
+  "controls": [
+    {
+      "id": "palette",
+      "label": "プリセットの配色",
+      "help": "3色の組み合わせ。",
+      "default": "vivid",
+      "options": [
+        {
+          "value": "vivid",
+          "label": "濃い色",
+          "promptValue": "プリセットを青#235de5・緑#176c52・紫#7544afにしてください"
+        },
+        {
+          "value": "pastel",
+          "label": "淡い色",
+          "promptValue": "プリセットを青#c9d9ff・緑#bde6cf・紫#dcc8f4にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の色",
+      "help": "リセット時の選択。",
+      "default": "blue",
+      "options": [
+        {
+          "value": "blue",
+          "label": "青",
+          "promptValue": "初期状態でプリセットの青を選んでください"
+        },
+        {
+          "value": "green",
+          "label": "緑",
+          "promptValue": "初期状態でプリセットの緑を選んでください"
+        }
+      ]
+    }
+  ],
+  "prompt": "アクセント色を選ぶカラーピッカーを実装してください。{{palette}}。{{initial}}。ラベル付きのHTML input type=colorとプリセットボタンを用意してください。選んだ色はサンプルの色面と枠線へ即時反映し、文字の背景は白のままにしてください。色の値を文字とstatusで示し、プリセットの選択はaria-pressedでも伝えてください。44px以上の操作領域とフォーカス表示を設け、スマホ幅に収めてください。リセットで初期色へ戻し、色以外の外部設定は変更しないでください。",
+  "references": [
+    {
+      "title": "MDN · input color",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/color",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

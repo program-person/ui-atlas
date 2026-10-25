@@ -1,0 +1,77 @@
+{
+  "id": "progress-bar",
+  "nameJa": "プログレスバー",
+  "nameEn": "Progress bar",
+  "aliases": [
+    "進捗バー",
+    "進み具合",
+    "処理の進捗"
+  ],
+  "tags": [
+    "処理中",
+    "完了",
+    "フィードバック"
+  ],
+  "category": "部品",
+  "summary": "処理の進み具合を、割合や進行中の状態で伝える。",
+  "description": "処理がどこまで進んだかを示す部品。デモでは架空の整理処理を手動で進め、割合が分かる状態と分からない状態を比較する。読み込み後の形を示すスケルトンとは異なり、処理自体の進行を伝える。",
+  "useCases": [
+    "処理の完了率の表示",
+    "進捗率が不明な処理の案内"
+  ],
+  "cautions": [
+    "割合が分からない場合は架空の数値を出さない。",
+    "デモはボタン操作による模擬処理であり通信やファイル整理は行わない。"
+  ],
+  "relatedIds": [
+    "skeleton-loading"
+  ],
+  "demoId": "progress-bar",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "進捗の種類",
+      "help": "割合が分かるかどうかを選ぶ。",
+      "default": "known",
+      "options": [
+        {
+          "value": "known",
+          "label": "割合あり",
+          "promptValue": "0%から始め、進捗を数値とバーで表示してください"
+        },
+        {
+          "value": "unknown",
+          "label": "割合不明",
+          "promptValue": "完了まではprogressのvalueを省略し、進捗率不明と文字で示してください"
+        }
+      ]
+    },
+    {
+      "id": "step",
+      "label": "進める幅",
+      "help": "割合ありの処理を1回で進める量。",
+      "default": "25",
+      "options": [
+        {
+          "value": "25",
+          "label": "25%ずつ",
+          "promptValue": "割合ありでは1回25%ずつ進めてください"
+        },
+        {
+          "value": "50",
+          "label": "50%ずつ",
+          "promptValue": "割合ありでは1回50%ずつ進めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のノート整理処理のプログレスバーを実装してください。{{mode}}。{{step}}。labelで名前を関連付けたHTMLのprogressを使い、maxを100にしてください。処理を進めるボタンを設け、不明の場合は1回で完了できるボタンにしてください。100%を上限にし、完了時は完了の文字とボタンの無効化で伝えてください。数値や完了状態をstatusにも反映し、フォーカスを奪わないでください。リセットで初期状態に戻し、スマホ幅に収めてください。操作領域は44px以上とし、アニメーションだけに意味を持たせないでください。",
+  "references": [
+    {
+      "title": "MDN · progress",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

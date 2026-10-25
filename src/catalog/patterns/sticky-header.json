@@ -1,0 +1,78 @@
+{
+  "id": "sticky-header",
+  "nameJa": "追従ヘッダー",
+  "nameEn": "Sticky header",
+  "aliases": [
+    "スティッキーヘッダー",
+    "スクロール中の見出し",
+    "上端に残るヘッダー"
+  ],
+  "tags": [
+    "スクロール",
+    "見出し",
+    "操作"
+  ],
+  "category": "レイアウト",
+  "summary": "スクロール中も、見出しや操作を枠の上端へ残す。",
+  "description": "スクロールに合わせてヘッダーを上端へ残す配置。デモでは独立したノート一覧の枠を使い、追従する場合と通常の文書として流れる場合を比較する。目次の現在位置を更新するスクロール連動ナビとは役割が異なる。",
+  "useCases": [
+    "長い一覧の見出しや操作",
+    "画面内のスクロール領域の案内"
+  ],
+  "cautions": [
+    "追従する領域が本文を覆いすぎないようにする。",
+    "position stickyがどのスクロール枠を基準にするかを明確にする。"
+  ],
+  "relatedIds": [
+    "scrollspy",
+    "sidebar"
+  ],
+  "demoId": "sticky-header",
+  "controls": [
+    {
+      "id": "position",
+      "label": "ヘッダーの挙動",
+      "help": "追従の有無を比較する。",
+      "default": "sticky",
+      "options": [
+        {
+          "value": "sticky",
+          "label": "上端に追従",
+          "promptValue": "スクロール枠内でposition sticky・top 0として上端へ残してください"
+        },
+        {
+          "value": "static",
+          "label": "通常の配置",
+          "promptValue": "通常の文書の流れに置き、スクロールすると一緒に移動させてください"
+        }
+      ]
+    },
+    {
+      "id": "height",
+      "label": "ヘッダーの高さ",
+      "help": "本文へ残せる領域を比較する。",
+      "default": "48",
+      "options": [
+        {
+          "value": "48",
+          "label": "48px",
+          "promptValue": "ヘッダーの高さを48pxにしてください"
+        },
+        {
+          "value": "72",
+          "label": "72px",
+          "promptValue": "ヘッダーの高さを72pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "高さ280pxの独立したノート一覧とヘッダーを実装してください。{{position}}。{{height}}。4件の架空ノートを縦に並べ、枠内だけをスクロールしてください。枠には名前とTab停止位置を設け、キーボードでも操作できるようにしてください。末尾へ移動・先頭へ戻るボタンとヘッダー内の先頭へボタンを用意してください。スクロールでフォーカスを動かさず、先頭かスクロール中かをstatusでも伝えてください。ヘッダーは不透明にし、操作領域を44px以上にしてください。スマホ幅に収め、リセットで先頭へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · position",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

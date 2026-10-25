@@ -1,0 +1,78 @@
+{
+  "id": "error-summary",
+  "nameJa": "エラーのまとめ",
+  "nameEn": "Error summary",
+  "category": "UXの流れ",
+  "summary": "複数欄の問題を先頭にまとめ、該当欄へ移動できるようにする。",
+  "description": "確定時の問題を先頭と各入力欄の近くに同じ文言で表示する。入力欄の近くでの検証に加え、複数欄を横断して問題を見つける流れ。",
+  "aliases": [
+    "エラーサマリー",
+    "入力エラー一覧",
+    "検証結果一覧"
+  ],
+  "tags": [
+    "エラーサマリー",
+    "入力エラー一覧",
+    "検証結果一覧"
+  ],
+  "useCases": [
+    "複数欄を持つフォーム",
+    "問題のある入力への案内"
+  ],
+  "cautions": [
+    "まとめだけで済ませず、各欄にも同じ問題を表示する。",
+    "入力中に毎回フォーカスを動かさない。"
+  ],
+  "relatedIds": [
+    "inline-validation",
+    "textarea"
+  ],
+  "demoId": "error-summary",
+  "controls": [
+    {
+      "id": "limit",
+      "label": "題名の上限",
+      "help": "Unicodeコードポイントで数える。",
+      "default": "12",
+      "options": [
+        {
+          "value": "12",
+          "label": "12文字",
+          "promptValue": "題名は12コードポイント以内にしてください"
+        },
+        {
+          "value": "24",
+          "label": "24文字",
+          "promptValue": "題名は24コードポイント以内にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の入力",
+      "help": "架空の記録だけを使う。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "空欄",
+          "promptValue": "両方の欄を空欄にしてください"
+        },
+        {
+          "value": "sample",
+          "label": "サンプル",
+          "promptValue": "有効な題名と種類を初期表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の記録の題名と種類を入力するフォームとエラーのまとめを実装してください。{{limit}}。{{initial}}。確定時に空白だけの題名・文字数超過・種類の未選択を検証し、先頭のまとめへフォーカスしてください。まとめには各欄へフォーカスするリンクを置き、辞典やデモのURLは変えないでください。各欄にも同じ文言を表示しaria-invalidと説明IDを関連付け、修正時は問題を再計算しフォーカスは移動しないでください。成功時はまとめをなくし、結果をstatusで知らせてください。",
+  "references": [
+    {
+      "title": "GOV.UK · Error summary",
+      "url": "https://design-system.service.gov.uk/components/error-summary/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

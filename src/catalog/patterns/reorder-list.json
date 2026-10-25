@@ -1,0 +1,77 @@
+{
+  "id": "reorder-list",
+  "nameJa": "並べ替えリスト",
+  "nameEn": "Reorder list",
+  "aliases": [
+    "順序の入れ替え",
+    "上下に移動",
+    "項目の並び順"
+  ],
+  "tags": [
+    "順序",
+    "一覧",
+    "キーボード"
+  ],
+  "category": "部品",
+  "summary": "項目を上下に移動し、自分で表示順を決める。",
+  "description": "項目の順序を操作するリスト。デモでは3件の架空メモを上下ボタンで入れ替える。特定の属性で自動ソートする表とは異なり、ユーザーが順番を決める。ドラッグを必須にせず、キーボードとタッチでも同じ操作ができる。",
+  "useCases": [
+    "表示順の設定",
+    "優先順や手順の並べ替え"
+  ],
+  "cautions": [
+    "移動した項目を見失わないよう、フォーカスと位置を伝える。",
+    "このデモの順序はメモリ上だけで変わり、外部への保存は行わない。"
+  ],
+  "relatedIds": [
+    "data-table"
+  ],
+  "demoId": "reorder-list",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "最初の順番",
+      "help": "リセット時の並び。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "通常の順番",
+          "promptValue": "目的のメモ・配置の案・確認リストの順に始めてください"
+        },
+        {
+          "value": "reverse",
+          "label": "逆の順番",
+          "promptValue": "確認リスト・配置の案・目的のメモの順に始めてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "項目の余白",
+      "help": "リスト内の密度。",
+      "default": "comfortable",
+      "options": [
+        {
+          "value": "comfortable",
+          "label": "ゆったり",
+          "promptValue": "各項目の内側に16pxの余白を設けてください"
+        },
+        {
+          "value": "compact",
+          "label": "コンパクト",
+          "promptValue": "各項目の上下8px・左右12pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空メモ3件の並べ替えリストを実装してください。{{initial}}。{{density}}。olの各項目に上へ・下へのボタンを設け、隣の項目と入れ替えてください。先頭の上へと末尾の下へはdisabledにしてください。移動後は同じ項目のボタンにフォーカスを保ち、その方向のボタンが無効になった場合は逆方向のボタンへ移してください。移動した項目名と新しい位置をstatusでも示してください。Tab・Enter・Spaceで操作でき、44px以上の領域とスマホへの収まりを確保してください。外部へ保存せず、リセットで設定した順序へ戻してください。",
+  "references": [
+    {
+      "title": "W3C · Keyboard",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/keyboard.html",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

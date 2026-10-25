@@ -1,0 +1,78 @@
+{
+  "id": "flip-card",
+  "nameJa": "裏返すカード",
+  "nameEn": "Flip card",
+  "category": "動き",
+  "summary": "カードの表裏を明示操作で切り替え、回転あり・なしを比較する。",
+  "description": "同じ領域の表裏に異なる内容を置き、ボタンで切り替える動き。ホバーに依存せず、非表示の面は読み上げから外す。回転なしの設定とOSの動きを減らす設定に対応する。",
+  "aliases": [
+    "フリップカード",
+    "カードの反転",
+    "表裏の切替"
+  ],
+  "tags": [
+    "フリップカード",
+    "カードの反転",
+    "表裏の切替"
+  ],
+  "useCases": [
+    "問いと答えを切り替える",
+    "カードの表裏を比較"
+  ],
+  "cautions": [
+    "重要な情報や必須の操作を裏に隠さない。",
+    "非表示の面を読み上げず、両面へフォーカス可能な操作を置かない。"
+  ],
+  "relatedIds": [
+    "fade-slide",
+    "tabs"
+  ],
+  "demoId": "flip-card",
+  "controls": [
+    {
+      "id": "motion",
+      "label": "切替時の動き",
+      "help": "OSの動きを減らす設定では回転を省く。",
+      "default": "rotate",
+      "options": [
+        {
+          "value": "rotate",
+          "label": "回転あり",
+          "promptValue": "300msのY軸回転で切り替えてください"
+        },
+        {
+          "value": "instant",
+          "label": "回転なし",
+          "promptValue": "回転を使わず即座に面を切り替えてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の面",
+      "help": "同じ内容を表と裏に固定する。",
+      "default": "front",
+      "options": [
+        {
+          "value": "front",
+          "label": "表面",
+          "promptValue": "表面から始めてください"
+        },
+        {
+          "value": "back",
+          "label": "裏面",
+          "promptValue": "裏面から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の問いと答えを持つフリップカードを実装してください。{{motion}}。{{initial}}。カードの外の固定ラベルのボタンで切り替え、aria-pressedで裏面の表示を示してください。両面は同じグリッド領域に重ね、backface-visibilityを使い、非表示の面をaria-hiddenにしてください。両面の中に対話要素は置かず、フォーカスはボタンへ保ってください。prefers-reduced-motionでは回転を完全に省き、表示中の面だけを可視にしてください。現在の面をstatusで知らせてください。",
+  "references": [
+    {
+      "title": "MDN · backface-visibility",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/backface-visibility",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

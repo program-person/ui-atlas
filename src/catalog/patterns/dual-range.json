@@ -1,0 +1,78 @@
+{
+  "id": "dual-range",
+  "nameJa": "範囲の下限と上限",
+  "nameEn": "Range bounds",
+  "category": "部品",
+  "summary": "2つのスライダーで、値の下限と上限を指定する。",
+  "description": "関連する2つの値で範囲を指定する。1つの値を変える範囲スライダーと異なり、2つの値の制約を保つ。デモはカスタムの重なったつまみを作らず、標準rangeを2段に分ける。",
+  "aliases": [
+    "範囲指定",
+    "レンジの上下限",
+    "2値スライダー"
+  ],
+  "tags": [
+    "範囲指定",
+    "レンジの上下限",
+    "2値スライダー"
+  ],
+  "useCases": [
+    "数値範囲の絞り込み",
+    "上下限の相互制約を比較"
+  ],
+  "cautions": [
+    "各スライダーに下限・上限の名前を付ける。",
+    "タッチ支援技術を含む実機検証は別途必要。"
+  ],
+  "relatedIds": [
+    "range-slider",
+    "search-filter"
+  ],
+  "demoId": "dual-range",
+  "controls": [
+    {
+      "id": "step",
+      "label": "値の刻み",
+      "help": "0〜100点の範囲。",
+      "default": "5",
+      "options": [
+        {
+          "value": "5",
+          "label": "5点",
+          "promptValue": "値を5点刻みにしてください"
+        },
+        {
+          "value": "10",
+          "label": "10点",
+          "promptValue": "値を10点刻みにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の範囲",
+      "help": "上下限はそれぞれ独立したTab停止位置。",
+      "default": "wide",
+      "options": [
+        {
+          "value": "wide",
+          "label": "20〜80点",
+          "promptValue": "初期範囲を20〜80点にしてください"
+        },
+        {
+          "value": "narrow",
+          "label": "40〜60点",
+          "promptValue": "初期範囲を40〜60点にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の点数を下限と上限で絞るデモを実装してください。{{step}}。{{initial}}。標準のrange入力を2段に分け、Tab順は下限・上限で固定してください。下限のmaxを上限、上限のminを下限に合わせ、値が逆転しないよう変更処理でも制約してください。0〜100点の中で同じ値も許可し、各欄に名前と点数のaria-valuetextを付けてください。範囲と刻みを文字で示し、0・20・40・60・80・100点のサンプルから範囲内だけを表示してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Multi-Thumb Slider（値の制約の参考。デモは標準入力2段）",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

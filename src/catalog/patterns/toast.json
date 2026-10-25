@@ -1,0 +1,77 @@
+{
+  "id": "toast",
+  "nameJa": "トースト通知",
+  "nameEn": "Toast notification",
+  "aliases": [
+    "短い通知",
+    "完了通知",
+    "スナックバー"
+  ],
+  "tags": [
+    "通知",
+    "フィードバック",
+    "状態"
+  ],
+  "category": "部品",
+  "summary": "操作結果を短く通知し、元の作業を続けられるようにする。",
+  "description": "作業を止めずに完了などを知らせる通知。デモでは設定適用の通知を出し、再度押すと最新1件に置き換える。取り消し操作を中心とするUXとは分け、通知の表示・終了・読み取りやすさを試す。",
+  "useCases": [
+    "保存や設定変更後の通知",
+    "作業を中断しない結果表示"
+  ],
+  "cautions": [
+    "重要な情報を自動で消える通知だけに残さない。",
+    "通知を連発せず、重要な警告はアラートなどを検討する。"
+  ],
+  "relatedIds": [
+    "undo-feedback"
+  ],
+  "demoId": "toast",
+  "controls": [
+    {
+      "id": "duration",
+      "label": "通知を消す方法",
+      "help": "自動非表示か手動で閉じるか。",
+      "default": "manual",
+      "options": [
+        {
+          "value": "manual",
+          "label": "手動で閉じる",
+          "promptValue": "閉じるボタンを押すまで通知を表示してください"
+        },
+        {
+          "value": "5000",
+          "label": "5秒後に非表示",
+          "promptValue": "5秒後に非表示にし、ホバー・フォーカス中は止め、離れたら5秒から数え直してください"
+        }
+      ]
+    },
+    {
+      "id": "placement",
+      "label": "通知の位置",
+      "help": "デモ領域内の表示位置。",
+      "default": "bottom",
+      "options": [
+        {
+          "value": "top",
+          "label": "上",
+          "promptValue": "通知をデモ領域の上側に配置してください"
+        },
+        {
+          "value": "bottom",
+          "label": "下",
+          "promptValue": "通知をデモ領域の下側に配置してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の設定適用を知らせるトースト通知を実装してください。{{duration}}。{{placement}}。通知は最新1件だけにし、既存のstatus領域へ結果を書いてください。通知を出した時はフォーカスを動かさず、閉じるボタンで閉じた時は通知を出すボタンへ戻してください。直前の結果は本文にも残してください。タイマーはリセット・画面切替時に解除してください。通知はデモ内に収め、スマホでも操作を覆わない余白を用意してください。ボタンは44px以上にし、動きに依存させないでください。",
+  "references": [
+    {
+      "title": "W3C · Status Messages",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

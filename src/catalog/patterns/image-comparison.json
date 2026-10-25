@@ -1,0 +1,78 @@
+{
+  "id": "image-comparison",
+  "nameJa": "画像の比較スライダー",
+  "nameEn": "Image comparison slider",
+  "category": "動き",
+  "summary": "重ねた2つの図の境界を動かし、違いを比較する。",
+  "description": "同じ図形の変更前と変更後を重ね、スライダーで表示範囲を変える。カルーセルのように図全体を順番に置き換えず、同じ場所の違いを比べる。デモは自作SVGだけを使う。",
+  "aliases": [
+    "ビフォーアフター",
+    "比較スライダー",
+    "画像の境界"
+  ],
+  "tags": [
+    "ビフォーアフター",
+    "比較スライダー",
+    "画像の境界"
+  ],
+  "useCases": [
+    "配色の変更前後を比べる",
+    "同じ位置の差を目で確認"
+  ],
+  "cautions": [
+    "2つの図の位置と寸法を揃える。",
+    "図だけに頼らず、どちらが何かを文字でも示す。"
+  ],
+  "relatedIds": [
+    "range-slider",
+    "carousel"
+  ],
+  "demoId": "image-comparison",
+  "controls": [
+    {
+      "id": "palette",
+      "label": "変更後の配色",
+      "help": "変更前は灰色で固定。",
+      "default": "blue",
+      "options": [
+        {
+          "value": "blue",
+          "label": "青",
+          "promptValue": "変更後を青系の配色にしてください"
+        },
+        {
+          "value": "green",
+          "label": "緑",
+          "promptValue": "変更後を緑系の配色にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の境界",
+      "help": "変更後を見せる割合。",
+      "default": "25",
+      "options": [
+        {
+          "value": "25",
+          "label": "25%",
+          "promptValue": "変更後を25%表示して始めてください"
+        },
+        {
+          "value": "75",
+          "label": "75%",
+          "promptValue": "変更後を75%表示して始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ寸法の自作SVGを重ねた比較スライダーを実装してください。{{palette}}。{{initial}}。変更前を下、変更後を上へ置き、clip-path:insetで左から表示する範囲を変えてください。境界の線と、0〜100%の5%刻みの標準range入力を置いてください。Home・End・矢印で操作でき、aria-valuetextとstatusで両方の表示割合を伝えてください。図の代替名に変更前後の違いを含め、外部画像や自動アニメーションは使わないでください。",
+  "references": [
+    {
+      "title": "MDN · clip-path",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

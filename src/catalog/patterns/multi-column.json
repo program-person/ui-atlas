@@ -1,0 +1,78 @@
+{
+  "id": "multi-column",
+  "nameJa": "文章の段組み",
+  "nameEn": "Multi-column text",
+  "category": "レイアウト",
+  "summary": "1つの文章を複数段へ流し、段数と区切りを比較する。",
+  "description": "CSS Multi-columnで文章を段に流す。均等カードのグリッドと違い、各段の上から下へ読み、その後に隣の段へ進む。段幅の目安を指定して、狭い幅では段数を減らす。",
+  "aliases": [
+    "マルチカラム",
+    "コラムレイアウト",
+    "文章の複数段"
+  ],
+  "tags": [
+    "マルチカラム",
+    "コラムレイアウト",
+    "文章の複数段"
+  ],
+  "useCases": [
+    "文章を段に分けて比較する",
+    "読み順と行の長さの検討"
+  ],
+  "cautions": [
+    "左段の下から次の段の上へ読む配置。対話部品を混ぜる場合は読み順に注意する。",
+    "文章量の変更で段の区切りが変わる。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "typography-scale"
+  ],
+  "demoId": "multi-column",
+  "controls": [
+    {
+      "id": "columns",
+      "label": "最大の段数",
+      "help": "幅が足りない時は自動で段数を減らす。",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2段",
+          "promptValue": "最大2段にしてください"
+        },
+        {
+          "value": "3",
+          "label": "3段",
+          "promptValue": "最大3段にしてください"
+        }
+      ]
+    },
+    {
+      "id": "rule",
+      "label": "段の区切り線",
+      "help": "段間の余白は20pxで共通。",
+      "default": "show",
+      "options": [
+        {
+          "value": "show",
+          "label": "線あり",
+          "promptValue": "段の間に細い区切り線を置いてください"
+        },
+        {
+          "value": "hide",
+          "label": "線なし",
+          "promptValue": "段の区切り線を省いてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の記事をCSSの段組みで表示してください。{{columns}}。{{rule}}。column-widthを160px、column-gapを20pxにし、幅に応じて段数を減らしてください。左段を上から下へ読んでから右段へ進むことを説明してください。操作で4段落と8段落を切り替え、文章の順番を保ち、入力や操作を段組みの中へ入れないでください。見出しは段組みの外に置き、長い文字を折り返してください。",
+  "references": [
+    {
+      "title": "MDN · Basic concepts of multi-column layouts",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

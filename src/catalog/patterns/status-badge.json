@@ -1,0 +1,78 @@
+{
+  "id": "status-badge",
+  "nameJa": "状態バッジ",
+  "nameEn": "Status badge",
+  "category": "部品",
+  "summary": "短い文字と色で、対象の現在の状態を添える。",
+  "description": "対象の状態を短いラベルで表す。操作ボタンや入力されたタグではなく、対象に添える非操作の表示。デモは未着手・進行中・完了を循環させて比較する。",
+  "aliases": [
+    "ステータスバッジ",
+    "状態ラベル",
+    "ステータスタグ"
+  ],
+  "tags": [
+    "ステータスバッジ",
+    "状態ラベル",
+    "ステータスタグ"
+  ],
+  "useCases": [
+    "一覧の処理状態",
+    "記録の進行状況"
+  ],
+  "cautions": [
+    "色だけで状態を区別しない。",
+    "クリックできるボタンと誤解される見た目を避ける。"
+  ],
+  "relatedIds": [
+    "tag-input",
+    "step-indicator"
+  ],
+  "demoId": "status-badge",
+  "controls": [
+    {
+      "id": "symbol",
+      "label": "補助の記号",
+      "help": "文字ラベルは常に表示する。",
+      "default": "show",
+      "options": [
+        {
+          "value": "show",
+          "label": "記号あり",
+          "promptValue": "文字と補助の記号を表示してください"
+        },
+        {
+          "value": "hide",
+          "label": "文字のみ",
+          "promptValue": "文字のみのバッジにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の状態",
+      "help": "サンプルの開始状態。",
+      "default": "pending",
+      "options": [
+        {
+          "value": "pending",
+          "label": "未着手",
+          "promptValue": "未着手から始めてください"
+        },
+        {
+          "value": "complete",
+          "label": "完了",
+          "promptValue": "完了から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の作業に、未着手・進行中・完了の状態バッジを添えてください。{{symbol}}。{{initial}}。非操作のspanで表示し、文字は常に残し、補助記号はaria-hiddenにしてください。別の次の状態を試すボタンで循環させ、statusで状態を知らせてください。ボタンとの見た目を区別し、色だけに依存しないでください。",
+  "references": [
+    {
+      "title": "GOV.UK · Tag",
+      "url": "https://design-system.service.gov.uk/components/tag/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

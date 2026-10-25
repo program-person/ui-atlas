@@ -1,0 +1,27 @@
+{
+  "id": "checkbox", "nameJa": "チェックボックス", "nameEn": "Checkbox",
+  "aliases": ["複数選択", "チェック欄", "全選択", "一部選択"],
+  "tags": ["フォーム", "選択肢", "一括操作"], "category": "部品",
+  "summary": "必要な候補を複数選び、全選択や一部選択も表す。",
+  "description": "独立した候補をそれぞれ選ぶ部品。このデモでは架空の資料セットに入れる項目を選び、選択結果を表示する。ラジオグループと違って0個から複数個まで選べる。まとめて選ぶ親チェックでは、子が一部だけ選ばれている状態も示す。",
+  "useCases": ["複数の条件や付属項目の選択", "リスト全体の一括選択", "一部だけ選択済みであることの表示"],
+  "cautions": ["一部選択は親が示す集計状態。通常の子チェックを3状態で循環させない。", "全選択がどの範囲に効くかを明示する。", "このデモの選択結果はメモリ上のプレビューであり、実際のファイルを生成・保存しない。"],
+  "relatedIds": ["radio-group", "switch"], "demoId": "checkbox",
+  "controls": [
+    { "id": "initial", "label": "初期選択", "help": "0個・一部・全部の状態を試す。", "default": "partial", "options": [
+      { "value": "none", "label": "未選択", "promptValue": "初期状態では何も選択しないでください" },
+      { "value": "partial", "label": "一部を選択", "promptValue": "初期状態では先頭の「要点メモ」だけを選択してください" },
+      { "value": "all", "label": "すべて選択", "promptValue": "初期状態では3項目すべてを選択してください" }
+    ] },
+    { "id": "selectAll", "label": "まとめて選ぶ操作", "help": "親チェックの有無を比較する。", "default": "show", "options": [
+      { "value": "show", "label": "全選択を表示", "promptValue": "親チェック「3項目をまとめて選ぶ」を表示し、全選択・全解除に対応してください。一部だけ選択中はindeterminateで示し、その状態で親を押すと全選択してください" },
+      { "value": "hide", "label": "個別選択のみ", "promptValue": "親の全選択チェックは表示せず、個別の選択だけを用意してください" }
+    ] }
+  ],
+  "prompt": "架空の資料セットに入れる「要点メモ」「配置スケッチ」「確認リスト」の3項目を選ぶチェックボックスを実装してください。{{initial}}。{{selectAll}}。標準のinput type=checkboxと関連付けたラベルを使い、fieldsetとlegendでグループ名「資料セットに入れる項目」を示してください。親チェックの状態は子の選択数から算出してください。各項目はTabで移動しSpaceで切り替えられ、ラベル全体をクリック・タップできるようにしてください。選択した項目の名前と個数をすぐ下に表示し、0個なら「まだ選んでいません」と示してください。選択状態とフォーカスを見た目でも区別してください。44px以上の操作領域を確保し、スマホでは縦に並べて横にはみ出さないようにしてください。アニメーションに依存させず、ファイルや外部データの操作は行わないでください。",
+  "references": [
+    { "title": "WAI-ARIA APG · Checkbox", "url": "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/", "checkedAt": "2026-10-25" },
+    { "title": "MDN · HTMLInputElement.indeterminate", "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/indeterminate", "checkedAt": "2026-10-25" }
+  ],
+  "verifiedAt": "2026-10-25"
+}

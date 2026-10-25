@@ -1,0 +1,78 @@
+{
+  "id": "focus-ring",
+  "nameJa": "フォーカスの見え方",
+  "nameEn": "Focus indicator",
+  "category": "見た目",
+  "summary": "キーボードの操作位置を枠線で示し、選択状態と区別する。",
+  "description": "focus-visibleで操作位置の枠線を描く。押下や選択の状態とは別に、今どこをキーボードで操作するかを示す。デモは枠線の太さと位置を比べる。",
+  "aliases": [
+    "フォーカスリング",
+    "フォーカスインジケーター",
+    "focus visible"
+  ],
+  "tags": [
+    "フォーカスリング",
+    "フォーカスインジケーター",
+    "focus visible"
+  ],
+  "useCases": [
+    "キーボード操作位置の確認",
+    "選択状態とフォーカスの比較"
+  ],
+  "cautions": [
+    "フォーカス表示を消さない。",
+    "枠線が見えるかは背景・太さ・位置・端末も含めて確認する。"
+  ],
+  "relatedIds": [
+    "hover-feedback",
+    "toolbar"
+  ],
+  "demoId": "focus-ring",
+  "controls": [
+    {
+      "id": "placement",
+      "label": "枠線の位置",
+      "help": "外側の余白と内側の重なりを比較。",
+      "default": "outer",
+      "options": [
+        {
+          "value": "outer",
+          "label": "外側",
+          "promptValue": "outline-offsetを2pxにして外側へ表示してください"
+        },
+        {
+          "value": "inset",
+          "label": "内側",
+          "promptValue": "枠線の太さ分だけ内側へ重ねてください"
+        }
+      ]
+    },
+    {
+      "id": "width",
+      "label": "枠線の太さ",
+      "help": "サンプル内のキーボードフォーカスだけに適用。",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2px",
+          "promptValue": "枠線を2pxにしてください"
+        },
+        {
+          "value": "4",
+          "label": "4px",
+          "promptValue": "枠線を4pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "3つのサンプルボタンでフォーカス表示を比較するデモを実装してください。{{placement}}。{{width}}。:focus-visibleに#1746b5のoutlineを設定し、周囲に12pxの余白を置いてください。通常のTab順とEnter・Spaceを保ち、フォーカスの移動だけでは選択しないでください。選択はaria-pressedと下線で示し、同じボタンの再操作で解除できるようにしてください。フォーカス先と選択先を文字で別々に示し、辞典本体のフォーカス表示は変更しないでください。",
+  "references": [
+    {
+      "title": "MDN · :focus-visible",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "tree-view",
+  "nameJa": "ツリービュー",
+  "nameEn": "Tree view",
+  "aliases": [
+    "階層ツリー",
+    "フォルダーツリー",
+    "木構造の一覧"
+  ],
+  "tags": [
+    "階層",
+    "展開",
+    "選択"
+  ],
+  "category": "部品",
+  "summary": "階層を開閉しながら、目的の項目を選ぶ。",
+  "description": "親子関係を持つ項目を開閉して選ぶ部品。デモでは2つのフォルダーと3つの子項目を扱う。現在までの経路だけを示すパンくずと違い、複数の枝を探索できる。",
+  "useCases": [
+    "フォルダーの構成を探す",
+    "階層化された項目の選択"
+  ],
+  "cautions": [
+    "浅い構成なら単純な一覧も検討する。",
+    "フォーカスと選択を区別し、閉じた子項目をTabでたどれないようにする。"
+  ],
+  "relatedIds": [
+    "breadcrumb",
+    "accordion"
+  ],
+  "demoId": "tree-view",
+  "controls": [
+    {
+      "id": "expansion",
+      "label": "初期の展開",
+      "help": "フォルダーの開始状態。",
+      "default": "closed",
+      "options": [
+        {
+          "value": "closed",
+          "label": "閉じる",
+          "promptValue": "初期状態でフォルダーを閉じてください"
+        },
+        {
+          "value": "open",
+          "label": "開く",
+          "promptValue": "初期状態で両方のフォルダーを開いてください"
+        }
+      ]
+    },
+    {
+      "id": "selection",
+      "label": "キーボードでの選択",
+      "help": "移動と選択を同時にするか。",
+      "default": "manual",
+      "options": [
+        {
+          "value": "manual",
+          "label": "Enter・Spaceで選択",
+          "promptValue": "矢印キーではフォーカスのみ移動し、Enter・Spaceで選択してください"
+        },
+        {
+          "value": "automatic",
+          "label": "移動と同時に選択",
+          "promptValue": "フォーカスした項目を同時に選択してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のフォルダーとノートを選ぶツリービューを実装してください。{{expansion}}。{{selection}}。tree・treeitem・groupの役割と各項目の名前、フォルダーの展開状態、選択状態を設定してください。Tabの停止位置を1つにし、上下で表示中の項目を移動、右で展開または最初の子へ移動、左で閉じるか親へ移動できるようにしてください。Home・Endは表示中の先頭・末尾へ移動し、端では止めてください。クリックは選択し、フォルダーなら開閉も行ってください。選択はノートから始め、再入場は選択中の項目か表示中の祖先へ戻してください。現在の選択名をstatusで示し、フォーカスと選択を見た目で区別してください。スマホ幅と44px以上の操作領域を確保し、リセットで初期状態に戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Tree View",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/treeview/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

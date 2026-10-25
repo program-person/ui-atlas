@@ -1,0 +1,77 @@
+{
+  "id": "range-slider",
+  "nameJa": "範囲スライダー",
+  "nameEn": "Range slider",
+  "aliases": [
+    "レンジ入力",
+    "つまみで調整",
+    "スライダー"
+  ],
+  "tags": [
+    "数値",
+    "入力",
+    "調整"
+  ],
+  "category": "部品",
+  "summary": "決まった範囲の数値を、つまみで調整する。",
+  "description": "範囲内の値をつまみで変える部品。デモではカードの余白を8〜40pxで調整し、数値と見た目を一緒に確認する。厳密な数値を直接入力したい場合は数値入力欄も検討する。",
+  "useCases": [
+    "見た目や量の調整",
+    "上限と下限が決まった設定"
+  ],
+  "cautions": [
+    "値の単位・範囲・刻みを文字でも示す。",
+    "つまみだけで値を伝えず、現在値を併記する。"
+  ],
+  "relatedIds": [
+    "minimal"
+  ],
+  "demoId": "range-slider",
+  "controls": [
+    {
+      "id": "step",
+      "label": "値の刻み",
+      "help": "矢印キーで変える量。",
+      "default": "4",
+      "options": [
+        {
+          "value": "4",
+          "label": "4pxずつ",
+          "promptValue": "値を4px刻みで変えてください"
+        },
+        {
+          "value": "8",
+          "label": "8pxずつ",
+          "promptValue": "値を8px刻みで変えてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の余白",
+      "help": "リセット時の値。",
+      "default": "16",
+      "options": [
+        {
+          "value": "16",
+          "label": "16px",
+          "promptValue": "初期値を16pxにしてください"
+        },
+        {
+          "value": "32",
+          "label": "32px",
+          "promptValue": "初期値を32pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "カードの余白を調整する範囲スライダーを実装してください。{{step}}。{{initial}}。HTMLのinput type=rangeを使い、最小8px・最大40pxにしてください。ラベルを関連付け、outputとaria-valuetextで現在のpx値を示してください。ドラッグ・タッチ・矢印キー・Home・Endによる標準操作を保ち、プレビューの余白へ即時反映してください。フォーカスを見えるようにし、操作領域を44px以上にしてください。スマホ幅に収め、リセットで初期値へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · input range",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "dark-mode",
+  "nameJa": "ダーク配色",
+  "nameEn": "Dark mode",
+  "aliases": [
+    "暗いテーマ",
+    "明暗の切り替え",
+    "ダークテーマ"
+  ],
+  "tags": [
+    "配色",
+    "コントラスト",
+    "テーマ"
+  ],
+  "category": "見た目",
+  "summary": "背景・文字・操作の色を揃え、明暗の配色を比較する。",
+  "description": "同じ内容を明るい配色と暗い配色で比較する見た目。デモではカード内の背景・本文・補足・枠線・操作色を一緒に切り替える。辞典本体やOSの設定は変更しない。",
+  "useCases": [
+    "明暗のテーマを比較する",
+    "背景に合わせた文字と操作色の検討"
+  ],
+  "cautions": [
+    "背景だけを暗くせず、文字やフォーカスの見え方も確認する。",
+    "暗い配色なら誰にとっても読みやすくなるとは限らない。"
+  ],
+  "relatedIds": [
+    "minimal",
+    "color-picker"
+  ],
+  "demoId": "dark-mode",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期のテーマ",
+      "help": "開始時のカードの配色。",
+      "default": "light",
+      "options": [
+        {
+          "value": "light",
+          "label": "ライト",
+          "promptValue": "ライト配色から始めてください"
+        },
+        {
+          "value": "dark",
+          "label": "ダーク",
+          "promptValue": "ダーク配色から始めてください"
+        }
+      ]
+    },
+    {
+      "id": "accent",
+      "label": "操作の色",
+      "help": "テーマごとに読みやすい色を使う。",
+      "default": "blue",
+      "options": [
+        {
+          "value": "blue",
+          "label": "青",
+          "promptValue": "ライトでは青#235de5、ダークでは青#8bb5ffをアクセントにしてください"
+        },
+        {
+          "value": "green",
+          "label": "緑",
+          "promptValue": "ライトでは緑#176c52、ダークでは緑#70d9b0をアクセントにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じサンプルカードの明暗を比較できるデモを実装してください。{{initial}}。{{accent}}。ライトは背景#ffffff・本文#25364e・補足#52647c、ダークは背景#162238・本文#edf3ff・補足#b8c8dfにしてください。背景・文字・枠線・操作の色をまとめて切り替え、暗い背景でもフォーカスが見えるようにしてください。切り替えボタンには次に試す配色を示してください。カードにはaria-pressedで選択を示すメモのボタンを置き、状態を文字でも伝えてください。辞典本体・OS設定・保存データは変更せず、スマホ幅と44px以上の操作領域を確保し、リセットで初期配色と未選択へ戻してください。",
+  "references": [
+    {
+      "title": "W3C · Contrast (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

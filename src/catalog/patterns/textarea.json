@@ -1,0 +1,78 @@
+{
+  "id": "textarea",
+  "nameJa": "複数行入力",
+  "nameEn": "Textarea",
+  "category": "部品",
+  "summary": "改行を含む文章を入力し、文字数と問題を確かめる。",
+  "description": "1行入力より長い文章を扱う標準のtextarea。Enterで改行し、確定ボタンで空欄と文字数を検証する。デモは架空の画面メモのみ。",
+  "aliases": [
+    "テキストエリア",
+    "長文入力",
+    "改行"
+  ],
+  "tags": [
+    "テキストエリア",
+    "長文入力",
+    "改行"
+  ],
+  "useCases": [
+    "複数行の短いメモ",
+    "改行を含む説明"
+  ],
+  "cautions": [
+    "Enterで送信しない。",
+    "文字数の数え方と上限を明示する。"
+  ],
+  "relatedIds": [
+    "inline-validation",
+    "tag-input"
+  ],
+  "demoId": "textarea",
+  "controls": [
+    {
+      "id": "limit",
+      "label": "文字数の上限",
+      "help": "改行も1文字として数える。",
+      "default": "40",
+      "options": [
+        {
+          "value": "40",
+          "label": "40文字",
+          "promptValue": "上限40コードポイントにしてください"
+        },
+        {
+          "value": "80",
+          "label": "80文字",
+          "promptValue": "上限80コードポイントにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期のメモ",
+      "help": "入力欄の開始状態。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "空欄",
+          "promptValue": "空欄から始めてください"
+        },
+        {
+          "value": "sample",
+          "label": "サンプル",
+          "promptValue": "架空の2行メモを初期表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の画面メモを入力するtextareaを実装してください。{{limit}}。{{initial}}。Enterは改行にし、送信は確定ボタンで行ってください。Unicodeコードポイントと改行を数えて現在数を表示し、空白だけ・上限超過は入力欄の近くで知らせてフォーカスしてください。入力を修正すると古い結果とエラーを解除し、プレビューでは改行を保ってください。外部送信・保存はせず、縦方向のサイズ変更とスマホ幅に対応してください。",
+  "references": [
+    {
+      "title": "MDN · textarea",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

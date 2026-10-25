@@ -1,0 +1,83 @@
+{
+  "id": "aspect-ratio",
+  "nameJa": "アスペクト比",
+  "nameEn": "Aspect ratio",
+  "category": "レイアウト",
+  "summary": "枠の縦横比を保ち、内容の切り取りと余白を比較する。",
+  "description": "CSSのaspect-ratioで枠を保ち、自作SVGのpreserveAspectRatioで全体表示か切り取りかを比較する。比率と、内容を枠へ収める方法は別の設定として扱う。",
+  "aliases": [
+    "縦横比",
+    "比率固定",
+    "画像の収まり"
+  ],
+  "tags": [
+    "縦横比",
+    "比率固定",
+    "画像の収まり"
+  ],
+  "useCases": [
+    "カードの画像枠",
+    "内容の切り取り方の比較"
+  ],
+  "cautions": [
+    "元の図と枠の比率が異なると、全体表示では余白が生じ、埋めると一部が切れる。",
+    "重要な内容を切り落とさないようにする。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "bento-grid"
+  ],
+  "demoId": "aspect-ratio",
+  "controls": [
+    {
+      "id": "ratio",
+      "label": "枠の縦横比",
+      "help": "図形の元の比率は16:9。",
+      "default": "16 / 9",
+      "options": [
+        {
+          "value": "16 / 9",
+          "label": "16:9",
+          "promptValue": "枠のaspect-ratioを16 / 9にしてください"
+        },
+        {
+          "value": "1 / 1",
+          "label": "1:1",
+          "promptValue": "枠のaspect-ratioを1 / 1にしてください"
+        }
+      ]
+    },
+    {
+      "id": "fit",
+      "label": "図形の収め方",
+      "help": "元の図全体か、枠を埋めるか。",
+      "default": "contain",
+      "options": [
+        {
+          "value": "contain",
+          "label": "全体を収める",
+          "promptValue": "SVGはxMidYMid meetで全体を収めてください"
+        },
+        {
+          "value": "cover",
+          "label": "枠を埋める",
+          "promptValue": "SVGはxMidYMid sliceで枠を埋めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "自作SVGを使い縦横比と収まりを比較するデモを実装してください。{{ratio}}。{{fit}}。SVGはviewBox 0 0 320 180の山と月の図形にし、外部画像は取得しないでください。枠は幅100%・最大340pxに収め、SVGの幅と高さを100%にしてください。ボタンで青と緑の図形を切り替え、画像の代替名も更新してください。枠の比率と収め方を文字で示してください。",
+  "references": [
+    {
+      "title": "MDN · aspect-ratio",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/aspect-ratio",
+      "checkedAt": "2026-10-25"
+    },
+    {
+      "title": "MDN · preserveAspectRatio",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/preserveAspectRatio",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

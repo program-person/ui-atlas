@@ -1,0 +1,78 @@
+{
+  "id": "number-input",
+  "nameJa": "数値入力",
+  "nameEn": "Number input",
+  "aliases": [
+    "枚数の入力",
+    "スピンボタン",
+    "増減入力"
+  ],
+  "tags": [
+    "数値",
+    "フォーム",
+    "検証"
+  ],
+  "category": "部品",
+  "summary": "決まった範囲・刻みの数値を、入力や増減で指定する。",
+  "description": "正確な数量を指定する入力部品。デモでは1〜9枚のカード枚数を入力し、増減と確定を試す。つまみを動かすスライダーより、特定の数値を直接入力する用途に向く。",
+  "useCases": [
+    "数量や枚数の指定",
+    "決まった範囲の整数入力"
+  ],
+  "cautions": [
+    "空欄・小数・範囲外・刻みに合わない値を検証する。",
+    "標準の数値入力の外観はブラウザやOSで異なる。"
+  ],
+  "relatedIds": [
+    "range-slider",
+    "inline-validation"
+  ],
+  "demoId": "number-input",
+  "controls": [
+    {
+      "id": "step",
+      "label": "増減の刻み",
+      "help": "1を基準にした刻み。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1ずつ",
+          "promptValue": "1ずつ増減できるようにしてください"
+        },
+        {
+          "value": "2",
+          "label": "2ずつ",
+          "promptValue": "1を基準に2刻みで増減できるようにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の枚数",
+      "help": "リセット時の数量。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1枚",
+          "promptValue": "初期値を1枚にしてください"
+        },
+        {
+          "value": "5",
+          "label": "5枚",
+          "promptValue": "初期値を5枚にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のカード枚数を指定する数値入力を実装してください。{{step}}。{{initial}}。ラベル付きのHTML input type=numberを使い、範囲を1〜9の整数にしてください。増やす・減らす・確定のボタンを用意し、境界の増減と不正入力中の増減を無効にしてください。空欄・小数・範囲外・刻み違いでは、確定時に近くへエラーを示して入力へフォーカスし、aria-invalidと説明を関連付けてください。編集で古い結果とエラーを消し、有効な枚数だけカードに反映してください。結果はstatusで示し、44px以上の操作領域とスマホへの収まりを確保し、リセットで初期値に戻してください。",
+  "references": [
+    {
+      "title": "MDN · input number",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "empty-state",
+  "nameJa": "空の状態",
+  "nameEn": "Empty state",
+  "aliases": [
+    "エンプティステート",
+    "初回の空画面",
+    "0件の案内"
+  ],
+  "tags": [
+    "初回",
+    "0件",
+    "案内"
+  ],
+  "category": "UXの流れ",
+  "summary": "何も表示できない理由と、次にできる操作を示す。",
+  "description": "データがない場面で、理由と次の行動を示す画面。デモでは初回の未作成と条件に合う記録がない場合を切り替え、サンプル追加や条件解除で一覧へ進む。単に0件と出すだけでなく、状況に対応する操作を案内する。",
+  "useCases": [
+    "初めて使う一覧",
+    "条件に合う記録がない場合の案内"
+  ],
+  "cautions": [
+    "読み込み中や通信エラーと混同しない。",
+    "空の原因に合わない操作を案内しない。サンプルは架空でメモリ上だけに作る。"
+  ],
+  "relatedIds": [
+    "search-filter",
+    "skeleton-loading"
+  ],
+  "demoId": "empty-state",
+  "controls": [
+    {
+      "id": "reason",
+      "label": "空になった理由",
+      "help": "案内と次の操作が変わる。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "初めての利用",
+          "promptValue": "未作成の状態を説明し、サンプルを1件追加できるようにしてください"
+        },
+        {
+          "value": "filtered",
+          "label": "条件に一致なし",
+          "promptValue": "保存済みという条件で0件の状態を説明し、条件解除で架空の2件を表示してください"
+        }
+      ]
+    },
+    {
+      "id": "alignment",
+      "label": "案内の揃え方",
+      "help": "見出し・説明・操作の配置。",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "中央揃え",
+          "promptValue": "空の案内を中央揃えにしてください"
+        },
+        {
+          "value": "left",
+          "label": "左揃え",
+          "promptValue": "空の案内を左揃えにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "ノート一覧の空の状態を実装してください。{{reason}}。{{alignment}}。表示される内容の説明と次の操作を1つ用意してください。操作後は一覧を表示し、一覧見出しへフォーカスを移してください。表示件数や操作結果はstatusでも伝えてください。デモのサンプルだけをメモリ上で扱い、外部データやファイルは変更しないでください。スマホ幅に収め、44px以上のボタンとフォーカス表示を備え、リセットで空の状態へ戻してください。",
+  "references": [
+    {
+      "title": "Carbon Design System · Empty states",
+      "url": "https://www.carbondesignsystem.com/building-blocks/core/patterns/empty-states",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

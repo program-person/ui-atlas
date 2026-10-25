@@ -1,0 +1,78 @@
+{
+  "id": "multi-select",
+  "nameJa": "複数選択リスト",
+  "nameEn": "Multiple select",
+  "category": "部品",
+  "summary": "標準のリストから複数の候補を選び、個数を検証する。",
+  "description": "multiple付きのselectで複数値を選ぶ。単一のセレクトボックスと異なり、リスト内の選択集合を保持する。チェックボックスより操作が端末に依存するため、デモ内で案内する。",
+  "aliases": [
+    "マルチセレクト",
+    "複数選択欄",
+    "multiple"
+  ],
+  "tags": [
+    "マルチセレクト",
+    "複数選択欄",
+    "multiple"
+  ],
+  "useCases": [
+    "候補が決まった道具の複数選択",
+    "標準HTMLの複数選択を比較"
+  ],
+  "cautions": [
+    "選択操作はOSとブラウザに依存する。",
+    "分かりやすさを優先する場合はチェックボックスも比較する。"
+  ],
+  "relatedIds": [
+    "select",
+    "checkbox"
+  ],
+  "demoId": "multi-select",
+  "controls": [
+    {
+      "id": "limit",
+      "label": "選択数の上限",
+      "help": "上限超過も確定時に検証する。",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2個",
+          "promptValue": "1〜2個を許可してください"
+        },
+        {
+          "value": "3",
+          "label": "3個",
+          "promptValue": "1〜3個を許可してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の選択",
+      "help": "利用可能な候補の開始状態。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "未選択",
+          "promptValue": "未選択から始めてください"
+        },
+        {
+          "value": "one",
+          "label": "先頭を選択",
+          "promptValue": "配置スケッチを選択済みにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具を選ぶmultiple付きの標準selectを実装してください。{{limit}}。{{initial}}。3つの利用可能な候補と1つの準備中で無効な候補を4行のリストにし、selectedOptionsから選択集合を保持してください。Ctrl・Command・Shiftの操作案内と端末差を示してください。確定時に0個・上限超過を検証し、欄へフォーカスしてください。変更時に古いエラーと確定結果を解除し、選択数と確定したラベルを文字で示してください。",
+  "references": [
+    {
+      "title": "MDN · select / multiple",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

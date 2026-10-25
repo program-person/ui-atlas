@@ -1,0 +1,78 @@
+{
+  "id": "date-picker",
+  "nameJa": "日付入力",
+  "nameEn": "Date picker",
+  "aliases": [
+    "カレンダー入力",
+    "予定日を選ぶ",
+    "日付ピッカー"
+  ],
+  "tags": [
+    "日付",
+    "入力",
+    "範囲"
+  ],
+  "category": "部品",
+  "summary": "ブラウザ標準の入力で日付を選び、範囲を検証する。",
+  "description": "年月日を選ぶ入力部品。デモでは架空の予定日を選び、未選択と選択可能な期間を検証する。入力値を時刻に変換せず、その年月日として表示する。実際の予定は登録しない。",
+  "useCases": [
+    "予定日の指定",
+    "期間が決まった日付入力"
+  ],
+  "cautions": [
+    "ブラウザやOSでカレンダーの外観・操作は異なる。",
+    "日付だけの値とタイムゾーンを持つ日時を混同しない。"
+  ],
+  "relatedIds": [
+    "number-input",
+    "inline-validation"
+  ],
+  "demoId": "date-picker",
+  "controls": [
+    {
+      "id": "window",
+      "label": "選べる期間",
+      "help": "サンプル用の固定期間。",
+      "default": "october",
+      "options": [
+        {
+          "value": "october",
+          "label": "2026年10月",
+          "promptValue": "選べる日付を2026年10月1日〜10月31日にしてください"
+        },
+        {
+          "value": "two-months",
+          "label": "2026年10〜11月",
+          "promptValue": "選べる日付を2026年10月1日〜11月30日にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の日付",
+      "help": "開始時の入力値。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "未選択",
+          "promptValue": "未選択で始めてください"
+        },
+        {
+          "value": "sample",
+          "label": "サンプル日",
+          "promptValue": "2026年10月25日を初期値にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の予定日を選ぶ日付入力を実装してください。{{window}}。{{initial}}。ラベル付きのHTML input type=dateを使い、min・maxを設定してください。確定ボタンで未選択と範囲外を検証し、エラーを近くへ表示して入力へフォーカスし、aria-invalidと説明を関連付けてください。日付を編集したら古い結果とエラーを消してください。値はYYYY-MM-DDの年月日として扱い、DateやUTCへ変換せず日本語の年月日として結果を表示してください。カレンダーなどの外部サービスへ登録せず、結果はstatusで示してください。44px以上の操作領域とスマホへの収まりを確保し、リセットで初期日付へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · input date",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

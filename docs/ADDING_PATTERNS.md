@@ -17,7 +17,7 @@
 ## 検証と掲載
 
 ```powershell
-npm.cmd check
+npm.cmd run check
 npm.cmd test
 npm.cmd run build
 npm.cmd run dev

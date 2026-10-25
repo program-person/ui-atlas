@@ -1,0 +1,77 @@
+{
+  "id": "load-more",
+  "nameJa": "もっと読み込む",
+  "nameEn": "Load more",
+  "category": "UXの流れ",
+  "summary": "表示済みの内容を残し、明示操作で一覧の続きを追加する。",
+  "description": "ページを入れ替える代わりに、既存の項目を残したまま続きを追加する流れ。無限スクロールと異なり、明示的なボタンで進める。デモは9件の固定データを表示する。",
+  "aliases": [
+    "追加読み込み",
+    "続きの表示",
+    "ロードモア"
+  ],
+  "tags": [
+    "追加読み込み",
+    "続きの表示",
+    "ロードモア"
+  ],
+  "useCases": [
+    "連続して見る小さな一覧",
+    "ページを入れ替えず内容を追加"
+  ],
+  "cautions": [
+    "件数が多い場合はページ送りや検索も比較する。",
+    "追加後の場所とフォーカスの移動先を明確にする。"
+  ],
+  "relatedIds": [
+    "pagination"
+  ],
+  "demoId": "load-more",
+  "controls": [
+    {
+      "id": "batch",
+      "label": "一度に追加する件数",
+      "help": "最終回は残り件数だけ表示する。",
+      "default": "3",
+      "options": [
+        {
+          "value": "3",
+          "label": "3件",
+          "promptValue": "3件ずつ追加してください"
+        },
+        {
+          "value": "4",
+          "label": "4件",
+          "promptValue": "4件ずつ追加してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の表示",
+      "help": "末尾付近からも試せる。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "最初のまとまり",
+          "promptValue": "初期は一度分の件数を表示してください"
+        },
+        {
+          "value": "near-end",
+          "label": "残り1件",
+          "promptValue": "初期は9件中8件を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "固定の架空ノート9件を持つ続きを表示するデモを実装してください。{{batch}}。{{initial}}。既存項目を残して末尾に追加し、追加された最初の見出しへフォーカスしてください。表示件数と総数をstatusで知らせ、残りがないときはすべて表示済みとしてボタンを無効にしてください。通信・自動読み込み・ページ置換は行わず、DOMの順序を維持してください。",
+  "references": [
+    {
+      "title": "W3C · Focus Order（追加後の移動先の設計参考）",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

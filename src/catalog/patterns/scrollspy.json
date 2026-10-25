@@ -1,0 +1,78 @@
+{
+  "id": "scrollspy",
+  "nameJa": "スクロール連動ナビ",
+  "nameEn": "Scrollspy",
+  "aliases": [
+    "目次の追従",
+    "読んでいる場所",
+    "ページ内の現在位置"
+  ],
+  "tags": [
+    "目次",
+    "スクロール",
+    "ナビゲーション"
+  ],
+  "category": "UXの流れ",
+  "summary": "スクロール位置に合わせて、現在の見出しを示す。",
+  "description": "本文の位置に応じて目次の現在位置を更新するナビゲーション。デモでは3つの見出しを持つ架空の記事を独立した枠内で読み進める。内容を隠すタブと違い、すべてのセクションが同じ記事に並んでいる。",
+  "useCases": [
+    "長い記事の目次",
+    "設定や説明ページ内の位置案内"
+  ],
+  "cautions": [
+    "スクロール中にフォーカスを勝手に移さない。",
+    "デモの記事のスクロールは辞典本体のスクロールと独立させる。"
+  ],
+  "relatedIds": [
+    "tabs",
+    "breadcrumb"
+  ],
+  "demoId": "scrollspy",
+  "controls": [
+    {
+      "id": "layout",
+      "label": "目次の配置",
+      "help": "狭い画面ではどちらも上に並ぶ。",
+      "default": "top",
+      "options": [
+        {
+          "value": "top",
+          "label": "本文の上",
+          "promptValue": "目次を本文の上に並べてください"
+        },
+        {
+          "value": "side",
+          "label": "本文の横",
+          "promptValue": "480px以上では目次を本文の横に、狭い画面では上に並べてください"
+        }
+      ]
+    },
+    {
+      "id": "length",
+      "label": "本文の長さ",
+      "help": "スクロール量を比較する。",
+      "default": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "標準",
+          "promptValue": "各セクションの最小高さを300pxにしてください"
+        },
+        {
+          "value": "long",
+          "label": "長め",
+          "promptValue": "各セクションの最小高さを440pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "目的・構成・確認の3見出しを持つ架空の記事とスクロール連動ナビを実装してください。{{layout}}。{{length}}。高さ260pxの独立したスクロール枠を作り、上端から24px以内まで来た最後の見出しを現在位置としてください。末尾では最後の見出しを選んでください。現在の目次ボタンだけにaria-current=locationを付け、通常のスクロールではフォーカスを動かさないでください。目次ボタンを押した場合は対応する見出しへ即時にスクロールし、その見出しへフォーカスしてください。記事枠をキーボードでもスクロールできるようにし、ボタンは44px以上にしてください。スマホで横にはみ出さず、リセットで先頭に戻してください。",
+  "references": [
+    {
+      "title": "MDN · Element scroll event",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

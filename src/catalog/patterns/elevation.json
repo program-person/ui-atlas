@@ -1,0 +1,78 @@
+{
+  "id": "elevation",
+  "nameJa": "影による奥行き",
+  "nameEn": "Elevation",
+  "category": "見た目",
+  "summary": "同じ面に異なる影を付け、浮き上がり方を比較する。",
+  "description": "box-shadowの距離・ぼかし・濃さで面の奥行きの見え方を比べる。デモの段階は比較用の提案値で、実際の優先順位や操作順序を保証するものではない。",
+  "aliases": [
+    "エレベーション",
+    "ボックスシャドウ",
+    "面の高さ"
+  ],
+  "tags": [
+    "エレベーション",
+    "ボックスシャドウ",
+    "面の高さ"
+  ],
+  "useCases": [
+    "カードの影の比較",
+    "面同士の分離の検討"
+  ],
+  "cautions": [
+    "影だけに意味や優先度を持たせない。",
+    "濃い影を増やしすぎると内容より目立つ。"
+  ],
+  "relatedIds": [
+    "neobrutalism",
+    "minimal"
+  ],
+  "demoId": "elevation",
+  "controls": [
+    {
+      "id": "style",
+      "label": "影の種類",
+      "help": "同じ段階でも異なる見え方。",
+      "default": "soft",
+      "options": [
+        {
+          "value": "soft",
+          "label": "ぼかす",
+          "promptValue": "距離に応じてぼかした影を使ってください"
+        },
+        {
+          "value": "crisp",
+          "label": "ぼかさない",
+          "promptValue": "ぼかしのない影を使ってください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "基本の段階",
+      "help": "操作で基本から1段上げて戻す。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "段階1",
+          "promptValue": "基本の影を段階1にしてください"
+        },
+        {
+          "value": "2",
+          "label": "段階2",
+          "promptValue": "基本の影を段階2にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ架空カードの影だけを変える比較デモを実装してください。{{style}}。{{initial}}。ぼかす場合の段階1・2・3は0 2px 6px #25364e22、0 6px 16px #25364e2e、0 14px 30px #25364e38にしてください。ぼかさない場合は3px・6px・9pxの右下への影にしてください。固定ラベルのボタンで基本から1段上げて戻し、aria-pressedと文字で段階を示してください。周囲に32pxの余白を確保し、内容やフォーカス順は変えないでください。",
+  "references": [
+    {
+      "title": "MDN · box-shadow",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/box-shadow",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

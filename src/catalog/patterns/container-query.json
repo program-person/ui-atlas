@@ -1,0 +1,78 @@
+{
+  "id": "container-query",
+  "nameJa": "コンテナに応じた配置",
+  "nameEn": "Container query",
+  "category": "レイアウト",
+  "summary": "画面全体ではなく、部品の親枠の幅に合わせて配置を変える。",
+  "description": "CSSコンテナクエリーで、同じカードを親枠の幅に応じて縦・横に配置する。画面幅で切り替えるメディアクエリーや列数だけを変えるグリッドと違い、部品の置き場所に応じた構成変更を試す。",
+  "aliases": [
+    "コンテナクエリ",
+    "親幅への対応",
+    "container queries"
+  ],
+  "tags": [
+    "コンテナクエリ",
+    "親幅への対応",
+    "container queries"
+  ],
+  "useCases": [
+    "同じカードを異なる枠へ置く",
+    "部品単位のレスポンシブ配置"
+  ],
+  "cautions": [
+    "指定幅と実際の幅は親枠の制限で異なる。",
+    "コンテナと、その幅を参照する子要素を分ける。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "split-view"
+  ],
+  "demoId": "container-query",
+  "controls": [
+    {
+      "id": "breakpoint",
+      "label": "横配置の境界",
+      "help": "親コンテナの内容幅で判定する。",
+      "default": "360",
+      "options": [
+        {
+          "value": "360",
+          "label": "360px",
+          "promptValue": "コンテナの幅360px以上で横配置にしてください"
+        },
+        {
+          "value": "440",
+          "label": "440px",
+          "promptValue": "コンテナの幅440px以上で横配置にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の指定幅",
+      "help": "親枠が狭い時は枠に収める。",
+      "default": "280",
+      "options": [
+        {
+          "value": "280",
+          "label": "280px",
+          "promptValue": "指定幅280pxから始めてください"
+        },
+        {
+          "value": "480",
+          "label": "480px",
+          "promptValue": "指定幅480pxから始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "自作カードをコンテナクエリーで縦・横配置に切り替えるデモを実装してください。{{breakpoint}}。{{initial}}。親要素にcontainer-type:inline-sizeと名前を設定し、子のレイアウトを@containerで変えてください。スライダーで指定幅を240〜560pxの40px刻みで変え、max-width:100%で親枠へ収めてください。横配置は88pxの図形と本文、縦配置は図形の下に本文を置いてください。選択ボタンは独立して切り替え、指定幅と境界を文字で示してください。",
+  "references": [
+    {
+      "title": "MDN · CSS container queries",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_queries",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "pagination", "nameJa": "ページネーション", "nameEn": "Pagination",
+  "aliases": ["ページ送り", "ページ分割", "ページ番号"],
+  "tags": ["一覧", "ナビゲーション", "件数"], "category": "部品",
+  "summary": "一覧を一定件数ずつに分け、ページを選んで移動する。",
+  "description": "一覧を件数で区切り、前後のページや指定したページへ移動する部品。このデモでは架空のノート18件を3件または6件ずつ表示する。作業の手順を表すステップ表示や、カテゴリの階層を表すパンくずとは用途が異なる。",
+  "useCases": ["件数の多い検索結果", "記録や記事の一覧", "全件数と現在の範囲を示したい画面"],
+  "cautions": ["短い一覧は分割せず全件表示することも検討する。", "ページ切り替え後の表示位置とフォーカスを設計する。", "このデモはすべての記録をメモリに持つ。実際のAPI取得や通信待ちは再現しない。"],
+  "relatedIds": ["search-filter", "master-detail", "breadcrumb"], "demoId": "pagination",
+  "controls": [
+    { "id": "pageSize", "label": "1ページの件数", "help": "18件を何件ずつ表示するか。", "default": "3", "options": [
+      { "value": "3", "label": "3件", "promptValue": "1ページ3件、全6ページにしてください" },
+      { "value": "6", "label": "6件", "promptValue": "1ページ6件、全3ページにしてください" }
+    ] },
+    { "id": "initial", "label": "開始ページ", "help": "先頭と末尾で移動ボタンの状態を比べる。", "default": "first", "options": [
+      { "value": "first", "label": "先頭ページ", "promptValue": "初期状態では先頭ページを表示してください" },
+      { "value": "last", "label": "最終ページ", "promptValue": "初期状態では最終ページを表示してください" }
+    ] }
+  ],
+  "prompt": "架空のノート18件をページに分けるページネーションを実装してください。{{pageSize}}。{{initial}}。ラベル付きnav内に前へ・次へとページの指定操作を置き、先頭の前へ・末尾の次へをdisabledにしてください。全件数、表示している範囲、現在ページと総ページ数を文字で示してください。幅520px以上では全ページ番号をul内のボタンとして並べ、現在の番号をaria-current=pageと見た目で示してください。狭い画面では番号の並びをラベル付きselectに切り替え、前へ・ページ選択欄・次へを1行に収めてください。番号ボタンと前後ボタンによる切り替え後は一覧見出しへフォーカスを移し、selectの変更ではその欄のフォーカスを保ってください。表示範囲の更新はstatusでも伝えてください。Tab・Enter・Spaceやselectの標準キー操作を保ち、44px以上の操作領域を確保してください。リセットでは設定した開始ページに戻してください。通信や外部データを使わず、表示を即時に切り替えてください。",
+  "references": [{ "title": "USWDS · Pagination", "url": "https://designsystem.digital.gov/components/pagination/", "checkedAt": "2026-10-25" }],
+  "verifiedAt": "2026-10-25"
+}

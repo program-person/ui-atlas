@@ -2,6 +2,60 @@ import type { DemoId } from '../types.ts';
 
 export function Thumbnail({ id }: { id: DemoId }) {
   return <div className={`thumbnail thumbnail-${id}`} aria-hidden="true">
+    {id === 'focus-ring' && <div className="mini-exploration"><span>Tabで操作位置を確認</span><b style={{display:"inline-block",outline:"2px solid #1746b5",outlineOffset:2,padding:6}}>案1</b><span>選択とは別の枠線</span></div>}
+    {id === 'spacing-scale' && <div className="mini-exploration"><b>4px × 1・2・4</b><span style={{marginTop:12}}>見出しと本文</span><span>余白を揃える</span></div>}
+    {id === 'gradient-surface' && <div className="mini-exploration" style={{background:"linear-gradient(45deg,#dce9ff,#eae1ff)",color:"#25364e"}}><span>青から紫へ</span><b>余白から広がる</b><span>方向 45度</span></div>}
+    {id === 'elevation' && <div className="mini-exploration" style={{boxShadow:"6px 6px 12px #25364e35"}}><span>同じカード</span><b>影の段階 2</b></div>}
+    {id === 'flip-card' && <div className="mini-exploration" style={{background:"#e5f3ec"}}><span>FRONT ⇄ BACK</span><b>目的と次の操作</b><span>カードを裏返す</span></div>}
+    {id === 'image-comparison' && <div className="mini-exploration"><div style={{height:55,background:"linear-gradient(90deg,#285db7 50%,#b6c1d2 50%)",borderRadius:5}} /><span>変更後 ← │ → 変更前</span></div>}
+    {id === 'multi-column' && <div className="mini-exploration" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><span>文章を上から下へ。<br />次に右の段へ。</span><span>文章の続き。<br />段に流し込む。</span></div>}
+    {id === 'container-query' && <div className="mini-exploration"><span>親枠 280px → 480px</span><b>図形</b><span>↓ 縦配置 ⇔ 横配置</span></div>}
+    {id === 'dual-range' && <div className="mini-exploration"><span>下限　20点　●───</span><span>上限　80点　───●</span><b>20〜80点</b></div>}
+    {id === 'input-adornment' && <div className="mini-exploration"><span>サンプルの幅（px）</span><b>幅 │ 32 │ px</b><span>単位は固定表示</span></div>}
+    {id === 'fieldset' && <div className="mini-exploration"><b>表示の補助設定</b><span>☑ 補助グリッド</span><span>カードの間隔　16px</span></div>}
+    {id === 'skip-link' && <div className="mini-exploration"><b>本文へ移動　↓</b><span>概要　記録　補足</span><span>ノートの本文</span></div>}
+    {id === 'typography-scale' && <div className="mini-continuation"><b style={{fontSize:16}}>余白から考える</b><span style={{fontSize:12}}>次の操作を近くへ</span><span>本文からサイズを決める</span></div>}
+    {id === 'text-truncation' && <div className="mini-continuation"><span>画面の情報を整理するときは、</span><span>まず目的と次の操作を…</span><b>全文を表示</b></div>}
+    {id === 'aspect-ratio' && <div className="mini-continuation"><div style={{aspectRatio:"16/9",background:"#e4ecff",display:"grid",placeItems:"center"}}>16:9</div><span>枠と内容の収まり</span></div>}
+    {id === 'responsive-grid' && <div className="mini-continuation" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}><span>カード1</span><span>カード2</span><span>カード3</span><span>カード4</span></div>}
+    {id === 'load-more' && <div className="mini-continuation"><span>1. 目的　2. 余白</span><span>3. 配色</span><b>＋ 続きを表示する</b></div>}
+    {id === 'error-summary' && <div className="mini-continuation" style={{border:"2px solid #a52c40"}}><b>入力内容を確認</b><span>題名を入力してください。</span><span>種類を選んでください。</span></div>}
+    {id === 'confirmation-flow' && <div className="mini-continuation"><span>配置のアイデア</span><b>下書き → 採用</b><span>戻って見直す　採用に変更</span></div>}
+    {id === 'loading-button' && <div className="mini-continuation"><span>画面サンプルの確認</span><b>確認中…</b><span>処理が終わるまで待機</span></div>}
+    {id === 'status-badge' && <div className="mini-continuation"><span>配置の確認</span><b style={{background:"#e4f3ea",color:"#205e42",padding:5}}>✓ 完了</b></div>}
+    {id === 'description-list' && <div className="mini-continuation"><span>題名　余白の記録</span><span>種類　見た目</span><span>状態　確認済み</span></div>}
+    {id === 'multi-select' && <div className="mini-continuation"><span>試す道具（複数）</span><b>配置スケッチ　✓</b><span>配色ノート　✓</span><span>要点メモ</span></div>}
+    {id === 'textarea' && <div className="mini-continuation"><span>画面のメモ</span><span>余白を広くする。</span><span>操作を近くにまとめる。</span><b>20 / 40文字</b></div>}
+    {id === 'meter' && <div className="mini-extension"><span>85% 使用 · 上限に近い</span><div style={{height:8,background:'#f5e0c3'}}><i style={{display:'block',width:'85%',height:8,background:'#9c6200'}} /></div></div>}
+    {id === 'dark-mode' && <div className="mini-extension" style={{background:'#162238',color:'#edf3ff'}}><span>余白から考える</span><b style={{color:'#8bb5ff'}}>メモを選ぶ</b></div>}
+    {id === 'resizable-panel' && <div className="mini-extension"><span>一覧　 ⋮　内容</span><b>30%　⇔　70%</b></div>}
+    {id === 'sticky-header' && <div className="mini-extension"><b>ノート一覧　↑</b><span>────────</span><span>枠の上端に残す</span></div>}
+    {id === 'timeline' && <div className="mini-extension"><span>10/01　設計　完了</span><span>　│</span><span>10/15　確認　進行中</span></div>}
+    {id === 'date-picker' && <div className="mini-extension"><span>デモの予定日</span><b>2026 / 10 / 25</b><span>範囲を確認して確定</span></div>}
+    {id === 'tag-input' && <div className="mini-extension"><span>画面 ×　余白 ×</span><b>＋ タグを追加</b></div>}
+    {id === 'number-input' && <div className="mini-extension"><span>カードの枚数</span><b>−　5　＋</b><span>1〜9枚</span></div>}
+    {id === 'color-picker' && <div className="mini-extension"><span>アクセント色</span><b style={{color:'#235de5'}}>■　</b><b style={{color:'#176c52'}}>■　</b><b style={{color:'#7544af'}}>■</b></div>}
+    {id === 'toolbar' && <div className="mini-extension"><span>太字　斜体　下線</span><b>書式を組み合わせる</b></div>}
+    {id === 'context-menu' && <div className="mini-extension"><span>ピン留めを切り替え</span><span>ラベルを確認</span><span>余白を切り替え</span></div>}
+    {id === 'tree-view' && <div className="mini-extension"><span>▾ ノート</span><span>　画面案</span><span>　色の記録</span><span>▸ ツール</span></div>}
+    {id === 'reorder-list' && <div className="mini-growth"><span>1 目的のメモ　↑ ↓</span><span>2 配置の案　　↑ ↓</span><span>3 確認リスト　↑ ↓</span></div>}
+    {id === 'combobox' && <div className="mini-growth"><span>ボード　⌄</span><b>スケッチボード</b><span>メモボード</span></div>}
+    {id === 'scrollspy' && <div className="mini-growth"><span>目的　構成　<b style={{color:'#235de5'}}>確認</b></span><span>読んでいる見出しを表示</span></div>}
+    {id === 'carousel' && <div className="mini-growth" style={{background:'#e7f3ed'}}><span>色を比べる</span><b>‹　1　●　3　›</b></div>}
+    {id === 'alert-banner' && <div className="mini-growth" style={{borderLeft:'4px solid #986000',background:'#fff3d9'}}><span>要確認：設定を確認</span><b>案内を閉じる</b></div>}
+    {id === 'empty-state' && <div className="mini-growth" style={{textAlign:'center'}}><span>最初のノートを作ろう</span><b>＋ サンプルを追加</b></div>}
+    {id === 'step-indicator' && <div className="mini-growth"><span>1 分類　2 見た目　3 確認</span><b>完了　　現在　　 未着手</b></div>}
+    {id === 'data-table' && <div className="mini-growth"><span>ノート名　記録数 ↑</span><span>色　　　　　2</span><span>配置　　　　5</span></div>}
+    {id === 'select' && <div className="mini-growth"><span>使う道具</span><b>スケッチボード　⌄</b></div>}
+    {id === 'toast' && <div className="mini-growth"><span>設定を適用しました</span><b>通知を閉じる</b></div>}
+    {id === 'range-slider' && <div className="mini-growth"><span>カードの余白　24px</span><div style={{height:4,background:'#dce3ee'}}><i style={{display:'block',width:14,height:14,borderRadius:'50%',background:'#235de5',marginLeft:'45%',transform:'translateY(-5px)'}} /></div></div>}
+    {id === 'progress-bar' && <div className="mini-growth mini-progress"><span>50% 完了</span><i style={{ width: '50%' }} /></div>}
+    {id === 'breadcrumb' && <div className="mini-breadcrumb"><span><b>ホーム</b> / <b>ノート</b> / <strong>画面案</strong></span><span>階層をたどる</span></div>}
+    {id === 'pagination' && <div className="mini-pagination"><span>‹</span><span>1</span><strong>2</strong><span>3</span><span>›</span></div>}
+    {id === 'tooltip' && <div className="mini-tooltip"><span>短い操作の説明</span><b>要点を表示</b></div>}
+    {id === 'switch' && <div className="mini-choices"><span>補助グリッド<i className="mini-switch-track" /></span><span>オン · すぐに反映</span></div>}
+    {id === 'radio-group' && <div className="mini-choices"><span><i className="mini-radio-dot is-selected" />15分</span><span><i className="mini-radio-dot" />30分</span><span><i className="mini-radio-dot" />45分</span></div>}
+    {id === 'checkbox' && <div className="mini-choices"><span><i className="mini-checkbox-mark is-selected">−</i>一部選択</span><span><i className="mini-checkbox-mark is-selected">✓</i>要点メモ</span><span><i className="mini-checkbox-mark" />配置スケッチ</span></div>}
     {id === 'sidebar' && <div className="mini-window"><div className="mini-sidebar"><i /><i /><i /><i /></div><div className="mini-content"><b /><div><i /><i /></div><b /></div></div>}
     {id === 'drawer' && <div className="mini-window"><div className="mini-content"><b /><b /><b /></div><div className="mini-drawer"><span /><b /><b /><i /></div></div>}
     {id === 'modal' && <div className="mini-window mini-modal-window"><div className="mini-dialog"><span /><b /><b /><i /></div></div>}

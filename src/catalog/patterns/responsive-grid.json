@@ -1,0 +1,78 @@
+{
+  "id": "responsive-grid",
+  "nameJa": "均等カードグリッド",
+  "nameEn": "Responsive card grid",
+  "category": "レイアウト",
+  "summary": "利用できる幅に応じて、均等なカードの列数を変える。",
+  "description": "CSS Gridのauto-fitとminmaxで列数を調整する。大小のカードを混ぜるBentoグリッドと違い、すべてのカードを同じ幅の列に置く。",
+  "aliases": [
+    "レスポンシブグリッド",
+    "カード一覧",
+    "自動列数"
+  ],
+  "tags": [
+    "レスポンシブグリッド",
+    "カード一覧",
+    "自動列数"
+  ],
+  "useCases": [
+    "同じ形式のカード一覧",
+    "幅に合わせた情報の配置"
+  ],
+  "cautions": [
+    "読み順はDOMの順序と一致させる。",
+    "最小幅より狭い画面でも列がはみ出さないようにする。"
+  ],
+  "relatedIds": [
+    "bento-grid",
+    "data-table"
+  ],
+  "demoId": "responsive-grid",
+  "controls": [
+    {
+      "id": "minimum",
+      "label": "カードの最小幅の目安",
+      "help": "これより狭い枠では枠の幅に収める。",
+      "default": "160",
+      "options": [
+        {
+          "value": "160",
+          "label": "160px",
+          "promptValue": "カードの最小幅の目安を160pxにしてください"
+        },
+        {
+          "value": "220",
+          "label": "220px",
+          "promptValue": "カードの最小幅の目安を220pxにしてください"
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "label": "カードの間隔",
+      "help": "縦横の間隔を揃える。",
+      "default": "8",
+      "options": [
+        {
+          "value": "8",
+          "label": "8px",
+          "promptValue": "カード間隔を8pxにしてください"
+        },
+        {
+          "value": "20",
+          "label": "20px",
+          "promptValue": "カード間隔を20pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "均等なカードを並べるレスポンシブグリッドを実装してください。{{minimum}}。{{gap}}。repeat(auto-fit, minmax(min(100%, 最小幅), 1fr))で枠幅に応じて列数を変えてください。最初は4枚、操作で7枚と4枚を切り替え、DOMの順番は維持してください。最小幅のカード2枚が収まらない枠では1列にし、長い文字は折り返し、カードは非操作の内容として扱ってください。",
+  "references": [
+    {
+      "title": "MDN · repeat()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/repeat",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "resizable-panel",
+  "nameJa": "可変分割パネル",
+  "nameEn": "Resizable panel",
+  "aliases": [
+    "幅を変える分割画面",
+    "ウィンドウスプリッター",
+    "ドラッグする境界"
+  ],
+  "tags": [
+    "分割",
+    "サイズ変更",
+    "キーボード"
+  ],
+  "category": "レイアウト",
+  "summary": "境界を動かし、2つの作業領域の幅を調整する。",
+  "description": "2つの領域の境界を動かせる配置。デモではドラッグとキーボードで、境界を除く有効領域の左側を20〜80%に調整する。固定比率の分割画面と違い、作業中に必要な幅を変えられる。",
+  "useCases": [
+    "一覧と編集領域の幅調整",
+    "作業に合わせて広さを変える画面"
+  ],
+  "cautions": [
+    "最小幅を確保し、狭い側の内容も折り返す。",
+    "参照するAPGのWindow Splitterは例の整備とレビューが継続中。ここでは完全に閉じず、最小幅を20%に制限する。"
+  ],
+  "relatedIds": [
+    "split-view",
+    "master-detail"
+  ],
+  "demoId": "resizable-panel",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "左側の初期比率",
+      "help": "境界を除く領域の配分。",
+      "default": "30",
+      "options": [
+        {
+          "value": "30",
+          "label": "30%",
+          "promptValue": "左側30%・右側70%から始めてください"
+        },
+        {
+          "value": "60",
+          "label": "60%",
+          "promptValue": "左側60%・右側40%から始めてください"
+        }
+      ]
+    },
+    {
+      "id": "step",
+      "label": "キー操作の刻み",
+      "help": "ドラッグは1%単位に丸める。",
+      "default": "5",
+      "options": [
+        {
+          "value": "5",
+          "label": "5%ずつ",
+          "promptValue": "左右キーでは5%ずつ変えてください"
+        },
+        {
+          "value": "10",
+          "label": "10%ずつ",
+          "promptValue": "左右キーでは10%ずつ変えてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "2領域の境界を動かせる可変分割パネルを実装してください。{{initial}}。{{step}}。境界の操作領域を44pxとし、残りの領域を左右へ配分してください。左側は20〜80%に制限し、ドラッグでは整数%へ丸めてください。pointer captureを使い、操作中にポインターが外れても追跡し、完了・キャンセルで解除してください。境界はフォーカス可能な縦のseparatorとし、左側領域の名前・aria-controls・最小・最大・現在値を設定してください。Home・Endで最小・最大へ移動し、Enterで最小幅と直前の幅を切り替えてください。比率を文字でも示し、狭い画面でも内容を折り返してください。リセットで初期比率に戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Window Splitter（レビュー継続中）",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/windowsplitter/",
+      "checkedAt": "2026-10-25"
+    },
+    {
+      "title": "MDN · setPointerCapture",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

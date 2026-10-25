@@ -1,0 +1,78 @@
+{
+  "id": "context-menu",
+  "nameJa": "コンテキストメニュー",
+  "nameEn": "Context menu",
+  "aliases": [
+    "右クリックメニュー",
+    "文脈メニュー",
+    "対象の操作一覧"
+  ],
+  "tags": [
+    "操作",
+    "メニュー",
+    "キーボード"
+  ],
+  "category": "部品",
+  "summary": "対象に関係する操作を、その近くで選べるようにする。",
+  "description": "特定の対象に対する操作をまとめるメニュー。デモではノートの固定・ラベル確認・余白変更を試せる。右クリック以外にも表示ボタンとShift+F10を用意し、外部データは変更しない。",
+  "useCases": [
+    "項目に対する補助操作",
+    "対象の近くに置きたい操作一覧"
+  ],
+  "cautions": [
+    "右クリックだけを唯一の開き方にしない。",
+    "デモでは3つの架空操作だけを用意し、削除や外部送信は行わない。"
+  ],
+  "relatedIds": [
+    "popover",
+    "command-palette"
+  ],
+  "demoId": "context-menu",
+  "controls": [
+    {
+      "id": "placement",
+      "label": "メニューの位置",
+      "help": "デモ枠内に収める。",
+      "default": "pointer",
+      "options": [
+        {
+          "value": "pointer",
+          "label": "操作した位置",
+          "promptValue": "右クリック位置を基準にし、ボタンやキーボードでは枠の左上に配置してください"
+        },
+        {
+          "value": "center",
+          "label": "枠の中央",
+          "promptValue": "メニューをデモ枠の中央に配置してください"
+        }
+      ]
+    },
+    {
+      "id": "initialFocus",
+      "label": "開いた時のフォーカス",
+      "help": "開始する操作を選ぶ。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "最初の操作",
+          "promptValue": "最初の操作にフォーカスしてください"
+        },
+        {
+          "value": "last",
+          "label": "最後の操作",
+          "promptValue": "最後の操作にフォーカスしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空ノートのコンテキストメニューを実装してください。{{placement}}。{{initialFocus}}。右クリック・Shift+F10・表示ボタンから開けるようにしてください。menuとmenuitemを用い、上下矢印で循環、Home・Endで先頭と末尾、Enter・Spaceで実行できるようにしてください。Escは閉じて起点へフォーカスを戻し、Tabでは閉じて外へ進めるようにしてください。外側クリックやフォーカス離脱でも閉じてください。ピン留め切替・ラベル確認・余白切替をデモ内だけで反映し、結果はstatusで伝えてください。メニューを枠外へ出さず、44px以上の操作領域を確保し、リセットで未固定・通常の余白へ戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Menu and Menubar",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

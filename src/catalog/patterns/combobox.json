@@ -1,0 +1,78 @@
+{
+  "id": "combobox",
+  "nameJa": "コンボボックス",
+  "nameEn": "Combobox",
+  "aliases": [
+    "候補付き入力",
+    "オートコンプリート",
+    "入力補完"
+  ],
+  "tags": [
+    "入力",
+    "候補",
+    "検索"
+  ],
+  "category": "部品",
+  "summary": "入力で候補を絞り、候補から値を確定する。",
+  "description": "文字入力と候補一覧を組み合わせた部品。デモでは5つの架空の道具から選ぶ。検索結果を閲覧する検索UIとは異なり、入力値として1つの候補を確定する。自由入力そのものは確定値として扱わない。",
+  "useCases": [
+    "候補が複数ある選択入力",
+    "名前の一部から探すフォーム"
+  ],
+  "cautions": [
+    "入力中の文字と確定済みの値を区別する。",
+    "日本語変換中のEnterを候補の決定として扱わない。候補0件と閉じた状態も設計する。"
+  ],
+  "relatedIds": [
+    "select",
+    "command-palette"
+  ],
+  "demoId": "combobox",
+  "controls": [
+    {
+      "id": "matching",
+      "label": "候補の探し方",
+      "help": "候補名のどこに一致させるか。",
+      "default": "contains",
+      "options": [
+        {
+          "value": "contains",
+          "label": "部分一致",
+          "promptValue": "入力文字を含む候補を表示してください"
+        },
+        {
+          "value": "prefix",
+          "label": "前方一致",
+          "promptValue": "入力文字で始まる候補を表示してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期入力",
+      "help": "選択済みの状態も比較する。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "空欄",
+          "promptValue": "空欄・未確定で始めてください"
+        },
+        {
+          "value": "first",
+          "label": "先頭を選択済み",
+          "promptValue": "スケッチボードを確定済みとして始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具5件から選ぶ編集可能なコンボボックスを実装してください。{{matching}}。{{initial}}。日本語・英語の大小や全角を正規化して照合してください。入力にcomboboxの役割、aria-autocomplete=list、aria-expanded・aria-controls・aria-activedescendantを設定し、候補はlistboxとoptionで表してください。上下矢印で候補を選び、端では止め、Enterまたは候補クリックで確定してください。DOMフォーカスは入力欄に保ち、日本語変換中のキー操作は確定に使わないでください。Escは入力を残して閉じ、Tab・フォーカス離脱でも閉じて未確定の候補を勝手に採用しないでください。0件では候補を選べず、件数と確定値を文字で示してください。候補を開くボタンも用意し、スマホ幅と44px以上の操作領域を確保してください。リセットで初期入力へ戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Combobox",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

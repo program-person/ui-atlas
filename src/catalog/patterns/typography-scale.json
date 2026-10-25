@@ -1,0 +1,78 @@
+{
+  "id": "typography-scale",
+  "nameJa": "文字サイズの階層",
+  "nameEn": "Typography scale",
+  "category": "見た目",
+  "summary": "本文を基準に見出しの大きさを変え、情報の強弱を比べる。",
+  "description": "本文・小見出し・大見出しのサイズを一定の倍率で関連付ける見た目。本文サイズを変更し、階層の差と狭い画面での折り返しを比較する。デモの倍率は検討用の提案値。",
+  "aliases": [
+    "タイプスケール",
+    "文字の階層",
+    "見出しサイズ"
+  ],
+  "tags": [
+    "タイプスケール",
+    "文字の階層",
+    "見出しサイズ"
+  ],
+  "useCases": [
+    "見出しと本文の強弱の比較",
+    "文字サイズと折り返しの検討"
+  ],
+  "cautions": [
+    "倍率だけで読みやすさが決まるわけではない。",
+    "見た目の大きさと意味上の見出し階層を混同しない。"
+  ],
+  "relatedIds": [
+    "minimal",
+    "text-truncation"
+  ],
+  "demoId": "typography-scale",
+  "controls": [
+    {
+      "id": "ratio",
+      "label": "サイズの倍率",
+      "help": "小見出しは本文×倍率、大見出しは本文×倍率の2乗。",
+      "default": "1.25",
+      "options": [
+        {
+          "value": "1.25",
+          "label": "1.25倍",
+          "promptValue": "サイズの倍率を1.25にしてください"
+        },
+        {
+          "value": "1.5",
+          "label": "1.5倍",
+          "promptValue": "サイズの倍率を1.5にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の本文サイズ",
+      "help": "スライダーで14〜20pxを比較する。",
+      "default": "14",
+      "options": [
+        {
+          "value": "14",
+          "label": "14px",
+          "promptValue": "本文サイズ14pxから始めてください"
+        },
+        {
+          "value": "18",
+          "label": "18px",
+          "promptValue": "本文サイズ18pxから始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ架空メモを使い文字サイズの階層を比較するデモを実装してください。{{ratio}}。{{initial}}。スライダーは14〜20pxを2px刻みとし、本文を基準に小見出しは倍率、大見出しは倍率の2乗を掛け、小数第1位へ丸めてください。本文行高は単位なし1.7、見出しは1.3にし、意味上のh2・h3の順を維持してください。実際のサイズを文字で示し、辞典本体の文字サイズは変えず、狭い幅でも折り返してください。",
+  "references": [
+    {
+      "title": "MDN · line-height（行高の設計参考）",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/line-height",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "step-indicator",
+  "nameJa": "ステップ表示",
+  "nameEn": "Step indicator",
+  "aliases": [
+    "手順の表示",
+    "ステッパー",
+    "ウィザード"
+  ],
+  "tags": [
+    "手順",
+    "完了",
+    "フォーム"
+  ],
+  "category": "UXの流れ",
+  "summary": "連続する作業を分け、現在・完了・未着手を示す。",
+  "description": "複数の手順のどこにいるかを示す流れ。デモでは分類・見た目・確認の3手順を進み、戻った時も選択を保持する。件数で一覧を区切るページネーションとは異なり、作業に意味のある順序を持つ。",
+  "useCases": [
+    "複数の手順を持つ設定",
+    "前後に戻れる入力の流れ"
+  ],
+  "cautions": [
+    "単純な作業を必要以上に分割しない。",
+    "完了・現在・未着手を色だけで区別しない。"
+  ],
+  "relatedIds": [
+    "pagination",
+    "inline-validation"
+  ],
+  "demoId": "step-indicator",
+  "controls": [
+    {
+      "id": "layout",
+      "label": "手順の並び",
+      "help": "進行状況の配置。",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "横並び",
+          "promptValue": "手順の表示を横に並べてください"
+        },
+        {
+          "value": "vertical",
+          "label": "縦並び",
+          "promptValue": "手順の表示を縦に並べてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "開始する手順",
+      "help": "架空の初期値が入力済みの状態。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "最初から",
+          "promptValue": "分類から始めてください"
+        },
+        {
+          "value": "second",
+          "label": "2番目から",
+          "promptValue": "分類をノートとして、見た目の手順から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "分類・見た目・確認の3手順で架空の設定をするステップ表示を実装してください。{{layout}}。{{initial}}。olに手順を並べ、現在だけにaria-current=stepを付けてください。完了・現在・未着手は文字でも示してください。分類はノートかスケッチ、色は青か緑から選び、前後へ移動しても値を保持してください。移動後は手順見出しへフォーカスし、最初の前へは無効にしてください。最後は確認内容を表示して完了できるようにし、外部へ送信しないでください。ボタンは44px以上にし、スマホ幅へ収め、リセットで設定した開始手順と初期値に戻してください。",
+  "references": [
+    {
+      "title": "USWDS · Step indicator",
+      "url": "https://designsystem.digital.gov/components/step-indicator/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

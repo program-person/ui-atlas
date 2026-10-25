@@ -1,0 +1,78 @@
+{
+  "id": "spacing-scale",
+  "nameJa": "余白の段階",
+  "nameEn": "Spacing scale",
+  "category": "見た目",
+  "summary": "共通の単位から余白を決め、密度とまとまりを比較する。",
+  "description": "枠の内側と項目間隔を共通の単位の1・2・4倍で変える見た目。デモの値は比較用の提案で、1つの正解を示すものではない。文字サイズの階層とは別に余白だけを比べる。",
+  "aliases": [
+    "スペーシングスケール",
+    "余白の単位",
+    "密度の比較"
+  ],
+  "tags": [
+    "スペーシングスケール",
+    "余白の単位",
+    "密度の比較"
+  ],
+  "useCases": [
+    "画面の密度の検討",
+    "関連する余白を揃える"
+  ],
+  "cautions": [
+    "単位を揃えるだけで情報の関係が伝わるわけではない。",
+    "狭い画面と操作領域の大きさを別に確認する。"
+  ],
+  "relatedIds": [
+    "typography-scale",
+    "minimal"
+  ],
+  "demoId": "spacing-scale",
+  "controls": [
+    {
+      "id": "unit",
+      "label": "余白の基準単位",
+      "help": "段階は1・2・4倍。",
+      "default": "4",
+      "options": [
+        {
+          "value": "4",
+          "label": "4px",
+          "promptValue": "余白の単位を4pxにしてください"
+        },
+        {
+          "value": "8",
+          "label": "8px",
+          "promptValue": "余白の単位を8pxにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の段階",
+      "help": "スライダーで3段階を比べる。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "段階1（1倍）",
+          "promptValue": "初期は段階1、単位の1倍にしてください"
+        },
+        {
+          "value": "3",
+          "label": "段階3（4倍）",
+          "promptValue": "初期は段階3、単位の4倍にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ架空カードの余白だけを比較するデモを実装してください。{{unit}}。{{initial}}。スライダーの段階1・2・3に倍率1・2・4を割り当て、枠のpaddingと項目間のgapへ同じ値を使ってください。見出し・説明・サンプル行・選択ボタンを同じ順序で保ち、既定の見出しや段落のmarginは0にしてください。44px以上の操作領域と折り返しを保ち、基準単位・倍率・実際のpx値を文字で示してください。",
+  "references": [
+    {
+      "title": "MDN · gap（間隔の実装参考）",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/gap",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "meter",
+  "nameJa": "メーター",
+  "nameEn": "Meter",
+  "aliases": [
+    "使用率の表示",
+    "現在量の目盛り",
+    "範囲付きの測定値"
+  ],
+  "tags": [
+    "量",
+    "使用率",
+    "状態"
+  ],
+  "category": "部品",
+  "summary": "決まった範囲の中で、現在の量や状態を示す。",
+  "description": "範囲を持つ量を示す部品。デモでは架空の使用率を0〜100%で調整し、余裕・注意・上限に近い状態を比較する。処理の完了率を表すプログレスバーとは区別する。",
+  "useCases": [
+    "容量や使用率の表示",
+    "範囲と基準を持つ現在量"
+  ],
+  "cautions": [
+    "処理の進行を示す用途にmeterを使わない。",
+    "表示色はブラウザで異なるため、値と状態を文字でも示す。実際のPCの使用率は取得しない。"
+  ],
+  "relatedIds": [
+    "progress-bar",
+    "range-slider"
+  ],
+  "demoId": "meter",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期の使用率",
+      "help": "表示する架空の値。",
+      "default": "25",
+      "options": [
+        {
+          "value": "25",
+          "label": "25%",
+          "promptValue": "25%から始めてください"
+        },
+        {
+          "value": "85",
+          "label": "85%",
+          "promptValue": "85%から始めてください"
+        }
+      ]
+    },
+    {
+      "id": "high",
+      "label": "高い範囲の境界",
+      "help": "この値を超えると上限に近い状態。",
+      "default": "70",
+      "options": [
+        {
+          "value": "70",
+          "label": "70%",
+          "promptValue": "高い範囲の境界を70%にしてください"
+        },
+        {
+          "value": "90",
+          "label": "90%",
+          "promptValue": "高い範囲の境界を90%にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の使用率を示すメーターを実装してください。{{initial}}。{{high}}。ラベル付きHTML meterに最小0・最大100・low 50・optimum 20と現在値を設定してください。50%以下は余裕あり、high以下は注意、それを超えたら上限に近いと文字で示してください。5%刻みのラベル付きスライダーで値を試せるようにし、数値と状態をstatusへ即時反映してください。色だけで意味を伝えず、キーボードの矢印・Home・Endを保ってください。操作領域は44px以上にし、スマホ幅に収め、リセットで初期値へ戻してください。実際のPCや外部サービスの使用量は取得しないでください。",
+  "references": [
+    {
+      "title": "MDN · meter",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meter",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "input-adornment",
+  "nameJa": "入力欄の単位表示",
+  "nameEn": "Input adornment",
+  "category": "部品",
+  "summary": "入力値に含めず、単位や短い補足を欄の前後へ添える。",
+  "description": "数値の入力と固定の単位表示を分ける部品。プレースホルダーと異なり、入力しても単位が残る。デモはサンプルの幅をpxまたは%で指定する。",
+  "aliases": [
+    "入力サフィックス",
+    "入力プレフィックス",
+    "単位付き入力"
+  ],
+  "tags": [
+    "入力サフィックス",
+    "入力プレフィックス",
+    "単位付き入力"
+  ],
+  "useCases": [
+    "単位が決まった数値欄",
+    "入力しても残したい短い補足"
+  ],
+  "cautions": [
+    "装飾だけに単位を置かず、ラベルにも含める。",
+    "単位を入力値の一部として編集させない。"
+  ],
+  "relatedIds": [
+    "number-input",
+    "range-slider"
+  ],
+  "demoId": "input-adornment",
+  "controls": [
+    {
+      "id": "unit",
+      "label": "幅の単位",
+      "help": "プレビューの実際の幅にも反映する。",
+      "default": "pixels",
+      "options": [
+        {
+          "value": "pixels",
+          "label": "px",
+          "promptValue": "単位をpxにしてください"
+        },
+        {
+          "value": "percent",
+          "label": "%",
+          "promptValue": "単位を%にしてください"
+        }
+      ]
+    },
+    {
+      "id": "prefix",
+      "label": "先頭の補助表示",
+      "help": "欄の末尾には常に単位を表示する。",
+      "default": "show",
+      "options": [
+        {
+          "value": "show",
+          "label": "幅を表示",
+          "promptValue": "欄の先頭にも幅という補助表示を置いてください"
+        },
+        {
+          "value": "hide",
+          "label": "表示なし",
+          "promptValue": "欄の先頭の補助表示は省いてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の幅を指定する単位付き入力を実装してください。{{unit}}。{{prefix}}。初期値は32、末尾に固定単位を置き、入力値とは分離してください。装飾をaria-hiddenにし、入力ラベルと補足に単位を含めてください。半角数字0〜100の整数を確定時に検証し、不正なら欄へフォーカスしてください。空欄・単位を含む入力も拒否し、修正で古いエラーと結果を解除してください。有効な値は幅のプレビューに反映し、外部送信しないでください。",
+  "references": [
+    {
+      "title": "GOV.UK · Text input / Prefixes and suffixes",
+      "url": "https://design-system.service.gov.uk/components/text-input/",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

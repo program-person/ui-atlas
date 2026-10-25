@@ -1,0 +1,78 @@
+{
+  "id": "loading-button",
+  "nameJa": "処理中ボタン",
+  "nameEn": "Loading button",
+  "category": "UXの流れ",
+  "summary": "処理中の状態をボタンで伝え、重複した実行を防ぐ。",
+  "description": "短い疑似処理を実行し、ボタンの文言と結果で待機・成功・失敗を伝える。全領域の仮表示とは異なり、起点となる操作の状態に焦点を当てる。",
+  "aliases": [
+    "ローディングボタン",
+    "二重送信防止",
+    "待機ボタン"
+  ],
+  "tags": [
+    "ローディングボタン",
+    "二重送信防止",
+    "待機ボタン"
+  ],
+  "useCases": [
+    "短い処理の待ち状態",
+    "操作の重複防止と再試行"
+  ],
+  "cautions": [
+    "aria-disabledだけではクリックを防げないため処理側でもガードする。",
+    "処理中にフォーカスを奪わず、結果を別に知らせる。"
+  ],
+  "relatedIds": [
+    "skeleton-loading",
+    "progress-bar"
+  ],
+  "demoId": "loading-button",
+  "controls": [
+    {
+      "id": "delay",
+      "label": "処理の待ち時間",
+      "help": "通信なしのタイマー。",
+      "default": "1000",
+      "options": [
+        {
+          "value": "1000",
+          "label": "1秒",
+          "promptValue": "疑似処理を1秒にしてください"
+        },
+        {
+          "value": "2000",
+          "label": "2秒",
+          "promptValue": "疑似処理を2秒にしてください"
+        }
+      ]
+    },
+    {
+      "id": "result",
+      "label": "処理の結果",
+      "help": "デモの成功と失敗を切り替える。",
+      "default": "success",
+      "options": [
+        {
+          "value": "success",
+          "label": "成功",
+          "promptValue": "処理後は成功を表示してください"
+        },
+        {
+          "value": "error",
+          "label": "失敗",
+          "promptValue": "処理後は失敗と再試行を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空サンプルを確認する処理中ボタンを実装してください。{{delay}}。{{result}}。処理中は文言を確認中に変え、aria-disabledを設定し、フォーカスを維持してください。同期的なガードで連打を防ぎ、実行回数は1回だけ増やしてください。処理領域にaria-busyを設定し、その外のstatusで結果を知らせてください。外部通信はせず、再試行可能にし、アンマウント時にタイマーを解除してください。",
+  "references": [
+    {
+      "title": "MDN · aria-busy",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

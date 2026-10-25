@@ -1,0 +1,78 @@
+{
+  "id": "data-table",
+  "nameJa": "データテーブル",
+  "nameEn": "Data table",
+  "aliases": [
+    "表形式",
+    "一覧表",
+    "並べ替え表"
+  ],
+  "tags": [
+    "表",
+    "比較",
+    "ソート"
+  ],
+  "category": "部品",
+  "summary": "同じ属性を列に揃え、行同士を比較する。",
+  "description": "項目を行、属性を列に並べる表。デモでは4件の架空ノートを名前・数値で並べ替え、読み取り密度を比較する。カード一覧より属性を横に比較しやすいが、画面幅に応じて列数を絞る必要がある。",
+  "useCases": [
+    "複数の属性の比較",
+    "数値や名前で並べ替える一覧"
+  ],
+  "cautions": [
+    "表と編集可能なグリッドは区別する。",
+    "小さな画面に多くの列を詰め込まない。"
+  ],
+  "relatedIds": [
+    "master-detail",
+    "search-filter"
+  ],
+  "demoId": "data-table",
+  "controls": [
+    {
+      "id": "sort",
+      "label": "初期の並び",
+      "help": "昇順で開始する列。",
+      "default": "name",
+      "options": [
+        {
+          "value": "name",
+          "label": "ノート名",
+          "promptValue": "ノート名の昇順で始めてください"
+        },
+        {
+          "value": "count",
+          "label": "記録数",
+          "promptValue": "記録数の昇順で始めてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "行の余白",
+      "help": "情報密度を比較する。",
+      "default": "comfortable",
+      "options": [
+        {
+          "value": "comfortable",
+          "label": "ゆったり",
+          "promptValue": "本文行の上下に14pxの余白を設けてください"
+        },
+        {
+          "value": "compact",
+          "label": "コンパクト",
+          "promptValue": "本文行の上下に7pxの余白を設けてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のノート4件の名前・記録数・状態を表示するデータテーブルを実装してください。{{sort}}。{{density}}。caption・thead・tbody・scope付き見出しを持つHTML tableを使ってください。名前と記録数の見出しをボタンにし、選択中の列を押すと昇順・降順を切り替え、別の列は昇順で始めてください。aria-sortは並べ替え中の見出しだけに設定し、状態は文字とstatusでも示してください。見出しのフォーカスを保ち、数値を数値として比較してください。スマホでも3列を折り返して収め、見出しボタンは44px以上にしてください。リセットで初期の並びに戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Sortable Table",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

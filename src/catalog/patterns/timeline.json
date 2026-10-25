@@ -1,0 +1,78 @@
+{
+  "id": "timeline",
+  "nameJa": "タイムライン",
+  "nameEn": "Timeline",
+  "aliases": [
+    "時系列の表示",
+    "出来事の記録",
+    "履歴の流れ"
+  ],
+  "tags": [
+    "履歴",
+    "時系列",
+    "記録"
+  ],
+  "category": "レイアウト",
+  "summary": "出来事を時間順に並べ、前後の流れを読み取れるようにする。",
+  "description": "出来事の日付・見出し・状態を時系列に並べる配置。デモでは架空の設計・制作・確認の記録を表示し、各出来事の詳細を開閉する。これから行う手順を示すステップ表示とは分けて扱う。",
+  "useCases": [
+    "制作や作業の履歴",
+    "出来事の前後関係の表示"
+  ],
+  "cautions": [
+    "見た目の線だけに頼らず、日付や状態も文字で示す。",
+    "横並びは狭い画面で縦に戻し、順序を保つ。"
+  ],
+  "relatedIds": [
+    "step-indicator",
+    "master-detail"
+  ],
+  "demoId": "timeline",
+  "controls": [
+    {
+      "id": "orientation",
+      "label": "時系列の配置",
+      "help": "狭い画面では縦に並ぶ。",
+      "default": "vertical",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "縦方向",
+          "promptValue": "時系列を縦に並べてください"
+        },
+        {
+          "value": "horizontal",
+          "label": "横方向",
+          "promptValue": "520px以上では時系列を横に、狭い画面では縦に並べてください"
+        }
+      ]
+    },
+    {
+      "id": "details",
+      "label": "初期の詳細",
+      "help": "出来事の補足を開くか。",
+      "default": "closed",
+      "options": [
+        {
+          "value": "closed",
+          "label": "閉じる",
+          "promptValue": "詳細をすべて閉じて始めてください"
+        },
+        {
+          "value": "first",
+          "label": "最初だけ開く",
+          "promptValue": "設計の詳細だけを開いて始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の設計・制作・確認の出来事を日付順に並べるタイムラインを実装してください。{{orientation}}。{{details}}。olに順序を持たせ、time要素のdateTimeに日付を設定し、見出し・日付・完了または進行中の文字を表示してください。各出来事には44px以上の詳細ボタンを設け、aria-expanded・aria-controlsで補足の開閉を関連付けてください。複数の詳細を独立して開けるようにし、フォーカスは押したボタンに保ってください。スマホで順序を変えずに収め、動きに依存させず、リセットで初期の開閉状態に戻してください。",
+  "references": [
+    {
+      "title": "MDN · time",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/time",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

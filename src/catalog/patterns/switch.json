@@ -1,0 +1,23 @@
+{
+  "id": "switch", "nameJa": "スイッチ", "nameEn": "Switch",
+  "aliases": ["トグルスイッチ", "オンオフ", "ON/OFF切り替え"],
+  "tags": ["設定", "即時反映", "二択"], "category": "部品",
+  "summary": "設定のオン・オフを切り替え、結果をすぐ確かめる。",
+  "description": "機能が有効か無効かを切り替える部品。このデモでは、架空のノートに補助グリッドを即時表示する。チェックボックスの複数選択や、ラジオグループの択一とは用途を分ける。状態が変わっても「補助グリッド」というラベルは変えず、オン・オフを別に示す。",
+  "useCases": ["表示オプションの有効・無効", "変更をすぐ確認できる設定", "機能のオン・オフを明示したい画面"],
+  "cautions": ["保存ボタンでまとめて確定する選択では、チェックボックスも検討する。", "色だけで状態を伝えず、文字でもオン・オフを示す。", "利用不可の場合は理由も添える。このデモでは設定で操作可能・利用不可を試せる。"],
+  "relatedIds": ["popover"], "demoId": "switch",
+  "controls": [
+    { "id": "initial", "label": "初期状態", "help": "リセット時の補助グリッドの状態。", "default": "off", "options": [
+      { "value": "off", "label": "オフ", "promptValue": "初期状態をオフにしてください" },
+      { "value": "on", "label": "オン", "promptValue": "初期状態をオンにしてください" }
+    ] },
+    { "id": "availability", "label": "操作の可否", "help": "利用不可の理由表示も試せる。", "default": "enabled", "options": [
+      { "value": "enabled", "label": "操作できる", "promptValue": "操作可能にし、クリック・タップ・Space・Enterで切り替えてください" },
+      { "value": "disabled", "label": "利用不可", "promptValue": "disabledで切り替えを無効にし、理由「閲覧モードでは変更できません」を表示してください" }
+    ] }
+  ],
+  "prompt": "架空のノートの補助グリッドを切り替えるスイッチを実装してください。{{initial}}。{{availability}}。状態を結果へ即時反映し、保存ボタンは設けないでください。buttonにswitchの役割とaria-checkedを設定し、「補助グリッド」という固定ラベルと説明を関連付けてください。オン・オフの文字をラベルとは別に示し、色だけに依存させないでください。フォーカスを見えるようにし、操作領域は44px以上を確保してください。スマホでもラベルとスイッチが収まり、横にはみ出さない配置にしてください。切り替えは即時に行い、アニメーションに依存させないでください。",
+  "references": [{ "title": "WAI-ARIA APG · Switch", "url": "https://www.w3.org/WAI/ARIA/apg/patterns/switch/", "checkedAt": "2026-10-25" }],
+  "verifiedAt": "2026-10-25"
+}

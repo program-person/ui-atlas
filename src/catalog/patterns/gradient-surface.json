@@ -1,0 +1,78 @@
+{
+  "id": "gradient-surface",
+  "nameJa": "グラデーションの面",
+  "nameEn": "Gradient surface",
+  "category": "見た目",
+  "summary": "2色の移り変わりで面を作り、方向と色順を比較する。",
+  "description": "線形グラデーションを背景に使う見た目。単色のテーマ切替や背景のぼかしと違い、同じ面の中で色が連続して変わる。デモは固定の淡い配色だけを使う。",
+  "aliases": [
+    "線形グラデーション",
+    "背景の色変化",
+    "linear gradient"
+  ],
+  "tags": [
+    "線形グラデーション",
+    "背景の色変化",
+    "linear gradient"
+  ],
+  "useCases": [
+    "カード背景の比較",
+    "色の方向と重心の検討"
+  ],
+  "cautions": [
+    "背景の全体で文字を読める配色にする。",
+    "色の変化だけで意味や状態を伝えない。"
+  ],
+  "relatedIds": [
+    "color-picker",
+    "dark-mode"
+  ],
+  "demoId": "gradient-surface",
+  "controls": [
+    {
+      "id": "palette",
+      "label": "2色の組み合わせ",
+      "help": "文字色は共通の濃い色を使う。",
+      "default": "blue",
+      "options": [
+        {
+          "value": "blue",
+          "label": "青と紫",
+          "promptValue": "青#dce9ffと紫#eae1ffの面にしてください"
+        },
+        {
+          "value": "green",
+          "label": "緑と青",
+          "promptValue": "緑#d9f2e5と青#e7f1ffの面にしてください"
+        }
+      ]
+    },
+    {
+      "id": "angle",
+      "label": "色の方向",
+      "help": "CSS linear-gradientの角度。",
+      "default": "45",
+      "options": [
+        {
+          "value": "45",
+          "label": "45度",
+          "promptValue": "方向を45degにしてください"
+        },
+        {
+          "value": "135",
+          "label": "135度",
+          "promptValue": "方向を135degにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ架空メモの背景を線形グラデーションで比較するデモを実装してください。{{palette}}。{{angle}}。文字は#25364eとし、ラベルも同じ濃い色にしてください。固定ラベルのボタンで始点と終点の色を反転し、aria-pressedで反転状態を示してください。角度と2色の値を文字でも表示し、自動アニメーション・外部画像・辞典本体の配色変更は行わないでください。",
+  "references": [
+    {
+      "title": "MDN · linear-gradient()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

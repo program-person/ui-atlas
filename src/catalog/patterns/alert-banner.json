@@ -1,0 +1,78 @@
+{
+  "id": "alert-banner",
+  "nameJa": "アラートバナー",
+  "nameEn": "Alert banner",
+  "aliases": [
+    "注意の帯",
+    "常設の案内",
+    "警告バナー"
+  ],
+  "tags": [
+    "警告",
+    "通知",
+    "案内"
+  ],
+  "category": "部品",
+  "summary": "作業を止めずに、重要な案内を画面内へ残す。",
+  "description": "作業領域の近くに案内や注意を残す部品。デモでは情報と要確認のメッセージを切り替え、表示・手動で閉じる操作を試す。一時的なトーストと違って自動では消えず、背景操作を止めるダイアログとも異なる。",
+  "useCases": [
+    "設定画面の注意",
+    "作業を続けながら読める案内"
+  ],
+  "cautions": [
+    "緊急性のない案内にalertを多用しない。",
+    "最初から表示されたalertが読み上げられるとは限らない。重要な案内を自動で消さない。"
+  ],
+  "relatedIds": [
+    "toast",
+    "modal"
+  ],
+  "demoId": "alert-banner",
+  "controls": [
+    {
+      "id": "severity",
+      "label": "案内の種類",
+      "help": "役割と見た目を切り替える。",
+      "default": "info",
+      "options": [
+        {
+          "value": "info",
+          "label": "お知らせ",
+          "promptValue": "情報の案内としてstatusを使い、青の枠とお知らせの文字で示してください"
+        },
+        {
+          "value": "warning",
+          "label": "要確認",
+          "promptValue": "要確認の案内としてalertを使い、黄土色の枠と要確認の文字で示してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の表示",
+      "help": "初期表示と操作後の出現を比べる。",
+      "default": "hidden",
+      "options": [
+        {
+          "value": "hidden",
+          "label": "非表示",
+          "promptValue": "初期状態は非表示にしてください"
+        },
+        {
+          "value": "visible",
+          "label": "表示済み",
+          "promptValue": "最初から案内を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のノートに関するアラートバナーを実装してください。{{severity}}。{{initial}}。案内を出すボタンと手動で閉じるボタンを用意し、自動非表示にはしないでください。メッセージのlive領域を最初から置き、出現時にはフォーカスを奪わず、閉じる操作後は案内を出すボタンへ戻してください。色だけで重要度を伝えず、作業領域の操作を妨げないでください。デモ用の架空案内であることを明示し、44px以上のボタンとスマホ幅への収まりを確保してください。リセットで設定した表示に戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Alert",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/alert/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

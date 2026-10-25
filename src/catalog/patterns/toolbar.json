@@ -1,0 +1,78 @@
+{
+  "id": "toolbar",
+  "nameJa": "ツールバー",
+  "nameEn": "Toolbar",
+  "aliases": [
+    "書式の操作群",
+    "関連操作のまとめ",
+    "書式ツールバー"
+  ],
+  "tags": [
+    "操作",
+    "書式",
+    "キーボード"
+  ],
+  "category": "部品",
+  "summary": "関連する操作をまとめ、矢印キーで移動できるようにする。",
+  "description": "複数の操作を1つのグループにまとめる部品。デモでは太字・斜体・下線をサンプル文へ適用する。タブのように本文を切り替えるものではなく、それぞれが独立した操作となる。",
+  "useCases": [
+    "文章や図の書式操作",
+    "関連する3つ以上の操作群"
+  ],
+  "cautions": [
+    "ツールバー内の移動と操作の実行を分ける。",
+    "操作同士の関係が薄い場合は単純なボタンの並びも検討する。"
+  ],
+  "relatedIds": [
+    "tabs",
+    "checkbox"
+  ],
+  "demoId": "toolbar",
+  "controls": [
+    {
+      "id": "orientation",
+      "label": "操作の向き",
+      "help": "矢印キーの方向も変わる。",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "横向き",
+          "promptValue": "横向きに並べ、左右の矢印で移動してください"
+        },
+        {
+          "value": "vertical",
+          "label": "縦向き",
+          "promptValue": "縦向きに並べ、上下の矢印で移動してください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期の書式",
+      "help": "サンプル文の開始状態。",
+      "default": "plain",
+      "options": [
+        {
+          "value": "plain",
+          "label": "書式なし",
+          "promptValue": "初期状態で書式をすべてオフにしてください"
+        },
+        {
+          "value": "bold",
+          "label": "太字",
+          "promptValue": "初期状態で太字だけをオンにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "固定の架空サンプル文へ太字・斜体・下線を適用するツールバーを実装してください。{{orientation}}。{{initial}}。toolbarの役割と名前、向きを示してください。各操作はaria-pressedを持つボタンにし、Tab停止位置を1つにしてください。矢印は端で循環させ、Home・Endは先頭・末尾へ移動してください。移動だけでは書式を変えず、Enter・Space・クリックで各書式を独立して切り替えてください。再入場は最後にフォーカスしたボタンへ戻し、状態はプレビューと文字でも示してください。44px以上の操作領域とスマホへの収まりを確保し、リセットで初期書式へ戻してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Toolbar",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

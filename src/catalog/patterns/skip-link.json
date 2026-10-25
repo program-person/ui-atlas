@@ -1,0 +1,78 @@
+{
+  "id": "skip-link",
+  "nameJa": "本文へのスキップリンク",
+  "nameEn": "Skip link",
+  "category": "UXの流れ",
+  "summary": "繰り返しの操作群を飛ばし、目的の内容へ移動する。",
+  "description": "キーボードで最初に到達するリンクから、繰り返しの操作群を飛ばして内容へ進む。目次と異なり、冒頭の移動を短縮することに焦点を当てる。",
+  "aliases": [
+    "スキップナビゲーション",
+    "本文へ移動",
+    "バイパスリンク"
+  ],
+  "tags": [
+    "スキップナビゲーション",
+    "本文へ移動",
+    "バイパスリンク"
+  ],
+  "useCases": [
+    "繰り返しのナビゲーションを持つ画面",
+    "キーボードで本文へ直接移動"
+  ],
+  "cautions": [
+    "移動先へ実際にフォーカスを動かす。",
+    "常時表示は発見しやすい。フォーカス時だけの表示でも見失わないようにする。"
+  ],
+  "relatedIds": [
+    "sidebar",
+    "scrollspy"
+  ],
+  "demoId": "skip-link",
+  "controls": [
+    {
+      "id": "visibility",
+      "label": "リンクの表示",
+      "help": "常時表示とフォーカス時表示を比較する。",
+      "default": "always",
+      "options": [
+        {
+          "value": "always",
+          "label": "常に表示",
+          "promptValue": "スキップリンクを常時表示してください"
+        },
+        {
+          "value": "focus",
+          "label": "フォーカス時",
+          "promptValue": "フォーカスした時にスキップリンクを表示してください"
+        }
+      ]
+    },
+    {
+      "id": "target",
+      "label": "移動先",
+      "help": "デモ内の2つの見出し。",
+      "default": "note",
+      "options": [
+        {
+          "value": "note",
+          "label": "本文",
+          "promptValue": "本文の見出しを移動先にしてください"
+        },
+        {
+          "value": "checklist",
+          "label": "チェックリスト",
+          "promptValue": "チェックリストの見出しを移動先にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "デモ内の冒頭にスキップリンクを実装してください。{{visibility}}。{{target}}。リンクを最初の操作要素にし、3つのサンプルナビゲーションボタンより前に置いてください。Enterでデモ内の対象見出しへフォーカスし、次のTabでその節の操作へ進めるようにしてください。見出しはtabIndex=-1とし、移動結果をstatusで伝え、辞典本体とデモのURLは変更しないでください。",
+  "references": [
+    {
+      "title": "W3C · G1 / Skip to main content",
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/general/G1",
+      "checkedAt": "2026-10-26"
+    }
+  ],
+  "verifiedAt": "2026-10-26"
+}

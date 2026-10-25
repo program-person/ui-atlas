@@ -1,0 +1,78 @@
+{
+  "id": "confirmation-flow",
+  "nameJa": "実行前の確認",
+  "nameEn": "Review before action",
+  "category": "UXの流れ",
+  "summary": "対象と変更内容を見直してから、明示的に確定する。",
+  "description": "対象・変更前・変更後を先に示し、実行か見直しかを選ぶ流れ。モーダルの構造とは異なり、ここでは本文内の確認ステップに焦点を当てる。",
+  "aliases": [
+    "確認ステップ",
+    "実行前レビュー",
+    "最終確認"
+  ],
+  "tags": [
+    "確認ステップ",
+    "実行前レビュー",
+    "最終確認"
+  ],
+  "useCases": [
+    "対象と変更内容を見直す操作",
+    "誤操作を減らす確認段階"
+  ],
+  "cautions": [
+    "すべての軽微な操作に確認を挟む必要はない。",
+    "確定ボタンは実行内容が分かる文言にする。"
+  ],
+  "relatedIds": [
+    "modal",
+    "step-indicator"
+  ],
+  "demoId": "confirmation-flow",
+  "controls": [
+    {
+      "id": "action",
+      "label": "変更後の状態",
+      "help": "確定前に対象と結果を示す。",
+      "default": "adopt",
+      "options": [
+        {
+          "value": "adopt",
+          "label": "採用",
+          "promptValue": "採用へ変更する操作にしてください"
+        },
+        {
+          "value": "hold",
+          "label": "保留",
+          "promptValue": "保留へ変更する操作にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "変更前の状態",
+      "help": "初期の架空レコード。",
+      "default": "draft",
+      "options": [
+        {
+          "value": "draft",
+          "label": "下書き",
+          "promptValue": "変更前は下書きにしてください"
+        },
+        {
+          "value": "review",
+          "label": "確認中",
+          "promptValue": "変更前は確認中にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の記録「配置のアイデア」の状態変更を、本文内の確認ステップで実装してください。{{action}}。{{initial}}。確認開始だけでは変更せず、対象と変更前後を表示してください。確認欄が開いたら戻って見直すボタンへフォーカスし、明示的な確定か見直しを選べるようにしてください。確定時だけ状態を変更し、閉じたら起点へ戻してください。確定後は同じ変更の開始ボタンを無効にし、結果をstatusで知らせてください。外部データは変更しません。",
+  "references": [
+    {
+      "title": "GOV.UK · Check answers",
+      "url": "https://design-system.service.gov.uk/patterns/check-answers/",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}

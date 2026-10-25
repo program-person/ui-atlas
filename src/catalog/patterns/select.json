@@ -1,0 +1,77 @@
+{
+  "id": "select",
+  "nameJa": "セレクトボックス",
+  "nameEn": "Select",
+  "aliases": [
+    "ドロップダウン選択",
+    "プルダウン",
+    "選択欄"
+  ],
+  "tags": [
+    "フォーム",
+    "選択",
+    "候補"
+  ],
+  "category": "部品",
+  "summary": "決まった候補を、標準の選択欄から1つ選ぶ。",
+  "description": "ブラウザ標準の選択欄。候補のグループ化や利用不可の選択肢を試せる。すべての候補を並べるラジオと違って普段は選択中の値だけを表示し、入力で候補を探すコンボボックスとは分けて扱う。",
+  "useCases": [
+    "候補が決まっているフォーム",
+    "画面を節約したい択一選択"
+  ],
+  "cautions": [
+    "未選択の案内を確定値として扱わない。",
+    "OSやブラウザによって開いた候補の見た目は異なる。"
+  ],
+  "relatedIds": [
+    "radio-group"
+  ],
+  "demoId": "select",
+  "controls": [
+    {
+      "id": "grouping",
+      "label": "候補の分類",
+      "help": "見出しで候補をまとめるか。",
+      "default": "grouped",
+      "options": [
+        {
+          "value": "grouped",
+          "label": "グループあり",
+          "promptValue": "optgroupでデザイン・開発に分けてください"
+        },
+        {
+          "value": "flat",
+          "label": "分類なし",
+          "promptValue": "候補を分類せず1列の選択肢にしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "初期選択",
+      "help": "未選択からの検証も試せる。",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "未選択",
+          "promptValue": "初期状態を未選択にしてください"
+        },
+        {
+          "value": "first",
+          "label": "先頭の道具",
+          "promptValue": "初期状態でスケッチボードを選んでください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具を1つ選ぶHTMLのselectを実装してください。{{grouping}}。{{initial}}。スケッチボード・カラーパレット・CSSプレビューを用意し、アーカイブは準備中としてdisabledにしてください。ラベルと補足を関連付け、選択の確定ボタンで検証してください。未選択なら入力欄の近くにエラーを示し、aria-invalidと説明を設定して選択欄にフォーカスしてください。選び直すとエラーと古い結果を消し、確定した結果はstatusに示してください。標準のキーボード・タッチ操作を保ち、44px以上の操作領域を確保してください。スマホ幅に収め、リセットで初期選択に戻してください。",
+  "references": [
+    {
+      "title": "MDN · select",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select",
+      "checkedAt": "2026-10-25"
+    }
+  ],
+  "verifiedAt": "2026-10-25"
+}
