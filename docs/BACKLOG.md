@@ -43,14 +43,14 @@
 
 | ID | 候補 | 状態 |
 |---|---|---|
-| switch | スイッチ | 完了（ローカル検証済み・未公開） |
-| radio-group | ラジオグループ | 完了（ローカル検証済み・未公開） |
-| checkbox | チェックボックス | 完了（ローカル検証済み・未公開） |
-| breadcrumb | パンくずリスト | 完了（ローカル検証済み・未公開） |
-| pagination | ページネーション | 完了（ローカル検証済み・未公開） |
-| tooltip | ツールチップ | 完了（ローカル検証済み・未公開） |
+| switch | スイッチ | 完了（公開済み） |
+| radio-group | ラジオグループ | 完了（公開済み） |
+| checkbox | チェックボックス | 完了（公開済み） |
+| breadcrumb | パンくずリスト | 完了（公開済み） |
+| pagination | ページネーション | 完了（公開済み） |
+| tooltip | ツールチップ | 完了（公開済み） |
 
-追加済み：100 / 100（既存20 + 100 = 合計120、残り0）。第1〜6回は23a102b、第7回は79246ca、第8回は8c0bb2bへコミット済み。第9回の22項目も検証記録と同じローカルコミットへ含める。追加100項目は未push・未公開。
+追加済み・公開済み：100 / 100（既存20 + 100 = 合計120、残り0）。23a102b・79246ca・8c0bb2b・6c2639cをmainへpush済み。2026-10-28にActions 40612161316のbuild・deploy成功と公開URLの全120デモ表示を確認。全設定・全境界の操作検証はPROGRESS.mdのローカル記録を参照。
 
 第2回はパンくずリスト・ページネーション・ツールチップを追加する。既存の項目名・別名・デモと重複しないことを確認し、WAI-ARIA APG・W3C・USWDSの一次資料を参照する。
 
@@ -62,18 +62,18 @@
 
 | ID | 候補 | 状態 |
 |---|---|---|
-| progress-bar | プログレスバー | 完了（ローカル検証済み・未公開） |
-| range-slider | 範囲スライダー | 完了（ローカル検証済み・未公開） |
-| toast | トースト通知 | 完了（ローカル検証済み・未公開） |
-| select | セレクトボックス | 完了（ローカル検証済み・未公開） |
-| data-table | データテーブル | 完了（ローカル検証済み・未公開） |
-| step-indicator | ステップ表示 | 完了（ローカル検証済み・未公開） |
-| empty-state | 空の状態 | 完了（ローカル検証済み・未公開） |
-| alert-banner | アラートバナー | 完了（ローカル検証済み・未公開） |
-| carousel | カルーセル | 完了（ローカル検証済み・未公開） |
-| scrollspy | スクロール連動ナビ | 完了（ローカル検証済み・未公開） |
-| combobox | コンボボックス | 完了（ローカル検証済み・未公開） |
-| reorder-list | 並べ替えリスト | 完了（ローカル検証済み・未公開） |
+| progress-bar | プログレスバー | 完了（公開済み） |
+| range-slider | 範囲スライダー | 完了（公開済み） |
+| toast | トースト通知 | 完了（公開済み） |
+| select | セレクトボックス | 完了（公開済み） |
+| data-table | データテーブル | 完了（公開済み） |
+| step-indicator | ステップ表示 | 完了（公開済み） |
+| empty-state | 空の状態 | 完了（公開済み） |
+| alert-banner | アラートバナー | 完了（公開済み） |
+| carousel | カルーセル | 完了（公開済み） |
+| scrollspy | スクロール連動ナビ | 完了（公開済み） |
+| combobox | コンボボックス | 完了（公開済み） |
+| reorder-list | 並べ替えリスト | 完了（公開済み） |
 
 第4回はツリービュー・コンテキストメニュー・ツールバー・カラーピッカーを出発点に、以下の12項目を追加した。
 
@@ -83,18 +83,18 @@
 
 | ID | 候補 | 状態 |
 |---|---|---|
-| tree-view | ツリービュー | 完了（ローカル検証済み・未公開） |
-| context-menu | コンテキストメニュー | 完了（ローカル検証済み・未公開） |
-| toolbar | ツールバー | 完了（ローカル検証済み・未公開） |
-| color-picker | カラーピッカー | 完了（ローカル検証済み・未公開） |
-| number-input | 数値入力 | 完了（ローカル検証済み・未公開） |
-| tag-input | タグ入力 | 完了（ローカル検証済み・未公開） |
-| date-picker | 日付入力 | 完了（ローカル検証済み・未公開） |
-| timeline | タイムライン | 完了（ローカル検証済み・未公開） |
-| sticky-header | 追従ヘッダー | 完了（ローカル検証済み・未公開） |
-| resizable-panel | 可変分割パネル | 完了（ローカル検証済み・未公開） |
-| dark-mode | ダーク配色 | 完了（ローカル検証済み・未公開） |
-| meter | メーター | 完了（ローカル検証済み・未公開） |
+| tree-view | ツリービュー | 完了（公開済み） |
+| context-menu | コンテキストメニュー | 完了（公開済み） |
+| toolbar | ツールバー | 完了（公開済み） |
+| color-picker | カラーピッカー | 完了（公開済み） |
+| number-input | 数値入力 | 完了（公開済み） |
+| tag-input | タグ入力 | 完了（公開済み） |
+| date-picker | 日付入力 | 完了（公開済み） |
+| timeline | タイムライン | 完了（公開済み） |
+| sticky-header | 追従ヘッダー | 完了（公開済み） |
+| resizable-panel | 可変分割パネル | 完了（公開済み） |
+| dark-mode | ダーク配色 | 完了（公開済み） |
+| meter | メーター | 完了（公開済み） |
 
 第4回終了時点の残りは70項目。第5回も、既存の用途・挙動と区別しながら選定する。
 
@@ -104,18 +104,18 @@
 
 | ID | 候補 | 状態 |
 |---|---|---|
-| textarea | 複数行入力 | 完了（ローカル検証済み・未公開） |
-| multi-select | 複数選択リスト | 完了（ローカル検証済み・未公開） |
-| description-list | 説明リスト | 完了（ローカル検証済み・未公開） |
-| status-badge | 状態バッジ | 完了（ローカル検証済み・未公開） |
-| loading-button | 処理中ボタン | 完了（ローカル検証済み・未公開） |
-| confirmation-flow | 実行前の確認 | 完了（ローカル検証済み・未公開） |
-| error-summary | エラーのまとめ | 完了（ローカル検証済み・未公開） |
-| load-more | もっと読み込む | 完了（ローカル検証済み・未公開） |
-| responsive-grid | 均等カードグリッド | 完了（ローカル検証済み・未公開） |
-| aspect-ratio | アスペクト比 | 完了（ローカル検証済み・未公開） |
-| text-truncation | 文章の省略と展開 | 完了（ローカル検証済み・未公開） |
-| typography-scale | 文字サイズの階層 | 完了（ローカル検証済み・未公開） |
+| textarea | 複数行入力 | 完了（公開済み） |
+| multi-select | 複数選択リスト | 完了（公開済み） |
+| description-list | 説明リスト | 完了（公開済み） |
+| status-badge | 状態バッジ | 完了（公開済み） |
+| loading-button | 処理中ボタン | 完了（公開済み） |
+| confirmation-flow | 実行前の確認 | 完了（公開済み） |
+| error-summary | エラーのまとめ | 完了（公開済み） |
+| load-more | もっと読み込む | 完了（公開済み） |
+| responsive-grid | 均等カードグリッド | 完了（公開済み） |
+| aspect-ratio | アスペクト比 | 完了（公開済み） |
+| text-truncation | 文章の省略と展開 | 完了（公開済み） |
+| typography-scale | 文字サイズの階層 | 完了（公開済み） |
 
 第5回終了時点の残りは58項目。JavaScriptサイズ警告があるため、公開前の読み込み時間と分割方針の検討を別課題として記録する。依存追加・構成変更・警告の抑制はしていない。
 
@@ -125,18 +125,18 @@
 
 | ID | 候補 | 状態 |
 |---|---|---|
-| skip-link | 本文へのスキップリンク | 完了（ローカル検証済み・未公開） |
-| fieldset | 入力欄のグループ | 完了（ローカル検証済み・未公開） |
-| input-adornment | 入力欄の単位表示 | 完了（ローカル検証済み・未公開） |
-| dual-range | 範囲の下限と上限 | 完了（ローカル検証済み・未公開） |
-| container-query | コンテナに応じた配置 | 完了（ローカル検証済み・未公開） |
-| multi-column | 文章の段組み | 完了（ローカル検証済み・未公開） |
-| image-comparison | 画像の比較スライダー | 完了（ローカル検証済み・未公開） |
-| flip-card | 裏返すカード | 完了（ローカル検証済み・未公開） |
-| elevation | 影による奥行き | 完了（ローカル検証済み・未公開） |
-| gradient-surface | グラデーションの面 | 完了（ローカル検証済み・未公開） |
-| spacing-scale | 余白の段階 | 完了（ローカル検証済み・未公開） |
-| focus-ring | フォーカスの見え方 | 完了（ローカル検証済み・未公開） |
+| skip-link | 本文へのスキップリンク | 完了（公開済み） |
+| fieldset | 入力欄のグループ | 完了（公開済み） |
+| input-adornment | 入力欄の単位表示 | 完了（公開済み） |
+| dual-range | 範囲の下限と上限 | 完了（公開済み） |
+| container-query | コンテナに応じた配置 | 完了（公開済み） |
+| multi-column | 文章の段組み | 完了（公開済み） |
+| image-comparison | 画像の比較スライダー | 完了（公開済み） |
+| flip-card | 裏返すカード | 完了（公開済み） |
+| elevation | 影による奥行き | 完了（公開済み） |
+| gradient-surface | グラデーションの面 | 完了（公開済み） |
+| spacing-scale | 余白の段階 | 完了（公開済み） |
+| focus-ring | フォーカスの見え方 | 完了（公開済み） |
 
 第6回終了時点の残りは46項目。第6回の本番ビルドは成功し、JavaScriptサイズ警告は566.12kB（gzip 158.46kB）。公開前の読み込み時間と分割方針の検討は引き続き別課題。
 
@@ -146,18 +146,18 @@
 
 | ID | 候補 | 状態 |
 |---|---|---|
-| inline-edit | その場で編集 | 完了（ローカル検証済み・未公開） |
-| conditional-fields | 条件に応じた入力欄 | 完了（ローカル検証済み・未公開） |
-| dependent-select | 連動する選択欄 | 完了（ローカル検証済み・未公開） |
-| transfer-list | 2つのリスト間で移動 | 完了（ローカル検証済み・未公開） |
-| bulk-actions | 一覧の一括操作 | 完了（ローカル検証済み・未公開） |
-| optimistic-update | 結果を先に反映 | 完了（ローカル検証済み・未公開） |
-| autosave-feedback | 自動保存の案内 | 完了（ローカル検証済み・未公開） |
-| unsaved-changes | 未保存の変更への案内 | 完了（ローカル検証済み・未公開） |
-| split-button | 主操作と追加操作 | 完了（ローカル検証済み・未公開） |
-| metric-card | 指標カード | 完了（ローカル検証済み・未公開） |
-| bar-chart | 棒グラフ | 完了（ローカル検証済み・未公開） |
-| donut-chart | ドーナツグラフ | 完了（ローカル検証済み・未公開） |
+| inline-edit | その場で編集 | 完了（公開済み） |
+| conditional-fields | 条件に応じた入力欄 | 完了（公開済み） |
+| dependent-select | 連動する選択欄 | 完了（公開済み） |
+| transfer-list | 2つのリスト間で移動 | 完了（公開済み） |
+| bulk-actions | 一覧の一括操作 | 完了（公開済み） |
+| optimistic-update | 結果を先に反映 | 完了（公開済み） |
+| autosave-feedback | 自動保存の案内 | 完了（公開済み） |
+| unsaved-changes | 未保存の変更への案内 | 完了（公開済み） |
+| split-button | 主操作と追加操作 | 完了（公開済み） |
+| metric-card | 指標カード | 完了（公開済み） |
+| bar-chart | 棒グラフ | 完了（公開済み） |
+| donut-chart | ドーナツグラフ | 完了（公開済み） |
 
 第7回終了時点は残り34項目。第7回のJavaScriptは625.09kB（gzip 173.47kB）でサイズ警告が継続。公開前の読み込み時間とコード分割の検討は別課題。
 
@@ -167,18 +167,18 @@
 
 | ID | 候補 | 担当 / 状態 |
 |---|---|---|
-| media-object | 図と本文の組み合わせ | Codex / 完了（ローカル検証済み・未公開） |
-| holy-grail-layout | ヘッダー付き3列配置 | Codex / 完了（ローカル検証済み・未公開） |
-| sticky-footer | 短い本文の下端フッター | Codex / 完了（ローカル検証済み・未公開） |
-| line-chart | 折れ線グラフ | Terra charts / 完了（ローカル検証済み・未公開） |
-| stacked-bar-chart | 積み上げ棒グラフ | Terra charts / 完了（ローカル検証済み・未公開） |
-| scatter-plot | 散布図 | Terra charts / 完了（ローカル検証済み・未公開） |
-| sort-controls | 並べ替えコントロール | Terra controls / 完了（ローカル検証済み・未公開） |
-| filter-chips | フィルターチップ | Terra controls / 完了（ローカル検証済み・未公開） |
-| segmented-control | セグメントコントロール | Terra controls / 完了（ローカル検証済み・未公開） |
-| heatmap | ヒートマップ | Terra collections / 完了（ローカル検証済み・未公開） |
-| grouped-list | グループ化リスト | Terra collections / 完了（ローカル検証済み・未公開） |
-| expandable-card | 詳細を開くカード | Terra collections / 完了（ローカル検証済み・未公開） |
+| media-object | 図と本文の組み合わせ | Codex / 完了（公開済み） |
+| holy-grail-layout | ヘッダー付き3列配置 | Codex / 完了（公開済み） |
+| sticky-footer | 短い本文の下端フッター | Codex / 完了（公開済み） |
+| line-chart | 折れ線グラフ | Terra charts / 完了（公開済み） |
+| stacked-bar-chart | 積み上げ棒グラフ | Terra charts / 完了（公開済み） |
+| scatter-plot | 散布図 | Terra charts / 完了（公開済み） |
+| sort-controls | 並べ替えコントロール | Terra controls / 完了（公開済み） |
+| filter-chips | フィルターチップ | Terra controls / 完了（公開済み） |
+| segmented-control | セグメントコントロール | Terra controls / 完了（公開済み） |
+| heatmap | ヒートマップ | Terra collections / 完了（公開済み） |
+| grouped-list | グループ化リスト | Terra collections / 完了（公開済み） |
+| expandable-card | 詳細を開くカード | Terra collections / 完了（公開済み） |
 
 担当ファイル：各IDの新規JSONと対応するDemo.tsx。CSSはCodexがcomposition-demos.css、Terraがanalytics-demos.css・selection-demos.css・collection-demos.css。types.ts・Demos.tsx・Thumbnail.tsx・main.tsxと資料はCodexだけが編集する。
 
@@ -190,31 +190,33 @@
 
 | ID | 担当 / 状態 |
 |---|---|
-| input-mask | Terra inputs / 完了（ローカル検証済み・未公開） |
-| rating | Terra inputs / 完了（ローカル検証済み・未公開） |
-| date-range | Terra inputs / 完了（ローカル検証済み・未公開） |
-| time-input | Terra inputs / 完了（ローカル検証済み・未公開） |
-| copy-button | Terra inputs / 完了（ローカル検証済み・未公開） |
-| form-review | Terra inputs / 完了（ローカル検証済み・未公開） |
-| notification-center | Terra states / 完了（ローカル検証済み・未公開） |
-| connection-status | Terra states / 完了（ローカル検証済み・未公開） |
-| activity-feed | Terra states / 完了（ローカル検証済み・未公開） |
-| polling-control | Terra states / 完了（ローカル検証済み・未公開） |
-| queue-controls | Terra states / 完了（ローカル検証済み・未公開） |
-| history-controls | Terra states / 完了（ローカル検証済み・未公開） |
-| calendar-grid | Terra collections / 完了（ローカル検証済み・未公開） |
-| kanban-board | Terra collections / 完了（ローカル検証済み・未公開） |
-| comparison-table | Terra collections / 完了（ローカル検証済み・未公開） |
-| zoom-controls | Terra collections / 完了（ローカル検証済み・未公開） |
-| thumbnail-gallery | Terra collections / 完了（ローカル検証済み・未公開） |
-| hierarchical-checkboxes | Terra collections / 完了（ローカル検証済み・未公開） |
-| full-bleed-layout | Codex / 完了（ローカル検証済み・未公開） |
-| card-footer-alignment | Codex / 完了（ローカル検証済み・未公開） |
-| reading-progress | Codex / 完了（ローカル検証済み・未公開） |
-| back-to-top | Codex / 完了（ローカル検証済み・未公開） |
+| input-mask | Terra inputs / 完了（公開済み） |
+| rating | Terra inputs / 完了（公開済み） |
+| date-range | Terra inputs / 完了（公開済み） |
+| time-input | Terra inputs / 完了（公開済み） |
+| copy-button | Terra inputs / 完了（公開済み） |
+| form-review | Terra inputs / 完了（公開済み） |
+| notification-center | Terra states / 完了（公開済み） |
+| connection-status | Terra states / 完了（公開済み） |
+| activity-feed | Terra states / 完了（公開済み） |
+| polling-control | Terra states / 完了（公開済み） |
+| queue-controls | Terra states / 完了（公開済み） |
+| history-controls | Terra states / 完了（公開済み） |
+| calendar-grid | Terra collections / 完了（公開済み） |
+| kanban-board | Terra collections / 完了（公開済み） |
+| comparison-table | Terra collections / 完了（公開済み） |
+| zoom-controls | Terra collections / 完了（公開済み） |
+| thumbnail-gallery | Terra collections / 完了（公開済み） |
+| hierarchical-checkboxes | Terra collections / 完了（公開済み） |
+| full-bleed-layout | Codex / 完了（公開済み） |
+| card-footer-alignment | Codex / 完了（公開済み） |
+| reading-progress | Codex / 完了（公開済み） |
+| back-to-top | Codex / 完了（公開済み） |
 
 担当ファイル：各IDの新規JSONと対応するDemo.tsx、final-input-demos.css・final-state-demos.css・final-collection-demos.css・final-layout-demos.css。types.ts・Demos.tsx・Thumbnail.tsx・main.tsx・資料はCodexだけが編集し、共有ファイルの衝突を避ける。
 
 第9回は120項目のテスト5件・本番ビルド、全88設定・22リセット・3画面幅132通り、境界動作とフォーカスを確認。100項目追加の依頼は完了。公開と比較・指示文合成は別課題。JavaScript763.45kB（gzip 207.57kB）の警告が継続。確認内容と未確認範囲、ダッシュボード更新案はPROGRESS.mdを参照。
+
+2026-10-28：120項目版を公開済み。公開URLでは全120デモの表示とタイトル、検索・設定・コピーと代表操作、3画面幅を確認。各回の未公開記述は当時の記録で、現在の状態はこの行と冒頭の集計を参照。
 
 定期実行や自動公開は未設定。目標達成後に自動で追加を続けず、新たな依頼がある場合に候補を判断する。
