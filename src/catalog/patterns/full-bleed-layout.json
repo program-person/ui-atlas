@@ -1,0 +1,78 @@
+{
+  "id": "full-bleed-layout",
+  "nameJa": "本文から広がる帯",
+  "nameEn": "Full bleed layout",
+  "category": "レイアウト",
+  "summary": "中央の本文幅を保ち、図の帯だけを親枠いっぱいへ広げる。",
+  "description": "本文と図の帯をCSS Gridの別の列範囲へ置く。画像の縦横比ではなく、記事内での本文幅と帯の幅の使い分けを比較する。",
+  "aliases": [
+    "フルブリード",
+    "帯を広げる",
+    "本文と図の幅"
+  ],
+  "tags": [
+    "フルブリード",
+    "帯を広げる",
+    "本文と図の幅"
+  ],
+  "useCases": [
+    "紹介記事の図",
+    "本文の途中の強調帯"
+  ],
+  "cautions": [
+    "実際の画面幅を超える固定幅や負の余白は避ける。",
+    "視覚的な配置と文書順を一致させる。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "media-object"
+  ],
+  "demoId": "full-bleed-layout",
+  "controls": [
+    {
+      "id": "span",
+      "label": "図の帯の幅",
+      "help": "親枠の中に収める。",
+      "default": "full",
+      "options": [
+        {
+          "value": "full",
+          "label": "枠全体",
+          "promptValue": "図の帯を親枠の端まで広げてください"
+        },
+        {
+          "value": "copy",
+          "label": "本文と同じ",
+          "promptValue": "図の帯を本文と同じ中央列に収めてください"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "label": "本文の最大幅",
+      "help": "ch単位はフォントの字幅に基づく。",
+      "default": "narrow",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "28ch",
+          "promptValue": "本文の最大幅を28chにしてください"
+        },
+        {
+          "value": "wide",
+          "label": "46ch",
+          "promptValue": "本文の最大幅を46chにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "中央の本文と図の帯をCSS Gridで配置してください。{{span}}。{{measure}}。左右の余白列と縮められる中央列を使い、親枠を越えないでください。題名、装飾図と説明、本文の順を保ってください。「帯の配色を切り替え」で青と緑を切り替え、aria-pressedとstatusで状態を伝えてください。装飾図は自作しaria-hiddenにし、外部画像を取得しないでください。",
+  "references": [
+    {
+      "title": "MDN · Grid wrapper",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Grid_wrapper",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

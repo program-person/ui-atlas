@@ -1,0 +1,7 @@
+{
+  "id":"date-range","nameJa":"日付範囲入力","nameEn":"Date range","aliases":["開始日と終了日","期間指定","日付の範囲"],"tags":["日付","期間","検証"],"category":"部品",
+  "summary":"開始日と終了日の順序を検証する。","description":"2つの日付入力で架空の期間を選ぶ。単一の日付入力と異なり、開始と終了の前後関係を検証する。","useCases":["架空の期間指定","日付範囲の検証"],"cautions":["未入力・範囲外・順序逆転を区別する。","日付をタイムゾーン付き時刻へ変換しない。"],"relatedIds":["date-picker","inline-validation"],"demoId":"date-range",
+  "controls":[{"id":"initial","label":"初期期間","help":"開始時の入力。","default":"empty","options":[{"value":"empty","label":"空","promptValue":"開始日と終了日を空にしてください"},{"value":"sample","label":"サンプル","promptValue":"初期値を2026-10-05から2026-10-12にしてください"}]},{"id":"layout","label":"入力欄の配置","help":"幅が狭い場合は縦に並ぶ。","default":"inline","options":[{"value":"inline","label":"横並び","promptValue":"幅に余裕があれば横に並べてください"},{"value":"stacked","label":"縦並び","promptValue":"縦に並べてください"}]}],
+  "prompt":"開始日と終了日を標準の日付入力で指定する架空の期間フォームを作ってください。{{initial}}。{{layout}}。選択範囲を2026-10-01〜2026-10-31とし、期間を確定するボタンで空欄、範囲外、終了日が開始日より前の場合をそれぞれ別のメッセージで示してください。エラーは入力欄に関連付け、問題の欄へフォーカスしてください。同日は許可し、編集時に古い結果を消してください。YYYY-MM-DD文字列で比較して表示し、DateやUTCへの変換はしないでください。",
+  "references":[{"title":"MDN · input date","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

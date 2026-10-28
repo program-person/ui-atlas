@@ -1,0 +1,7 @@
+{
+  "id":"copy-button","nameJa":"コピーボタン","nameEn":"Copy button","aliases":["クリップボード","文字列コピー","コードコピー"],"tags":["コピー","フィードバック","操作"],"category":"部品",
+  "summary":"固定のサンプル文字列をコピーし、結果を知らせる。","description":"公開可能な架空のコードまたは色の文字列をコピーする。失敗時も読み取り専用欄から手動で選択できる。","useCases":["コード例のコピー","短い色指定のコピー"],"cautions":["クリップボードは利用環境により失敗する。","アイコンだけでも操作名を伝える。"],"relatedIds":["toast","inline-validation"],"demoId":"copy-button",
+  "controls":[{"id":"mode","label":"ボタン表示","help":"文字とアイコンを比べる。","default":"button","options":[{"value":"button","label":"文字","promptValue":"コピーボタンを文字で表示してください"},{"value":"icon","label":"アイコン","promptValue":"コピーをアイコンで表示し操作名を読み上げ可能にしてください"}]},{"id":"snippet","label":"サンプル","help":"固定の公開用文字列。","default":"grid","options":[{"value":"grid","label":"CSS","promptValue":"サンプルをdisplay: grid;にしてください"},{"value":"color","label":"色","promptValue":"サンプルを#276B59にしてください"}]}],
+  "prompt":"固定の架空サンプルを読み取り専用欄に表示し、コピーボタンを押したときだけClipboard APIでコピーしてください。{{mode}}。{{snippet}}。成功・失敗を状態表示し、失敗時は手動コピーを案内してください。文字列を選択するボタンで欄にフォーカスして全選択できるようにしてください。外部への送信や自由入力は不要です。",
+  "references":[{"title":"MDN · Clipboard.writeText","url":"https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

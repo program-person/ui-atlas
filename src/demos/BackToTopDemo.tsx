@@ -1,0 +1,8 @@
+import { useRef, useState } from 'react';
+import type { Settings } from '../types.ts';
+const paragraphs=Array.from({length:6},(_,index)=>`メモ${index+1}：文章を読み進め、次の内容を確認します。戻る操作の対象はこのデモの枠だけです。辞典本体の位置は変えません。`);
+export function BackToTopDemo({ settings }: { settings: Settings }) {
+  const frameRef=useRef<HTMLDivElement>(null);const headingRef=useRef<HTMLHeadingElement>(null);const [position,setPosition]=useState(0);const [returned,setReturned]=useState(false);const threshold=settings.threshold==='early'?80:180;const available=position>threshold;
+  function returnToTop(){const frame=frameRef.current;if(!frame||frame.scrollTop<=threshold)return;frame.scrollTo({top:0,behavior:'instant'});headingRef.current?.focus({preventScroll:true});setPosition(0);setReturned(true);}
+  return <div className="expanded-demo final-layout-demo"><span className="demo-kicker">RETURN TO THE BEGINNING</span><h1>読んでいた枠の先頭へ戻る</h1><p className="demo-muted">一定距離より下へ進むと戻る操作が有効になります。動きは即時です。</p><div ref={frameRef} className={`backtop-frame backtop-${settings.placement==='end'?'end':'start'}`} role="region" aria-label="戻る操作を試す文章" tabIndex={0} onScroll={(event)=>{const top=event.currentTarget.scrollTop;setPosition(top);if(top>0)setReturned(false);}}><article><h2 ref={headingRef} tabIndex={-1}>ノートの先頭</h2>{paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</article></div><div className={`backtop-actions actions-${settings.placement==='end'?'end':'start'}`}><button className="demo-secondary" aria-disabled={!available} onClick={returnToTop}>この文章の先頭へ</button></div><p role="status">{available?`${threshold}pxより下へ移動しました。先頭へ戻れます。`:position>0?'文章の先頭付近です。':returned?'文章の先頭へ戻りました。':'文章の先頭です。'}</p></div>;
+}

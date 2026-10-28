@@ -1,0 +1,7 @@
+{
+  "id":"time-input","nameJa":"時刻入力","nameEn":"Time input","aliases":["時間入力","時刻選択","時間ピッカー"],"tags":["時刻","入力","検証"],"category":"部品",
+  "summary":"時刻と刻み幅を標準入力で検証する。","description":"架空の時刻を選択し、許可範囲と分単位の刻みを確定前に検証する。タイムゾーンは扱わない。","useCases":["架空の時刻選択","時間帯と刻みの確認"],"cautions":["表示や操作はブラウザによって異なる。","時刻だけの値と日時を混同しない。"],"relatedIds":["date-picker","number-input"],"demoId":"time-input",
+  "controls":[{"id":"step","label":"刻み幅","help":"選べる分単位。","default":"fifteen","options":[{"value":"fifteen","label":"15分","promptValue":"15分刻みにしてください"},{"value":"thirty","label":"30分","promptValue":"30分刻みにしてください"}]},{"id":"initial","label":"初期値","help":"開始時の時刻。","default":"empty","options":[{"value":"empty","label":"空","promptValue":"空欄から始めてください"},{"value":"sample","label":"09:00","promptValue":"09:00から始めてください"}]}],
+  "prompt":"架空の時刻を標準のtime入力で選んでください。{{step}}。{{initial}}。範囲は09:00〜18:00とし、空欄・範囲外・刻み外を確定時に検証してください。エラーを入力に関連付けてフォーカスし、変更時は古い結果を消してください。確定値を時刻文字列として表示し、タイムゾーンや外部サービスを扱わないでください。",
+  "references":[{"title":"MDN · input time","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/time","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

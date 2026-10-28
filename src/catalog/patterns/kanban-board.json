@@ -1,0 +1,8 @@
+{
+ "id":"kanban-board","nameJa":"カンバンボード","nameEn":"Kanban board","category":"レイアウト","aliases":["カンバン","状態別ボード","作業ボード"],"tags":["作業","状態","一覧"],
+ "summary":"作業カードを状態別に並べ、隣の状態へ移す。","description":"架空の3件を待機・作業中・完了に分け、ボタンで隣の状態に移す。時系列のタイムラインと異なり現在の状態を見渡す。",
+ "useCases":["作業の進み具合を見渡す","状態ごとに作業を整理する"],"cautions":["ドラッグだけに操作を限定しない。","状態の移動先をボタンの名前で明確にする。"],"relatedIds":["grouped-list","timeline","reorder-list"],"demoId":"kanban-board",
+ "controls":[{"id":"initial","label":"最初の配置","help":"開始・リセット時の状態。","default":"waiting","options":[{"value":"waiting","label":"すべて待機","promptValue":"3件を待機から始めてください"},{"value":"mixed","label":"各列に1件","promptValue":"各状態に1件ずつ配置して始めてください"}]},{"id":"view","label":"列の配置","help":"広い幅での表示。","default":"columns","options":[{"value":"columns","label":"横に並べる","promptValue":"広い幅では3列に並べてください"},{"value":"stack","label":"縦に並べる","promptValue":"状態を縦に並べてください"}]}],
+ "prompt":"架空の作業3件を待機・作業中・完了に分けるカンバンボードを実装してください。{{initial}}。{{view}}。各カードに隣の状態へ進める・戻すボタンを用意し、端では存在しない方向のボタンを表示しないでください。各ボタンの名前にはカード名と移動先を含め、移動後は移動したカードの見出しへフォーカスを移し、合計3件を保ってください。各列に件数を表示し、狭い画面では縦に並べてください。データはメモリ上の架空データだけにしてください。",
+ "references":[{"title":"W3C WAI · Content Structure","url":"https://www.w3.org/WAI/tutorials/page-structure/content/","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

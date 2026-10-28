@@ -1,0 +1,22 @@
+.final-input-demo { min-width: 0; }
+.final-input-demo p { overflow-wrap: anywhere; }
+.final-input-demo label:not(.final-rating label) { display: grid; gap: 6px; font-weight: 700; }
+.final-input-demo input:not([type=radio]), .final-input-demo textarea { box-sizing: border-box; width: 100%; min-width: 0; min-height: 44px; padding: 9px; border: 1px solid #778d87; border-radius: 8px; background: white; color: #183a32; font: inherit; }
+.final-input-demo button { min-height: 44px; }
+.final-input-demo :focus-visible { outline: 3px solid #b66b00; outline-offset: 2px; }
+.final-error { color: #a02424; min-height: 1em; }
+.final-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.final-rating { border: 0; padding: 0; margin: 16px 0; }
+.final-rating legend { font-weight: 700; margin-bottom: 8px; }
+.final-rating > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.final-rating label { position: relative; }
+.final-rating input { position: absolute; opacity: 0; }
+.final-rating label > span { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #839e93; border-radius: 8px; background: white; font-weight: 700; }
+.final-rating svg { width: 24px; height: 24px; fill: #50695f; }
+.final-rating input:checked + span { background: #195c49; color: white; border-color: #195c49; }
+.final-rating input:checked + span svg { fill: #fff; }
+.final-rating input:focus-visible + span { outline: 3px solid #b66b00; outline-offset: 2px; }
+.final-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.final-date-fields { display: grid; gap: 12px; }
+.final-date-inline { grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+.final-review-card section { padding: 14px; border: 1px solid #9ebbb1; border-radius: 10px; background: #f1f8f4; }

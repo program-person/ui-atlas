@@ -1,0 +1,8 @@
+{
+ "id":"zoom-controls","nameJa":"拡大・縮小操作","nameEn":"Zoom controls","category":"部品","aliases":["ズーム操作","倍率変更","拡大縮小"],"tags":["拡大","縮小","図"],
+ "summary":"図の表示倍率を段階的に変える。","description":"架空の図を50〜200%で拡大・縮小し、設定した開始倍率に戻す。表示領域を越えた図はスクロールして確認する。",
+ "useCases":["図の細部を確認する","図の全体と部分を見比べる"],"cautions":["現在の倍率と上下限を明確にする。","拡大して見切れる内容へスクロールで到達できるようにする。"],"relatedIds":["range-slider","image-comparison"],"demoId":"zoom-controls",
+ "controls":[{"id":"initial","label":"開始倍率","help":"開始・リセット時の倍率。","default":"100","options":[{"value":"100","label":"100%","promptValue":"開始とリセットの倍率を100%にしてください"},{"value":"150","label":"150%","promptValue":"開始とリセットの倍率を150%にしてください"}]},{"id":"step","label":"変更幅","help":"1回の操作で変える倍率。","default":"50","options":[{"value":"25","label":"25%","promptValue":"1回につき25ポイント変更してください"},{"value":"50","label":"50%","promptValue":"1回につき50ポイント変更してください"}]}],
+ "prompt":"架空のSVG図の拡大・縮小操作を実装してください。{{initial}}。{{step}}。倍率は50〜200%に制限し、縮小・拡大・設定された開始倍率に戻すリセットを設けてください。上下限のボタンは利用不可であることを示し、フォーカスを失わないようにしてください。現在倍率を文字とstatusで示し、拡大された図はスクロールできるようにしてください。図のスクロール枠にはregionの役割、名前とtabIndexを付けてキーボードでも到達できるようにしてください。",
+ "references":[{"title":"W3C WAI · Resize Text","url":"https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

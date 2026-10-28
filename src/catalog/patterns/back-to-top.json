@@ -1,0 +1,78 @@
+{
+  "id": "back-to-top",
+  "nameJa": "枠の先頭へ戻る",
+  "nameEn": "Back to top",
+  "category": "UXの流れ",
+  "summary": "長い本文を進んだ後、対象の枠の先頭へ戻る。",
+  "description": "スクロールした距離に応じて戻るボタンを有効にする。スキップリンクと異なり、読んでいる枠の末尾などから先頭へ戻す操作。移動後は本文見出しへフォーカスを移す。",
+  "aliases": [
+    "トップへ戻る",
+    "先頭ボタン",
+    "スクロールを戻す"
+  ],
+  "tags": [
+    "トップへ戻る",
+    "先頭ボタン",
+    "スクロールを戻す"
+  ],
+  "useCases": [
+    "長い説明文",
+    "独立したスクロールパネル"
+  ],
+  "cautions": [
+    "対象の枠を明示して辞典本体の位置を変えない。",
+    "本文や他の操作にボタンを重ねない。"
+  ],
+  "relatedIds": [
+    "skip-link",
+    "sticky-header"
+  ],
+  "demoId": "back-to-top",
+  "controls": [
+    {
+      "id": "threshold",
+      "label": "有効にする距離",
+      "help": "指定距離を越えたら有効にする。",
+      "default": "early",
+      "options": [
+        {
+          "value": "early",
+          "label": "80px",
+          "promptValue": "80pxより下へ進むと戻るボタンを有効にしてください"
+        },
+        {
+          "value": "late",
+          "label": "180px",
+          "promptValue": "180pxより下へ進むと戻るボタンを有効にしてください"
+        }
+      ]
+    },
+    {
+      "id": "placement",
+      "label": "ボタンの位置",
+      "help": "本文枠の外に置き、内容に重ねない。",
+      "default": "end",
+      "options": [
+        {
+          "value": "end",
+          "label": "右寄せ",
+          "promptValue": "ボタンを本文枠の下へ右寄せで置いてください"
+        },
+        {
+          "value": "start",
+          "label": "左寄せ",
+          "promptValue": "ボタンを本文枠の下へ左寄せで置いてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "名前とtabIndexを持つ高さ260pxの本文スクロール枠と、先頭へ戻るボタンを実装してください。{{threshold}}。{{placement}}。無効時はaria-disabledと実行ガードを使ってフォーカスを保ってください。実行時は枠内をbehavior:instantで先頭へ移し、tabIndex=-1の本文見出しへフォーカスを戻してください。辞典本体のスクロール位置は変えず、状態をstatusで示してください。スクロールがしきい値以下では先頭または先頭付近と案内し、アニメーションは使わないでください。",
+  "references": [
+    {
+      "title": "MDN · Element.scrollTo",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

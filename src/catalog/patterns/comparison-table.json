@@ -1,0 +1,8 @@
+{
+ "id":"comparison-table","nameJa":"比較表","nameEn":"Comparison table","category":"部品","aliases":["機能比較表","属性比較","比較テーブル"],"tags":["比較","表","特徴"],
+ "summary":"複数の対象の属性を同じ行で比較する。","description":"3つの架空の道具について属性の有無を比較する。全項目と違いのある項目だけを切り替えられる。",
+ "useCases":["複数の道具の機能を比較する","対象ごとの違いを確認する"],"cautions":["値を色や記号だけに頼らず文字で示す。","対象と属性の見出しの関係を表で示す。"],"relatedIds":["data-table","description-list"],"demoId":"comparison-table",
+ "controls":[{"id":"mode","label":"最初の表示","help":"表示する属性。","default":"all","options":[{"value":"all","label":"全項目","promptValue":"最初は全項目を表示してください"},{"value":"differences","label":"違いのみ","promptValue":"最初は違いのある項目だけを表示してください"}]},{"id":"density","label":"行の余白","help":"表の間隔。","default":"comfortable","options":[{"value":"comfortable","label":"広め","promptValue":"行の余白を広めにしてください"},{"value":"compact","label":"コンパクト","promptValue":"行の余白をコンパクトにしてください"}]}],
+ "prompt":"架空の3つの道具の属性を比較するHTML表を実装してください。{{mode}}。{{density}}。共有はすべてあり、オフラインはあり・なし・あり、履歴はなし・あり・ありと文字で示してください。全項目と違いのある項目だけをボタンで切り替え、表示件数を示してください。captionと行・列の見出しを備え、色だけに依存せずスマホ幅に収めてください。",
+ "references":[{"title":"W3C WAI · Tables Tutorial","url":"https://www.w3.org/WAI/tutorials/tables/","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

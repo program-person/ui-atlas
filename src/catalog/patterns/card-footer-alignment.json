@@ -1,0 +1,78 @@
+{
+  "id": "card-footer-alignment",
+  "nameJa": "カードの操作位置を揃える",
+  "nameEn": "Card footer alignment",
+  "category": "レイアウト",
+  "summary": "文章量が違うカードの操作を、同じ行の下端へ揃える。",
+  "description": "均等グリッドで並べるだけでなく、カード内部を縦方向へ伸ばし操作用のフッターへ余り空間を配分する。自然な文章直後の配置と比較できる。",
+  "aliases": [
+    "カード下端",
+    "ボタン位置を揃える",
+    "カードフッター"
+  ],
+  "tags": [
+    "カード下端",
+    "ボタン位置を揃える",
+    "カードフッター"
+  ],
+  "useCases": [
+    "説明量が異なる一覧",
+    "案を選ぶカード"
+  ],
+  "cautions": [
+    "行が変わったカードのフッターまで同じ高さに揃えるものではない。",
+    "固定高さで本文を切らず、狭い枠では1列にする。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "sticky-footer"
+  ],
+  "demoId": "card-footer-alignment",
+  "controls": [
+    {
+      "id": "alignment",
+      "label": "操作の配置",
+      "help": "同じ行のカードで比べる。",
+      "default": "bottom",
+      "options": [
+        {
+          "value": "bottom",
+          "label": "下端へ揃える",
+          "promptValue": "操作フッターへmargin-top:autoを使って下端へ揃えてください"
+        },
+        {
+          "value": "natural",
+          "label": "文章の直後",
+          "promptValue": "操作フッターを文章の直後へ置いてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "カード内の余白",
+      "help": "カードのpaddingを切り替える。",
+      "default": "comfortable",
+      "options": [
+        {
+          "value": "comfortable",
+          "label": "20px",
+          "promptValue": "カード内の余白を20pxにしてください"
+        },
+        {
+          "value": "compact",
+          "label": "12px",
+          "promptValue": "カード内の余白を12pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "説明量が異なる2枚のカードをレスポンシブなグリッドで配置してください。{{alignment}}。{{density}}。カード内部を縦方向のFlexにし、文章を切らずに表示してください。「説明を追加・解除」で先頭カードに文章を足し、各カードの選択ボタンとaria-pressed、選択状態のstatusを用意してください。狭い枠では1列、広い枠では同じ行のカードで下端の配置を比較できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · Card",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Card",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

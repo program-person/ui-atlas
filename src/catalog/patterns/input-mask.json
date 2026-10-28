@@ -1,0 +1,7 @@
+{
+  "id":"input-mask", "nameJa":"入力マスク", "nameEn":"Input mask", "aliases":["入力整形","桁区切り","整理コード"], "tags":["入力","書式","数字"], "category":"部品",
+  "summary":"入力中の数字を決まった形式に整える。", "description":"架空の6桁整理コードを3桁ごとに区切る。全角数字も受け付け、入力途中と完了を示す。", "useCases":["架空の固定桁コード","書式の視覚的な案内"], "cautions":["変換中は整形を待つ。","入力途中や選択範囲の編集を妨げない。"], "relatedIds":["inline-validation","number-input"], "demoId":"input-mask",
+  "controls":[{"id":"initial","label":"初期値","help":"開始時の例。","default":"empty","options":[{"value":"empty","label":"空","promptValue":"空欄から始めてください"},{"value":"sample","label":"サンプル","promptValue":"123-456を初期表示してください"}]},{"id":"guide","label":"入力例","help":"プレースホルダーの表示。","default":"example","options":[{"value":"example","label":"入力例","promptValue":"プレースホルダーは123-456にしてください"},{"value":"zeros","label":"桁を示す","promptValue":"プレースホルダーは000-000にしてください"}]}],
+  "prompt":"架空の整理コード用の入力欄を実装してください。{{initial}}。{{guide}}。数字を最大6桁に制限し、4桁目からNNN-NNNの形式で表示してください。NFKCで全角数字を半角に変え、数字以外を取り除いてください。IME変換中は整形を保留し、確定後に整形してください。カーソルと選択範囲は整形前にそれぞれの端までにある数字の数を数え、整形後の同じ数字位置へ移してください。入力途中の桁数と6桁での完了を表示し、実際の番号は求めないでください。",
+  "references":[{"title":"MDN · compositionstart","url":"https://developer.mozilla.org/en-US/docs/Web/API/Element/compositionstart_event","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

@@ -1,0 +1,8 @@
+{
+ "id":"calendar-grid","nameJa":"カレンダーの日付選択","nameEn":"Calendar grid","category":"部品","aliases":["月間カレンダー","日付の一覧","カレンダー表"],"tags":["日付","選択","表"],
+ "summary":"月の日付を曜日に合わせて並べ、日付を選ぶ。","description":"2026年10月と11月の架空の月間表から日付を選ぶ。日付入力欄とは異なり、月全体を見て選択できる。",
+ "useCases":["月の日付から予定の日を選ぶ","曜日を確認しながら日付を選ぶ"],"cautions":["選択した日付を文字でも示す。","曜日の開始日を明確にし、タイムゾーンによる日付ずれを避ける。"],"relatedIds":["date-picker","data-table"],"demoId":"calendar-grid",
+ "controls":[{"id":"initial","label":"最初の月","help":"開始・リセット時の月。","default":"oct","options":[{"value":"oct","label":"10月","promptValue":"2026年10月から始めてください"},{"value":"nov","label":"11月","promptValue":"2026年11月から始めてください"}]},{"id":"weekStart","label":"週の始まり","help":"左端に表示する曜日。","default":"sunday","options":[{"value":"sunday","label":"日曜日","promptValue":"日曜日から週を始めてください"},{"value":"monday","label":"月曜日","promptValue":"月曜日から週を始めてください"}]}],
+ "prompt":"2026年10月と11月の月間カレンダーをHTML表として実装してください。{{initial}}。{{weekStart}}。先頭の空白を含め曜日に合わせて日付を配置し、UTCで曜日と日数を計算してください。日付ボタンにはYYYY-MM-DD形式の名前と選択状態を付け、選んだ日付を文字でも表示してください。10月と11月をボタンで切り替え、月を変えると選択を解除してください。月の範囲外には移動せず、スマホ幅でも操作できるようにしてください。",
+ "references":[{"title":"W3C WAI · Tables Tutorial","url":"https://www.w3.org/WAI/tutorials/tables/","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

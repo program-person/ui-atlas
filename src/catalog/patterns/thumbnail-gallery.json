@@ -1,0 +1,8 @@
+{
+ "id":"thumbnail-gallery","nameJa":"サムネイルギャラリー","nameEn":"Thumbnail gallery","category":"部品","aliases":["画像一覧","サムネイル選択","ギャラリー"],"tags":["画像","選択","一覧"],
+ "summary":"小さなプレビューを選び、大きな図を切り替える。","description":"架空の3つの図のサムネイルから1つを選び、主表示とキャプションを切り替える。自動再生は行わない。",
+ "useCases":["複数の図から詳細を選ぶ","画像の一覧と主表示を組み合わせる"],"cautions":["選択ボタンの名前と現在の選択状態を示す。","画像だけに頼らずキャプションを表示する。"],"relatedIds":["carousel","image-comparison"],"demoId":"thumbnail-gallery",
+ "controls":[{"id":"initial","label":"最初の図","help":"開始・リセット時の選択。","default":"layout","options":[{"value":"layout","label":"配置","promptValue":"最初は配置の図を選択してください"},{"value":"color","label":"配色","promptValue":"最初は配色の図を選択してください"}]},{"id":"position","label":"サムネイル位置","help":"広い幅での配置。","default":"below","options":[{"value":"below","label":"下","promptValue":"サムネイルを主表示の下に並べてください"},{"value":"side","label":"横","promptValue":"広い画面ではサムネイルを主表示の横に並べてください"}]}],
+ "prompt":"自作の架空の3つのSVG図を選択するサムネイルギャラリーを実装してください。{{initial}}。{{position}}。各サムネイルを名前と選択状態を持つボタンとし、選択すると主表示とキャプションを切り替えてください。TabとEnter・Spaceで操作でき、自動再生しないでください。狭い画面ではサムネイルを下に並べ、図の装飾画像がボタン名を重複させないようにしてください。",
+ "references":[{"title":"W3C WAI · Functional Images","url":"https://www.w3.org/WAI/tutorials/images/functional/","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

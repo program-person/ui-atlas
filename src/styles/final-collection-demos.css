@@ -1,0 +1,18 @@
+.final-collection { color: #17233c; }
+.final-collection button { min-height: 44px; padding: 6px 10px; border: 1px solid #aabbd0; border-radius: 7px; background: #fff; color: #17233c; cursor: pointer; }
+.final-collection button:focus-visible { outline: 3px solid #235de5; outline-offset: 2px; }
+.final-collection button[aria-disabled="true"], .final-collection button:disabled { opacity: .55; }
+.final-calendar-controls, .final-zoom-controls { display: flex; gap: 8px; flex-wrap: wrap; }
+.final-calendar, .final-comparison { width: 100%; border-collapse: collapse; margin-top: 16px; table-layout: fixed; }
+.final-calendar caption, .final-comparison caption { text-align: left; font-weight: 700; margin-bottom: 8px; }
+.final-calendar th, .final-calendar td, .final-comparison th, .final-comparison td { text-align: center; border: 1px solid #d7e0ed; overflow-wrap: anywhere; }
+.final-calendar td button { width: 100%; padding: 0; border: 0; }
+.final-calendar button[aria-pressed="true"], .final-thumbnails button[aria-pressed="true"] { background: #d9e6ff; box-shadow: inset 0 0 0 2px #235de5; }
+.final-comparison th, .final-comparison td { padding: 12px 4px; } .final-comparison.final-density-compact th, .final-comparison.final-density-compact td { padding: 5px 3px; }
+.final-kanban { display: grid; gap: 10px; margin-top: 16px; } .final-kanban-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.final-kanban section, .final-check-groups fieldset { border: 1px solid #cbd5e1; border-radius: 10px; padding: 10px; min-width: 0; }
+.final-kanban h2 { font-size: 1rem; } .final-kanban ul { list-style: none; padding: 0; } .final-kanban li { background: #eef3fb; padding: 8px; margin: 8px 0; overflow-wrap: anywhere; } .final-kanban li div { display: flex; flex-wrap: wrap; gap: 4px; }
+.final-zoom-viewport { overflow: auto; border: 1px solid #cbd5e1; padding: 16px; } .final-zoom-viewport svg { display: block; max-width: none; height: auto; }
+.final-gallery { display: grid; gap: 12px; margin-top: 16px; } .final-gallery-side { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); } .final-gallery figure { margin: 0; } .final-gallery svg { width: 100%; display: block; } .final-thumbnails { display: flex; gap: 6px; } .final-gallery-side .final-thumbnails { flex-direction: column; } .final-thumbnails button { min-width: 0; flex: 1; font-size: .8rem; } .final-thumbnails span { display: block; overflow-wrap: anywhere; }
+.final-check-groups { display: grid; gap: 10px; margin: 16px 0; } .final-check-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); } .final-check-groups label { display: block; min-height: 44px; padding: 6px 0; } .final-check-groups .final-child { padding-left: 20px; }
+@media (max-width: 500px) { .final-kanban-columns, .final-gallery-side, .final-check-columns { grid-template-columns: 1fr; } .final-gallery-side .final-thumbnails { flex-direction: row; } }

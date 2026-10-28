@@ -1,0 +1,10 @@
+.final-state-demo { min-width: 0; }
+.final-state-demo .final-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.final-state-demo .final-list { list-style: none; padding: 0; display: grid; gap: 8px; }
+.final-state-demo .final-list li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 12px; border: 1px solid #cbd8d4; border-radius: 8px; background: white; }
+.final-state-demo .final-compact li { padding: 6px 10px; }
+.final-state-demo button[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+.final-state-demo button:focus-visible { outline: 3px solid #ce7200; outline-offset: 2px; }
+.final-state-demo .final-color { min-height: 75px; border-radius: 8px; padding: 16px; color: white; background: #235de5; }
+.final-state-demo .final-color-green { background: #216348; }
+.final-state-demo .final-color-purple { background: #70429a; }

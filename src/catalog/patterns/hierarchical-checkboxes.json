@@ -1,0 +1,8 @@
+{
+ "id":"hierarchical-checkboxes","nameJa":"階層チェックボックス","nameEn":"Hierarchical checkboxes","category":"部品","aliases":["親子チェックボックス","一括選択","部分選択"],"tags":["選択","チェックボックス","グループ"],
+ "summary":"親のチェックでグループ内をまとめて選択する。","description":"2つのグループそれぞれに2項目を持ち、親のチェックは全選択・未選択・一部選択を示す。子も個別に選択できる。",
+ "useCases":["グループ単位と個別の選択","複数の項目の一括選択"],"cautions":["親の一部選択をindeterminateで示す。","選択数は子項目だけで数える。"],"relatedIds":["checkbox","fieldset","tree-view"],"demoId":"hierarchical-checkboxes",
+ "controls":[{"id":"initial","label":"最初の選択","help":"開始・リセット時の状態。","default":"none","options":[{"value":"none","label":"未選択","promptValue":"初期状態ではすべて未選択にしてください"},{"value":"partial","label":"一部選択","promptValue":"初期状態では余白だけを選択してください"}]},{"id":"layout","label":"グループの配置","help":"広い幅での配置。","default":"stack","options":[{"value":"stack","label":"縦","promptValue":"グループを縦に並べてください"},{"value":"columns","label":"横","promptValue":"広い幅ではグループを横に並べてください"}]}],
+ "prompt":"2グループ各2項目の架空の階層チェックボックスを実装してください。{{initial}}。{{layout}}。親を押すと子をまとめて選択・解除し、子の一部だけ選択された親にはネイティブinputのindeterminateを設定してください。子の選択数を4件中として表示し、すべて解除するボタンを設けてください。fieldsetとlegendでグループを示し、狭い幅では縦に並べてください。",
+ "references":[{"title":"WAI-ARIA APG · Checkbox","url":"https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "reading-progress",
+  "nameJa": "文章のスクロール進度",
+  "nameEn": "Reading progress",
+  "category": "UXの流れ",
+  "summary": "記事を読み進めた位置を、割合として示す。",
+  "description": "枠内のscrollTopを、スクロール可能な全距離で割る。作業の完了率を示すプログレスバーと異なり、文章内の位置だけを示す。リサイズと本文量変更で再計算する。",
+  "aliases": [
+    "読書の進捗",
+    "記事の位置",
+    "スクロール割合"
+  ],
+  "tags": [
+    "読書の進捗",
+    "記事の位置",
+    "スクロール割合"
+  ],
+  "useCases": [
+    "長い記事の位置把握",
+    "説明文の読み進め"
+  ],
+  "cautions": [
+    "理解度やタスクの完了と混同しない。",
+    "全文が枠に収まる場合は100%とし、0で割らない。"
+  ],
+  "relatedIds": [
+    "progress-bar",
+    "scrollspy"
+  ],
+  "demoId": "reading-progress",
+  "controls": [
+    {
+      "id": "display",
+      "label": "進度の表示",
+      "help": "スクロールごとのライブ読み上げは行わない。",
+      "default": "bar",
+      "options": [
+        {
+          "value": "bar",
+          "label": "数値とバー",
+          "promptValue": "数値と名前付きprogress要素で表示してください"
+        },
+        {
+          "value": "number",
+          "label": "数値だけ",
+          "promptValue": "数値だけで表示してください"
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "label": "最初の文章量",
+      "help": "1段落または10段落。",
+      "default": "long",
+      "options": [
+        {
+          "value": "long",
+          "label": "長い文章",
+          "promptValue": "10段落の長い文章から始めてください"
+        },
+        {
+          "value": "short",
+          "label": "短い文章",
+          "promptValue": "1段落の短い文章から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "デモ内の高さ260pxのスクロール枠に文章の進度を実装してください。{{display}}。{{content}}。scrollTopをscrollHeight-clientHeightで割り、0〜100%へ丸めて範囲を制限してください。スクロール不要なら100%とし、ResizeObserverで枠と本文の高さ変更を再計算してください。効果の解除時には監視とイベントを解除してください。文章量を切り替えると先頭へ戻し、regionには名前とtabIndexを付けてPageDown・End・Homeを使えるようにしてください。理解度や完了率とは区別し、スクロールごとのaria-live通知は行わないでください。",
+  "references": [
+    {
+      "title": "MDN · Element.scrollTop",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

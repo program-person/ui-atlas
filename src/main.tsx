@@ -13,6 +13,9 @@ import './styles/workflow-demos.css';
 import './styles/composition-demos.css';
 import './styles/selection-demos.css';
 import './styles/collection-demos.css';
+import './styles/final-input-demos.css';
+import './styles/final-collection-demos.css';
+import './styles/final-layout-demos.css';
 
 const container = document.getElementById('root');
 if (!container) throw new Error('アプリの表示先が見つかりません。');

@@ -1,0 +1,7 @@
+{
+  "id":"rating","nameJa":"評価入力","nameEn":"Rating","aliases":["星評価","5段階評価","レーティング"],"tags":["評価","選択","ラジオ"],"category":"部品",
+  "summary":"1〜5の評価を1つ選び、未選択に戻す。","description":"架空の案への評価を標準ラジオボタンで選ぶ。表示は星または数字で、未選択へ戻す操作もある。","useCases":["案への5段階評価","少数の段階からの選択"],"cautions":["未選択と最低評価を区別する。","星だけで意味を伝えず各候補に点数を付ける。"],"relatedIds":["radio-group","meter"],"demoId":"rating",
+  "controls":[{"id":"initial","label":"初期評価","help":"最初の選択。","default":"empty","options":[{"value":"empty","label":"未選択","promptValue":"未選択で開始してください"},{"value":"three","label":"3点","promptValue":"3点を選択して開始してください"}]},{"id":"appearance","label":"見た目","help":"星と数字を比べる。","default":"stars","options":[{"value":"stars","label":"星","promptValue":"候補を星のSVGで表示してください"},{"value":"numbers","label":"数字","promptValue":"候補を数字で表示してください"}]}],
+  "prompt":"架空の案を1〜5点から1つ評価する標準ラジオグループを作ってください。{{initial}}。{{appearance}}。星表示では各候補の点数を読み上げ可能にし、選択状態とフォーカスを区別してください。評価をクリアするボタンで未選択に戻し、未選択時はaria-disabledを示して操作を行わず、フォーカスを保ってください。現在の評価を表示し、矢印キーによる標準操作を保ち、狭い画面では折り返してください。",
+  "references":[{"title":"MDN · input radio","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}

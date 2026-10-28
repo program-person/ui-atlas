@@ -2,6 +2,28 @@ import type { DemoId } from '../types.ts';
 
 export function Thumbnail({ id }: { id: DemoId }) {
   return <div className={`thumbnail thumbnail-${id}`} aria-hidden="true">
+    {id === 'input-mask' && <div className="mini-workflow"><span>整理コード</span><b>123-456</b><span>6桁で入力完了</span></div>}
+    {id === 'rating' && <div className="mini-workflow"><span>評価を選ぶ</span><b>1　2　3　4　5</b><span>未選択に戻せる</span></div>}
+    {id === 'date-range' && <div className="mini-workflow"><span>開始日　→　終了日</span><b>2026-10-05〜12</b><span>期間を検証</span></div>}
+    {id === 'time-input' && <div className="mini-workflow"><span>時刻を選ぶ</span><b>09:00　15分刻み</b><span>範囲と刻みを検証</span></div>}
+    {id === 'copy-button' && <div className="mini-workflow"><span>GRID-GUIDE</span><b>サンプルをコピー</b><span>失敗時は手動選択</span></div>}
+    {id === 'form-review' && <div className="mini-workflow"><span>編集 → 確認 → 完了</span><b>内容を見直す</b><span>戻って修正できる</span></div>}
+    {id === 'notification-center' && <div className="mini-workflow"><span>通知センター</span><b>未読3件</b><span>個別・すべて既読</span></div>}
+    {id === 'connection-status' && <div className="mini-workflow"><span>オフライン</span><b>保留中　2件</b><span>接続後に送信</span></div>}
+    {id === 'activity-feed' && <div className="mini-workflow"><span>操作の記録</span><b>新しい順 ↑</b><span>イベントを追加</span></div>}
+    {id === 'polling-control' && <div className="mini-workflow"><span>1秒ごとに更新</span><b>更新回数：2回</b><span>一時停止・再開</span></div>}
+    {id === 'queue-controls' && <div className="mini-workflow"><span>待機 → 作業中 → 完了</span><b>3件の処理</b><span>進行を手動で確認</span></div>}
+    {id === 'history-controls' && <div className="mini-workflow"><span>青 → 緑 → 紫</span><b>元に戻す │ やり直す</b><span>変更履歴をたどる</span></div>}
+    {id === 'calendar-grid' && <div className="mini-workflow"><span>2026年10月</span><b>日 月 火 水 木 金 土</b><span>日付を選択</span></div>}
+    {id === 'kanban-board' && <div className="mini-workflow"><span>待機 │ 作業中 │ 完了</span><b>3件の架空カード</b><span>隣の列へ移動</span></div>}
+    {id === 'comparison-table' && <div className="mini-workflow"><span>架空の道具を比較</span><b>オフライン ○ │ ×</b><span>違いのある行だけ</span></div>}
+    {id === 'zoom-controls' && <div className="mini-workflow"><span>表示を拡大・縮小</span><b>−　100%　＋</b><span>50〜200%</span></div>}
+    {id === 'thumbnail-gallery' && <div className="mini-workflow"><span>主表示とサムネイル</span><b>配置 │ 配色 │ 文章</b><span>選択して切り替え</span></div>}
+    {id === 'hierarchical-checkboxes' && <div className="mini-workflow"><span>見た目　[一部選択]</span><b>☑ 余白　□ 配色</b><span>親子の選択状態</span></div>}
+    {id === 'full-bleed-layout' && <div className="mini-workflow"><span>本文は中央の列</span><b>図の帯は端まで</b><span>幅の使い分け</span></div>}
+    {id === 'card-footer-alignment' && <div className="mini-workflow"><span>文章量の違うカード</span><b>操作の位置を揃える</b><span>同じ行の下端へ</span></div>}
+    {id === 'reading-progress' && <div className="mini-workflow"><span>文章のスクロール位置</span><b>━━━ 45% ───</b><span>作業の完了とは別</span></div>}
+    {id === 'back-to-top' && <div className="mini-workflow"><span>長い文章の途中</span><b>この文章の先頭へ ↑</b><span>見出しへフォーカス</span></div>}
     {id === 'media-object' && <div className="mini-workflow"><span>◼　余白のスケッチ</span><b>図と本文をまとめる</b><span>狭い枠では縦へ</span></div>}
     {id === 'holy-grail-layout' && <div className="mini-workflow"><b>ヘッダー</b><span>一覧 │ 本文 │ 補足</span><b>フッター</b></div>}
     {id === 'sticky-footer' && <div className="mini-workflow" style={{minHeight:100}}><b>メモページ</b><span>短い本文</span><span style={{marginTop:25}}>ページの終わり</span></div>}

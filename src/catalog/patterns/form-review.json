@@ -1,0 +1,7 @@
+{
+  "id":"form-review","nameJa":"フォームの確認画面","nameEn":"Form review","aliases":["入力内容の確認","確認ステップ","送信前確認"],"tags":["フォーム","確認","戻る"],"category":"UXの流れ",
+  "summary":"入力、確認、完了の流れを試す。","description":"架空のラベルを入力して確認し、編集に戻っても下書きを保持する。完了しても実際の送信は行わない。","useCases":["確定前の入力確認","戻って修正するフォーム"],"cautions":["戻ったときに入力を失わない。","個人情報や実際の送信先をデモに使わない。"],"relatedIds":["inline-validation","step-indicator"],"demoId":"form-review",
+  "controls":[{"id":"layout","label":"確認画面の見た目","help":"確認欄の枠を比べる。","default":"plain","options":[{"value":"plain","label":"標準","promptValue":"確認内容を標準の配置で表示してください"},{"value":"card","label":"カード","promptValue":"確認内容を枠付きカードで表示してください"}]},{"id":"requirement","label":"入力条件","help":"空欄を許すか選ぶ。","default":"required","options":[{"value":"required","label":"必須","promptValue":"ラベルを必須にしてください"},{"value":"optional","label":"任意","promptValue":"ラベルを任意にし空欄は未入力と表示してください"}]}],
+  "prompt":"架空ラベルの編集、確認、完了を順に表示するフォームを作ってください。{{layout}}。{{requirement}}。ラベルは前後の空白を除いたUnicodeコードポイントで12文字以内にし、必須時は空欄をエラーにしてください。確認に進む前に検証し、エラー時は入力欄にフォーカスしてください。IME変換中のEnterで確認へ進まないようにしてください。確認・完了へ進んだらその見出しへ、編集に戻ったら入力欄へフォーカスしてください。編集に戻ると下書きを保持し、完了時は送信せず画面内で完了を表示してください。実際の個人情報は求めないでください。",
+  "references":[{"title":"W3C WAI · Validating Input","url":"https://www.w3.org/WAI/tutorials/forms/validation/","checkedAt":"2026-10-28"}],"verifiedAt":"2026-10-28"
+}
