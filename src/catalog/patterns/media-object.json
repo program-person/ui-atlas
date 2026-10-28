@@ -1,0 +1,78 @@
+{
+  "id": "media-object",
+  "nameJa": "図と本文の組み合わせ",
+  "nameEn": "Media object",
+  "category": "レイアウト",
+  "summary": "装飾図と説明を一組にし、長い本文にも枠を合わせる。",
+  "description": "図と本文をまとめる小さなレイアウト。画面全体を分ける分割画面とは異なり、説明一件に図を添える。デモでは装飾図を使い、左右配置・図の大きさ・長文への伸びを比べる。",
+  "aliases": [
+    "メディアオブジェクト",
+    "図と説明",
+    "画像付き説明"
+  ],
+  "tags": [
+    "メディアオブジェクト",
+    "図と説明",
+    "画像付き説明"
+  ],
+  "useCases": [
+    "道具の紹介",
+    "図付きの要約"
+  ],
+  "cautions": [
+    "意味のある画像には内容に合う代替テキストを付ける。デモの図は装飾として扱う。",
+    "視覚的な並べ替えと読み上げ・Tabの順序が矛盾しないようにする。"
+  ],
+  "relatedIds": [
+    "split-view",
+    "aspect-ratio"
+  ],
+  "demoId": "media-object",
+  "controls": [
+    {
+      "id": "side",
+      "label": "図の位置",
+      "help": "440px未満の枠では先頭へ積む。",
+      "default": "start",
+      "options": [
+        {
+          "value": "start",
+          "label": "本文の左",
+          "promptValue": "広い枠では図を本文の左に置いてください"
+        },
+        {
+          "value": "end",
+          "label": "本文の右",
+          "promptValue": "広い枠では図を本文の右に置いてください"
+        }
+      ]
+    },
+    {
+      "id": "size",
+      "label": "図の大きさ",
+      "help": "装飾図の縦横を揃える。",
+      "default": "small",
+      "options": [
+        {
+          "value": "small",
+          "label": "64px",
+          "promptValue": "装飾図を64px四方にしてください"
+        },
+        {
+          "value": "large",
+          "label": "104px",
+          "promptValue": "装飾図を104px四方にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "装飾図と本文を一件のarticleにまとめるメディアオブジェクトを実装してください。{{side}}。{{size}}。440px未満の親枠では元の文書順で図、本文の縦配置にしてください。装飾図はaria-hiddenで読み上げから除き、本文のボタンだけを操作可能にしてください。短文と長文の切替ではaria-expandedとaria-controlsを使い、高さは本文に合わせて伸ばしてください。「この案を選ぶ」で選択状態を切り替え、statusで選択と文量を伝えてください。外部画像は取得しないでください。",
+  "references": [
+    {
+      "title": "MDN · Media objects",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Media_objects",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

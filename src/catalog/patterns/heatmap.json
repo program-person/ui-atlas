@@ -1,0 +1,15 @@
+{
+  "id": "heatmap", "nameJa": "ヒートマップ", "nameEn": "Heatmap",
+  "aliases": ["濃淡の表", "強度マップ", "ヒートマップ表"], "tags": ["集計", "比較", "色"], "category": "部品",
+  "summary": "行と列の値を、数値と色の濃淡で比較する。",
+  "description": "種類と時間帯の組み合わせごとの件数を、3×3の表で比較する。カレンダー形式ではなく、行と列の関係を持つ強度の表。各セルの数値と凡例も示す。",
+  "useCases": ["分類と時間帯ごとの件数を比べる", "組み合わせの偏りを見つける"],
+  "cautions": ["色だけで値を伝えず数値と範囲を示す。", "色の段階や範囲を明示し、欠損値を0と混同しない。"],
+  "relatedIds": ["data-table", "empty-state", "bar-chart"], "demoId": "heatmap",
+  "controls": [
+    { "id": "palette", "label": "配色", "help": "濃淡に使う色を選ぶ。", "default": "blue", "options": [{ "value": "blue", "label": "青", "promptValue": "青の濃淡を使用してください" }, { "value": "green", "label": "緑", "promptValue": "緑の濃淡を使用してください" }] },
+    { "id": "initial", "label": "最初の状態", "help": "開始・リセット時の表示を選ぶ。", "default": "sample", "options": [{ "value": "sample", "label": "サンプル", "promptValue": "初期状態では架空のサンプルを表示してください" }, { "value": "empty", "label": "空", "promptValue": "初期状態では空の案内を表示してください" }] }
+  ],
+  "prompt": "種類3行と時間帯3列の架空の件数を比較するヒートマップを実装してください。{{palette}}。{{initial}}。0〜2件、3〜5件、6〜8件の3段階の凡例を示し、各セルに数値も表示してください。caption、行と列の見出しを持つHTMLの表を使い、色だけに依存しないでください。空とサンプルをボタンで切り替えられるようにし、スマホ幅でも表とボタンを使えるようにしてください。リセットでは設定した初期状態に戻してください。",
+  "references": [{ "title": "W3C WAI · Tables Tutorial", "url": "https://www.w3.org/WAI/tutorials/tables/", "checkedAt": "2026-10-28" }], "verifiedAt": "2026-10-28"
+}

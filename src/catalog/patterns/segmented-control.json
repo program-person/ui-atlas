@@ -1,0 +1,21 @@
+{
+  "id": "segmented-control", "nameJa": "セグメントコントロール", "nameEn": "Segmented control",
+  "aliases": ["表示切り替え", "セグメント", "単一選択"], "tags": ["表示形式", "ラジオ", "一覧"], "category": "部品",
+  "summary": "隣接した選択肢から表示形式を1つ選ぶ。",
+  "description": "カードとリストの表示形式を、隣り合うラジオボタンから1つ選ぶ。内容パネルを切り替えるタブではなく、同じ架空の記録の表示方法を変える。",
+  "useCases": ["一覧の表示形式の切り替え", "少数の排他的な表示設定"],
+  "cautions": ["選択肢が多い場合は別の選択方法を検討する。", "選択状態とキーボードフォーカスを区別する。"],
+  "relatedIds": ["radio-group", "responsive-grid", "tabs"], "demoId": "segmented-control",
+  "controls": [
+    { "id": "initial", "label": "初期表示", "help": "最初に選択する表示形式。", "default": "cards", "options": [
+      { "value": "cards", "label": "カード", "promptValue": "初期表示はカードにしてください" },
+      { "value": "list", "label": "リスト", "promptValue": "初期表示はリストにしてください" }
+    ] },
+    { "id": "density", "label": "情報の間隔", "help": "項目内の余白を切り替える。", "default": "comfortable", "options": [
+      { "value": "comfortable", "label": "ゆったり", "promptValue": "各項目の余白を14pxにしてください" },
+      { "value": "compact", "label": "コンパクト", "promptValue": "各項目の余白を8pxにしてください" }
+    ] }
+  ],
+  "prompt": "架空の同じ3件の記録をカードまたはリストで表示し、隣接する2つのラジオボタンで表示形式を選べるようにしてください。{{initial}}。{{density}}。fieldsetとlegendで「表示形式」を示し、同じnameの標準ラジオで択一選択と矢印キー操作を保ってください。選択時に一覧の配置と表示中の形式を更新し、選択とフォーカスを見分けられるようにしてください。カードは幅に応じて折り返し、狭い画面では横にはみ出さないようにしてください。",
+  "references": [{ "title": "MDN · input type=radio", "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio", "checkedAt": "2026-10-28" }], "verifiedAt": "2026-10-28"
+}

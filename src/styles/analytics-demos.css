@@ -1,0 +1,6 @@
+.analytics-chart svg { display: block; width: 100%; height: auto; }
+.analytics-chart svg text { font-size: 12px; fill: #283b5c; }
+.analytics-chart .axis-grid { stroke: #c2cfe6; }
+.analytics-chart .legend { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.analytics-chart .legend span::before { content: ''; display: inline-block; width: 0.8rem; height: 0.8rem; margin-right: 0.3rem; background: #235de5; }
+.analytics-chart .legend span + span::before { background: #e08b31; }

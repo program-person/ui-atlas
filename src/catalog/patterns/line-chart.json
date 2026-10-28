@@ -1,0 +1,15 @@
+{
+  "id": "line-chart", "nameJa": "折れ線グラフ", "nameEn": "Line chart", "category": "部品",
+  "summary": "時系列の値を線で結び、変化を見せる。",
+  "description": "架空の期間別件数を折れ線と数表で示す。棒グラフの分類比較に対し、順序のある値の変化を見る。",
+  "aliases": ["ラインチャート", "時系列グラフ", "推移"], "tags": ["グラフ", "時系列", "推移"],
+  "useCases": ["日ごとの件数の推移", "週ごとの変化を見る"],
+  "cautions": ["期間を比較するときは目盛と単位を明示する。", "正確な値を表でも示す。"],
+  "relatedIds": ["bar-chart", "data-table"], "demoId": "line-chart",
+  "controls": [
+    {"id":"initial", "label":"最初の期間", "help":"固定の架空値。", "default":"week", "options":[{"value":"week","label":"週間","promptValue":"週間の4・8・6・12件から始めてください"},{"value":"month","label":"月間","promptValue":"月間の10・0・15・18件から始めてください"}]},
+    {"id":"markers", "label":"点の表示", "help":"各測定値の点を切り替える。", "default":"show", "options":[{"value":"show","label":"表示","promptValue":"各測定値に点を表示してください"},{"value":"hide","label":"非表示","promptValue":"測定値の点を表示せず線だけにしてください"}]}
+  ],
+  "prompt": "架空の件数の推移を自作SVGの折れ線グラフで実装してください。{{initial}}。{{markers}}。期間切替で週間4・8・6・12件と月間10・0・15・18件を表示し、縦軸は共通の0〜20件としてください。横軸に日または週を表示し、同じ値を見出し付きHTML表にも示してください。切替時には図・表・statusを更新し、外部ライブラリや通信を使わないでください。",
+  "references": [{"title":"W3C WAI · Complex Images", "url":"https://www.w3.org/WAI/tutorials/images/complex/", "checkedAt":"2026-10-28"}], "verifiedAt":"2026-10-28"
+}

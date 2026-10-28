@@ -1,0 +1,78 @@
+{
+  "id": "sticky-footer",
+  "nameJa": "短い本文の下端フッター",
+  "nameEn": "Sticky footer",
+  "category": "レイアウト",
+  "summary": "本文が少ないときはページの下端、多いときは本文の後ろへ。",
+  "description": "最小高さを持つページに、ヘッダー・伸びる本文・フッターを配置する。追従ヘッダーや固定ボタンとは異なり、スクロールへの追従ではなく短いページの余り空間を本文に配分する。",
+  "aliases": [
+    "下端フッター",
+    "ページ末尾",
+    "フッターの余白"
+  ],
+  "tags": [
+    "下端フッター",
+    "ページ末尾",
+    "フッターの余白"
+  ],
+  "useCases": [
+    "短い案内ページ",
+    "本文量の異なるメモ画面"
+  ],
+  "cautions": [
+    "position:fixedで本文へ重ねない。長い本文ではフッターを自然に押し下げる。",
+    "デモはサンプル枠の最小高さを使う。実際のページではビューポートに合わせて設計する。"
+  ],
+  "relatedIds": [
+    "sticky-header",
+    "responsive-grid"
+  ],
+  "demoId": "sticky-footer",
+  "controls": [
+    {
+      "id": "height",
+      "label": "ページ枠の最小高さ",
+      "help": "デモ枠の中で比較する。",
+      "default": "short",
+      "options": [
+        {
+          "value": "short",
+          "label": "300px",
+          "promptValue": "ページ枠の最小高さを300pxにしてください"
+        },
+        {
+          "value": "tall",
+          "label": "420px",
+          "promptValue": "ページ枠の最小高さを420pxにしてください"
+        }
+      ]
+    },
+    {
+      "id": "initial",
+      "label": "最初の本文量",
+      "help": "操作で1段落と5段落を切り替える。",
+      "default": "short",
+      "options": [
+        {
+          "value": "short",
+          "label": "短文",
+          "promptValue": "1段落の短い本文から始めてください"
+        },
+        {
+          "value": "long",
+          "label": "長文",
+          "promptValue": "5段落の長い本文から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "短い本文のときに下端を揃えるフッターを実装してください。{{height}}。{{initial}}。サンプルページをCSS Gridのauto 1fr autoでヘッダー・本文・フッターへ分け、固定配置や本文への重ね合わせを使わないでください。本文量を1段落と5段落で切り替え、長文ではフッターを本文の後ろへ自然に押し下げてください。切替後もボタンのフォーカスを維持し、本文量と最小高さをstatusで伝えてください。",
+  "references": [
+    {
+      "title": "MDN · Sticky footers",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/How_to/Layout_cookbook/Sticky_footers",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

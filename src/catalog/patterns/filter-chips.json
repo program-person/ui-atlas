@@ -1,0 +1,21 @@
+{
+  "id": "filter-chips", "nameJa": "フィルターチップ", "nameEn": "Filter chips",
+  "aliases": ["適用中の条件", "絞り込みタグ", "条件チップ"], "tags": ["一覧", "絞り込み", "条件解除"], "category": "UXの流れ",
+  "summary": "適用中の条件をチップで見せ、個別に解除する。",
+  "description": "チェックボックスで選んだ条件を解除可能なチップとして表示し、架空の記録をすべての条件に一致するものに絞る。件数と0件の状態も確認できる。",
+  "useCases": ["複数条件の絞り込み", "適用中の条件を個別に解除する一覧"],
+  "cautions": ["解除ボタンに対象条件を含む名前を付ける。", "0件でも条件解除の操作を残す。"],
+  "relatedIds": ["search-filter", "status-badge"], "demoId": "filter-chips",
+  "controls": [
+    { "id": "initial", "label": "初期条件", "help": "全件または条件適用済みで開始する。", "default": "all", "options": [
+      { "value": "all", "label": "全件", "promptValue": "初期状態は条件なしで全件表示してください" },
+      { "value": "filtered", "label": "絞り込み済み", "promptValue": "初期状態で自然の条件を適用してください" }
+    ] },
+    { "id": "presentation", "label": "チップの見た目", "help": "塗りと枠線の見た目を比べる。", "default": "plain", "options": [
+      { "value": "plain", "label": "塗り", "promptValue": "チップは淡い塗りで表示してください" },
+      { "value": "outlined", "label": "枠線", "promptValue": "チップは背景を透明にし枠線を強調してください" }
+    ] }
+  ],
+  "prompt": "架空の記録一覧に自然・街・夜のチェックボックスを設け、選択した条件をすべて含む記録だけを表示してください。{{initial}}。{{presentation}}。選択中の条件をそれぞれ解除ボタン付きのチップとして表示し、解除時は対応するチェックボックスと結果を更新して、そのチェックボックスにフォーカスを戻してください。すべて解除ボタンと件数を表示し、0件では条件解除を案内してください。すべて解除した後は先頭のチェックボックスへフォーカスを移してください。条件がなければ全件を表示し、すべて解除ボタンを無効にしてください。狭い幅ではチップを折り返してください。",
+  "references": [{ "title": "Carbon Design System · Tag", "url": "https://www.carbondesignsystem.com/building-blocks/core/components/tag/guidelines", "checkedAt": "2026-10-28" }], "verifiedAt": "2026-10-28"
+}

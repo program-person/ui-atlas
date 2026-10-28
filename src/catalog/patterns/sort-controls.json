@@ -1,0 +1,21 @@
+{
+  "id": "sort-controls", "nameJa": "並べ替えコントロール", "nameEn": "Sort controls",
+  "aliases": ["ソート", "並び順", "順序変更"], "tags": ["一覧", "並べ替え", "選択"], "category": "部品",
+  "summary": "一覧の並べ替え項目と順序を選ぶ。",
+  "description": "項目と昇順・降順を別々に指定して、架空のノート一覧の順序を変える。列見出しを操作するデータテーブルとは異なり、カード状の一覧の外側に操作を置く。",
+  "useCases": ["カード一覧の並べ替え", "記録数や名前による整理"],
+  "cautions": ["現在の項目と順序を明示する。", "同じ値の項目の順序を安定させる。"],
+  "relatedIds": ["data-table", "search-filter"], "demoId": "sort-controls",
+  "controls": [
+    { "id": "sortKey", "label": "初期の並べ替え項目", "help": "一覧の最初の並びに使う項目。", "default": "title", "options": [
+      { "value": "title", "label": "タイトル", "promptValue": "最初はタイトルで並べ替えてください" },
+      { "value": "count", "label": "記録数", "promptValue": "最初は記録数で並べ替えてください" }
+    ] },
+    { "id": "direction", "label": "初期の順序", "help": "最初の昇順・降順。", "default": "asc", "options": [
+      { "value": "asc", "label": "昇順", "promptValue": "初期順序を昇順にしてください" },
+      { "value": "desc", "label": "降順", "promptValue": "初期順序を降順にしてください" }
+    ] }
+  ],
+  "prompt": "架空のノートをカード状のリストに表示し、並べ替える項目（タイトル・記録数）と順序（昇順・降順）をそれぞれ標準の選択欄で変更できるようにしてください。{{sortKey}}。{{direction}}。項目と順序の変更をすぐ一覧に反映し、現在の条件を表示してください。同じ値は元の順序を保ち、狭い画面では選択欄を折り返してください。",
+  "references": [{ "title": "MDN · Array.prototype.sort", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort", "checkedAt": "2026-10-28" }], "verifiedAt": "2026-10-28"
+}

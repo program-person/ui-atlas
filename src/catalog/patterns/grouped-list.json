@@ -1,0 +1,15 @@
+{
+  "id": "grouped-list", "nameJa": "グループ化リスト", "nameEn": "Grouped list",
+  "aliases": ["グループ一覧", "分類別リスト", "まとまり別一覧"], "tags": ["一覧", "分類", "グループ"], "category": "レイアウト",
+  "summary": "共通する属性ごとに項目を分け、見出しと件数を示す。",
+  "description": "架空の記録を種類または状態でまとめ、グループの見出しと件数の下に一覧を表示する。列の値を比較するデータテーブルや時系列を追うタイムラインとは目的が異なる。",
+  "useCases": ["種類ごとに記録を探す", "状態ごとに作業を把握する"],
+  "cautions": ["グループの意味と件数を見出しで示す。", "分類変更時にも項目の順序や表示内容を予測できるようにする。"],
+  "relatedIds": ["data-table", "empty-state", "timeline"], "demoId": "grouped-list",
+  "controls": [
+    { "id": "groupBy", "label": "グループの基準", "help": "一覧をまとめる属性を選ぶ。", "default": "kind", "options": [{ "value": "kind", "label": "種類", "promptValue": "種類ごとにまとめてください" }, { "value": "status", "label": "状態", "promptValue": "状態ごとにまとめてください" }] },
+    { "id": "initial", "label": "最初の状態", "help": "開始・リセット時の表示を選ぶ。", "default": "all", "options": [{ "value": "all", "label": "全件", "promptValue": "初期状態では架空の4件を表示してください" }, { "value": "empty", "label": "空", "promptValue": "初期状態では空の案内を表示してください" }] }
+  ],
+  "prompt": "架空の記録を属性別にまとめるグループ化リストを実装してください。{{groupBy}}。{{initial}}。各グループを見出しと件数、項目のリストで表し、元の順序をグループ内で保ってください。各項目には種類と状態を表示してください。ボタンで空とサンプルを切り替え、空の理由と次の操作を示してください。スマホ幅では文字を折り返し、リセットで設定した初期状態に戻してください。",
+  "references": [{ "title": "W3C WAI · Page Structure", "url": "https://www.w3.org/WAI/tutorials/page-structure/content/", "checkedAt": "2026-10-28" }], "verifiedAt": "2026-10-28"
+}

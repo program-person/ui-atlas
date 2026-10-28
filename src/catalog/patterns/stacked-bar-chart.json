@@ -1,0 +1,15 @@
+{
+  "id": "stacked-bar-chart", "nameJa": "積み上げ棒グラフ", "nameEn": "Stacked bar chart", "category": "部品",
+  "summary": "棒を内訳ごとに積み重ね、分類の合計と構成を見る。",
+  "description": "架空の作成と確認の件数を積み上げ、件数と分類内の割合を切り替える。",
+  "aliases": ["積み上げ棒", "構成比グラフ", "スタックバー"], "tags": ["グラフ", "内訳", "割合"],
+  "useCases": ["分類別の内訳と合計", "各分類の構成比を見る"],
+  "cautions": ["割合の表示では合計の大きさを別途確認する。", "合計0件の割合は算出せず、表にも示す。"],
+  "relatedIds": ["bar-chart", "donut-chart", "data-table"], "demoId": "stacked-bar-chart",
+  "controls": [
+    {"id":"view", "label":"最初の表示", "help":"件数または分類内の割合。", "default":"absolute", "options":[{"value":"absolute","label":"件数","promptValue":"件数の表示から始めてください"},{"value":"percent","label":"割合","promptValue":"分類内の割合の表示から始めてください"}]},
+    {"id":"initial", "label":"最初のデータ", "help":"固定の架空値。", "default":"sample", "options":[{"value":"sample","label":"サンプル","promptValue":"サンプルデータから始めてください"},{"value":"empty","label":"0件","promptValue":"全分類0件のデータから始めてください"}]}
+  ],
+  "prompt": "作成と確認の架空件数を分類A・B・Cごとに示す積み上げ棒グラフを自作SVGで実装してください。{{view}}。{{initial}}。サンプルは順に4・6件、8・4件、0・0件とし、全分類0件のデータにも切り替えられるようにしてください。件数は0〜20件、割合は0〜100%の目盛で表示し、合計0件では割合を計算せず割合なしと表示してください。図と同じ内訳と合計をHTML表に示し、切替で図・表・statusを更新してください。通信や外部ライブラリは使わないでください。",
+  "references": [{"title":"W3C WAI · Complex Images", "url":"https://www.w3.org/WAI/tutorials/images/complex/", "checkedAt":"2026-10-28"}], "verifiedAt":"2026-10-28"
+}

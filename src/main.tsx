@@ -10,6 +10,9 @@ import './styles/extension-demos.css';
 import './styles/continuation-demos.css';
 import './styles/exploration-demos.css';
 import './styles/workflow-demos.css';
+import './styles/composition-demos.css';
+import './styles/selection-demos.css';
+import './styles/collection-demos.css';
 
 const container = document.getElementById('root');
 if (!container) throw new Error('アプリの表示先が見つかりません。');

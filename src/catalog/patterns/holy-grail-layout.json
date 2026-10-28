@@ -1,0 +1,79 @@
+{
+  "id": "holy-grail-layout",
+  "nameJa": "ヘッダー付き3列配置",
+  "nameEn": "Holy grail layout",
+  "category": "レイアウト",
+  "summary": "一覧・本文・補足をヘッダーとフッターで挟む。",
+  "description": "画面の役割を一覧、本文、補足の列へ割り当てる。可変分割パネルと違い、ドラッグではなく親枠の幅で列数を変える。設定と補足の開閉で本文に使える幅を比べる。",
+  "aliases": [
+    "ホーリーグレイル",
+    "聖杯レイアウト",
+    "3列ページ"
+  ],
+  "tags": [
+    "ホーリーグレイル",
+    "聖杯レイアウト",
+    "3列ページ"
+  ],
+  "useCases": [
+    "一覧と本文と補助情報",
+    "ノート管理の作業画面"
+  ],
+  "cautions": [
+    "狭い枠では文書順を維持して1列にする。",
+    "列の幅を減らしても操作や文章がはみ出さないようにする。"
+  ],
+  "relatedIds": [
+    "sidebar",
+    "split-view",
+    "container-query"
+  ],
+  "demoId": "holy-grail-layout",
+  "controls": [
+    {
+      "id": "proportion",
+      "label": "一覧と本文の比率",
+      "help": "補足がある場合は右列を1とする。",
+      "default": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "1：3",
+          "promptValue": "一覧と本文の比率を1対3にしてください"
+        },
+        {
+          "value": "wide",
+          "label": "2：3",
+          "promptValue": "一覧と本文の比率を2対3にしてください"
+        }
+      ]
+    },
+    {
+      "id": "supplement",
+      "label": "最初の補足表示",
+      "help": "デモ内でも表示を切り替えられる。",
+      "default": "shown",
+      "options": [
+        {
+          "value": "shown",
+          "label": "表示",
+          "promptValue": "補足を表示して始めてください"
+        },
+        {
+          "value": "hidden",
+          "label": "非表示",
+          "promptValue": "補足を隠して始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "ヘッダー、一覧ナビゲーション、本文、補足、フッターをCSS Gridで配置してください。{{proportion}}。{{supplement}}。親枠640px以上でヘッダーとフッターを列全体へ渡し、中段を一覧・本文・補足の順に並べてください。640px未満では文書順の1列にしてください。補足の切替ボタンはaria-pressedを持たせ、非表示では本文へ空き幅を配分してください。一覧の二つのボタンは架空ノートの本文とaria-currentを切り替え、選択と補足状態をstatusで示してください。",
+  "references": [
+    {
+      "title": "MDN · Common grid layouts",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "verifiedAt": "2026-10-28"
+}

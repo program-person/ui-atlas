@@ -1,0 +1,15 @@
+{
+  "id": "scatter-plot", "nameJa": "散布図", "nameEn": "Scatter plot", "category": "部品",
+  "summary": "2つの数値の組を点で表し、分布を見る。",
+  "description": "架空の作業時間と件数の組を点と表で示す。サンプルを切り替えて点の並びを比べる。",
+  "aliases": ["散布図", "スキャッタープロット", "2変数の分布"], "tags": ["グラフ", "分布", "2変数"],
+  "useCases": ["2つの数値の組の分布", "架空データの点の並びの比較"],
+  "cautions": ["点の並びだけで因果関係を判断しない。", "軸の単位と各点の値を表で示す。"],
+  "relatedIds": ["bar-chart", "data-table"], "demoId": "scatter-plot",
+  "controls": [
+    {"id":"initial", "label":"最初のサンプル", "help":"固定の架空値。", "default":"a", "options":[{"value":"a","label":"サンプルA","promptValue":"サンプルAから始めてください"},{"value":"b","label":"サンプルB","promptValue":"サンプルBから始めてください"}]},
+    {"id":"labels", "label":"点のラベル", "help":"図中の点の名前を切り替える。", "default":"show", "options":[{"value":"show","label":"表示","promptValue":"点の名前を表示してください"},{"value":"hide","label":"非表示","promptValue":"図中の点の名前を非表示にしてください"}]}
+  ],
+  "prompt": "架空の作業時間と件数の組を散布図として自作SVGで実装してください。{{initial}}。{{labels}}。サンプルAは(2,3)・(4,7)・(8,5)、Bは(1,8)・(5,4)・(9,2)とし、ボタンで切り替えてください。横軸は0〜10時間、縦軸は0〜10件とし、同じ値を見出し付きHTML表に表示してください。切替で図・表・statusを更新し、因果関係を主張せず、通信や外部ライブラリを使わないでください。",
+  "references": [{"title":"W3C WAI · Complex Images", "url":"https://www.w3.org/WAI/tutorials/images/complex/", "checkedAt":"2026-10-28"}], "verifiedAt":"2026-10-28"
+}

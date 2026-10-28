@@ -1,0 +1,27 @@
+.selection-demo { min-width: 0; }
+.selection-sort-controls { display: flex; flex-wrap: wrap; gap: 12px; }
+.selection-sort-controls label { display: grid; gap: 6px; flex: 1 1 140px; font-weight: 700; }
+.selection-sort-controls select { min-height: 44px; max-width: 100%; padding: 8px; border: 1px solid #8c9c98; border-radius: 8px; background: white; color: #16332e; }
+.selection-items, .selection-view { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 8px; }
+.selection-items li, .selection-view li { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 14px; border: 1px solid #cddbd6; border-radius: 10px; background: #fff; }
+.selection-items li span, .selection-view li span { color: #48665e; }
+.selection-filter-options { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 16px 0; }
+.selection-filter-options legend { font-weight: 700; margin-bottom: 8px; }
+.selection-filter-options label { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 4px 10px; border: 1px solid #cddbd6; border-radius: 8px; }
+.selection-active { display: grid; gap: 8px; justify-items: start; }
+.selection-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.selection-chips button, .selection-active > button { min-height: 44px; padding: 6px 12px; border: 1px solid #72948a; border-radius: 20px; color: #163b32; background: #e2f2eb; cursor: pointer; }
+.selection-chips-outlined button { background: transparent; border: 2px solid #477769; }
+.selection-active > button:disabled { opacity: .55; cursor: default; }
+.selection-segment { border: 0; padding: 0; margin: 16px 0; }
+.selection-segment legend { font-weight: 700; margin-bottom: 8px; }
+.selection-segment > div { display: inline-flex; max-width: 100%; border: 1px solid #8c9c98; border-radius: 10px; overflow: hidden; }
+.selection-segment label { position: relative; cursor: pointer; }
+.selection-segment input { position: absolute; opacity: 0; }
+.selection-segment span { display: grid; place-items: center; min-width: 86px; min-height: 44px; padding: 6px 12px; background: white; color: #163b32; }
+.selection-segment input:checked + span { background: #245e50; color: white; }
+.selection-segment input:focus-visible + span { outline: 3px solid #ce7200; outline-offset: -3px; }
+.selection-view-cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); }
+.selection-view-cards li { display: grid; align-content: start; }
+.selection-view.selection-density-compact li { padding: 8px; }
+.selection-demo button:focus-visible, .selection-demo select:focus-visible, .selection-demo input:focus-visible { outline: 3px solid #ce7200; outline-offset: 2px; }

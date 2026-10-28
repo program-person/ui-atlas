@@ -1,0 +1,17 @@
+.collection-demo { color: #17233c; }
+.collection-demo button { min-height: 44px; }
+.collection-heatmap { width: 100%; border-collapse: separate; border-spacing: 4px; margin-top: 18px; table-layout: fixed; text-align: center; }
+.collection-heatmap caption { text-align: left; font-weight: 700; margin-bottom: 8px; }
+.collection-heatmap th, .collection-heatmap td { padding: 10px 3px; overflow-wrap: anywhere; }
+.collection-heatmap td { border-radius: 7px; font-weight: 700; }
+.heatmap-blue .heat-level-low { background: #e1eaff; } .heatmap-blue .heat-level-mid { background: #b3c9ff; } .heatmap-blue .heat-level-high { background: #3366c5; color: white; }
+.heatmap-green .heat-level-low { background: #ddf2e5; } .heatmap-green .heat-level-mid { background: #a4d5b7; } .heatmap-green .heat-level-high { background: #267048; color: white; }
+.collection-legend { font-size: .875rem; }
+.collection-groups, .collection-cards { display: grid; gap: 14px; margin-top: 18px; }
+.collection-groups section, .collection-card { border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; background: white; min-width: 0; }
+.collection-groups h2, .collection-card h2 { font-size: 1.05rem; margin: 0 0 10px; }
+.collection-groups h2 span { font-weight: 400; font-size: .875rem; }
+.collection-groups ul { list-style: none; padding: 0; margin: 0; }
+.collection-groups li { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; padding: 9px 0; border-top: 1px solid #e2e8f0; }
+.collection-groups li span { font-size: .875rem; }
+.collection-card p { overflow-wrap: anywhere; }

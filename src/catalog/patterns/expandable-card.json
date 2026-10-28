@@ -1,0 +1,15 @@
+{
+  "id": "expandable-card", "nameJa": "詳細を開くカード", "nameEn": "Expandable card",
+  "aliases": ["展開カード", "詳細付きカード", "開閉カード"], "tags": ["カード", "詳細", "開閉"], "category": "部品",
+  "summary": "概要を常に表示し、各カードの補足を個別に開閉する。",
+  "description": "2枚の架空のカードは見出しと概要を常に表示し、それぞれのボタンから補足だけを開く。見出し自体を操作するアコーディオンと異なり、カード内の概要を閉じない。",
+  "useCases": ["複数の案の概要と補足を見比べる", "一覧で必要なカードの説明だけを開く"],
+  "cautions": ["常に必要な情報は閉じた詳細だけに置かない。", "各ボタンと対応する詳細の関係と開閉状態を示す。"],
+  "relatedIds": ["accordion", "description-list", "responsive-grid"], "demoId": "expandable-card",
+  "controls": [
+    { "id": "initial", "label": "最初の状態", "help": "開始・リセット時の開閉を選ぶ。", "default": "closed", "options": [{ "value": "closed", "label": "閉じる", "promptValue": "初期状態ではすべての詳細を閉じてください" }, { "value": "open", "label": "開く", "promptValue": "初期状態ではすべての詳細を開いてください" }] },
+    { "id": "detail", "label": "補足の長さ", "help": "開いたときの情報量を選ぶ。", "default": "short", "options": [{ "value": "short", "label": "短い", "promptValue": "各カードの詳細は短い説明にしてください" }, { "value": "full", "label": "詳しい", "promptValue": "各カードの詳細は詳しい説明にしてください" }] }
+  ],
+  "prompt": "2枚の架空のカードに見出しと概要を常に表示し、カードごとのボタンで補足を開閉してください。{{initial}}。{{detail}}。各カードは独立して開閉し、片方を開いてももう片方を閉じないでください。ボタンはカード名を含む名前を持ち、aria-expandedとaria-controlsで開閉状態と補足を関連付けてください。Enter・Spaceで操作でき、開閉後も操作したボタンにフォーカスを保ってください。スマホでは1列にして文字を折り返し、リセットで設定した初期状態に戻してください。",
+  "references": [{ "title": "WAI-ARIA APG · Disclosure", "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/", "checkedAt": "2026-10-28" }], "verifiedAt": "2026-10-28"
+}

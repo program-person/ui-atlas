@@ -2,6 +2,18 @@ import type { DemoId } from '../types.ts';
 
 export function Thumbnail({ id }: { id: DemoId }) {
   return <div className={`thumbnail thumbnail-${id}`} aria-hidden="true">
+    {id === 'media-object' && <div className="mini-workflow"><span>◼　余白のスケッチ</span><b>図と本文をまとめる</b><span>狭い枠では縦へ</span></div>}
+    {id === 'holy-grail-layout' && <div className="mini-workflow"><b>ヘッダー</b><span>一覧 │ 本文 │ 補足</span><b>フッター</b></div>}
+    {id === 'sticky-footer' && <div className="mini-workflow" style={{minHeight:100}}><b>メモページ</b><span>短い本文</span><span style={{marginTop:25}}>ページの終わり</span></div>}
+    {id === 'line-chart' && <div className="mini-workflow"><svg viewBox="0 0 180 60" style={{width:"100%",height:60}}><polyline points="10,45 60,30 110,38 165,10" fill="none" stroke="#235de5" strokeWidth="3" /></svg><span>4 → 8 → 6 → 12件</span></div>}
+    {id === 'stacked-bar-chart' && <div className="mini-workflow"><div style={{display:"flex",height:16}}><i style={{width:"40%",background:"#235de5"}}/><i style={{width:"60%",background:"#e08b31"}}/></div><b>内訳と合計</b><span>件数 ⇄ 割合</span></div>}
+    {id === 'scatter-plot' && <div className="mini-workflow"><svg viewBox="0 0 180 60" style={{width:"100%",height:60}}><circle cx="30" cy="45" r="5" fill="#235de5"/><circle cx="75" cy="15" r="5" fill="#235de5"/><circle cx="145" cy="30" r="5" fill="#235de5"/></svg><span>2つの数値を点へ</span></div>}
+    {id === 'sort-controls' && <div className="mini-workflow"><b>記録数 │ 昇順</b><span>森の記録　2件</span><span>青いノート　4件</span></div>}
+    {id === 'filter-chips' && <div className="mini-workflow"><b>自然 ×　夜 ×</b><span>適用中の条件を個別に解除</span><span>1件 / 月の観察</span></div>}
+    {id === 'segmented-control' && <div className="mini-workflow"><b>カード │ リスト</b><span>同じ3件の表示形式</span><span>一つだけ選択</span></div>}
+    {id === 'heatmap' && <div className="mini-workflow"><div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:3}}>{[2,5,8,0,3,6,4,7,1].map((n,i)=><span key={i} style={{background:n>5?"#3366c5":"#e1eaff",color:n>5?"white":"#17233c",textAlign:"center"}}>{n}</span>)}</div></div>}
+    {id === 'grouped-list' && <div className="mini-workflow"><b>見た目（2件）</b><span>余白の案 / 色の案</span><b>配置（2件）</b></div>}
+    {id === 'expandable-card' && <div className="mini-workflow"><b>配置の案</b><span>概要はいつも表示</span><b>詳細を開く　⌄</b></div>}
     {id === 'donut-chart' && <div className="mini-workflow"><div style={{position:"relative",width:52,height:52,borderRadius:"50%",background:"conic-gradient(#235de5 0 60%, #9c6200 60% 90%, #64758f 90% 100%)"}}><i style={{position:"absolute",inset:10,borderRadius:"50%",background:"white"}} /></div><span>確認済み60%・確認中30%</span><b>合計10件</b></div>}
     {id === 'bar-chart' && <div className="mini-workflow"><div style={{display:"flex",alignItems:"end",gap:10,height:55}}><i style={{display:"block",width:24,height:18,background:"#235de5"}} /><i style={{display:"block",width:24,height:36,background:"#235de5"}} /><i style={{display:"block",width:24,height:54,background:"#235de5"}} /></div><span>配置4　配色8　要点12</span></div>}
     {id === 'metric-card' && <div className="mini-workflow"><span>作成メモ数 / 7日間</span><b style={{fontSize:24}}>12件</b><span>前の期間より3件多い</span></div>}
