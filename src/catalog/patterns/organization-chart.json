@@ -1,0 +1,59 @@
+{
+  "id": "organization-chart",
+  "nameJa": "階層の構成図",
+  "nameEn": "Organization Chart",
+  "category": "部品",
+  "summary": "上位と下位の関係を枝で示す。",
+  "description": "架空の部門構成を親子で結ぶ。下位の2区画を開閉しても親の位置と説明を残す。",
+  "aliases": [
+    "階層構成図",
+    "organization chart"
+  ],
+  "tags": [
+    "部品",
+    "組織の構成",
+    "機能の階層"
+  ],
+  "useCases": [
+    "組織の構成",
+    "機能の階層"
+  ],
+  "cautions": [
+    "実際の人物や所属情報は使わない。",
+    "図だけでなく入れ子のリストでも関係を示す。"
+  ],
+  "relatedIds": [
+    "tree-view",
+    "disclosure-navigation"
+  ],
+  "demoId": "organization-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "下位の初期表示",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "open",
+      "options": [
+        {
+          "value": "open",
+          "label": "展開",
+          "promptValue": "下位の区画を表示して始めてください"
+        },
+        {
+          "value": "closed",
+          "label": "省略",
+          "promptValue": "下位の区画を折りたたんで始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "統括の下に制作・確認、制作の下に文章・図という架空構成を自作SVGと入れ子のリストで示してください。制作の下位を開閉するbuttonにaria-expandedを付け、図とリストを連動させてください。人物情報は使わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

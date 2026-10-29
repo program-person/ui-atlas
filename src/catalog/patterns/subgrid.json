@@ -1,0 +1,76 @@
+{
+  "id": "subgrid",
+  "nameJa": "内側の行を揃えるグリッド",
+  "nameEn": "Subgrid",
+  "category": "レイアウト",
+  "summary": "入れ子のカードが親グリッドの行を共有する。",
+  "description": "subgridで見出し・説明・補足の各行を隣のカードと揃える。カード末尾だけを揃える配置と異なり、内側の複数の行を共通化する。",
+  "aliases": [
+    "内側の行を揃えるグリッド",
+    "Subgrid"
+  ],
+  "tags": [
+    "レイアウト",
+    "subgrid"
+  ],
+  "useCases": [
+    "比較する資料カード",
+    "説明量が異なる一覧"
+  ],
+  "cautions": [
+    "対応ブラウザを確認し、通常のグリッドも選べるようにする。",
+    "狭い画面では1列で文書順に表示する。"
+  ],
+  "relatedIds": [
+    "card-footer-alignment",
+    "responsive-grid"
+  ],
+  "demoId": "subgrid",
+  "controls": [
+    {
+      "id": "align",
+      "label": "行の共有",
+      "help": "説明量の違いを操作で試す。",
+      "default": "shared",
+      "options": [
+        {
+          "value": "shared",
+          "label": "親の行を共有",
+          "promptValue": "カードの内部行をgrid-template-rows: subgridで親と共有してください"
+        },
+        {
+          "value": "independent",
+          "label": "カードごと",
+          "promptValue": "カードの内部行を独立した通常のグリッドにしてください"
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "label": "行と列の間隔",
+      "help": "親グリッドのgap。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "12px",
+          "promptValue": "親グリッドのgapを12pxにしてください"
+        },
+        {
+          "value": "wide",
+          "label": "24px",
+          "promptValue": "親グリッドのgapを24pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "カード内部の行を共有するグリッドを作ってください。{{align}}。{{gap}}。各カードを見出し・説明・補足の3行にし、説明文を長くするボタンで整列を比べられるようにしてください。440px以下では1列に並べてください。",
+  "references": [
+    {
+      "title": "MDN · Subgrid",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

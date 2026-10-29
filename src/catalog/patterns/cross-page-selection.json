@@ -1,0 +1,59 @@
+{
+  "id": "cross-page-selection",
+  "nameJa": "ページをまたいで選ぶ",
+  "nameEn": "Cross Page Selection",
+  "category": "UXの流れ",
+  "summary": "今のページの選択と、全体の選択を区別する。",
+  "description": "6件を2件ずつ表示し、選択集合をページとは独立に持つ。表示中だけを選ぶ操作と全6件を選ぶ操作を別々に置く。",
+  "aliases": [
+    "ページをまたいで選ぶ",
+    "cross page selection"
+  ],
+  "tags": [
+    "UXの流れ",
+    "複数ページの一括対象",
+    "選択範囲の明示"
+  ],
+  "useCases": [
+    "複数ページの一括対象",
+    "選択範囲の明示"
+  ],
+  "cautions": [
+    "全件が何件か明示する。",
+    "ページを移動しても選択を消さない。"
+  ],
+  "relatedIds": [
+    "bulk-actions",
+    "pagination"
+  ],
+  "demoId": "cross-page-selection",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のページ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "0",
+      "options": [
+        {
+          "value": "0",
+          "label": "先頭",
+          "promptValue": "メモ1・2のページから始めてください"
+        },
+        {
+          "value": "1",
+          "label": "次のページ",
+          "promptValue": "メモ3・4のページから始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "6件の架空メモを2件ずつ表示し、ページをまたいで選択集合を保持してください。今の2件を選ぶ、全6件を選ぶ、全解除を分けて提供してください。選択総数と今のページの選択数を表示し、実際の一括処理は行わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

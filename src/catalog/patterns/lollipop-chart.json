@@ -1,0 +1,59 @@
+{
+  "id": "lollipop-chart",
+  "nameJa": "ロリポップチャート",
+  "nameEn": "Lollipop Chart",
+  "category": "部品",
+  "summary": "棒の先端を点で示し、分類ごとの値を比較する。",
+  "description": "0から伸びる細い線と先端の点で量を示す。デモでは3種類の道具の記録数を比べる。",
+  "aliases": [
+    "ロリポップチャート",
+    "lollipop chart"
+  ],
+  "tags": [
+    "部品",
+    "分類別の件数",
+    "順位の比較"
+  ],
+  "useCases": [
+    "分類別の件数",
+    "順位の比較"
+  ],
+  "cautions": [
+    "量の比較では基準を0に揃える。",
+    "点の面積ではなく位置が値を示す。"
+  ],
+  "relatedIds": [
+    "bar-chart",
+    "scatter-plot"
+  ],
+  "demoId": "lollipop-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "3分類の件数を0〜100件の共通横軸でロリポップチャートにしてください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

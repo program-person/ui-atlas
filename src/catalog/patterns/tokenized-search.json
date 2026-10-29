@@ -1,0 +1,75 @@
+{
+  "id": "tokenized-search",
+  "nameJa": "検索語のトークン化",
+  "nameEn": "Tokenized Search",
+  "aliases": [
+    "検索語のトークン化"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "検索条件を個別に追加し取り除く。",
+  "description": "検索語を個別の条件として追加し、すべてに一致する道具を表示する。",
+  "useCases": [
+    "複数のキーワードを保持する検索",
+    "条件を個別に見直す検索"
+  ],
+  "cautions": [
+    "tag-inputはタグの入力を扱い、こちらは複数語でAND検索する。",
+    "空白だけの語や同一条件の重複は追加せず、条件の除去で結果を更新する。"
+  ],
+  "relatedIds": [
+    "tag-input",
+    "search-filter"
+  ],
+  "demoId": "tokenized-search",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の青いノート・赤いペン・青いペンを対象に、検索語を条件として追加し、すべての条件を含む品目の件数と一覧を表示してください。空欄と重複を拒否し、各条件を外すと結果を更新してください。ボタンとEnterで追加できるようにしてください。 {{initial}}。{{layout}}。 条件を外した後は検索欄にフォーカスを戻してください。",
+  "references": [
+    {
+      "title": "MDN · button",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

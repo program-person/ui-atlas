@@ -1,0 +1,77 @@
+{
+  "id": "disclosure-navigation",
+  "nameJa": "分類から開くナビゲーション",
+  "nameEn": "Disclosure navigation",
+  "category": "部品",
+  "summary": "分類を開いて下位の移動先を選ぶ。",
+  "description": "分類ボタンと下位リンクを組み合わせたサイトナビゲーション。内容を読むためのアコーディオンと違い、選択した移動先を現在位置として示す。",
+  "aliases": [
+    "分類から開くナビゲーション",
+    "Disclosure navigation"
+  ],
+  "tags": [
+    "部品",
+    "disclosure",
+    "navigation"
+  ],
+  "useCases": [
+    "資料サイトの分類メニュー",
+    "機能が複数ある道具の移動先"
+  ],
+  "cautions": [
+    "サイトナビゲーションには通常のリンクと開閉ボタンを使う。",
+    "デモのリンクは外部移動せず、移動先の表示だけを切り替える。"
+  ],
+  "relatedIds": [
+    "accordion",
+    "tree-view"
+  ],
+  "demoId": "disclosure-navigation",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "同時に開く分類",
+      "help": "分類の開閉ルール。",
+      "default": "single",
+      "options": [
+        {
+          "value": "single",
+          "label": "ひとつ",
+          "promptValue": "分類は同時にひとつだけ開いてください"
+        },
+        {
+          "value": "multiple",
+          "label": "複数",
+          "promptValue": "分類を複数同時に開けるようにしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "分類の並び",
+      "help": "下位リンクは縦に並べる。",
+      "default": "vertical",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "縦",
+          "promptValue": "分類を縦に並べてください"
+        },
+        {
+          "value": "horizontal",
+          "label": "横",
+          "promptValue": "分類を折り返し可能な横並びにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "分類を開いて下位リンクを選ぶナビゲーションを作ってください。{{mode}}。{{layout}}。分類ボタンはaria-expandedとaria-controlsで下位リンク群につなぎ、Escでその分類を閉じて開閉ボタンへ戻してください。リンクを選ぶと現在位置をaria-current=pageで示してください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Disclosure navigation",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

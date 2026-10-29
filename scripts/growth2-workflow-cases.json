@@ -1,0 +1,122 @@
+[
+  {
+    "id": "cursor-pagination",
+    "component": "CursorPaginationDemo",
+    "name": "次の位置をたどるページ送り",
+    "action": "次の位置へ",
+    "expected": "メモ3",
+    "preview": [
+      "総ページ数を使わず、前後の位置から一覧を送る。",
+      "次の位置をたどるページ送り",
+      "2件 / 3件"
+    ]
+  },
+  {
+    "id": "cross-page-selection",
+    "component": "CrossPageSelectionDemo",
+    "name": "ページをまたいで選ぶ",
+    "action": "全6件を選ぶ",
+    "expected": "全体の選択 6件",
+    "preview": [
+      "今のページの選択と、全体の選択を区別する。",
+      "ページをまたいで選ぶ",
+      "先頭 / 次のページ"
+    ]
+  },
+  {
+    "id": "attachment-list",
+    "component": "AttachmentListDemo",
+    "name": "添付候補を一覧で確認する",
+    "action": "サンプルを追加",
+    "expected": "添付候補 1件",
+    "preview": [
+      "候補の名前・形式・容量と、対象に含めるかを表示する。",
+      "添付候補を一覧で確認する",
+      "2件 / 3件"
+    ]
+  },
+  {
+    "id": "upload-constraints",
+    "component": "UploadConstraintsDemo",
+    "name": "取り込み条件を先に示す",
+    "action": "diagram.svgの例",
+    "expected": "この形式は対象外",
+    "preview": [
+      "形式と容量の条件を示し、候補ごとに理由を表示する。",
+      "取り込み条件を先に示す",
+      "5KB / 10KB"
+    ]
+  },
+  {
+    "id": "delivery-receipt",
+    "component": "DeliveryReceiptDemo",
+    "name": "送信・到達・既読を分ける",
+    "action": "次の状態へ",
+    "expected": "送信済み",
+    "preview": [
+      "異なる到達段階を、別の状態として表示する。",
+      "送信・到達・既読を分ける",
+      "成功 / 失敗"
+    ]
+  },
+  {
+    "id": "threaded-comments",
+    "component": "ThreadedCommentsDemo",
+    "name": "返信を階層で読む",
+    "action": "返信2件",
+    "expected": "返信1",
+    "preview": [
+      "返信先との関係を、段差とまとまりで示す。",
+      "返信を階層で読む",
+      "段差あり / 段差なし"
+    ]
+  },
+  {
+    "id": "code-block",
+    "component": "CodeBlockDemo",
+    "name": "コードの表示と折り返し",
+    "action": "2行目の強調を切り替える",
+    "expected": "強調：2行目",
+    "preview": [
+      "インデントを保ち、長い行の表示を選ぶ。",
+      "コードの表示と折り返し",
+      "折り返す / 横スクロール"
+    ]
+  },
+  {
+    "id": "anchor-offset",
+    "component": "AnchorOffsetDemo",
+    "name": "固定見出しを避けて移動する",
+    "action": "2番目の見出しへ",
+    "expected": "2番目へ移動しました",
+    "preview": [
+      "移動先の見出しが固定部分の下に隠れないようにする。",
+      "固定見出しを避けて移動する",
+      "64px / なし"
+    ]
+  },
+  {
+    "id": "notification-grouping",
+    "component": "NotificationGroupingDemo",
+    "name": "関連する通知をまとめる",
+    "action": "設定の通知を追加",
+    "expected": "通知 4件",
+    "preview": [
+      "種類別の通知と発生順の通知を切り替える。",
+      "関連する通知をまとめる",
+      "種類別 / 新しい順"
+    ]
+  },
+  {
+    "id": "collapsed-breadcrumb",
+    "component": "CollapsedBreadcrumbDemo",
+    "name": "長いパンくずの中間を開く",
+    "action": "中間の階層を表示",
+    "expected": "中間階層：表示中",
+    "preview": [
+      "深い階層の中間をまとめ、必要なときに開く。",
+      "長いパンくずの中間を開く",
+      "省略 / すべて"
+    ]
+  }
+]

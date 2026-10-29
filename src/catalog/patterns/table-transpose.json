@@ -1,0 +1,59 @@
+{
+  "id": "table-transpose",
+  "nameJa": "表の行と列を入れ替える",
+  "nameEn": "Transposed Table",
+  "category": "部品",
+  "summary": "比べる方向に合わせて表の縦横を入れ替える。",
+  "description": "3種類の道具と2つの属性を表示する。道具を行にするか列にするかを変えても、見出しと値の対応を保つ。",
+  "aliases": [
+    "表行と列を入れ替える",
+    "transposed table"
+  ],
+  "tags": [
+    "部品",
+    "比較方向の切替",
+    "小さな比較表"
+  ],
+  "useCases": [
+    "比較方向の切替",
+    "小さな比較表"
+  ],
+  "cautions": [
+    "見出しのscopeを入れ替え後も正しく付ける。",
+    "項目が多いと横幅が増える。"
+  ],
+  "relatedIds": [
+    "comparison-table",
+    "data-table"
+  ],
+  "demoId": "table-transpose",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の方向",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "rows",
+      "options": [
+        {
+          "value": "rows",
+          "label": "道具を行",
+          "promptValue": "開始時は道具を行にしてください"
+        },
+        {
+          "value": "columns",
+          "label": "道具を列",
+          "promptValue": "開始時は道具を列にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "道具A・B・Cの件数10・20・30と容量2・5・4を表にし、行列を入れ替えるボタンを設けてください。両方向で行と列の見出しにscopeを付け、captionで方向を説明してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

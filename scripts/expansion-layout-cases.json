@@ -1,0 +1,101 @@
+[
+  {
+    "id": "masonry-columns",
+    "exportName": "MasonryColumnsDemo",
+    "action": {
+      "role": "button",
+      "name": "メモを追加・解除"
+    },
+    "expectedText": "6件のメモ"
+  },
+  {
+    "id": "sticky-aside",
+    "exportName": "StickyAsideDemo",
+    "action": {
+      "role": "button",
+      "name": "本文の途中へ"
+    },
+    "expectedText": "スクロール位置：180px"
+  },
+  {
+    "id": "bottom-navigation",
+    "exportName": "BottomNavigationDemo",
+    "action": {
+      "role": "button",
+      "name": "検索"
+    },
+    "expectedText": "表示中：検索"
+  },
+  {
+    "id": "navigation-rail",
+    "exportName": "NavigationRailDemo",
+    "action": {
+      "role": "button",
+      "name": "記録"
+    },
+    "expectedText": "移動先：記録"
+  },
+  {
+    "id": "overflow-menu",
+    "exportName": "OverflowMenuDemo",
+    "action": {
+      "role": "button",
+      "name": "その他の操作"
+    },
+    "expectedText": "固定する"
+  },
+  {
+    "id": "disclosure-navigation",
+    "exportName": "DisclosureNavigationDemo",
+    "action": {
+      "role": "button",
+      "name": "作る"
+    },
+    "expectedText": "下書き"
+  },
+  {
+    "id": "line-length",
+    "exportName": "LineLengthDemo",
+    "action": {
+      "role": "button",
+      "name": "日本語・英語を切り替え"
+    },
+    "expectedText": "本文：英語"
+  },
+  {
+    "id": "text-wrap",
+    "exportName": "TextWrapDemo",
+    "action": {
+      "role": "button",
+      "name": "長い見出しに切り替え"
+    },
+    "expectedText": "見出し：長文"
+  },
+  {
+    "id": "logical-properties",
+    "exportName": "LogicalPropertiesDemo",
+    "action": {
+      "role": "button",
+      "name": "読む方向を反転"
+    },
+    "expectedText": "方向：RTL"
+  },
+  {
+    "id": "subgrid",
+    "exportName": "SubgridDemo",
+    "action": {
+      "role": "button",
+      "name": "説明を長くする"
+    },
+    "expectedText": "説明：長文"
+  },
+  {
+    "id": "scroll-snap",
+    "exportName": "ScrollSnapDemo",
+    "action": {
+      "role": "button",
+      "name": "2枚目へ"
+    },
+    "expectedText": "表示位置：2枚目"
+  }
+]

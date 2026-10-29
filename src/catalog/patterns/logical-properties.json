@@ -1,0 +1,77 @@
+{
+  "id": "logical-properties",
+  "nameJa": "読む方向に沿った余白",
+  "nameEn": "Logical properties",
+  "category": "レイアウト",
+  "summary": "開始側の余白が読む方向に合わせて動く。",
+  "description": "padding-inline-startやmargin-inline-startを使い、LTRとRTLで開始側が変わることを確かめる。左・右に固定した余白と使い分けるためのデモ。",
+  "aliases": [
+    "読む方向に沿った余白",
+    "Logical properties"
+  ],
+  "tags": [
+    "レイアウト",
+    "logical",
+    "properties"
+  ],
+  "useCases": [
+    "多言語画面の余白",
+    "読む方向に沿った部品配置"
+  ],
+  "cautions": [
+    "方向の反転だけで文章の翻訳や自然な組版は完了しない。",
+    "アイコンや数値の向きは内容に応じて別途確認する。"
+  ],
+  "relatedIds": [
+    "spacing-scale",
+    "media-object"
+  ],
+  "demoId": "logical-properties",
+  "controls": [
+    {
+      "id": "direction",
+      "label": "開始方向",
+      "help": "デモ内の枠だけに適用する。",
+      "default": "ltr",
+      "options": [
+        {
+          "value": "ltr",
+          "label": "左から右",
+          "promptValue": "初期状態をdir=ltrにしてください"
+        },
+        {
+          "value": "rtl",
+          "label": "右から左",
+          "promptValue": "初期状態をdir=rtlにしてください"
+        }
+      ]
+    },
+    {
+      "id": "indent",
+      "label": "開始側の余白",
+      "help": "物理的なleft/rightを使わない。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "16px",
+          "promptValue": "開始側のpaddingを16pxにしてください"
+        },
+        {
+          "value": "wide",
+          "label": "48px",
+          "promptValue": "開始側のpaddingを48pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "読む方向に沿って余白が変わるデモを作ってください。{{direction}}。{{indent}}。読む方向を反転するボタンを用意し、dirとstatusを更新してください。枠とマーカーには論理プロパティの開始側の余白を使い、文字列自体は翻訳しないでください。",
+  "references": [
+    {
+      "title": "MDN · Logical properties",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

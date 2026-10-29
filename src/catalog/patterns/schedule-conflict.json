@@ -1,0 +1,59 @@
+{
+  "id": "schedule-conflict",
+  "nameJa": "時間帯の重なりを確認する",
+  "nameEn": "Schedule Conflict",
+  "category": "UXの流れ",
+  "summary": "予定どうしの重なりと、接しているだけの状態を分ける。",
+  "description": "2つの架空の時間帯を図と表で比べる。終了時刻と次の開始時刻が同じ場合は重複なしとして扱う。",
+  "aliases": [
+    "時間帯重なりを確認する",
+    "schedule conflict"
+  ],
+  "tags": [
+    "UXの流れ",
+    "予定の重複確認",
+    "時間枠の整合性"
+  ],
+  "useCases": [
+    "予定の重複確認",
+    "時間枠の整合性"
+  ],
+  "cautions": [
+    "開始を含み終了を含まない区間として判定する。",
+    "日付をまたぐ予定はこのデモでは扱わない。"
+  ],
+  "relatedIds": [
+    "gantt-chart",
+    "time-slot-picker"
+  ],
+  "demoId": "schedule-conflict",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の例",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "overlap",
+      "options": [
+        {
+          "value": "overlap",
+          "label": "重なる",
+          "promptValue": "09:00〜11:00と10:00〜12:00の例から始めてください"
+        },
+        {
+          "value": "adjacent",
+          "label": "接する",
+          "promptValue": "09:00〜11:00と11:00〜13:00の例から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "日本時間の同じ架空日の2予定を、開始を含み終了を含まない区間で比較してください。max(開始) < min(終了)の場合だけ重複とし、例の切替で重複と接する状態を確認できるようにしてください。図の帯と文字の時間帯を同じ値から作ってください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Grouping Controls",
+      "url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

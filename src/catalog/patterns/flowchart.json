@@ -1,0 +1,59 @@
+{
+  "id": "flowchart",
+  "nameJa": "条件分岐のフローチャート",
+  "nameEn": "Flowchart",
+  "category": "部品",
+  "summary": "条件の答えによって進む先が変わる流れを示す。",
+  "description": "開始・条件・分岐先を図で結ぶ。選んだ答えを文字と経路の太さで示し、処理そのものは実行しない。",
+  "aliases": [
+    "条件分岐フローチャート",
+    "flowchart"
+  ],
+  "tags": [
+    "部品",
+    "判断手順の説明",
+    "条件分岐の確認"
+  ],
+  "useCases": [
+    "判断手順の説明",
+    "条件分岐の確認"
+  ],
+  "cautions": [
+    "線の矢印と分岐条件を明示する。",
+    "色だけで選択経路を示さない。"
+  ],
+  "relatedIds": [
+    "dependent-steps",
+    "step-indicator"
+  ],
+  "demoId": "flowchart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の答え",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "yes",
+      "options": [
+        {
+          "value": "yes",
+          "label": "はい",
+          "promptValue": "はいの経路を選択して始めてください"
+        },
+        {
+          "value": "no",
+          "label": "いいえ",
+          "promptValue": "いいえの経路を選択して始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "内容は揃ったかという条件から、はいなら確認へ、いいえなら補足へ進む自作SVGのフローチャートを作ってください。答えを切り替えるbuttonで選択経路と文字の説明を連動させ、選択線は太さとラベルでも区別してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

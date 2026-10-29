@@ -1,0 +1,77 @@
+{
+  "id": "bottom-navigation",
+  "nameJa": "画面下のナビゲーション",
+  "nameEn": "Bottom navigation",
+  "category": "部品",
+  "summary": "主要な移動先を本文の下に並べる。",
+  "description": "少数の主要画面を下部から切り替える。タブは同一画面の内容切り替え、ここではアプリの移動先を示す用途を扱う。",
+  "aliases": [
+    "画面下のナビゲーション",
+    "Bottom navigation"
+  ],
+  "tags": [
+    "部品",
+    "bottom",
+    "navigation"
+  ],
+  "useCases": [
+    "スマホの記録アプリ",
+    "少数の主要画面への移動"
+  ],
+  "cautions": [
+    "項目を増やしすぎず、各移動先に名前を付ける。",
+    "本文と重ならない領域と端末下部の余白を確保する。"
+  ],
+  "relatedIds": [
+    "tabs",
+    "sidebar"
+  ],
+  "demoId": "bottom-navigation",
+  "controls": [
+    {
+      "id": "items",
+      "label": "移動先の数",
+      "help": "すべての項目を一度に表示する。",
+      "default": "three",
+      "options": [
+        {
+          "value": "three",
+          "label": "3画面",
+          "promptValue": "ノート・検索・設定の3画面にしてください"
+        },
+        {
+          "value": "four",
+          "label": "4画面",
+          "promptValue": "ノート・検索・保存・設定の4画面にしてください"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "label": "間隔",
+      "help": "名前は省略しない。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "標準",
+          "promptValue": "番号と名前に間隔を設けてください"
+        },
+        {
+          "value": "compact",
+          "label": "コンパクト",
+          "promptValue": "番号と名前の間隔を詰めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "画面下のナビゲーションを作ってください。{{items}}。{{labels}}。架空の画面名を切り替えるnavを本文の下に配置し、aria-current=pageで現在位置を示してください。ボタンをキーボードで操作可能にし、本文を覆わないでください。",
+  "references": [
+    {
+      "title": "MDN · nav",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

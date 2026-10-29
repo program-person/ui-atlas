@@ -1,0 +1,59 @@
+{
+  "id": "upload-constraints",
+  "nameJa": "取り込み条件を先に示す",
+  "nameEn": "Upload Constraints",
+  "category": "UXの流れ",
+  "summary": "形式と容量の条件を示し、候補ごとに理由を表示する。",
+  "description": "架空のサンプルの形式と容量だけを検証する。実際のファイル読み取りやアップロードを使わず、条件の見せ方を試す。",
+  "aliases": [
+    "取り込み条件を先に示す",
+    "upload constraints"
+  ],
+  "tags": [
+    "UXの流れ",
+    "取り込み条件の説明",
+    "拒否理由の表示"
+  ],
+  "useCases": [
+    "取り込み条件の説明",
+    "拒否理由の表示"
+  ],
+  "cautions": [
+    "拡張子だけで実ファイルの安全性を判断しない。",
+    "このデモの検証は固定サンプルの表示用メタデータだけ。"
+  ],
+  "relatedIds": [
+    "attachment-list",
+    "inline-validation"
+  ],
+  "demoId": "upload-constraints",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "容量の上限",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "5",
+      "options": [
+        {
+          "value": "5",
+          "label": "5KB",
+          "promptValue": "容量の上限を5KBにしてください"
+        },
+        {
+          "value": "10",
+          "label": "10KB",
+          "promptValue": "容量の上限を10KBにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "テキスト形式txt・mdだけを許可する表示デモを作ってください。note.txt 2KB、draft.md 8KB、diagram.svg 3KBの固定サンプルをボタンで選び、形式と容量を別々に検証して結果を表示してください。実ファイルの選択・読み込み・アップロードは追加しないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Validating Input",
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

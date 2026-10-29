@@ -1,0 +1,59 @@
+{
+  "id": "notification-grouping",
+  "nameJa": "関連する通知をまとめる",
+  "nameEn": "Grouped Notifications",
+  "category": "部品",
+  "summary": "種類別の通知と発生順の通知を切り替える。",
+  "description": "架空の設定・処理の通知を、種類ごとまたは新しい順に並べる。まとめた状態でも件数と個別の内容を読めるようにする。",
+  "aliases": [
+    "関連する通知をまとめる",
+    "grouped notifications"
+  ],
+  "tags": [
+    "部品",
+    "通知一覧の整理",
+    "関連通知のまとまり"
+  ],
+  "useCases": [
+    "通知一覧の整理",
+    "関連通知のまとまり"
+  ],
+  "cautions": [
+    "まとめて重要な通知を見落とさせない。",
+    "グループの件数と全体の件数を区別する。"
+  ],
+  "relatedIds": [
+    "notification-center",
+    "grouped-list"
+  ],
+  "demoId": "notification-grouping",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "表示のまとめ方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "group",
+      "options": [
+        {
+          "value": "group",
+          "label": "種類別",
+          "promptValue": "種類ごとに見出しと通知件数を表示してください"
+        },
+        {
+          "value": "time",
+          "label": "新しい順",
+          "promptValue": "新しい通知から発生順に表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "設定1・処理2・設定3という固定の架空通知を表示してください。設定の通知を1件追加する操作を持たせ、種類別では各グループの件数と新しい順の内容を示し、発生順では全通知を新しい順に並べてください。実際の通知は読み込まないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Disclosure",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

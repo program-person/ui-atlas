@@ -1,0 +1,59 @@
+{
+  "id": "permission-matrix",
+  "nameJa": "権限を表で選ぶ",
+  "nameEn": "Permission Matrix",
+  "category": "部品",
+  "summary": "対象と操作を行列に分けて選択する。",
+  "description": "架空のノートと図に対して、閲覧と編集をチェックする。編集に閲覧を必要とする場合の連動を試す。",
+  "aliases": [
+    "権限を表で選ぶ",
+    "permission matrix"
+  ],
+  "tags": [
+    "部品",
+    "権限設定の見比べ",
+    "操作と対象の対応"
+  ],
+  "useCases": [
+    "権限設定の見比べ",
+    "操作と対象の対応"
+  ],
+  "cautions": [
+    "デモのチェックで実際の権限は変わらない。",
+    "編集を外したとき閲覧まで解除するかを明示する。"
+  ],
+  "relatedIds": [
+    "hierarchical-checkboxes",
+    "checkbox"
+  ],
+  "demoId": "permission-matrix",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "編集と閲覧の関係",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "dependent",
+      "options": [
+        {
+          "value": "dependent",
+          "label": "編集には閲覧が必要",
+          "promptValue": "編集を選ぶと閲覧も有効にし、編集中は閲覧を外せないようにしてください"
+        },
+        {
+          "value": "independent",
+          "label": "独立",
+          "promptValue": "閲覧と編集を独立して選択できるようにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "ノートと図を行、閲覧と編集を列にした表を作ってください。各チェックボックスに対象と操作の名前を付け、対象ごとに選んだ権限を文字で表示してください。閲覧と編集の依存設定は画面に説明し、実際の権限やAPIは扱わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Grouping Controls",
+      "url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

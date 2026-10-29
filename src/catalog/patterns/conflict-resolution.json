@@ -1,0 +1,77 @@
+{
+  "id": "conflict-resolution",
+  "nameJa": "変更の競合解決",
+  "nameEn": "Conflict Resolution",
+  "aliases": [
+    "変更の競合解決",
+    "conflict-resolution"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "異なる内容を見比べ、残す変更を選ぶ。",
+  "description": "同じ内容に異なる変更がある場合、両方の候補を見て残す内容を選ぶ。単純な取り消しとは異なり、競合の解決を確定する。",
+  "useCases": [
+    "共同編集時の変更競合",
+    "同期前後で内容が異なるメモの確認"
+  ],
+  "cautions": [
+    "元の変更を失わないよう、確定前に両方を確認できるようにする。",
+    "実際の保存では確定後の再競合にも対処する。"
+  ],
+  "relatedIds": [
+    "unsaved-changes",
+    "inline-edit"
+  ],
+  "demoId": "conflict-resolution",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期選択",
+      "help": "初期選択を切り替えます。",
+      "default": "local",
+      "options": [
+        {
+          "value": "local",
+          "label": "自分の変更",
+          "promptValue": "自分の変更を初期選択"
+        },
+        {
+          "value": "remote",
+          "label": "別の変更",
+          "promptValue": "別の変更を初期選択"
+        }
+      ]
+    },
+    {
+      "id": "view",
+      "label": "表示",
+      "help": "表示を切り替えます。",
+      "default": "both",
+      "options": [
+        {
+          "value": "both",
+          "label": "両方表示",
+          "promptValue": "候補を両方表示"
+        },
+        {
+          "value": "selected",
+          "label": "選択内容を表示",
+          "promptValue": "候補に加えて選択中の内容を表示"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}し、{{view}}してください。残す内容を選んで確定できるようにしてください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

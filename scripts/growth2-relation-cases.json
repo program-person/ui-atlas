@@ -1,0 +1,122 @@
+[
+  {
+    "id": "flowchart",
+    "component": "FlowchartDemo",
+    "name": "条件分岐のフローチャート",
+    "action": "答えを切り替える",
+    "expected": "いいえ → 補足",
+    "preview": [
+      "条件の答えによって進む先が変わる流れを示す。",
+      "条件分岐のフローチャート",
+      "はい / いいえ"
+    ]
+  },
+  {
+    "id": "state-machine",
+    "component": "StateMachineDemo",
+    "name": "状態遷移図",
+    "action": "開始",
+    "expected": "現在：処理中",
+    "preview": [
+      "現在の状態と、操作で移れる先を示す。",
+      "状態遷移図",
+      "完了 / 失敗"
+    ]
+  },
+  {
+    "id": "organization-chart",
+    "component": "OrganizationChartDemo",
+    "name": "階層の構成図",
+    "action": "下位の区画を切り替える",
+    "expected": "下位：省略中",
+    "preview": [
+      "上位と下位の関係を枝で示す。",
+      "階層の構成図",
+      "展開 / 省略"
+    ]
+  },
+  {
+    "id": "network-graph",
+    "component": "NetworkGraphDemo",
+    "name": "つながりのネットワーク図",
+    "action": "Bを選ぶ",
+    "expected": "選択：B",
+    "preview": [
+      "複数の項目どうしの接続を図で見る。",
+      "つながりのネットワーク図",
+      "輪 / 中心から枝"
+    ]
+  },
+  {
+    "id": "dependency-graph",
+    "component": "DependencyGraphDemo",
+    "name": "前提を持つ作業の図",
+    "action": "調査を完了",
+    "expected": "完了：調査",
+    "preview": [
+      "先に終える必要がある作業を線で結ぶ。",
+      "前提を持つ作業の図",
+      "並行 / 順番"
+    ]
+  },
+  {
+    "id": "swimlane",
+    "component": "SwimlaneDemo",
+    "name": "担当範囲ごとの工程図",
+    "action": "工程を進める",
+    "expected": "現在：制作",
+    "preview": [
+      "工程の並びと、その担当範囲を同時に示す。",
+      "担当範囲ごとの工程図",
+      "横 / 縦"
+    ]
+  },
+  {
+    "id": "cycle-diagram",
+    "component": "CycleDiagramDemo",
+    "name": "繰り返す手順の図",
+    "action": "次の手順",
+    "expected": "現在：制作",
+    "preview": [
+      "最後の手順から最初へ戻る関係を示す。",
+      "繰り返す手順の図",
+      "正順 / 逆順"
+    ]
+  },
+  {
+    "id": "sankey-diagram",
+    "component": "SankeyDiagramDemo",
+    "name": "量の流れを太さで示す図",
+    "action": "分配を切り替える",
+    "expected": "A 3件 / B 9件",
+    "preview": [
+      "分かれて流れる量を、線の太さで表す。",
+      "量の流れを太さで示す図",
+      "8対4 / 6対6"
+    ]
+  },
+  {
+    "id": "parallel-coordinates",
+    "component": "ParallelCoordinatesDemo",
+    "name": "平行座標の比較図",
+    "action": "Bの表示を切り替える",
+    "expected": "表示：A",
+    "preview": [
+      "複数の数値軸を横に並べ、同じ項目を線で結ぶ。",
+      "平行座標の比較図",
+      "AとB / Aだけ"
+    ]
+  },
+  {
+    "id": "venn-diagram",
+    "component": "VennDiagramDemo",
+    "name": "集合の重なりを示す図",
+    "action": "集合を切り替える",
+    "expected": "和集合：1・2・3・4・5・6・7・8・9",
+    "preview": [
+      "2つの集合の共通部分と全体を見比べる。",
+      "集合の重なりを示す図",
+      "共通部分 / 和集合"
+    ]
+  }
+]

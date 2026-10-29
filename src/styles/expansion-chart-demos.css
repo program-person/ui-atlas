@@ -1,0 +1,18 @@
+.exchart-demo { color: #183b38; background: #f5f8f4; padding: 1rem; min-width: 0; }
+.exchart-demo h1 { font-size: 1.2rem; margin: 0 0 1rem; }
+.exchart-demo button, .exchart-demo label { min-height: 44px; }
+.exchart-demo button { background: #fff; border: 1px solid #38635d; color: #183b38; padding: .5rem .75rem; cursor: pointer; }
+.exchart-demo :focus-visible { outline: 3px solid #b35b35; outline-offset: 2px; }
+.exchart-demo table { border-collapse: collapse; width: 100%; margin-top: .8rem; font-size: .9rem; }
+.exchart-demo th, .exchart-demo td { border-bottom: 1px solid #b8cbc3; padding: .7rem .4rem; text-align: left; }
+.exchart-compact th, .exchart-compact td { padding: .3rem .4rem; }
+.exchart-demo caption { text-align: left; font-weight: bold; padding: .5rem 0; }
+.exchart-svg { display: block; width: 100%; max-width: 320px; height: auto; color: #205c56; margin: 1rem 0; }
+.exchart-svg text { fill: #183b38; font-size: 8px; }
+.exchart-scroll { max-width: 100%; overflow-x: auto; }
+.exchart-scroll table { min-width: 500px; }
+.exchart-pinned th:first-child { position: sticky; left: 0; background: #f5f8f4; }
+.exchart-key { display: inline-block; width: .8em; height: .8em; margin-right: .4em; border: 1px solid #183b38; }
+.exchart-key-0 { background: #28736d; }
+.exchart-key-1 { background: #75a9a0; }
+.exchart-key-2 { background: #c87558; }

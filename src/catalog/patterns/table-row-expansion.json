@@ -1,0 +1,76 @@
+{
+  "id": "table-row-expansion",
+  "nameJa": "行の展開",
+  "nameEn": "Table row expansion",
+  "category": "部品",
+  "aliases": [
+    "行の展開",
+    "table row expansion"
+  ],
+  "tags": [
+    "表",
+    "表示",
+    "比較"
+  ],
+  "summary": "行を開いて補足情報を表示する。",
+  "description": "道具Aの行を開いて補足情報を表示し、もう一度押すと閉じる。道具Bには詳細を用意していない。",
+  "useCases": [
+    "一覧で必要な行だけ補足を確認する",
+    "詳細を常時表示せずに一覧する"
+  ],
+  "cautions": [
+    "値や状態を色だけに頼らず文字で示す。",
+    "狭い画面でも操作と内容を確認できるようにする。"
+  ],
+  "relatedIds": [
+    "data-table"
+  ],
+  "demoId": "table-row-expansion",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "最初の状態を選ぶ。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "閉じる",
+          "promptValue": "初期状態を「閉じる」にしてください"
+        },
+        {
+          "value": "second",
+          "label": "開く",
+          "promptValue": "初期状態を「開く」にしてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "行間",
+      "help": "表示方法を選ぶ。",
+      "default": "wide",
+      "options": [
+        {
+          "value": "wide",
+          "label": "広め",
+          "promptValue": "行間を広めにしてください"
+        },
+        {
+          "value": "compact",
+          "label": "狭め",
+          "promptValue": "行間を狭めにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具のHTML表を作ってください。行の詳細を開閉するボタンにaria-expandedを付け、補足内容を表示してください。 {{initial}}。{{density}}。見出しとcaptionを設け、狭い画面でも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

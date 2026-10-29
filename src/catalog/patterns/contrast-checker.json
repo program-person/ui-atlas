@@ -1,0 +1,59 @@
+{
+  "id": "contrast-checker",
+  "nameJa": "文字と背景のコントラスト",
+  "nameEn": "Contrast Checker",
+  "category": "見た目",
+  "summary": "文字色と背景色の明るさの差を数値で確かめる。",
+  "description": "固定の2配色から相対輝度とコントラスト比を計算する。通常文字の4.5対1または大きい文字の3対1という基準と比較する。",
+  "aliases": [
+    "文字と背景コントラスト",
+    "contrast checker"
+  ],
+  "tags": [
+    "見た目",
+    "文字色の確認",
+    "背景色の検討"
+  ],
+  "useCases": [
+    "文字色の確認",
+    "背景色の検討"
+  ],
+  "cautions": [
+    "大きい文字の条件を満たす場合だけ3対1を使う。",
+    "このデモだけで画面全体の適合を判断しない。"
+  ],
+  "relatedIds": [
+    "color-mix",
+    "dark-mode"
+  ],
+  "demoId": "contrast-checker",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "判定する文字",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "通常文字",
+          "promptValue": "通常文字の4.5対1を基準にしてください"
+        },
+        {
+          "value": "large",
+          "label": "大きい文字",
+          "promptValue": "24pxの通常ウェイトの文字で3対1を基準にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "#235b46と#80958aを白背景と組み合わせ、sRGBを線形化した相対輝度からコントラスト比を計算してください。丸める前の値で基準と比べてください。判定はこの文字と背景の組だけを対象にしてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Contrast Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

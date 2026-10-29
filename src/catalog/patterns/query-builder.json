@@ -1,0 +1,74 @@
+{
+  "id": "query-builder",
+  "nameJa": "検索条件ビルダー",
+  "nameEn": "Query Builder",
+  "aliases": [
+    "検索条件ビルダー"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "項目と条件を組み合わせて絞り込む。",
+  "description": "色と種類の二つの条件をANDまたはORで結合し、架空の一覧を検索する。",
+  "useCases": [
+    "属性を組み合わせた一覧検索",
+    "複数条件のAND検索"
+  ],
+  "cautions": [
+    "search-filterと違い、条件をANDかORで結合する方法を選べる。",
+    "条件変更後は適用ボタンを押して結果を更新し、0件も表示する。"
+  ],
+  "relatedIds": [
+    "search-filter"
+  ],
+  "demoId": "query-builder",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期の色",
+      "help": "最初に選ぶ色。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "青",
+          "promptValue": "色の初期値を青にしてください"
+        },
+        {
+          "value": "empty",
+          "label": "赤",
+          "promptValue": "色の初期値を赤にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の青いノート・赤いペン・青いペンから、色と種類の条件をANDまたはORで結合して検索してください。適用ボタンで件数と一覧を表示し、一致なしは0件としてください。 {{initial}}。{{layout}}。",
+  "references": [
+    {
+      "title": "MDN · select",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

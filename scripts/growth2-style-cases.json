@@ -1,0 +1,122 @@
+[
+  {
+    "id": "object-fit",
+    "component": "ObjectFitDemo",
+    "name": "画像を枠に収める",
+    "action": "位置を切り替える",
+    "expected": "左寄せ",
+    "preview": [
+      "画像全体を見せるか、枠を埋めるかを選ぶ。",
+      "画像を枠に収める",
+      "全体を表示 / 枠を埋める"
+    ]
+  },
+  {
+    "id": "writing-mode",
+    "component": "WritingModeDemo",
+    "name": "縦書きと横書き",
+    "action": "本文量を切り替える",
+    "expected": "長い本文",
+    "preview": [
+      "日本語の文章を縦方向と横方向に組む。",
+      "縦書きと横書き",
+      "横書き / 縦書き"
+    ]
+  },
+  {
+    "id": "fluid-type",
+    "component": "FluidTypeDemo",
+    "name": "幅に応じて変わる文字サイズ",
+    "action": "枠幅を切り替える",
+    "expected": "広い枠",
+    "preview": [
+      "文字の大きさを上下限の間で変える。",
+      "幅に応じて変わる文字サイズ",
+      "可変 / 固定"
+    ]
+  },
+  {
+    "id": "tabular-numbers",
+    "component": "TabularNumbersDemo",
+    "name": "数字の幅を揃える",
+    "action": "数値を切り替える",
+    "expected": "88,888",
+    "preview": [
+      "桁を揃え、数値の変化で表示幅が動くのを抑える。",
+      "数字の幅を揃える",
+      "等幅の数字 / 通常の数字"
+    ]
+  },
+  {
+    "id": "drop-cap",
+    "component": "DropCapDemo",
+    "name": "段落の先頭文字を大きくする",
+    "action": "文章を切り替える",
+    "expected": "別の文章",
+    "preview": [
+      "本文の最初の一文字を大きく組む。",
+      "段落の先頭文字を大きくする",
+      "拡大 / 通常"
+    ]
+  },
+  {
+    "id": "text-spacing",
+    "component": "TextSpacingDemo",
+    "name": "文字間隔を調整する",
+    "action": "行間を切り替える",
+    "expected": "行間 2.2",
+    "preview": [
+      "文字の間隔と行間を変えて読み比べる。",
+      "文字間隔を調整する",
+      "標準 / 広め"
+    ]
+  },
+  {
+    "id": "color-mix",
+    "component": "ColorMixDemo",
+    "name": "基準色から中間色を作る",
+    "action": "割合を切り替える",
+    "expected": "75%",
+    "preview": [
+      "基準色と白を混ぜ、段階的な色を作る。",
+      "基準色から中間色を作る",
+      "sRGB / Oklab"
+    ]
+  },
+  {
+    "id": "contrast-checker",
+    "component": "ContrastCheckerDemo",
+    "name": "文字と背景のコントラスト",
+    "action": "配色を切り替える",
+    "expected": "色 #80958a",
+    "preview": [
+      "文字色と背景色の明るさの差を数値で確かめる。",
+      "文字と背景のコントラスト",
+      "通常文字 / 大きい文字"
+    ]
+  },
+  {
+    "id": "border-radius",
+    "component": "BorderRadiusDemo",
+    "name": "角の丸みを使い分ける",
+    "action": "余白を切り替える",
+    "expected": "余白 24px",
+    "preview": [
+      "同じ部品の角を、用途に合わせて変える。",
+      "角の丸みを使い分ける",
+      "直角 / 6px / 20px"
+    ]
+  },
+  {
+    "id": "scroll-shadow",
+    "component": "ScrollShadowDemo",
+    "name": "スクロールの続きの手がかり",
+    "action": "末尾へ移動",
+    "expected": "下の続きなし",
+    "preview": [
+      "枠の上や下に続きがあることを示す。",
+      "スクロールの続きの手がかり",
+      "長い / 短い"
+    ]
+  }
+]

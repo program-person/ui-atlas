@@ -1,0 +1,59 @@
+{
+  "id": "responsive-image",
+  "nameJa": "幅に応じて画像を選ぶ",
+  "nameEn": "Responsive Picture",
+  "category": "部品",
+  "summary": "画面幅に合わせて別の図を読み込む。",
+  "description": "横長と正方形の自作SVGをpictureで切り替える。CSSで切り抜く方法とは異なり、選ばれる画像そのものを変える。",
+  "aliases": [
+    "幅に応じて画像を選ぶ",
+    "responsive picture"
+  ],
+  "tags": [
+    "部品",
+    "狭い画面向けの図",
+    "画像の構図の切替"
+  ],
+  "useCases": [
+    "狭い画面向けの図",
+    "画像の構図の切替"
+  ],
+  "cautions": [
+    "両画像に同じ意味の内容を持たせる。",
+    "実画像や外部URLは読み込まない。"
+  ],
+  "relatedIds": [
+    "object-fit",
+    "aspect-ratio"
+  ],
+  "demoId": "responsive-image",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "画像の選び方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "responsive",
+      "options": [
+        {
+          "value": "responsive",
+          "label": "幅で切替",
+          "promptValue": "500px以下では正方形、広い枠では横長を選んでください"
+        },
+        {
+          "value": "fixed",
+          "label": "横長に固定",
+          "promptValue": "幅によらず横長の画像を使ってください"
+        }
+      ]
+    }
+  ],
+  "prompt": "picture・source・imgを使い、180px四方と360×180pxの自作SVGを表示してください。幅500px以下で正方形を選ぶ設定と横長固定を比較できるようにし、読み込んだ画像のnaturalWidthを表示してください。図の色を切り替えるbuttonと代替テキストを付けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · picture",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

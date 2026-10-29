@@ -1,0 +1,59 @@
+{
+  "id": "responsive-table",
+  "nameJa": "狭い枠で表の表示を変える",
+  "nameEn": "Responsive Table",
+  "category": "レイアウト",
+  "summary": "横スクロールと項目ごとの縦表示を比較する。",
+  "description": "同じ3件の道具を表と定義リストで表示する。縦表示は各値のラベルを繰り返し、横スクロールは表の中だけで行う。",
+  "aliases": [
+    "狭い枠で表表示を変える",
+    "responsive table"
+  ],
+  "tags": [
+    "レイアウト",
+    "スマホの一覧表示",
+    "属性の多い表"
+  ],
+  "useCases": [
+    "スマホの一覧表示",
+    "属性の多い表"
+  ],
+  "cautions": [
+    "縦表示では行同士の比較がしにくくなる。",
+    "横スクロールの領域に名前とフォーカスを付ける。"
+  ],
+  "relatedIds": [
+    "data-table",
+    "description-list"
+  ],
+  "demoId": "responsive-table",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "狭い枠での形式",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "scroll",
+      "options": [
+        {
+          "value": "scroll",
+          "label": "横スクロール",
+          "promptValue": "見出し付きの表を枠内で横スクロールさせてください"
+        },
+        {
+          "value": "stack",
+          "label": "縦に表示",
+          "promptValue": "道具ごとに見出しと定義リストで縦に表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "3件の道具の分類・記録数・容量を、320pxと560pxへ切り替える枠に表示してください。縦表示では属性名を省略せず、横スクロール形式はtableの最小幅を520pxにして親枠からはみ出さないようにしてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,4 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+function Content({ settings }: { settings: Settings }) { const [quantity,setQuantity]=useState(settings.initial==='sample'?'2':''); const [result,setResult]=useState(''); return <><table><caption>架空の道具</caption><thead><tr><th>品目</th><th>数量</th></tr></thead><tbody><tr><td>ノート</td><td><label>数量<input type="number" min="0" step="1" value={quantity} onChange={e=>{setQuantity(e.target.value);setResult('');}}/></label></td></tr></tbody></table><button onClick={()=>setResult(quantity!=='' && Number.isSafeInteger(Number(quantity)) && Number(quantity)>=0?'数量：'+quantity:'0以上の整数を入力してください')}>変更を確認</button><p role="status">{result}</p></>; }
+export function EditableTableDemo({ settings }: { settings: Settings }) { return <section className={`exinput-demo exinput-${settings.layout}`}><h1>編集できる表</h1><Content settings={settings}/></section>; }

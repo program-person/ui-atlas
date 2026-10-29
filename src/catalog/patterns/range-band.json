@@ -1,0 +1,59 @@
+{
+  "id": "range-band",
+  "nameJa": "範囲帯付きの折れ線",
+  "nameEn": "Range Band Chart",
+  "category": "部品",
+  "summary": "代表値と、その上下の範囲を一緒に表示する。",
+  "description": "中央値の推移に加えて各時点の最小値と最大値を帯で示す。統計的な信頼区間とは区別する。",
+  "aliases": [
+    "範囲帯付き折れ線",
+    "range band chart"
+  ],
+  "tags": [
+    "部品",
+    "最小値と最大値の推移",
+    "代表値と幅の比較"
+  ],
+  "useCases": [
+    "最小値と最大値の推移",
+    "代表値と幅の比較"
+  ],
+  "cautions": [
+    "帯が何を表すか明記する。",
+    "範囲を確率や保証と誤解させない。"
+  ],
+  "relatedIds": [
+    "area-chart",
+    "line-chart"
+  ],
+  "demoId": "range-band",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "最小〜最大を塗りの帯、中央値を線として共通の0〜100点の軸へ描いてください。帯を信頼区間とは呼ばず、表にも3値を示してください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

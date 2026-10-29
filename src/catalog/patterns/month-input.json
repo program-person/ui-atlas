@@ -1,0 +1,59 @@
+{
+  "id": "month-input",
+  "nameJa": "年月だけを入力する",
+  "nameEn": "Month Input",
+  "category": "部品",
+  "summary": "日を含めず、年月を選ぶ。",
+  "description": "ネイティブのmonth入力で年月を選ぶ。許可範囲と空欄を確かめ、日付やタイムゾーンへの変換は行わない。",
+  "aliases": [
+    "年月だけを入力する",
+    "month input"
+  ],
+  "tags": [
+    "部品",
+    "月単位のレポート",
+    "対象年月の指定"
+  ],
+  "useCases": [
+    "月単位のレポート",
+    "対象年月の指定"
+  ],
+  "cautions": [
+    "ブラウザによって入力UIが異なる。",
+    "YYYY-MM形式を文字列として検証する。"
+  ],
+  "relatedIds": [
+    "date-picker",
+    "date-range"
+  ],
+  "demoId": "month-input",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "選べる範囲",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "year",
+      "options": [
+        {
+          "value": "year",
+          "label": "2026年全体",
+          "promptValue": "2026年1月〜12月を許可してください"
+        },
+        {
+          "value": "autumn",
+          "label": "2026年秋",
+          "promptValue": "2026年9月〜11月を許可してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "input type=monthで年月を選び、2026-10から開始してください。許可範囲はmin・maxと文字列検証で確認し、空欄や範囲外は説明を出してください。2026-11の例を入れるボタンを付けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · month input",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/month",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

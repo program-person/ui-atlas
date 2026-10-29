@@ -1,0 +1,77 @@
+{
+  "id": "batch-progress",
+  "nameJa": "一括処理の進捗",
+  "nameEn": "Batch Progress",
+  "aliases": [
+    "一括処理の進捗",
+    "batch-progress"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "複数の処理の進捗と成功・失敗を確認する。",
+  "description": "複数件の処理について、処理済み件数と失敗件数を表示する。単一操作の進捗表示とは異なり、失敗後に続行するかを選べる。",
+  "useCases": [
+    "複数項目の一括変換",
+    "複数ファイルの一括確認"
+  ],
+  "cautions": [
+    "完了件数と失敗件数の意味を区別する。",
+    "途中停止時は処理済みと未処理を区別する。"
+  ],
+  "relatedIds": [
+    "progress-bar",
+    "bulk-actions"
+  ],
+  "demoId": "batch-progress",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "件数",
+      "help": "件数を切り替えます。",
+      "default": "three",
+      "options": [
+        {
+          "value": "three",
+          "label": "3件",
+          "promptValue": "3件を順に処理"
+        },
+        {
+          "value": "five",
+          "label": "5件",
+          "promptValue": "5件を順に処理"
+        }
+      ]
+    },
+    {
+      "id": "failure",
+      "label": "失敗時",
+      "help": "失敗時を切り替えます。",
+      "default": "continue",
+      "options": [
+        {
+          "value": "continue",
+          "label": "続ける",
+          "promptValue": "2件目が失敗しても残りを続行"
+        },
+        {
+          "value": "stop",
+          "label": "停止する",
+          "promptValue": "2件目が失敗した時点で停止"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}し、{{failure}}してください。処理済み件数と失敗件数を表示してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://www.w3.org/WAI/tutorials/forms/multi-page/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

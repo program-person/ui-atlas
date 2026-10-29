@@ -1,0 +1,59 @@
+{
+  "id": "anchor-offset",
+  "nameJa": "固定見出しを避けて移動する",
+  "nameEn": "Anchor Scroll Offset",
+  "category": "動き",
+  "summary": "移動先の見出しが固定部分の下に隠れないようにする。",
+  "description": "枠の上に残る見出しの高さを考慮して、本文の見出しへ移動する。移動後は見出しへフォーカスも移す。",
+  "aliases": [
+    "固定見出しを避けて移動する",
+    "anchor scroll offset"
+  ],
+  "tags": [
+    "動き",
+    "記事内の見出し移動",
+    "固定ヘッダーの回避"
+  ],
+  "useCases": [
+    "記事内の見出し移動",
+    "固定ヘッダーの回避"
+  ],
+  "cautions": [
+    "スクロール位置とフォーカスを両方扱う。",
+    "固定領域の高さが変わる場合は余白も見直す。"
+  ],
+  "relatedIds": [
+    "sticky-header",
+    "skip-link"
+  ],
+  "demoId": "anchor-offset",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "見出しの移動余白",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "64",
+      "options": [
+        {
+          "value": "64",
+          "label": "64px",
+          "promptValue": "移動先にscroll-margin-top: 64pxを指定してください"
+        },
+        {
+          "value": "0",
+          "label": "なし",
+          "promptValue": "移動先のscroll-margin-topを0にして違いを比較してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "高さ44pxの固定見出しを持つ260px高の本文枠を作ってください。2番目の見出しへscrollIntoViewで移動し、見出しへpreventScroll付きでフォーカスを移してください。動きに依存せず即時に移動し、余白ありとなしを比較してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · scroll-margin-top",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-top",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "seat-selection",
+    "component": "SeatSelectionDemo",
+    "name": "配置図から場所を選ぶ",
+    "action": "A1 空き",
+    "expected": "選択：A1",
+    "preview": [
+      "座標のある配置図で、利用できる場所を選ぶ。",
+      "配置図から場所を選ぶ",
+      "1席 / 複数席"
+    ]
+  },
+  {
+    "id": "time-slot-picker",
+    "component": "TimeSlotPickerDemo",
+    "name": "空いている時間帯を選ぶ",
+    "action": "09:00 空き",
+    "expected": "選択：09:00〜09:30",
+    "preview": [
+      "候補から利用可能な時間帯を選ぶ。",
+      "空いている時間帯を選ぶ",
+      "30分 / 60分"
+    ]
+  },
+  {
+    "id": "schedule-conflict",
+    "component": "ScheduleConflictDemo",
+    "name": "時間帯の重なりを確認する",
+    "action": "時間帯を切り替える",
+    "expected": "重複なし",
+    "preview": [
+      "予定どうしの重なりと、接しているだけの状態を分ける。",
+      "時間帯の重なりを確認する",
+      "重なる / 接する"
+    ]
+  },
+  {
+    "id": "permission-matrix",
+    "component": "PermissionMatrixDemo",
+    "name": "権限を表で選ぶ",
+    "action": "ノートを編集",
+    "expected": "ノート：閲覧・編集",
+    "preview": [
+      "対象と操作を行列に分けて選択する。",
+      "権限を表で選ぶ",
+      "編集には閲覧が必要 / 独立"
+    ]
+  },
+  {
+    "id": "settings-dependency",
+    "component": "SettingsDependencyDemo",
+    "name": "関連する設定の有効・無効",
+    "action": "通知を有効にする",
+    "expected": "通知：有効",
+    "preview": [
+      "前提となる設定に応じて、詳細設定を使えるようにする。",
+      "関連する設定の有効・無効",
+      "無効 / 有効"
+    ]
+  },
+  {
+    "id": "facet-counts",
+    "component": "FacetCountsDemo",
+    "name": "絞り込み候補の件数",
+    "action": "青だけにする",
+    "expected": "該当 3件",
+    "preview": [
+      "選ぶ前に、候補ごとの件数を示す。",
+      "絞り込み候補の件数",
+      "表示 / 隠す"
+    ]
+  },
+  {
+    "id": "selection-summary",
+    "component": "SelectionSummaryDemo",
+    "name": "選んだ項目の合計",
+    "action": "先頭2件を選ぶ",
+    "expected": "選択 2件",
+    "preview": [
+      "選択を変えるたび、対象数と合計値を更新する。",
+      "選んだ項目の合計",
+      "点数 / 件数"
+    ]
+  },
+  {
+    "id": "image-hotspots",
+    "component": "ImageHotspotsDemo",
+    "name": "図の印から説明を開く",
+    "action": "3 操作",
+    "expected": "操作：次の行動を選ぶ領域",
+    "preview": [
+      "図の位置と補足説明を対応させる。",
+      "図の印から説明を開く",
+      "見出し / 本文"
+    ]
+  },
+  {
+    "id": "pan-controls",
+    "component": "PanControlsDemo",
+    "name": "図を上下左右へ動かす",
+    "action": "図を右へ",
+    "expected": "横 20px",
+    "preview": [
+      "表示窓の中で大きな図の位置を変える。",
+      "図を上下左右へ動かす",
+      "20px / 40px"
+    ]
+  },
+  {
+    "id": "shortcut-hints",
+    "component": "ShortcutHintsDemo",
+    "name": "キー操作を画面に示す",
+    "action": "書式を切り替える",
+    "expected": "書式：太字",
+    "preview": [
+      "実行できるキーと操作名を近くに表示する。",
+      "キー操作を画面に示す",
+      "Alt+B / Alt+M"
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "id": "object-fit",
+  "nameJa": "画像を枠に収める",
+  "nameEn": "Object Fit",
+  "category": "見た目",
+  "summary": "画像全体を見せるか、枠を埋めるかを選ぶ。",
+  "description": "自作の横長の図を正方形の枠に表示する。containでは全体を残し、coverでは比率を保ったまま枠の外を切り取る。",
+  "aliases": [
+    "画像を枠に収める",
+    "object fit"
+  ],
+  "tags": [
+    "見た目",
+    "サムネイルの切り抜き",
+    "画像の余白の比較"
+  ],
+  "useCases": [
+    "サムネイルの切り抜き",
+    "画像の余白の比較"
+  ],
+  "cautions": [
+    "切り抜きで主要な内容が欠けないか確認する。",
+    "画像の代替テキストを用意する。"
+  ],
+  "relatedIds": [
+    "aspect-ratio",
+    "thumbnail-gallery"
+  ],
+  "demoId": "object-fit",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "収め方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "contain",
+      "options": [
+        {
+          "value": "contain",
+          "label": "全体を表示",
+          "promptValue": "object-fit: containで画像全体を表示してください"
+        },
+        {
+          "value": "cover",
+          "label": "枠を埋める",
+          "promptValue": "object-fit: coverで枠を埋めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "360×180の自作図を200px四方の枠へ収めてください。中央の印と左右の図形で切り取り範囲を確かめられるようにし、左寄せと中央寄せを切り替えてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · object-fit",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/object-fit",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "overflow-menu",
+  "nameJa": "その他の操作",
+  "nameEn": "Overflow actions",
+  "category": "部品",
+  "summary": "常用しない操作をひとつの開閉ボタンにまとめる。",
+  "description": "主操作を持つ分割ボタンや右クリックのメニューとは異なり、追加操作の開閉だけを専用ボタンにする。内容は通常のボタンで構成し、Tabで移動する。",
+  "aliases": [
+    "その他の操作",
+    "Overflow actions"
+  ],
+  "tags": [
+    "部品",
+    "overflow",
+    "actions"
+  ],
+  "useCases": [
+    "カードの追加操作",
+    "一覧の行ごとの補助操作"
+  ],
+  "cautions": [
+    "頻繁に使う主操作は隠さない。",
+    "通常のボタン群として実装する場合はmenuロールを付けない。"
+  ],
+  "relatedIds": [
+    "split-button",
+    "context-menu"
+  ],
+  "demoId": "overflow-menu",
+  "controls": [
+    {
+      "id": "actions",
+      "label": "操作の数",
+      "help": "いずれもデモ内の結果だけを変える。",
+      "default": "two",
+      "options": [
+        {
+          "value": "two",
+          "label": "2操作",
+          "promptValue": "固定と情報表示の2操作を用意してください"
+        },
+        {
+          "value": "three",
+          "label": "3操作",
+          "promptValue": "固定・複製・情報表示の3操作を用意してください"
+        }
+      ]
+    },
+    {
+      "id": "align",
+      "label": "揃える側",
+      "help": "枠内に収める。",
+      "default": "start",
+      "options": [
+        {
+          "value": "start",
+          "label": "左",
+          "promptValue": "ボタンと操作群を左揃えにしてください"
+        },
+        {
+          "value": "end",
+          "label": "右",
+          "promptValue": "ボタンと操作群を右揃えにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "追加操作を開閉できるボタンを作ってください。{{actions}}。{{align}}。開閉ボタンにaria-expandedとaria-controlsを付け、閉じた内容をhiddenにしてください。操作後とEscでは閉じて開閉ボタンへフォーカスを戻し、領域外へフォーカスが移った場合も閉じてください。",
+  "references": [
+    {
+      "title": "WAI-ARIA APG · Disclosure navigation",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

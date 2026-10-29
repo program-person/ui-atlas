@@ -1,0 +1,59 @@
+{
+  "id": "easing-curves",
+  "nameJa": "動きの速さの変化を比べる",
+  "nameEn": "Easing Curves",
+  "category": "動き",
+  "summary": "同じ距離と時間で、途中の速さだけを変える。",
+  "description": "一定の速さと、終わりにゆっくりになる動きを比較する。動きを減らす設定では即時に位置を変える。",
+  "aliases": [
+    "動き速さの変化を比べる",
+    "easing curves"
+  ],
+  "tags": [
+    "動き",
+    "移動の緩急",
+    "モーションの比較"
+  ],
+  "useCases": [
+    "移動の緩急",
+    "モーションの比較"
+  ],
+  "cautions": [
+    "動きだけで状態を伝えない。",
+    "連続再生はせず、手動の切替だけにする。"
+  ],
+  "relatedIds": [
+    "fade-slide",
+    "hover-feedback"
+  ],
+  "demoId": "easing-curves",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "速さの変化",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "linear",
+      "options": [
+        {
+          "value": "linear",
+          "label": "一定",
+          "promptValue": "linearで一定の速さにしてください"
+        },
+        {
+          "value": "ease-out",
+          "label": "最後に減速",
+          "promptValue": "ease-outで最後に減速させてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "横長の枠の中で24pxの印を左右へ移動するbuttonを作ってください。移動時間を200msに揃え、指定のtransition-timing-functionでtransformだけを動かしてください。現在の側を文字で示し、prefers-reduced-motion: reduceでは即時に移動してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · transition-timing-function",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transition-timing-function",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

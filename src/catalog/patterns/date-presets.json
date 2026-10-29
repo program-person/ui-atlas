@@ -1,0 +1,74 @@
+{
+  "id": "date-presets",
+  "nameJa": "日付のプリセット",
+  "nameEn": "Date Presets",
+  "aliases": [
+    "日付のプリセット"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "決まった期間を選んで日付を表示する。",
+  "description": "固定の基準日から今月または過去7日を選ぶ。",
+  "useCases": [
+    "定型期間での一覧絞り込み",
+    "月間表示の期間指定"
+  ],
+  "cautions": [
+    "date-rangeと違い、自由な開始日と終了日の入力は行わない。",
+    "基準日は2026年10月29日に固定し、過去7日は当日を含む。"
+  ],
+  "relatedIds": [
+    "date-range"
+  ],
+  "demoId": "date-presets",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "開始時に過去7日を選択してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "開始時は期間を選択しないでください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "基準日を2026年10月29日に固定し、今月と過去7日をボタンで選択してください。開始日と終了日を表示し、過去7日には基準日を含めてください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · button",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

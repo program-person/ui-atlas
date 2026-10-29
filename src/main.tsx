@@ -1,3 +1,8 @@
+import './styles/growth2-demos.css';
+import './styles/expansion-layout-demos.css';
+import './styles/expansion-flow-demos.css';
+import './styles/expansion-chart-demos.css';
+import './styles/expansion-input-demos.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { App } from './App.tsx';

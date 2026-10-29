@@ -1,0 +1,59 @@
+{
+  "id": "number-format",
+  "nameJa": "数値を表示用に整える",
+  "nameEn": "Number Formatting",
+  "category": "部品",
+  "summary": "入力値を保ち、桁区切りや単位を表示へ付ける。",
+  "description": "数値の入力欄と表示用の値を分ける。小数を含む数値を丸めて表示し、空欄や不正な文字はエラーとして扱う。",
+  "aliases": [
+    "数値を表示用に整える",
+    "number formatting"
+  ],
+  "tags": [
+    "部品",
+    "数値の表示整形",
+    "入力と表示の分離"
+  ],
+  "useCases": [
+    "数値の表示整形",
+    "入力と表示の分離"
+  ],
+  "cautions": [
+    "丸めた表示値で元の数値を置き換えない。",
+    "桁区切りや全角文字の扱いを明示する。"
+  ],
+  "relatedIds": [
+    "number-input",
+    "tabular-numbers"
+  ],
+  "demoId": "number-format",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "表示形式",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "decimal",
+      "options": [
+        {
+          "value": "decimal",
+          "label": "小数2桁まで",
+          "promptValue": "桁区切りと小数2桁までで表示してください"
+        },
+        {
+          "value": "percent",
+          "label": "百分率",
+          "promptValue": "入力を比率として百分率で小数1桁まで表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "半角の符号付き十進数を入力し、Intl.NumberFormatのja-JPで表示してください。入力値は保持し、空欄・桁区切り・全角文字・指数表記・非有限値は受け付けないでください。0.125の例へ切り替える操作を付けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · Intl.NumberFormat",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

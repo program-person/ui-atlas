@@ -1,0 +1,76 @@
+{
+  "id": "request-cancellation",
+  "nameJa": "処理のキャンセル",
+  "nameEn": "Request Cancellation",
+  "aliases": [
+    "処理のキャンセル",
+    "request-cancellation"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "待機中の処理を取り消し、結果の反映を止める。",
+  "description": "進行中の処理を途中で止め、結果の反映を取り消す。ローディング表示に加え、利用者が中止した状態を示す。",
+  "useCases": [
+    "時間のかかる検索の中止",
+    "不要になったプレビュー生成の中止"
+  ],
+  "cautions": [
+    "実際の通信は中止してもサーバー側の処理が完了している場合がある。",
+    "中止後に古い結果やエラーを表示しない。"
+  ],
+  "relatedIds": [
+    "loading-button"
+  ],
+  "demoId": "request-cancellation",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "所要時間",
+      "help": "所要時間を切り替えます。",
+      "default": "short",
+      "options": [
+        {
+          "value": "short",
+          "label": "短い",
+          "promptValue": "2秒後に処理が完了"
+        },
+        {
+          "value": "long",
+          "label": "長い",
+          "promptValue": "4秒後に処理が完了"
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "label": "完了時",
+      "help": "完了時を切り替えます。",
+      "default": "result",
+      "options": [
+        {
+          "value": "result",
+          "label": "結果を表示",
+          "promptValue": "完了時に架空の結果3件を表示"
+        },
+        {
+          "value": "message",
+          "label": "完了のみ表示",
+          "promptValue": "完了時に完了だけを表示"
+        }
+      ]
+    }
+  ],
+  "prompt": "開始した処理は{{mode}}とし、{{finish}}してください。処理中にキャンセルでき、中止後は結果を反映しないでください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

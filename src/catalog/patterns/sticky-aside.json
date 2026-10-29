@@ -1,0 +1,77 @@
+{
+  "id": "sticky-aside",
+  "nameJa": "スクロールに残る補足",
+  "nameEn": "Sticky aside",
+  "category": "レイアウト",
+  "summary": "本文をスクロールしても補足を領域内の上端に残す。",
+  "description": "本文と補足を別の列に置き、補足だけをstickyにする。ヘッダー全体の固定とは異なり、記事のスクロール領域が終わると補足も止まる。",
+  "aliases": [
+    "スクロールに残る補足",
+    "Sticky aside"
+  ],
+  "tags": [
+    "レイアウト",
+    "sticky",
+    "aside"
+  ],
+  "useCases": [
+    "記事の用語集",
+    "作業手順のチェックポイント"
+  ],
+  "cautions": [
+    "補足がスクロール領域より高くなる場合は固定しない。",
+    "狭い枠では本文のあとに補足を並べ、固定を解除する。"
+  ],
+  "relatedIds": [
+    "sticky-header",
+    "holy-grail-layout"
+  ],
+  "demoId": "sticky-aside",
+  "controls": [
+    {
+      "id": "side",
+      "label": "補足の位置",
+      "help": "広い枠での左右配置。",
+      "default": "end",
+      "options": [
+        {
+          "value": "end",
+          "label": "本文の右",
+          "promptValue": "広い枠では本文の右に補足を置いてください"
+        },
+        {
+          "value": "start",
+          "label": "本文の左",
+          "promptValue": "広い枠では本文の左に補足を置いてください"
+        }
+      ]
+    },
+    {
+      "id": "offset",
+      "label": "上端からの距離",
+      "help": "スクロール領域内での余白。",
+      "default": "small",
+      "options": [
+        {
+          "value": "small",
+          "label": "8px",
+          "promptValue": "補足のsticky位置を上から8pxにしてください"
+        },
+        {
+          "value": "roomy",
+          "label": "32px",
+          "promptValue": "補足のsticky位置を上から32pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "本文のスクロールに追従する補足欄を作ってください。{{side}}。{{offset}}。高さ300pxのラベル付きスクロール領域をTabで操作可能にし、途中へ移動するボタンと現在位置の表示を用意してください。440px以下では補足を本文のあとへ並べてください。",
+  "references": [
+    {
+      "title": "MDN · position",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/position",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

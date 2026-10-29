@@ -1,0 +1,59 @@
+{
+  "id": "sankey-diagram",
+  "nameJa": "量の流れを太さで示す図",
+  "nameEn": "Sankey Diagram",
+  "category": "部品",
+  "summary": "分かれて流れる量を、線の太さで表す。",
+  "description": "入力12件を2つの行き先へ分配する。流量と線幅を比例させ、分配前後の合計が一致することを示す。",
+  "aliases": [
+    "量流れを太さで示す図",
+    "sankey diagram"
+  ],
+  "tags": [
+    "部品",
+    "流量の分配",
+    "処理先ごとの件数"
+  ],
+  "useCases": [
+    "流量の分配",
+    "処理先ごとの件数"
+  ],
+  "cautions": [
+    "入力と出力の合計を合わせる。",
+    "線の太さを装飾だけで決めない。"
+  ],
+  "relatedIds": [
+    "funnel-chart",
+    "stacked-bar-chart"
+  ],
+  "demoId": "sankey-diagram",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の分配",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "split",
+      "options": [
+        {
+          "value": "split",
+          "label": "8対4",
+          "promptValue": "初期の分配をA8件・B4件にしてください"
+        },
+        {
+          "value": "equal",
+          "label": "6対6",
+          "promptValue": "初期の分配をA6件・B6件にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "入力12件からA・Bへ分かれる自作のサンキー図を作ってください。線幅は1件あたり3pxとし、分配の切替でA3件・B9件と初期値を行き来してください。同じ流量を表に示し、入力と出力の合計12件を保ってください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

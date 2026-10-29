@@ -1,0 +1,59 @@
+{
+  "id": "parallel-coordinates",
+  "nameJa": "平行座標の比較図",
+  "nameEn": "Parallel Coordinates",
+  "category": "部品",
+  "summary": "複数の数値軸を横に並べ、同じ項目を線で結ぶ。",
+  "description": "同じ0〜100点の3軸に、架空の道具A・Bの評価を表示する。系列を切り替えて、それぞれの特徴を見る。",
+  "aliases": [
+    "平行座標比較図",
+    "parallel coordinates"
+  ],
+  "tags": [
+    "部品",
+    "3つ以上の評価軸",
+    "多変量の特徴の比較"
+  ],
+  "useCases": [
+    "3つ以上の評価軸",
+    "多変量の特徴の比較"
+  ],
+  "cautions": [
+    "軸の尺度と向きを揃える。",
+    "線が増えると対応を追いにくくなる。"
+  ],
+  "relatedIds": [
+    "radar-chart",
+    "comparison-table"
+  ],
+  "demoId": "parallel-coordinates",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の系列",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "both",
+      "options": [
+        {
+          "value": "both",
+          "label": "AとB",
+          "promptValue": "AとBの両方を表示して始めてください"
+        },
+        {
+          "value": "a",
+          "label": "Aだけ",
+          "promptValue": "Aだけを表示して始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "速さ・容量・軽さの3軸を平行に並べ、すべて下端0・上端100点としてください。Aを80・30・60、Bを40・80・30として線と表で示し、Bの表示を切り替えるbuttonで両方を更新してください。系列は実線と破線でも区別してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

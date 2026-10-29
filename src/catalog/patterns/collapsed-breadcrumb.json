@@ -1,0 +1,59 @@
+{
+  "id": "collapsed-breadcrumb",
+  "nameJa": "長いパンくずの中間を開く",
+  "nameEn": "Collapsed Breadcrumb",
+  "category": "部品",
+  "summary": "深い階層の中間をまとめ、必要なときに開く。",
+  "description": "先頭と現在地を残し、中間の3階層を開閉する。省略した階層へも移動でき、移動後は現在地を更新する。",
+  "aliases": [
+    "長いパンくず中間を開く",
+    "collapsed breadcrumb"
+  ],
+  "tags": [
+    "部品",
+    "深い階層の現在地",
+    "狭い枠のパンくず"
+  ],
+  "useCases": [
+    "深い階層の現在地",
+    "狭い枠のパンくず"
+  ],
+  "cautions": [
+    "現在地と先頭は隠さない。",
+    "省略した階層を操作で復元できるようにする。"
+  ],
+  "relatedIds": [
+    "breadcrumb",
+    "disclosure-navigation"
+  ],
+  "demoId": "collapsed-breadcrumb",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "中間階層の初期表示",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "collapsed",
+      "options": [
+        {
+          "value": "collapsed",
+          "label": "省略",
+          "promptValue": "開始時は中間階層を折りたたんでください"
+        },
+        {
+          "value": "expanded",
+          "label": "すべて",
+          "promptValue": "開始時は中間階層を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "ホーム・資料・見た目・文字・本文の5階層を表示してください。先頭と現在地を残し、中間の階層を表示というbuttonで残りを開閉してください。選んだ上位階層を現在地へ更新し、現在地にaria-current=pageを付け、末尾の本文へ戻る操作を別に提供してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Disclosure",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

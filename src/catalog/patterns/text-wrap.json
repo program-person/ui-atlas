@@ -1,0 +1,78 @@
+{
+  "id": "text-wrap",
+  "nameJa": "見出しの折り返し",
+  "nameEn": "Balanced text wrapping",
+  "category": "見た目",
+  "summary": "見出しの行の長さを均す折り返しを比べる。",
+  "description": "text-wrapのbalanceと通常のwrapを切り替え、見出しの行末を比較する。長文を隠す省略表示とは異なり、全文を表示したまま折り返しを調整する。",
+  "aliases": [
+    "見出しの折り返し",
+    "Balanced text wrapping"
+  ],
+  "tags": [
+    "見た目",
+    "balanced",
+    "text",
+    "wrapping"
+  ],
+  "useCases": [
+    "短い見出しの組版",
+    "図のキャプション"
+  ],
+  "cautions": [
+    "折り返し位置はブラウザとフォントに左右される。",
+    "短い見出しを対象とし、行数が必ず同じになるとは限らない。"
+  ],
+  "relatedIds": [
+    "text-truncation",
+    "typography-scale"
+  ],
+  "demoId": "text-wrap",
+  "controls": [
+    {
+      "id": "wrap",
+      "label": "折り返し方",
+      "help": "両方とも全文を表示する。",
+      "default": "balance",
+      "options": [
+        {
+          "value": "balance",
+          "label": "行の長さを均す",
+          "promptValue": "見出しにtext-wrap: balanceを指定してください"
+        },
+        {
+          "value": "normal",
+          "label": "通常",
+          "promptValue": "見出しにtext-wrap: wrapを指定してください"
+        }
+      ]
+    },
+    {
+      "id": "width",
+      "label": "見出し枠の幅",
+      "help": "画面幅を超えない上限。",
+      "default": "narrow",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "22ch",
+          "promptValue": "見出し枠の最大幅を22chにしてください"
+        },
+        {
+          "value": "wide",
+          "label": "34ch",
+          "promptValue": "見出し枠の最大幅を34chにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "見出しの折り返しを比較するデモを作ってください。{{wrap}}。{{width}}。短文と長文の見出しをボタンで切り替え、現在の長さをstatusで伝えてください。本文を省略せず、狭い画面でも枠からはみ出さないでください。",
+  "references": [
+    {
+      "title": "MDN · text-wrap",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

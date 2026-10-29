@@ -1,0 +1,59 @@
+{
+  "id": "pan-controls",
+  "nameJa": "図を上下左右へ動かす",
+  "nameEn": "Pan Controls",
+  "category": "部品",
+  "summary": "表示窓の中で大きな図の位置を変える。",
+  "description": "自作図の表示原点をボタンで動かす。拡大率を変えるズームとは分け、移動範囲と中央へ戻す操作を用意する。",
+  "aliases": [
+    "図を上下左右へ動かす",
+    "pan controls"
+  ],
+  "tags": [
+    "部品",
+    "大きな図の移動",
+    "ドラッグの代替操作"
+  ],
+  "useCases": [
+    "大きな図の移動",
+    "ドラッグの代替操作"
+  ],
+  "cautions": [
+    "移動で図を完全に見失わないよう範囲を制限する。",
+    "移動方向と座標の意味を説明する。"
+  ],
+  "relatedIds": [
+    "zoom-controls",
+    "image-hotspots"
+  ],
+  "demoId": "pan-controls",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "1回の移動量",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "20",
+      "options": [
+        {
+          "value": "20",
+          "label": "20px",
+          "promptValue": "1回20pxずつ図を移動してください"
+        },
+        {
+          "value": "40",
+          "label": "40px",
+          "promptValue": "1回40pxずつ図を移動してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "400px四方の自作SVGを240px四方の表示窓で見せ、上下左右のボタンで図を動かしてください。各軸を−80〜80pxに制限し、境界では対応するボタンを無効にしてください。中央へ戻す操作と現在の座標を表示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

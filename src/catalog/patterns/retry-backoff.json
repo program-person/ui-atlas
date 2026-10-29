@@ -1,0 +1,76 @@
+{
+  "id": "retry-backoff",
+  "nameJa": "再試行と待機",
+  "nameEn": "Retry Backoff",
+  "aliases": [
+    "再試行と待機",
+    "retry-backoff"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "失敗後に間隔を設けて再試行する。",
+  "description": "待機時間と上限を設け、失敗した処理を再び試す。ローディング表示と異なり、失敗後の待機と打ち切りを確認する。",
+  "useCases": [
+    "一時的な通信障害からの再取得",
+    "一時的な混雑による処理失敗への対応"
+  ],
+  "cautions": [
+    "再試行できるエラーと操作を限定し、重複実行を防ぐ。",
+    "実際の運用では待ち時間の上限や揺らぎも検討する。"
+  ],
+  "relatedIds": [
+    "skeleton-loading"
+  ],
+  "demoId": "retry-backoff",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "間隔",
+      "help": "間隔を切り替えます。",
+      "default": "fixed",
+      "options": [
+        {
+          "value": "fixed",
+          "label": "固定",
+          "promptValue": "0.5秒の固定間隔"
+        },
+        {
+          "value": "backoff",
+          "label": "増加",
+          "promptValue": "0.5秒から倍増する間隔"
+        }
+      ]
+    },
+    {
+      "id": "limit",
+      "label": "上限",
+      "help": "上限を切り替えます。",
+      "default": "two",
+      "options": [
+        {
+          "value": "two",
+          "label": "2回",
+          "promptValue": "最大2回"
+        },
+        {
+          "value": "three",
+          "label": "3回",
+          "promptValue": "最大3回"
+        }
+      ]
+    }
+  ],
+  "prompt": "処理の失敗後、{{mode}}で再試行し、{{limit}}で打ち切ってください。待機中と上限到達を表示してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://docs.cloud.google.com/storage/docs/retry-strategy",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

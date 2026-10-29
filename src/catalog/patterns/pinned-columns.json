@@ -1,0 +1,76 @@
+{
+  "id": "pinned-columns",
+  "nameJa": "列の固定",
+  "nameEn": "Pinned columns",
+  "category": "部品",
+  "aliases": [
+    "列の固定",
+    "pinned columns"
+  ],
+  "tags": [
+    "表",
+    "表示",
+    "比較"
+  ],
+  "summary": "横スクロール中も先頭列を固定する。",
+  "description": "横にスクロールする表で、道具の列の固定を切り替える。固定するとスクロール中も道具名が左端に残る。",
+  "useCases": [
+    "列の多い表で行の見出しを確認する",
+    "固定の有無を比較する"
+  ],
+  "cautions": [
+    "値や状態を色だけに頼らず文字で示す。",
+    "狭い画面でも操作と内容を確認できるようにする。"
+  ],
+  "relatedIds": [
+    "data-table"
+  ],
+  "demoId": "pinned-columns",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "最初の状態を選ぶ。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "固定",
+          "promptValue": "初期状態を「固定」にしてください"
+        },
+        {
+          "value": "second",
+          "label": "固定なし",
+          "promptValue": "初期状態を「固定なし」にしてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "行間",
+      "help": "表示方法を選ぶ。",
+      "default": "wide",
+      "options": [
+        {
+          "value": "wide",
+          "label": "広め",
+          "promptValue": "行間を広めにしてください"
+        },
+        {
+          "value": "compact",
+          "label": "狭め",
+          "promptValue": "行間を狭めにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具のHTML表を作ってください。横スクロールする表の先頭列の固定をボタンで切り替えてください。 {{initial}}。{{density}}。見出しとcaptionを設け、狭い画面でも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

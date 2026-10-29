@@ -1,0 +1,76 @@
+{
+  "id": "dependent-steps",
+  "nameJa": "条件で変わる手順",
+  "nameEn": "Dependent Steps",
+  "aliases": [
+    "条件で変わる手順",
+    "dependent-steps"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "選択に応じて後続の手順を切り替える。",
+  "description": "最初の選択によって後続の手順を増減する。固定のステップ表示とは異なり、選択に合わせて総数も変わる。",
+  "useCases": [
+    "任意の詳細入力を含む申込",
+    "選択に応じた確認手順の案内"
+  ],
+  "cautions": [
+    "戻って選択を変えたとき、不要になった入力の扱いを明示する。",
+    "手順数が変わる場合も現在位置を示す。"
+  ],
+  "relatedIds": [
+    "step-indicator"
+  ],
+  "demoId": "dependent-steps",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "分岐",
+      "help": "分岐を切り替えます。",
+      "default": "detail",
+      "options": [
+        {
+          "value": "detail",
+          "label": "詳細あり",
+          "promptValue": "詳細を選択した場合は3手順に分岐"
+        },
+        {
+          "value": "simple",
+          "label": "詳細なし",
+          "promptValue": "詳細の選択に関係なく2手順"
+        }
+      ]
+    },
+    {
+      "id": "returning",
+      "label": "戻り方",
+      "help": "戻り方を切り替えます。",
+      "default": "keep",
+      "options": [
+        {
+          "value": "keep",
+          "label": "選択を保持",
+          "promptValue": "戻っても選択を保持"
+        },
+        {
+          "value": "reset",
+          "label": "選択を初期化",
+          "promptValue": "戻ると選択を初期化"
+        }
+      ]
+    }
+  ],
+  "prompt": "手順は{{mode}}とし、{{returning}}してください。現在の手順と総数を表示してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://www.w3.org/WAI/tutorials/forms/multi-page/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

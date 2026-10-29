@@ -1,0 +1,74 @@
+{
+  "id": "unit-converter",
+  "nameJa": "単位変換",
+  "nameEn": "Unit Converter",
+  "aliases": [
+    "単位変換"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "入力した長さを別の単位へ換算する。",
+  "description": "メートルで入力した長さをセンチメートルに換算する。",
+  "useCases": [
+    "長さの単位確認",
+    "数値の換算結果の表示"
+  ],
+  "cautions": [
+    "number-inputと違い、入力値から別単位の値を計算する。",
+    "空欄はゼロと扱わず、入力を促す。負の値も計算する。"
+  ],
+  "relatedIds": [
+    "number-input"
+  ],
+  "demoId": "unit-converter",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "メートルの数値欄と換算するボタンを用意し、100倍したセンチメートルを表示してください。空欄と有限でない値には入力を促してください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。 入力値を変更したら前の結果表示を消してください。",
+  "references": [
+    {
+      "title": "MDN · input type=number",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

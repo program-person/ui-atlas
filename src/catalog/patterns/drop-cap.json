@@ -1,0 +1,59 @@
+{
+  "id": "drop-cap",
+  "nameJa": "段落の先頭文字を大きくする",
+  "nameEn": "Drop Cap",
+  "category": "見た目",
+  "summary": "本文の最初の一文字を大きく組む。",
+  "description": "段落の先頭にfirst-letterを適用し、残りの本文を回り込ませる。本文を画像や別要素に分断せずに見た目を変える。",
+  "aliases": [
+    "段落先頭文字を大きくする",
+    "drop cap"
+  ],
+  "tags": [
+    "見た目",
+    "記事の導入段落",
+    "読み物の組版"
+  ],
+  "useCases": [
+    "記事の導入段落",
+    "読み物の組版"
+  ],
+  "cautions": [
+    "短い段落では装飾が目立ちすぎる場合がある。",
+    "読み順を変えない。"
+  ],
+  "relatedIds": [
+    "typography-scale",
+    "line-length"
+  ],
+  "demoId": "drop-cap",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "先頭文字",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "drop",
+      "options": [
+        {
+          "value": "drop",
+          "label": "拡大",
+          "promptValue": "先頭文字を3emにして本文を回り込ませてください"
+        },
+        {
+          "value": "plain",
+          "label": "通常",
+          "promptValue": "先頭文字を本文と同じサイズにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "日本語の段落にfirst-letterによるドロップキャップを設定してください。本文全体は1つのp要素に残し、別の文章への切替と枠内の折り返しに対応してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · ::first-letter",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::first-letter",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "multi-sort-table",
+  "nameJa": "複数の条件で並べ替える表",
+  "nameEn": "Multi Column Sort",
+  "category": "部品",
+  "summary": "第1条件が同じ行を第2条件で並べる。",
+  "description": "分類を第1条件、件数を第2条件として並べ替える。件数が同じ場合は道具名を使い、並びを安定させる。",
+  "aliases": [
+    "複数条件で並べ替える表",
+    "multi column sort"
+  ],
+  "tags": [
+    "部品",
+    "同じ分類の中を並べる",
+    "複数条件の順位付け"
+  ],
+  "useCases": [
+    "同じ分類の中を並べる",
+    "複数条件の順位付け"
+  ],
+  "cautions": [
+    "条件の優先順位を文字で示す。",
+    "単一列の並べ替え状態だけで説明しない。"
+  ],
+  "relatedIds": [
+    "data-table",
+    "sort-controls"
+  ],
+  "demoId": "multi-sort-table",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "分類の順序",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "asc",
+      "options": [
+        {
+          "value": "asc",
+          "label": "昇順",
+          "promptValue": "第1条件の分類を昇順にしてください"
+        },
+        {
+          "value": "desc",
+          "label": "降順",
+          "promptValue": "第1条件の分類を降順にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "道具A（紙・20）、B（紙・10）、C（筆記具・30）、D（筆記具・10）を分類順・次に件数順で並べてください。件数順の昇降をボタンで切り替え、優先順位をcaptionとstatusで示してください。同値は名前順としてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

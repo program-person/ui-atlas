@@ -1,0 +1,59 @@
+{
+  "id": "state-machine",
+  "nameJa": "状態遷移図",
+  "nameEn": "State Transition Diagram",
+  "category": "部品",
+  "summary": "現在の状態と、操作で移れる先を示す。",
+  "description": "待機・処理中・完了または失敗の状態を図で示す。状態ごとに有効な操作だけを使えるようにする。",
+  "aliases": [
+    "状態遷移図",
+    "state transition diagram"
+  ],
+  "tags": [
+    "部品",
+    "画面状態の説明",
+    "処理の遷移確認"
+  ],
+  "useCases": [
+    "画面状態の説明",
+    "処理の遷移確認"
+  ],
+  "cautions": [
+    "時間の経過を示す図とは区別する。",
+    "図と有効な操作を同じ状態から求める。"
+  ],
+  "relatedIds": [
+    "status-badge",
+    "request-cancellation"
+  ],
+  "demoId": "state-machine",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "終了の結果",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "success",
+      "options": [
+        {
+          "value": "success",
+          "label": "完了",
+          "promptValue": "処理を終えると完了へ進めてください"
+        },
+        {
+          "value": "failure",
+          "label": "失敗",
+          "promptValue": "処理を終えると失敗へ進めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "待機から開始で処理中へ、終了で完了または失敗へ進む自作の状態遷移図を作ってください。終了後に待機へ戻す操作を設け、状態に応じてbuttonを無効にしてください。現在の状態は枠線・文字・statusで示し、実処理やタイマーは使わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

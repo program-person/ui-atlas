@@ -1,0 +1,59 @@
+{
+  "id": "code-block",
+  "nameJa": "コードの表示と折り返し",
+  "nameEn": "Code Block",
+  "category": "部品",
+  "summary": "インデントを保ち、長い行の表示を選ぶ。",
+  "description": "固定のサンプルをpreとcodeで表示する。横スクロールと折り返しを切り替え、行の強調を試す。コードは実行しない。",
+  "aliases": [
+    "コード表示と折り返し",
+    "code block"
+  ],
+  "tags": [
+    "部品",
+    "実装例の表示",
+    "長い行の読み取り"
+  ],
+  "useCases": [
+    "実装例の表示",
+    "長い行の読み取り"
+  ],
+  "cautions": [
+    "行の強調だけで意味を伝えない。",
+    "サンプルコードを実行しない。"
+  ],
+  "relatedIds": [
+    "copy-button",
+    "text-wrap"
+  ],
+  "demoId": "code-block",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "長い行",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "wrap",
+      "options": [
+        {
+          "value": "wrap",
+          "label": "折り返す",
+          "promptValue": "長い行をpre-wrapで折り返してください"
+        },
+        {
+          "value": "scroll",
+          "label": "横スクロール",
+          "promptValue": "white-space: preで枠内を横スクロールさせてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "固定のサンプルコードをpreとcodeで表示してください。長い行の折り返しと横スクロールを比較できる設定を持たせ、2行目の強調を切り替えてください。強調中の行番号を文字で示し、表示するコードは実行しないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · pre",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/pre",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

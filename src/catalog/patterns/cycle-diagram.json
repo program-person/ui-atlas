@@ -1,0 +1,59 @@
+{
+  "id": "cycle-diagram",
+  "nameJa": "繰り返す手順の図",
+  "nameEn": "Cycle Diagram",
+  "category": "部品",
+  "summary": "最後の手順から最初へ戻る関係を示す。",
+  "description": "観察・制作・確認を輪に並べ、次の操作で循環する。完了で止まる工程の図と区別する。",
+  "aliases": [
+    "繰り返す手順図",
+    "cycle diagram"
+  ],
+  "tags": [
+    "部品",
+    "繰り返す工程",
+    "改善のサイクル"
+  ],
+  "useCases": [
+    "繰り返す工程",
+    "改善のサイクル"
+  ],
+  "cautions": [
+    "終わりのない処理を自動で実行しない。",
+    "次に進む向きを文字で示す。"
+  ],
+  "relatedIds": [
+    "timeline",
+    "step-indicator"
+  ],
+  "demoId": "cycle-diagram",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "進む方向",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "forward",
+      "options": [
+        {
+          "value": "forward",
+          "label": "正順",
+          "promptValue": "観察・制作・確認の順で循環させてください"
+        },
+        {
+          "value": "reverse",
+          "label": "逆順",
+          "promptValue": "観察・確認・制作の順で循環させてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "観察・制作・確認を輪に配置した自作SVGを表示してください。手動の次の手順buttonで指定方向に循環し、現在と次の手順を文字でも示してください。タイマーや自動進行は追加しないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

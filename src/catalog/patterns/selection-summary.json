@@ -1,0 +1,59 @@
+{
+  "id": "selection-summary",
+  "nameJa": "選んだ項目の合計",
+  "nameEn": "Selection Summary",
+  "category": "部品",
+  "summary": "選択を変えるたび、対象数と合計値を更新する。",
+  "description": "3つの架空の道具を選び、件数または点数を合計する。選択状態と集計値を別々に保持せず、同じ選択集合から求める。",
+  "aliases": [
+    "選んだ項目合計",
+    "selection summary"
+  ],
+  "tags": [
+    "部品",
+    "選択数と合計の確認",
+    "対象の見落としを防ぐ"
+  ],
+  "useCases": [
+    "選択数と合計の確認",
+    "対象の見落としを防ぐ"
+  ],
+  "cautions": [
+    "未選択を0として明示する。",
+    "値の単位を省略しない。"
+  ],
+  "relatedIds": [
+    "bulk-actions",
+    "checkbox-cards"
+  ],
+  "demoId": "selection-summary",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "集計する属性",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "points",
+      "options": [
+        {
+          "value": "points",
+          "label": "点数",
+          "promptValue": "点数10・20・30を合計してください"
+        },
+        {
+          "value": "count",
+          "label": "件数",
+          "promptValue": "件数2・3・4を合計してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "ノート・カード・鉛筆を複数選択し、選択数と指定属性の合計を表示してください。属性値は点数10・20・30、件数2・3・4とし、先頭2件を選ぶ操作と全解除を付けてください。計算は選択集合から毎回求めてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · output",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/output",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

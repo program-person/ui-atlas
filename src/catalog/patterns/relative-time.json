@@ -1,0 +1,59 @@
+{
+  "id": "relative-time",
+  "nameJa": "相対時刻と日時を切り替える",
+  "nameEn": "Relative Time",
+  "category": "部品",
+  "summary": "何分前という表示と、正確な日時を使い分ける。",
+  "description": "固定の架空の基準時刻から記録時刻との差を計算する。表示を切り替えても同じ時刻を指すようにする。",
+  "aliases": [
+    "相対時刻と日時を切り替える",
+    "relative time"
+  ],
+  "tags": [
+    "部品",
+    "記録の経過時間",
+    "正確な時刻の確認"
+  ],
+  "useCases": [
+    "記録の経過時間",
+    "正確な時刻の確認"
+  ],
+  "cautions": [
+    "基準時刻とタイムゾーンを明示する。",
+    "実際の現在時刻を使わないデモ。"
+  ],
+  "relatedIds": [
+    "activity-feed",
+    "timeline"
+  ],
+  "demoId": "relative-time",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "時刻の表示",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "relative",
+      "options": [
+        {
+          "value": "relative",
+          "label": "何分前",
+          "promptValue": "相対時刻を主に表示してください"
+        },
+        {
+          "value": "absolute",
+          "label": "正確な日時",
+          "promptValue": "日本時間の年月日と時刻を主に表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "基準を2026年10月29日12:30日本時間、初期の記録を同日12:00としてください。記録を5分ずつ進めるbuttonを置き、基準の12:30を上限にしてください。Intl.RelativeTimeFormatとAsia/Tokyo指定のIntl.DateTimeFormatで同じ時刻を表し、timeのdateTimeにはISO文字列を入れてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · Intl.RelativeTimeFormat",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

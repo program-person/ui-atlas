@@ -1,0 +1,119 @@
+[
+  {
+    "id": "retry-backoff",
+    "exportName": "RetryBackoffDemo",
+    "action": {
+      "role": "button",
+      "name": "再試行を開始"
+    },
+    "expectedText": "再試行を待機中"
+  },
+  {
+    "id": "request-cancellation",
+    "exportName": "RequestCancellationDemo",
+    "action": {
+      "role": "button",
+      "name": "処理を開始"
+    },
+    "expectedText": "処理中"
+  },
+  {
+    "id": "dependent-steps",
+    "exportName": "DependentStepsDemo",
+    "action": {
+      "role": "button",
+      "name": "次へ"
+    },
+    "expectedText": "内容を確認"
+  },
+  {
+    "id": "checkpoint-resume",
+    "exportName": "CheckpointResumeDemo",
+    "action": {
+      "role": "button",
+      "name": "中断して記録"
+    },
+    "expectedText": "途中位置を記録しました"
+  },
+  {
+    "id": "batch-progress",
+    "exportName": "BatchProgressDemo",
+    "action": {
+      "role": "button",
+      "name": "一括処理を開始"
+    },
+    "expectedText": "処理中"
+  },
+  {
+    "id": "async-search",
+    "exportName": "AsyncSearchDemo",
+    "action": {
+      "role": "button",
+      "name": "青を検索"
+    },
+    "expectedText": "検索中"
+  },
+  {
+    "id": "search-history",
+    "exportName": "SearchHistoryDemo",
+    "action": {
+      "role": "button",
+      "name": "検索"
+    },
+    "expectedText": "検索：ノート"
+  },
+  {
+    "id": "saved-filters",
+    "exportName": "SavedFiltersDemo",
+    "action": {
+      "role": "button",
+      "name": "条件を保存"
+    },
+    "expectedText": "保存済み：1件"
+  },
+  {
+    "id": "selection-limit",
+    "exportName": "SelectionLimitDemo",
+    "action": {
+      "role": "checkbox",
+      "name": "朝"
+    },
+    "expectedText": "1 / 2 件"
+  },
+  {
+    "id": "conflict-resolution",
+    "exportName": "ConflictResolutionDemo",
+    "action": {
+      "role": "button",
+      "name": "選択を確定"
+    },
+    "expectedText": "確定：青いメモ"
+  },
+  {
+    "id": "version-comparison",
+    "exportName": "VersionComparisonDemo",
+    "action": {
+      "role": "button",
+      "name": "変更を比較"
+    },
+    "expectedText": "変更：色を赤に変更"
+  },
+  {
+    "id": "session-timeout",
+    "exportName": "SessionTimeoutDemo",
+    "action": {
+      "role": "button",
+      "name": "終了する"
+    },
+    "expectedText": "利用を終了しました"
+  },
+  {
+    "id": "offline-fallback",
+    "exportName": "OfflineFallbackDemo",
+    "action": {
+      "role": "button",
+      "name": "接続を切る"
+    },
+    "expectedText": "オフラインです"
+  }
+]

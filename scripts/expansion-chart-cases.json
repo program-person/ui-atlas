@@ -1,0 +1,119 @@
+[
+  {
+    "id": "table-row-expansion",
+    "exportName": "TableRowExpansionDemo",
+    "action": {
+      "role": "button",
+      "name": "詳細を開く"
+    },
+    "expectedText": "補足：軽量な道具"
+  },
+  {
+    "id": "column-visibility",
+    "exportName": "ColumnVisibilityDemo",
+    "action": {
+      "role": "checkbox",
+      "name": "記録数を表示"
+    },
+    "expectedText": "記録数を非表示"
+  },
+  {
+    "id": "column-reorder",
+    "exportName": "ColumnReorderDemo",
+    "action": {
+      "role": "button",
+      "name": "列順を入れ替える"
+    },
+    "expectedText": "記録数、道具の順"
+  },
+  {
+    "id": "pinned-columns",
+    "exportName": "PinnedColumnsDemo",
+    "action": {
+      "role": "button",
+      "name": "固定を解除"
+    },
+    "expectedText": "固定なし"
+  },
+  {
+    "id": "table-footer",
+    "exportName": "TableFooterDemo",
+    "action": {
+      "role": "button",
+      "name": "平均を表示"
+    },
+    "expectedText": "平均 15"
+  },
+  {
+    "id": "sparkline",
+    "exportName": "SparklineDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "area-chart",
+    "exportName": "AreaChartDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "histogram",
+    "exportName": "HistogramDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "bullet-chart",
+    "exportName": "BulletChartDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "waterfall-chart",
+    "exportName": "WaterfallChartDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "waffle-chart",
+    "exportName": "WaffleChartDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "funnel-chart",
+    "exportName": "FunnelChartDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  },
+  {
+    "id": "treemap",
+    "exportName": "TreemapDemo",
+    "action": {
+      "role": "button",
+      "name": "別の系列を表示"
+    },
+    "expectedText": "系列Bを表示中"
+  }
+]

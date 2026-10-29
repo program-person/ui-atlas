@@ -1,0 +1,74 @@
+{
+  "id": "checkbox-cards",
+  "nameJa": "チェックボックスカード",
+  "nameEn": "Checkbox Cards",
+  "aliases": [
+    "チェックボックスカード"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "複数の選択肢をカードから選ぶ。",
+  "description": "カード内のチェックボックスで複数項目を選ぶ。",
+  "useCases": [
+    "複数のカテゴリ選択",
+    "特徴の複数選択"
+  ],
+  "cautions": [
+    "hierarchical-checkboxesと違い、親子関係のない選択肢を並べる。",
+    "選択状態はチェックボックスと文字の両方で示す。"
+  ],
+  "relatedIds": [
+    "hierarchical-checkboxes"
+  ],
+  "demoId": "checkbox-cards",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "開始時に赤を選択してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "開始時は何も選択しないでください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "青と赤の選択肢をチェックボックス付きカードで表示し、複数選択と解除に応じて選択中の項目を表示してください。未選択も明示してください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · checkbox",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

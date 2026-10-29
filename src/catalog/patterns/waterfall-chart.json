@@ -1,0 +1,81 @@
+{
+  "id": "waterfall-chart",
+  "nameJa": "ウォーターフォールチャート",
+  "nameEn": "Waterfall chart",
+  "category": "部品",
+  "aliases": [
+    "ウォーターフォールチャート",
+    "waterfall chart"
+  ],
+  "tags": [
+    "グラフ",
+    "表示",
+    "比較"
+  ],
+  "summary": "増減を積み上げて最終値を示す。",
+  "description": "開始値40に増加と減少を順に加え、合計に至る流れを示す。系列Aは40＋20−10＝50、系列Bは40＋30−10＝60。",
+  "useCases": [
+    "増減と合計の関係を確認する",
+    "変化が最終値に及ぼす影響を比べる"
+  ],
+  "cautions": [
+    "値や状態を色だけに頼らず文字で示す。",
+    "狭い画面でも操作と内容を確認できるようにする。"
+  ],
+  "relatedIds": [
+    "bar-chart"
+  ],
+  "demoId": "waterfall-chart",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期系列",
+      "help": "最初の状態を選ぶ。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "系列A",
+          "promptValue": "初期状態を「系列A」にしてください"
+        },
+        {
+          "value": "second",
+          "label": "系列B",
+          "promptValue": "初期状態を「系列B」にしてください"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "label": "値の表示",
+      "help": "表示方法を選ぶ。",
+      "default": "shown",
+      "options": [
+        {
+          "value": "shown",
+          "label": "図に表示",
+          "promptValue": "図に値を表示してください"
+        },
+        {
+          "value": "hidden",
+          "label": "一覧のみ",
+          "promptValue": "図の値を省き一覧に表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "開始40、減少10、増加20または30を使い、累積値と合計50または60を段階ごとの棒で示してください。 {{initial}}。{{labels}}。ボタンで系列を切り替え、項目名と正確な値を表にも表示してください。狭い画面とキーボード操作に対応してください。",
+  "references": [
+    {
+      "title": "Carbon · Data visualization overview",
+      "url": "https://www.carbondesignsystem.com/building-blocks/data-visualization/overview",
+      "checkedAt": "2026-10-29"
+    },
+    {
+      "title": "Microsoft Learn · Visualization overview",
+      "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualizations-overview",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

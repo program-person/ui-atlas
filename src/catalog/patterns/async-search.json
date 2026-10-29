@@ -1,0 +1,76 @@
+{
+  "id": "async-search",
+  "nameJa": "非同期検索",
+  "nameEn": "Async Search",
+  "aliases": [
+    "非同期検索",
+    "async-search"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "入力後に検索し、古い結果が表示されないようにする。",
+  "description": "検索語を入力してから一定時間後に結果を返す。入力が変わった際は以前の待機を取り消し、古い結果を表示しない。",
+  "useCases": [
+    "入力候補の非同期検索",
+    "更新の遅い一覧の検索"
+  ],
+  "cautions": [
+    "古い応答が新しい検索結果を上書きしないようにする。",
+    "空入力、検索中、0件を区別する。"
+  ],
+  "relatedIds": [
+    "search-filter"
+  ],
+  "demoId": "async-search",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "待機時間",
+      "help": "待機時間を切り替えます。",
+      "default": "short",
+      "options": [
+        {
+          "value": "short",
+          "label": "短い",
+          "promptValue": "入力後0.6秒で検索結果を表示"
+        },
+        {
+          "value": "long",
+          "label": "長い",
+          "promptValue": "入力後1.5秒で検索結果を表示"
+        }
+      ]
+    },
+    {
+      "id": "display",
+      "label": "結果表示",
+      "help": "結果表示を切り替えます。",
+      "default": "count",
+      "options": [
+        {
+          "value": "count",
+          "label": "件数",
+          "promptValue": "一致した場合は件数を表示"
+        },
+        {
+          "value": "list",
+          "label": "一覧",
+          "promptValue": "一致した項目名を表示"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}し、{{display}}してください。入力変更時は以前の処理を取り消し、空入力では結果を消してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://react.dev/reference/react/useEffect",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

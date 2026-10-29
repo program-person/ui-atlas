@@ -1,0 +1,76 @@
+{
+  "id": "table-footer",
+  "nameJa": "表のフッター",
+  "nameEn": "Table footer",
+  "category": "部品",
+  "aliases": [
+    "表のフッター",
+    "table footer"
+  ],
+  "tags": [
+    "表",
+    "表示",
+    "比較"
+  ],
+  "summary": "表の末尾に集計値を表示する。",
+  "description": "表のフッターに記録数の合計30または平均15を表示する。ボタンで集計方法を切り替える。",
+  "useCases": [
+    "表の値と集計結果を一緒に示す",
+    "合計と平均を切り替えて確認する"
+  ],
+  "cautions": [
+    "値や状態を色だけに頼らず文字で示す。",
+    "狭い画面でも操作と内容を確認できるようにする。"
+  ],
+  "relatedIds": [
+    "data-table"
+  ],
+  "demoId": "table-footer",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "最初の状態を選ぶ。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "合計",
+          "promptValue": "初期状態を「合計」にしてください"
+        },
+        {
+          "value": "second",
+          "label": "平均",
+          "promptValue": "初期状態を「平均」にしてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "行間",
+      "help": "表示方法を選ぶ。",
+      "default": "wide",
+      "options": [
+        {
+          "value": "wide",
+          "label": "広め",
+          "promptValue": "行間を広めにしてください"
+        },
+        {
+          "value": "compact",
+          "label": "狭め",
+          "promptValue": "行間を狭めにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具のHTML表を作ってください。表のフッターに合計または平均を表示するボタンを用意してください。 {{initial}}。{{density}}。見出しとcaptionを設け、狭い画面でも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

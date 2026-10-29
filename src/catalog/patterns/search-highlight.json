@@ -1,0 +1,74 @@
+{
+  "id": "search-highlight",
+  "nameJa": "検索語の強調",
+  "nameEn": "Search Highlight",
+  "aliases": [
+    "検索語の強調"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "一致する文字を結果内で強調する。",
+  "description": "検索語に一致する部分を結果内で強調する。",
+  "useCases": [
+    "文書名の検索結果",
+    "一覧内の一致箇所の確認"
+  ],
+  "cautions": [
+    "search-filterが結果を絞るのに対し、一つの結果内の一致部分を強調する。",
+    "一致は大文字小文字を区別し、最初の一致箇所のみ強調する。"
+  ],
+  "relatedIds": [
+    "search-filter"
+  ],
+  "demoId": "search-highlight",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "「青いノート」を表示し、入力された検索語の最初の一致部分をmark要素で強調してください。空欄と不一致を区別し、例を検索するボタンで「ノート」を入力してください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · mark",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/mark",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

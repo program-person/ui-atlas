@@ -1,0 +1,59 @@
+{
+  "id": "bubble-chart",
+  "nameJa": "バブルチャート",
+  "nameEn": "Bubble Chart",
+  "category": "部品",
+  "summary": "点の位置に2つの値、面積に3つ目の値を割り当てる。",
+  "description": "架空の道具の重さ・容量・記録数を位置と円の面積で表す。円の半径は記録数の平方根に比例させる。",
+  "aliases": [
+    "バブルチャート",
+    "bubble chart"
+  ],
+  "tags": [
+    "部品",
+    "3つの数値の比較",
+    "規模と相関の観察"
+  ],
+  "useCases": [
+    "3つの数値の比較",
+    "規模と相関の観察"
+  ],
+  "cautions": [
+    "円が重なると小さな値が隠れる。",
+    "面積が示す単位と縮尺を説明する。"
+  ],
+  "relatedIds": [
+    "scatter-plot",
+    "treemap"
+  ],
+  "demoId": "bubble-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "横軸を0〜100g、縦軸を0〜100点とするバブルチャートを作ってください。半径は記録数の平方根の3倍とし、円の面積が件数を表すと説明してください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

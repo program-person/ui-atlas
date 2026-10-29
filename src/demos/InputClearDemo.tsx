@@ -1,0 +1,3 @@
+import { useRef, useState } from 'react';
+import type { Settings } from '../types.ts';
+export function InputClearDemo({settings}:{settings:Settings}) {const [value,setValue]=useState(settings.initial==='sample'?'サンプル':'');const [message,setMessage]=useState('');const input=useRef<HTMLInputElement>(null);return <section className={`exinput-demo exinput-${settings.layout}`}><h1>入力のクリア</h1><label>入力<input ref={input} value={value} onChange={e=>{setValue(e.target.value);setMessage('');}}/></label><button aria-disabled={!value} onClick={()=>{if(!value)return;setValue('');setMessage('入力を消しました');input.current?.focus();}}>入力を消す</button><p role="status">{message}</p></section>;}

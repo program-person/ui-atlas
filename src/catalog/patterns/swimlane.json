@@ -1,0 +1,59 @@
+{
+  "id": "swimlane",
+  "nameJa": "担当範囲ごとの工程図",
+  "nameEn": "Swimlane Diagram",
+  "category": "レイアウト",
+  "summary": "工程の並びと、その担当範囲を同時に示す。",
+  "description": "受付・制作・確認という架空の担当範囲に工程を分ける。時間の長さではなく、処理を受け渡す順序を見る。",
+  "aliases": [
+    "担当範囲ごと工程図",
+    "swimlane diagram"
+  ],
+  "tags": [
+    "レイアウト",
+    "担当範囲の分担",
+    "工程の受け渡し"
+  ],
+  "useCases": [
+    "担当範囲の分担",
+    "工程の受け渡し"
+  ],
+  "cautions": [
+    "帯の長さを所要時間と誤解させない。",
+    "実際の担当者情報を使わない。"
+  ],
+  "relatedIds": [
+    "step-indicator",
+    "gantt-chart"
+  ],
+  "demoId": "swimlane",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "工程の向き",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "横",
+          "promptValue": "広い枠では工程を横に並べてください"
+        },
+        {
+          "value": "vertical",
+          "label": "縦",
+          "promptValue": "工程を縦に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "受付・制作・確認の3担当範囲と、内容を受ける・形を作る・内容を点検するという3工程を対応させてください。進めるbuttonで現在の工程を変え、工程番号と担当範囲を文字で示してください。幅が狭いときは横並びの設定でも縦へ並べてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "fluid-type",
+  "nameJa": "幅に応じて変わる文字サイズ",
+  "nameEn": "Fluid Typography",
+  "category": "見た目",
+  "summary": "文字の大きさを上下限の間で変える。",
+  "description": "CSSのclampとコンテナの幅を使い、狭い枠では小さく、広い枠では大きくする。固定サイズとの違いを比べる。",
+  "aliases": [
+    "幅に応じて変わる文字サイズ",
+    "fluid typography"
+  ],
+  "tags": [
+    "見た目",
+    "可変幅の見出し",
+    "極端な文字サイズを避ける"
+  ],
+  "useCases": [
+    "可変幅の見出し",
+    "極端な文字サイズを避ける"
+  ],
+  "cautions": [
+    "文字を小さくしすぎない。",
+    "ズームや折り返しでも全文を保つ。"
+  ],
+  "relatedIds": [
+    "typography-scale",
+    "container-query"
+  ],
+  "demoId": "fluid-type",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "サイズの決め方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "fluid",
+      "options": [
+        {
+          "value": "fluid",
+          "label": "可変",
+          "promptValue": "文字サイズをclamp(20px, 6cqi, 40px)にしてください"
+        },
+        {
+          "value": "fixed",
+          "label": "固定",
+          "promptValue": "文字サイズを28pxに固定してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "親をinline-sizeコンテナにして、見出しの固定サイズと幅に応じた可変サイズを比較してください。本文枠を220pxと480pxで切り替え、狭い画面では最大100%に収めてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · clamp()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

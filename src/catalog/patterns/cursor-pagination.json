@@ -1,0 +1,59 @@
+{
+  "id": "cursor-pagination",
+  "nameJa": "次の位置をたどるページ送り",
+  "nameEn": "Cursor Pagination",
+  "category": "UXの流れ",
+  "summary": "総ページ数を使わず、前後の位置から一覧を送る。",
+  "description": "固定の架空リストを不透明なカーソルで区切る。先頭や末尾では操作を無効にし、戻るための位置を履歴に保持する。",
+  "aliases": [
+    "次位置をたどるページ送り",
+    "cursor pagination"
+  ],
+  "tags": [
+    "UXの流れ",
+    "総数が不明な一覧",
+    "続きからの取得"
+  ],
+  "useCases": [
+    "総数が不明な一覧",
+    "続きからの取得"
+  ],
+  "cautions": [
+    "このデモは通信を行わず固定配列を使う。",
+    "ページ番号への直接移動は提供しない。"
+  ],
+  "relatedIds": [
+    "pagination",
+    "load-more"
+  ],
+  "demoId": "cursor-pagination",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "1回に見せる件数",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2件",
+          "promptValue": "1回2件ずつ表示してください"
+        },
+        {
+          "value": "3",
+          "label": "3件",
+          "promptValue": "1回3件ずつ表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "7件の架空メモを不透明なカーソルの対応表と履歴でページ送りしてください。次へと前へだけを設け、先頭と末尾は対応ボタンを無効にし、現在の項目名をstatusでも知らせてください。ページ総数は表示しないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

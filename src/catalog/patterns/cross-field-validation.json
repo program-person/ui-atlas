@@ -1,0 +1,59 @@
+{
+  "id": "cross-field-validation",
+  "nameJa": "入力欄どうしの整合性を確かめる",
+  "nameEn": "Cross Field Validation",
+  "category": "UXの流れ",
+  "summary": "別々の入力値をまとめて検証する。",
+  "description": "最小件数と最大件数を入力し、両方の値と大小関係を確認する。範囲が逆転しても自動で入れ替えず、修正する欄を示す。",
+  "aliases": [
+    "入力欄どうし整合性を確かめる",
+    "cross field validation"
+  ],
+  "tags": [
+    "UXの流れ",
+    "上下限の指定",
+    "相互に関係する入力"
+  ],
+  "useCases": [
+    "上下限の指定",
+    "相互に関係する入力"
+  ],
+  "cautions": [
+    "どちらの欄を直すか説明する。",
+    "空文字を0として扱わない。"
+  ],
+  "relatedIds": [
+    "inline-validation",
+    "date-range"
+  ],
+  "demoId": "cross-field-validation",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の範囲",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "valid",
+      "options": [
+        {
+          "value": "valid",
+          "label": "有効",
+          "promptValue": "最小2・最大8の範囲から始めてください"
+        },
+        {
+          "value": "invalid",
+          "label": "逆転",
+          "promptValue": "最小8・最大2の範囲から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "最小件数と最大件数は0〜100の整数とし、空欄・非整数・範囲外・最小が最大を超える場合を検出してください。同値は有効にしてください。両入力のエラー説明をaria-describedbyで関連付け、例を反転する操作を付けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Validating Input",
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

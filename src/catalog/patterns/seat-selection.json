@@ -1,0 +1,59 @@
+{
+  "id": "seat-selection",
+  "nameJa": "配置図から場所を選ぶ",
+  "nameEn": "Seat Selection",
+  "category": "部品",
+  "summary": "座標のある配置図で、利用できる場所を選ぶ。",
+  "description": "3行4列の架空の座席を表示する。予約済みは操作できない状態にし、選択中・空き・予約済みを文字でも示す。",
+  "aliases": [
+    "配置図から場所を選ぶ",
+    "seat selection"
+  ],
+  "tags": [
+    "部品",
+    "座席の選択",
+    "区画の選択"
+  ],
+  "useCases": [
+    "座席の選択",
+    "区画の選択"
+  ],
+  "cautions": [
+    "状態を色だけで伝えない。",
+    "予約の確定や外部通信は行わない。"
+  ],
+  "relatedIds": [
+    "checkbox-cards",
+    "calendar-grid"
+  ],
+  "demoId": "seat-selection",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "選択方法",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "single",
+      "options": [
+        {
+          "value": "single",
+          "label": "1席",
+          "promptValue": "同時に1席だけ選べるようにしてください"
+        },
+        {
+          "value": "multiple",
+          "label": "複数席",
+          "promptValue": "複数席を選択・解除できるようにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "A〜C行・1〜4列の12席をネイティブbuttonで表示してください。A2とB3は予約済みとし、選べない理由を文字で示してください。各ボタンは席番号と状態を読み上げ、選択時はaria-pressedと選択一覧を更新してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

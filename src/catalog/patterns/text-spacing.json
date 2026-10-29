@@ -1,0 +1,59 @@
+{
+  "id": "text-spacing",
+  "nameJa": "文字間隔を調整する",
+  "nameEn": "Letter Spacing",
+  "category": "見た目",
+  "summary": "文字の間隔と行間を変えて読み比べる。",
+  "description": "同じ文章に異なるletter-spacingとline-heightを適用する。余白を広げた際の折り返しと本文の高さを確認する。",
+  "aliases": [
+    "文字間隔を調整する",
+    "letter spacing"
+  ],
+  "tags": [
+    "見た目",
+    "本文の読みやすさの調整",
+    "日本語の字間の比較"
+  ],
+  "useCases": [
+    "本文の読みやすさの調整",
+    "日本語の字間の比較"
+  ],
+  "cautions": [
+    "広すぎる字間は単語のまとまりを弱める。",
+    "固定の高さで文字を切らない。"
+  ],
+  "relatedIds": [
+    "line-length",
+    "typography-scale"
+  ],
+  "demoId": "text-spacing",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "字間",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "標準",
+          "promptValue": "letter-spacingをnormalにしてください"
+        },
+        {
+          "value": "wide",
+          "label": "広め",
+          "promptValue": "letter-spacingを0.12emにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ日本語本文で標準と0.12emの文字間隔を比較してください。行間を1.6と2.2で切り替え、本文の高さは内容に合わせてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · letter-spacing",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/letter-spacing",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "slope-chart",
+  "nameJa": "スロープチャート",
+  "nameEn": "Slope Chart",
+  "category": "部品",
+  "summary": "2時点の順位や値の変化を傾きで示す。",
+  "description": "左に前回、右に今回の値を置き、同じ分類を線で結ぶ。途中の経過は補間せず、2時点の差を示す。",
+  "aliases": [
+    "スロープチャート",
+    "slope chart"
+  ],
+  "tags": [
+    "部品",
+    "2時点の推移",
+    "順位変動の比較"
+  ],
+  "useCases": [
+    "2時点の推移",
+    "順位変動の比較"
+  ],
+  "cautions": [
+    "途中の経過を表していると誤解させない。",
+    "線が交差するときは端のラベルで対応を示す。"
+  ],
+  "relatedIds": [
+    "line-chart",
+    "dumbbell-chart"
+  ],
+  "demoId": "slope-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "前回と今回を左右に置き、共通の0〜100点の縦軸で3分類を線で結んでください。線の両端へ分類名と値を付けてください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

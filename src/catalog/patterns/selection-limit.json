@@ -1,0 +1,77 @@
+{
+  "id": "selection-limit",
+  "nameJa": "選択数の上限",
+  "nameEn": "Selection Limit",
+  "aliases": [
+    "選択数の上限",
+    "selection-limit"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "選択できる項目数を制限し、残りを示す。",
+  "description": "選択数の上限を示し、上限を超える選択を防ぐ。複数選択に加えて、残りの枠数と上限時の扱いを確認する。",
+  "useCases": [
+    "比較対象の数を制限する選択",
+    "少数の候補を選ぶ投票"
+  ],
+  "cautions": [
+    "上限と現在の選択数を操作前から分かるようにする。",
+    "上限に達した理由と選択を解除できることを伝える。"
+  ],
+  "relatedIds": [
+    "multi-select",
+    "checkbox"
+  ],
+  "demoId": "selection-limit",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "上限",
+      "help": "上限を切り替えます。",
+      "default": "two",
+      "options": [
+        {
+          "value": "two",
+          "label": "2件",
+          "promptValue": "最大2件を選択"
+        },
+        {
+          "value": "three",
+          "label": "3件",
+          "promptValue": "最大3件を選択"
+        }
+      ]
+    },
+    {
+      "id": "limitBehavior",
+      "label": "上限時",
+      "help": "上限時を切り替えます。",
+      "default": "disable",
+      "options": [
+        {
+          "value": "disable",
+          "label": "未選択を無効化",
+          "promptValue": "上限時は未選択の項目を無効化"
+        },
+        {
+          "value": "message",
+          "label": "理由を表示",
+          "promptValue": "上限を超える操作に理由を表示"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}できるようにし、{{limitBehavior}}してください。現在の選択数と上限を表示してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

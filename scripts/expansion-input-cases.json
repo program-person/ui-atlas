@@ -1,0 +1,119 @@
+[
+  {
+    "id": "search-input",
+    "exportName": "SearchInputDemo",
+    "action": {
+      "role": "button",
+      "name": "検索する"
+    },
+    "expectedText": "検索結果：1件"
+  },
+  {
+    "id": "duration-input",
+    "exportName": "DurationInputDemo",
+    "action": {
+      "role": "button",
+      "name": "計算する"
+    },
+    "expectedText": "合計：90分"
+  },
+  {
+    "id": "character-counter",
+    "exportName": "CharacterCounterDemo",
+    "action": {
+      "role": "button",
+      "name": "例を入力"
+    },
+    "expectedText": "残り：17文字"
+  },
+  {
+    "id": "input-clear",
+    "exportName": "InputClearDemo",
+    "action": {
+      "role": "button",
+      "name": "入力を消す"
+    },
+    "expectedText": "入力を消しました"
+  },
+  {
+    "id": "search-highlight",
+    "exportName": "SearchHighlightDemo",
+    "action": {
+      "role": "button",
+      "name": "例を検索"
+    },
+    "expectedText": "1件一致"
+  },
+  {
+    "id": "tokenized-search",
+    "exportName": "TokenizedSearchDemo",
+    "action": {
+      "role": "button",
+      "name": "条件を追加"
+    },
+    "expectedText": "条件：青"
+  },
+  {
+    "id": "query-builder",
+    "exportName": "QueryBuilderDemo",
+    "action": {
+      "role": "button",
+      "name": "条件を適用"
+    },
+    "expectedText": "青いノート"
+  },
+  {
+    "id": "date-presets",
+    "exportName": "DatePresetsDemo",
+    "action": {
+      "role": "button",
+      "name": "今月"
+    },
+    "expectedText": "2026-10-01 ～ 2026-10-31"
+  },
+  {
+    "id": "unit-converter",
+    "exportName": "UnitConverterDemo",
+    "action": {
+      "role": "button",
+      "name": "換算する"
+    },
+    "expectedText": "100 cm"
+  },
+  {
+    "id": "input-suggestions",
+    "exportName": "InputSuggestionsDemo",
+    "action": {
+      "role": "button",
+      "name": "青いノート"
+    },
+    "expectedText": "選択：青いノート"
+  },
+  {
+    "id": "editable-table",
+    "exportName": "EditableTableDemo",
+    "action": {
+      "role": "button",
+      "name": "変更を確認"
+    },
+    "expectedText": "数量：2"
+  },
+  {
+    "id": "repeatable-fields",
+    "exportName": "RepeatableFieldsDemo",
+    "action": {
+      "role": "button",
+      "name": "行を追加"
+    },
+    "expectedText": "項目 2"
+  },
+  {
+    "id": "checkbox-cards",
+    "exportName": "CheckboxCardsDemo",
+    "action": {
+      "role": "checkbox",
+      "name": "青"
+    },
+    "expectedText": "選択中：青"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "id": "attachment-list",
+  "nameJa": "添付候補を一覧で確認する",
+  "nameEn": "Attachment List",
+  "category": "UXの流れ",
+  "summary": "候補の名前・形式・容量と、対象に含めるかを表示する。",
+  "description": "固定の架空サンプルだけを使い、添付候補を追加・解除する。実ファイルを選択せず、合計容量と上限を確認する。",
+  "aliases": [
+    "添付候補を一覧で確認する",
+    "attachment list"
+  ],
+  "tags": [
+    "UXの流れ",
+    "添付前の一覧確認",
+    "容量と件数の確認"
+  ],
+  "useCases": [
+    "添付前の一覧確認",
+    "容量と件数の確認"
+  ],
+  "cautions": [
+    "実ファイルや外部ストレージにはアクセスしない。",
+    "対象から外す操作と実ファイルの削除を区別する。"
+  ],
+  "relatedIds": [
+    "selection-summary",
+    "repeatable-fields"
+  ],
+  "demoId": "attachment-list",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "件数の上限",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2件",
+          "promptValue": "添付候補の上限を2件にしてください"
+        },
+        {
+          "value": "3",
+          "label": "3件",
+          "promptValue": "添付候補の上限を3件にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のdraft.txt 2KB・diagram.svg 8KB・notes.md 4KBだけを候補にしてください。サンプルを追加するボタンで順に候補を含め、各候補を対象から外せるようにしてください。上限または全サンプル追加時は追加操作を無効にし、件数と合計容量を表示してください。実ファイルや通信は扱わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

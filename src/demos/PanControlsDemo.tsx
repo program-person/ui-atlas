@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+
+export function PanControlsDemo({ settings }: { settings: Settings }) {
+const [position,setPosition]=useState({x:0,y:0});const step=Number(settings.mode);const move=(dx:number,dy:number)=>setPosition(current=>({x:Math.max(-80,Math.min(80,current.x+dx)),y:Math.max(-80,Math.min(80,current.y+dy))}));
+return <div className="growth2-demo"><h1>図を上下左右へ動かす</h1><div className="g2-actions"><button disabled={position.x<=-80} onClick={()=>move(-step,0)}>図を左へ</button><button disabled={position.x>=80} onClick={()=>move(step,0)}>図を右へ</button><button disabled={position.y<=-80} onClick={()=>move(0,-step)}>図を上へ</button><button disabled={position.y>=80} onClick={()=>move(0,step)}>図を下へ</button><button onClick={()=>setPosition({x:0,y:0})}>中央へ戻す</button></div><p role="status">横 {position.x}px / 縦 {position.y}px</p><div style={{position:'relative',width:240,height:240,maxWidth:'100%',overflow:'hidden',border:'1px solid #81998a'}}><svg viewBox="0 0 400 400" role="img" aria-label="中央に丸、四隅に四角を置いた配置図" style={{position:'absolute',width:400,height:400,maxWidth:'none',left:-80+position.x,top:-80+position.y}}><rect width="400" height="400" fill="#e4e9df"/>{[[20,20],[320,20],[20,320],[320,320]].map(([x,y])=><rect key={x+','+y} x={x} y={y} width="60" height="60" fill="#a24f31"/>)}<circle cx="200" cy="200" r="45" fill="#235b46"/></svg></div><p>座標は図を動かした距離です。</p></div>;
+}

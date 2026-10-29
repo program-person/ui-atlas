@@ -1,0 +1,59 @@
+{
+  "id": "autosize-textarea",
+  "nameJa": "文章量に合わせて伸びる入力欄",
+  "nameEn": "Autosizing Textarea",
+  "category": "部品",
+  "summary": "入力した行数に合わせて、高さを自動で変える。",
+  "description": "複数行の文章と幅の変化から必要な高さを計算する。上限を超えた分は欄内でスクロールし、短くすると高さも戻す。",
+  "aliases": [
+    "文章量に合わせて伸びる入力欄",
+    "autosizing textarea"
+  ],
+  "tags": [
+    "部品",
+    "長さが変わるメモ",
+    "入力中の全文確認"
+  ],
+  "useCases": [
+    "長さが変わるメモ",
+    "入力中の全文確認"
+  ],
+  "cautions": [
+    "伸びる高さに上限を設ける。",
+    "Enterで送信しない。"
+  ],
+  "relatedIds": [
+    "textarea",
+    "character-counter"
+  ],
+  "demoId": "autosize-textarea",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "高さの上限",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "160",
+      "options": [
+        {
+          "value": "160",
+          "label": "160px",
+          "promptValue": "自動の高さの上限を160pxにしてください"
+        },
+        {
+          "value": "240",
+          "label": "240px",
+          "promptValue": "自動の高さの上限を240pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "入力内容のscrollHeightを測って高さを変えるtextareaを作ってください。最小64px・指定した最大高さに収め、超過時は縦スクロールにしてください。入力が短くなったときも再計算し、親幅の変化をResizeObserverで検知してください。12行の架空例を入れるbuttonを設けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · textarea",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

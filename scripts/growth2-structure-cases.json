@@ -1,0 +1,122 @@
+[
+  {
+    "id": "table-transpose",
+    "component": "TableTransposeDemo",
+    "name": "表の行と列を入れ替える",
+    "action": "行列を入れ替える",
+    "expected": "道具を列",
+    "preview": [
+      "比べる方向に合わせて表の縦横を入れ替える。",
+      "表の行と列を入れ替える",
+      "道具を行 / 道具を列"
+    ]
+  },
+  {
+    "id": "grouped-table",
+    "component": "GroupedTableDemo",
+    "name": "分類別にまとまった表",
+    "action": "紙の内訳",
+    "expected": "紙の内訳を非表示",
+    "preview": [
+      "分類ごとに行をまとめ、内訳と小計を示す。",
+      "分類別にまとまった表",
+      "開く / 閉じる"
+    ]
+  },
+  {
+    "id": "pivot-table",
+    "component": "PivotTableDemo",
+    "name": "クロス集計表",
+    "action": "追加例を切り替える",
+    "expected": "元記録 5件",
+    "preview": [
+      "2つの分類を掛け合わせて集計する。",
+      "クロス集計表",
+      "数量の合計 / 記録の件数"
+    ]
+  },
+  {
+    "id": "multi-sort-table",
+    "component": "MultiSortTableDemo",
+    "name": "複数の条件で並べ替える表",
+    "action": "件数順を切り替える",
+    "expected": "件数 降順",
+    "preview": [
+      "第1条件が同じ行を第2条件で並べる。",
+      "複数の条件で並べ替える表",
+      "昇順 / 降順"
+    ]
+  },
+  {
+    "id": "responsive-table",
+    "component": "ResponsiveTableDemo",
+    "name": "狭い枠で表の表示を変える",
+    "action": "枠幅を切り替える",
+    "expected": "広い枠",
+    "preview": [
+      "横スクロールと項目ごとの縦表示を比較する。",
+      "狭い枠で表の表示を変える",
+      "横スクロール / 縦に表示"
+    ]
+  },
+  {
+    "id": "cross-field-validation",
+    "component": "CrossFieldValidationDemo",
+    "name": "入力欄どうしの整合性を確かめる",
+    "action": "範囲を反転する",
+    "expected": "最小は最大以下",
+    "preview": [
+      "別々の入力値をまとめて検証する。",
+      "入力欄どうしの整合性を確かめる",
+      "有効 / 逆転"
+    ]
+  },
+  {
+    "id": "month-input",
+    "component": "MonthInputDemo",
+    "name": "年月だけを入力する",
+    "action": "11月の例を入れる",
+    "expected": "選択：2026-11",
+    "preview": [
+      "日を含めず、年月を選ぶ。",
+      "年月だけを入力する",
+      "2026年全体 / 2026年秋"
+    ]
+  },
+  {
+    "id": "number-format",
+    "component": "NumberFormatDemo",
+    "name": "数値を表示用に整える",
+    "action": "比率の例を入れる",
+    "expected": "入力値：0.125",
+    "preview": [
+      "入力値を保ち、桁区切りや単位を表示へ付ける。",
+      "数値を表示用に整える",
+      "小数2桁まで / 百分率"
+    ]
+  },
+  {
+    "id": "paste-preview",
+    "component": "PastePreviewDemo",
+    "name": "取り込む前に表を確認する",
+    "action": "内容を確定する",
+    "expected": "2行を確定しました",
+    "preview": [
+      "区切られた文章を、確定前に行と列で確認する。",
+      "取り込む前に表を確認する",
+      "タブ / カンマ"
+    ]
+  },
+  {
+    "id": "toggle-button",
+    "component": "ToggleButtonDemo",
+    "name": "押した状態を保つボタン",
+    "action": "太字",
+    "expected": "太字：オン",
+    "preview": [
+      "ボタンを押すたびに状態を切り替える。",
+      "押した状態を保つボタン",
+      "標準 / 太字"
+    ]
+  }
+]

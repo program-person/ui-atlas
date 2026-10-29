@@ -1,0 +1,74 @@
+{
+  "id": "duration-input",
+  "nameJa": "時間量の入力",
+  "nameEn": "Duration Input",
+  "aliases": [
+    "時間量の入力"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "時間と分から所要時間を計算する。",
+  "description": "時間と分を入力し、合計分数を表示する。",
+  "useCases": [
+    "作業時間の入力",
+    "予定の所要時間の見積もり"
+  ],
+  "cautions": [
+    "time-inputが時刻を扱うのに対し、経過時間を扱う。",
+    "時間は0〜24、分は0〜59の整数とし、空欄や範囲外を拒否する。"
+  ],
+  "relatedIds": [
+    "time-input"
+  ],
+  "demoId": "duration-input",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "時間と分の数値欄を用意し、計算するボタンで合計分数を表示してください。時間は0〜24、分は0〜59の整数とし、空欄と範囲外はエラーにしてください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。 入力値を変更したら前の結果表示を消してください。",
+  "references": [
+    {
+      "title": "MDN · input type=number",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/number",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

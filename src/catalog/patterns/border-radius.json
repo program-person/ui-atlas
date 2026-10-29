@@ -1,0 +1,64 @@
+{
+  "id": "border-radius",
+  "nameJa": "角の丸みを使い分ける",
+  "nameEn": "Border Radius",
+  "category": "見た目",
+  "summary": "同じ部品の角を、用途に合わせて変える。",
+  "description": "直角・小さな丸み・大きな丸みを見比べる。枠の形と余白を分けて操作し、角だけで操作状態を伝えない。",
+  "aliases": [
+    "角丸みを使い分ける",
+    "border radius"
+  ],
+  "tags": [
+    "見た目",
+    "部品の形状比較",
+    "角丸の段階設計"
+  ],
+  "useCases": [
+    "部品の形状比較",
+    "角丸の段階設計"
+  ],
+  "cautions": [
+    "角丸だけで選択や押せる状態を示さない。",
+    "内側の余白を確保する。"
+  ],
+  "relatedIds": [
+    "elevation",
+    "spacing-scale"
+  ],
+  "demoId": "border-radius",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "角丸の大きさ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "0",
+      "options": [
+        {
+          "value": "0",
+          "label": "直角",
+          "promptValue": "角丸を0にしてください"
+        },
+        {
+          "value": "6",
+          "label": "6px",
+          "promptValue": "角丸を6pxにしてください"
+        },
+        {
+          "value": "20",
+          "label": "20px",
+          "promptValue": "角丸を20pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のメモの枠とボタンに同じborder-radiusを適用して形を比較してください。内側余白を12pxと24pxで切り替え、選択状態は文字で明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · border-radius",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/border-radius",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

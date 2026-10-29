@@ -1,0 +1,76 @@
+{
+  "id": "checkpoint-resume",
+  "nameJa": "途中から再開",
+  "nameEn": "Checkpoint Resume",
+  "aliases": [
+    "途中から再開",
+    "checkpoint-resume"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "作業の途中位置を一時的に記録し再開する。",
+  "description": "中断時に手順と必要な入力を記録し、後から再開する。このデモの記録はメモリ内に限り、画面を閉じると消える。",
+  "useCases": [
+    "長い入力作業の一時中断",
+    "段階的な設定作業の再開"
+  ],
+  "cautions": [
+    "保存対象と保存先を利用者に伝える。",
+    "実際の永続保存では期限と機密性を設計する。"
+  ],
+  "relatedIds": [
+    "autosave-feedback"
+  ],
+  "demoId": "checkpoint-resume",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "記録範囲",
+      "help": "記録範囲を切り替えます。",
+      "default": "step",
+      "options": [
+        {
+          "value": "step",
+          "label": "手順のみ",
+          "promptValue": "手順だけを記録"
+        },
+        {
+          "value": "content",
+          "label": "手順と内容",
+          "promptValue": "手順とメモを記録"
+        }
+      ]
+    },
+    {
+      "id": "resume",
+      "label": "再開位置",
+      "help": "再開位置を切り替えます。",
+      "default": "saved",
+      "options": [
+        {
+          "value": "saved",
+          "label": "記録した位置",
+          "promptValue": "記録した手順から再開"
+        },
+        {
+          "value": "start",
+          "label": "先頭",
+          "promptValue": "先頭の手順から再開"
+        }
+      ]
+    }
+  ],
+  "prompt": "中断時は{{mode}}し、{{resume}}してください。記録済みの状態を示してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://www.w3.org/WAI/tutorials/forms/multi-page/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

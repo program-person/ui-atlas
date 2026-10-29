@@ -1,0 +1,59 @@
+{
+  "id": "grouped-table",
+  "nameJa": "分類別にまとまった表",
+  "nameEn": "Grouped Table",
+  "category": "部品",
+  "summary": "分類ごとに行をまとめ、内訳と小計を示す。",
+  "description": "紙と筆記具の分類ごとにtbodyを分ける。見出しのボタンで内訳を開閉し、小計は閉じた状態でも残す。",
+  "aliases": [
+    "分類別にまとまった表",
+    "grouped table"
+  ],
+  "tags": [
+    "部品",
+    "分類ごとの小計",
+    "内訳の開閉"
+  ],
+  "useCases": [
+    "分類ごとの小計",
+    "内訳の開閉"
+  ],
+  "cautions": [
+    "閉じた内訳と小計を混同しない。",
+    "全体の合計と分類の合計を分けて示す。"
+  ],
+  "relatedIds": [
+    "grouped-list",
+    "table-footer"
+  ],
+  "demoId": "grouped-table",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の内訳",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "open",
+      "options": [
+        {
+          "value": "open",
+          "label": "開く",
+          "promptValue": "開始時はすべての内訳を開いてください"
+        },
+        {
+          "value": "closed",
+          "label": "閉じる",
+          "promptValue": "開始時はすべての内訳を閉じてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "紙のノート10・カード5件、筆記具の鉛筆8・ペン2件を分類別に表示してください。各分類を独立して開閉し、分類の小計15・10と全体25件を常に示してください。見出しボタンにaria-expandedを付けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

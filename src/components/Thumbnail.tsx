@@ -1,7 +1,11 @@
+import { Growth2Thumbnail } from './Growth2Thumbnail.tsx';
+import { ExpansionThumbnail } from './ExpansionThumbnail.tsx';
 import type { DemoId } from '../types.ts';
 
 export function Thumbnail({ id }: { id: DemoId }) {
   return <div className={`thumbnail thumbnail-${id}`} aria-hidden="true">
+    <Growth2Thumbnail id={id} />
+    <ExpansionThumbnail id={id} />
     {id === 'input-mask' && <div className="mini-workflow"><span>整理コード</span><b>123-456</b><span>6桁で入力完了</span></div>}
     {id === 'rating' && <div className="mini-workflow"><span>評価を選ぶ</span><b>1　2　3　4　5</b><span>未選択に戻せる</span></div>}
     {id === 'date-range' && <div className="mini-workflow"><span>開始日　→　終了日</span><b>2026-10-05〜12</b><span>期間を検証</span></div>}

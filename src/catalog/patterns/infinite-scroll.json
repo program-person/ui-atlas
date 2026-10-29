@@ -1,0 +1,59 @@
+{
+  "id": "infinite-scroll",
+  "nameJa": "末尾で次の項目を表示する",
+  "nameEn": "Infinite Scroll",
+  "category": "UXの流れ",
+  "summary": "一覧の末尾が見えたとき、続きの項目を増やす。",
+  "description": "枠内の末尾をIntersectionObserverで監視する。自動追加を止めたり、同じ操作をbuttonで行ったりできる有限のデモ。",
+  "aliases": [
+    "末尾で次項目を表示する",
+    "infinite scroll"
+  ],
+  "tags": [
+    "UXの流れ",
+    "連続して読む一覧",
+    "手動読み込みとの併用"
+  ],
+  "useCases": [
+    "連続して読む一覧",
+    "手動読み込みとの併用"
+  ],
+  "cautions": [
+    "必ず末尾と表示件数を示す。",
+    "自動追加だけを操作方法にしない。"
+  ],
+  "relatedIds": [
+    "load-more",
+    "virtual-list"
+  ],
+  "demoId": "infinite-scroll",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の追加方法",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "manual",
+      "options": [
+        {
+          "value": "manual",
+          "label": "手動",
+          "promptValue": "自動追加を止めて始めてください"
+        },
+        {
+          "value": "auto",
+          "label": "自動",
+          "promptValue": "末尾が見えると自動追加する状態で始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "12件の架空記録を最初4件・追加4件ずつ表示してください。220px高の一覧枠の末尾をIntersectionObserverで監視し、自動追加の有効・無効を切り替えられるようにしてください。手動追加buttonも残し、12件で末尾と示して追加を止めてください。外部通信は行わず、observerを解除してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · Intersection Observer",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

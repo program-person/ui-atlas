@@ -1,0 +1,74 @@
+{
+  "id": "editable-table",
+  "nameJa": "編集できる表",
+  "nameEn": "Editable Table",
+  "aliases": [
+    "編集できる表"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "表のセルを編集し変更内容を確認する。",
+  "description": "表の数量欄を編集し、現在の値を確認する。",
+  "useCases": [
+    "品目一覧の数量編集",
+    "表内の入力値の確認"
+  ],
+  "cautions": [
+    "data-tableと違い、表のセル内で数量を編集する。",
+    "数量は0以上の安全な整数に限る。変更はメモリ内だけで、外部に保存しない。"
+  ],
+  "relatedIds": [
+    "data-table"
+  ],
+  "demoId": "editable-table",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のノートを表に表示し、数量を表内の数値欄で編集できるようにしてください。変更を確認するボタンで値を表示し、空欄や0未満、小数、安全な整数を超える値なら入力を促してください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。 入力値を変更したら前の結果表示を消してください。",
+  "references": [
+    {
+      "title": "MDN · table",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/table",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

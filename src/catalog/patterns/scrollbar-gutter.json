@@ -1,0 +1,59 @@
+{
+  "id": "scrollbar-gutter",
+  "nameJa": "スクロールバーの場所を確保する",
+  "nameEn": "Scrollbar Gutter",
+  "category": "レイアウト",
+  "summary": "スクロールの有無で本文幅が変わるのを抑える。",
+  "description": "スクロールバー用の余白を常に取る設定を比較する。短い文章と長い文章を切り替え、利用できる本文幅を表示する。",
+  "aliases": [
+    "スクロールバー場所を確保する",
+    "scrollbar gutter"
+  ],
+  "tags": [
+    "レイアウト",
+    "一覧幅の安定",
+    "長短の切替時の位置ずれ抑制"
+  ],
+  "useCases": [
+    "一覧幅の安定",
+    "長短の切替時の位置ずれ抑制"
+  ],
+  "cautions": [
+    "オーバーレイ型スクロールバーでは差が出ない場合がある。",
+    "余白はスクロール機能の代わりにはならない。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "scroll-shadow"
+  ],
+  "demoId": "scrollbar-gutter",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "余白の確保",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "stable",
+      "options": [
+        {
+          "value": "stable",
+          "label": "常に確保",
+          "promptValue": "scrollbar-gutter: stableを指定してください"
+        },
+        {
+          "value": "auto",
+          "label": "自動",
+          "promptValue": "scrollbar-gutter: autoを指定してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "高さ160pxの本文枠へ短い文章と12行の文章を切り替えて表示してください。指定したscrollbar-gutterを適用し、ResizeObserverで本文枠のclientWidthを表示してください。環境によって差が出ない場合があると説明してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · scrollbar-gutter",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scrollbar-gutter",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

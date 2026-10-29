@@ -1,0 +1,12 @@
+.exinput-demo { padding: 1rem; display: flex; flex-direction: column; align-items: flex-start; gap: .75rem; background: #f5f7f5; color: #172d26; }
+.exinput-demo h1 { font-size: 1.25rem; margin: 0; }
+.exinput-demo label { display: flex; flex-direction: column; gap: .25rem; max-width: 100%; }
+.exinput-demo input, .exinput-demo textarea, .exinput-demo select { max-width: 100%; box-sizing: border-box; padding: .5rem; }
+.exinput-demo button { padding: .5rem .75rem; cursor: pointer; }
+.exinput-demo button:focus-visible, .exinput-demo input:focus-visible, .exinput-demo textarea:focus-visible, .exinput-demo select:focus-visible { outline: 3px solid #14644b; outline-offset: 2px; }
+.exinput-demo p { margin: 0; }
+.exinput-demo form, .exinput-demo fieldset { display: flex; flex-direction: column; align-items: flex-start; gap: .5rem; max-width: 100%; box-sizing: border-box; }
+.exinput-row form, .exinput-row fieldset { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.exinput-card { display: inline-flex !important; flex-direction: row !important; padding: .75rem; border: 1px solid #65766e; margin: .25rem; }
+.exinput-row { flex-direction: row; flex-wrap: wrap; align-items: center; }
+.exinput-row h1 { flex-basis: 100%; }

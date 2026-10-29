@@ -1,0 +1,59 @@
+{
+  "id": "radar-chart",
+  "nameJa": "レーダーチャート",
+  "nameEn": "Radar Chart",
+  "category": "部品",
+  "summary": "複数の評価軸を放射状に並べる。",
+  "description": "速さ・軽さ・容量・静かさの架空評価を4軸へ置く。各軸は中心が0、外側が5の共通尺度にする。",
+  "aliases": [
+    "レーダーチャート",
+    "radar chart"
+  ],
+  "tags": [
+    "部品",
+    "同じ尺度の多面評価",
+    "特徴の偏りを見る"
+  ],
+  "useCases": [
+    "同じ尺度の多面評価",
+    "特徴の偏りを見る"
+  ],
+  "cautions": [
+    "面積だけで総合評価を決めない。",
+    "軸の順序で形が変わるため比較時は固定する。"
+  ],
+  "relatedIds": [
+    "comparison-table",
+    "bar-chart"
+  ],
+  "demoId": "radar-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "4軸のレーダーチャートを、中心0・外側5点で表示してください。軸の順序を固定し、外周と中心を結ぶ補助線を付けてください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

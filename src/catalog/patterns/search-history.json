@@ -1,0 +1,76 @@
+{
+  "id": "search-history",
+  "nameJa": "検索履歴",
+  "nameEn": "Search History",
+  "aliases": [
+    "検索履歴",
+    "search-history"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "直前に検索した言葉を再利用する。",
+  "description": "検索した語を一時的な履歴に残し、選ぶと再検索する。検索条件そのものを保存する機能とは異なり、検索語を再利用する。",
+  "useCases": [
+    "繰り返し検索する資料一覧",
+    "最近調べた項目への再検索"
+  ],
+  "cautions": [
+    "履歴には入力した内容が残るため、保存範囲と消去方法を明示する。",
+    "空文字は記録せず、同じ語の重複を整理する。"
+  ],
+  "relatedIds": [
+    "search-filter"
+  ],
+  "demoId": "search-history",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "履歴数",
+      "help": "履歴数を切り替えます。",
+      "default": "three",
+      "options": [
+        {
+          "value": "three",
+          "label": "3件",
+          "promptValue": "直近3件を保持"
+        },
+        {
+          "value": "five",
+          "label": "5件",
+          "promptValue": "直近5件を保持"
+        }
+      ]
+    },
+    {
+      "id": "order",
+      "label": "並び",
+      "help": "並びを切り替えます。",
+      "default": "recent",
+      "options": [
+        {
+          "value": "recent",
+          "label": "新しい順",
+          "promptValue": "新しい検索語から表示"
+        },
+        {
+          "value": "oldest",
+          "label": "古い順",
+          "promptValue": "古い検索語から表示"
+        }
+      ]
+    }
+  ],
+  "prompt": "検索語の履歴は{{mode}}し、{{order}}してください。履歴の選択で再検索でき、履歴を消去できるようにしてください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://www.w3.org/WAI/tutorials/forms/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

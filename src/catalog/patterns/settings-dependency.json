@@ -1,0 +1,59 @@
+{
+  "id": "settings-dependency",
+  "nameJa": "関連する設定の有効・無効",
+  "nameEn": "Dependent Settings",
+  "category": "UXの流れ",
+  "summary": "前提となる設定に応じて、詳細設定を使えるようにする。",
+  "description": "通知を有効にしたときだけ間隔を変更できる。無効にしても選んだ値を保ち、再び有効にすると前の設定を表示する。",
+  "aliases": [
+    "関連する設定有効・無効",
+    "dependent settings"
+  ],
+  "tags": [
+    "UXの流れ",
+    "詳細設定の依存関係",
+    "無効状態の理由表示"
+  ],
+  "useCases": [
+    "詳細設定の依存関係",
+    "無効状態の理由表示"
+  ],
+  "cautions": [
+    "使えない理由を近くに書く。",
+    "無効にしても値を失わない。"
+  ],
+  "relatedIds": [
+    "conditional-fields",
+    "fieldset"
+  ],
+  "demoId": "settings-dependency",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "通知の初期状態",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "off",
+      "options": [
+        {
+          "value": "off",
+          "label": "無効",
+          "promptValue": "通知を無効にして始めてください"
+        },
+        {
+          "value": "on",
+          "label": "有効",
+          "promptValue": "通知を有効にして始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の通知設定と通知間隔のselectを作ってください。無効中はfieldsetのdisabledで詳細を操作不可にし、理由を文字で表示してください。10・30・60分の値は無効にしても保持し、有効に戻すと復元してください。実際の通知は出さないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · disabled",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/disabled",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

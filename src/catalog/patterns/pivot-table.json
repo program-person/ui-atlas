@@ -1,0 +1,59 @@
+{
+  "id": "pivot-table",
+  "nameJa": "クロス集計表",
+  "nameEn": "Pivot Table",
+  "category": "部品",
+  "summary": "2つの分類を掛け合わせて集計する。",
+  "description": "紙・筆記具と青・赤を行と列に分け、記録の件数または数量の合計を集計する。元の記録も併記する。",
+  "aliases": [
+    "クロス集計表",
+    "pivot table"
+  ],
+  "tags": [
+    "部品",
+    "分類と色のクロス集計",
+    "合計と件数の比較"
+  ],
+  "useCases": [
+    "分類と色のクロス集計",
+    "合計と件数の比較"
+  ],
+  "cautions": [
+    "記録件数と数量を混同しない。",
+    "該当なしは0として示す。"
+  ],
+  "relatedIds": [
+    "table-footer",
+    "grouped-table"
+  ],
+  "demoId": "pivot-table",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "集計する値",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "sum",
+      "options": [
+        {
+          "value": "sum",
+          "label": "数量の合計",
+          "promptValue": "数量を合計して集計してください"
+        },
+        {
+          "value": "count",
+          "label": "記録の件数",
+          "promptValue": "記録の件数を数えて集計してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "紙・青・2、紙・青・3、紙・赤・1、筆記具・赤・4の4記録を行列で集計してください。追加例で筆記具・青・5を含む状態と切り替えてください。分類別・色別と全体の合計を示し、元記録も残してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

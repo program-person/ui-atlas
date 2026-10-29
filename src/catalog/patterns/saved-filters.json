@@ -1,0 +1,77 @@
+{
+  "id": "saved-filters",
+  "nameJa": "条件の一時保存",
+  "nameEn": "Saved Filters",
+  "aliases": [
+    "条件の一時保存",
+    "saved-filters"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "絞り込み条件を保存して呼び戻す。",
+  "description": "選択した条件を一時的に保存し、解除後に再適用する。検索履歴とは異なり、複数の条件の組み合わせを呼び戻す。",
+  "useCases": [
+    "繰り返し使う一覧の絞り込み",
+    "作業別の条件セットの切り替え"
+  ],
+  "cautions": [
+    "保存対象の条件と適用時の置換・追加を明示する。",
+    "同じ名前や空の条件を保存する場合の扱いを決める。"
+  ],
+  "relatedIds": [
+    "filter-chips",
+    "search-filter"
+  ],
+  "demoId": "saved-filters",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "保存数",
+      "help": "保存数を切り替えます。",
+      "default": "one",
+      "options": [
+        {
+          "value": "one",
+          "label": "1件",
+          "promptValue": "直近1件の条件セットを保存"
+        },
+        {
+          "value": "two",
+          "label": "2件",
+          "promptValue": "直近2件の条件セットを保存"
+        }
+      ]
+    },
+    {
+      "id": "apply",
+      "label": "適用時",
+      "help": "適用時を切り替えます。",
+      "default": "replace",
+      "options": [
+        {
+          "value": "replace",
+          "label": "条件を置換",
+          "promptValue": "現在の条件を保存条件で置換"
+        },
+        {
+          "value": "merge",
+          "label": "条件を追加",
+          "promptValue": "現在の条件に保存条件を追加"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}できるようにし、適用時は{{apply}}してください。条件の解除と再適用を用意してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://www.w3.org/WAI/tutorials/forms/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "shortcut-hints",
+  "nameJa": "キー操作を画面に示す",
+  "nameEn": "Keyboard Shortcut Hints",
+  "category": "部品",
+  "summary": "実行できるキーと操作名を近くに表示する。",
+  "description": "デモ枠にフォーカスがある間だけ、Altと指定キーの組で架空の書式を切り替える。同じ操作をボタンでも使えるようにする。",
+  "aliases": [
+    "キー操作を画面に示す",
+    "keyboard shortcut hints"
+  ],
+  "tags": [
+    "部品",
+    "キー操作の発見",
+    "ボタンとショートカットの併用"
+  ],
+  "useCases": [
+    "キー操作の発見",
+    "ボタンとショートカットの併用"
+  ],
+  "cautions": [
+    "入力欄やIME変換中はショートカットを実行しない。",
+    "OSやブラウザの既存操作との競合を確認する。"
+  ],
+  "relatedIds": [
+    "toolbar",
+    "command-palette"
+  ],
+  "demoId": "shortcut-hints",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "切替キー",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "b",
+      "options": [
+        {
+          "value": "b",
+          "label": "Alt+B",
+          "promptValue": "枠内ではAlt+Bで書式を切り替えてください"
+        },
+        {
+          "value": "m",
+          "label": "Alt+M",
+          "promptValue": "枠内ではAlt+Mで書式を切り替えてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "フォーカス可能なデモ枠内だけでAltと指定キーを受け取り、書式の太字を切り替えてください。入力欄・textarea・contenteditable・IME変換中・キーリピートは除外してください。同じ操作をbuttonでも提供し、kbdでキー名を表示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · kbd",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/kbd",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

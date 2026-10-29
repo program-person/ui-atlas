@@ -1,0 +1,77 @@
+{
+  "id": "masonry-columns",
+  "nameJa": "高さの違うカードを詰める",
+  "nameEn": "Masonry columns",
+  "category": "レイアウト",
+  "summary": "高さの異なるカードを列の上から下へ詰めて並べる。",
+  "description": "CSSの段組みとbreak-insideを使い、カードを分割せずに配置する。通常のグリッドの行揃えや、文章を流す段組みとの違いを確認できる。",
+  "aliases": [
+    "高さの違うカードを詰める",
+    "Masonry columns"
+  ],
+  "tags": [
+    "レイアウト",
+    "masonry",
+    "columns"
+  ],
+  "useCases": [
+    "資料カードの一覧",
+    "長さが異なる観察メモ"
+  ],
+  "cautions": [
+    "列優先の読み順になるため、時系列を横方向に読ませる一覧には使わない。",
+    "実験的なCSS masonry構文は使用せず、標準の段組みを使う。"
+  ],
+  "relatedIds": [
+    "responsive-grid",
+    "multi-column"
+  ],
+  "demoId": "masonry-columns",
+  "controls": [
+    {
+      "id": "columns",
+      "label": "列の目安",
+      "help": "狭い枠では列数が減る。",
+      "default": "two",
+      "options": [
+        {
+          "value": "two",
+          "label": "2列・最小180px",
+          "promptValue": "列数の上限を2、列幅の目安を180pxにしてください"
+        },
+        {
+          "value": "three",
+          "label": "3列・最小140px",
+          "promptValue": "列数の上限を3、列幅の目安を140pxにしてください"
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "label": "列の間隔",
+      "help": "カード間に余白を残す。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "12px",
+          "promptValue": "列間隔を12pxにしてください"
+        },
+        {
+          "value": "wide",
+          "label": "24px",
+          "promptValue": "列間隔を24pxにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "高さの異なるカードを列に詰めるレイアウトを作ってください。{{columns}}。{{gap}}。順序付きリストの各カードをbreak-inside: avoidにし、メモを追加・解除するボタンと件数のstatusを付けてください。DOMの読み順を変えないでください。",
+  "references": [
+    {
+      "title": "MDN · columns",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/columns",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

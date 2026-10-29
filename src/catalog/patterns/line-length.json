@@ -1,0 +1,77 @@
+{
+  "id": "line-length",
+  "nameJa": "文章の一行の長さ",
+  "nameEn": "Reading measure",
+  "category": "見た目",
+  "summary": "本文の幅と行間を変えて読み進め方を比べる。",
+  "description": "文字サイズの階層ではなく、本文の一行の長さを比較する。chは数字の0の字幅に基づく単位で、日本語の文字数を直接表すものではない。",
+  "aliases": [
+    "文章の一行の長さ",
+    "Reading measure"
+  ],
+  "tags": [
+    "見た目",
+    "reading",
+    "measure"
+  ],
+  "useCases": [
+    "説明文の読み幅",
+    "記事本文の表示調整"
+  ],
+  "cautions": [
+    "適した長さは文章・フォント・画面によって変わる。",
+    "狭い画面では指定幅を上限として枠内に収める。"
+  ],
+  "relatedIds": [
+    "typography-scale",
+    "multi-column"
+  ],
+  "demoId": "line-length",
+  "controls": [
+    {
+      "id": "measure",
+      "label": "本文幅の上限",
+      "help": "chはフォントの0の字幅に基づく。",
+      "default": "short",
+      "options": [
+        {
+          "value": "short",
+          "label": "28ch",
+          "promptValue": "本文幅の上限を28chにしてください"
+        },
+        {
+          "value": "long",
+          "label": "52ch",
+          "promptValue": "本文幅の上限を52chにしてください"
+        }
+      ]
+    },
+    {
+      "id": "leading",
+      "label": "行間",
+      "help": "文字サイズに対する倍率。",
+      "default": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "1.5",
+          "promptValue": "本文のline-heightを1.5にしてください"
+        },
+        {
+          "value": "loose",
+          "label": "2",
+          "promptValue": "本文のline-heightを2にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "本文の一行の長さを比較するデモを作ってください。{{measure}}。{{leading}}。日本語と英語の固定サンプルをボタンで切り替え、langも合わせて変更してください。本文を省略せず、最大幅と行間による折り返しを確かめられるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · length",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/length",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

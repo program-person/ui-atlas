@@ -1,0 +1,74 @@
+{
+  "id": "repeatable-fields",
+  "nameJa": "繰り返し入力欄",
+  "nameEn": "Repeatable Fields",
+  "aliases": [
+    "繰り返し入力欄"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "入力行を追加し個別に取り除く。",
+  "description": "同じ種類の入力行を追加し、個別に外す。",
+  "useCases": [
+    "複数の道具の入力",
+    "項目数が決まっていないメモ"
+  ],
+  "cautions": [
+    "conditional-fieldsと違い、同じ入力行を追加して個別に外す。",
+    "行は1〜5件に制限し、削除後は隣の入力欄にフォーカスを戻す。"
+  ],
+  "relatedIds": [
+    "conditional-fields"
+  ],
+  "demoId": "repeatable-fields",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "項目の入力行を最大5行まで追加し、それぞれ外せるようにしてください。最後の1行は残し、削除後は次の行、なければ前の行にフォーカスを戻してください。上限では追加ボタンをaria-disabledにして動作させず、各削除ボタンの名前に行番号を含めてください。 {{initial}}。{{layout}}。",
+  "references": [
+    {
+      "title": "MDN · button",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

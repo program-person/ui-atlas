@@ -1,0 +1,77 @@
+{
+  "id": "navigation-rail",
+  "nameJa": "ナビゲーションレール",
+  "nameEn": "Navigation rail",
+  "category": "部品",
+  "summary": "少数の移動先を細い縦の列へ並べる。",
+  "description": "サイドバーの開閉を使わずに、主要な移動先を細い列で常時表示する。名前を隠す設定でも、ボタンの読み上げ名は維持する。",
+  "aliases": [
+    "ナビゲーションレール",
+    "Navigation rail"
+  ],
+  "tags": [
+    "部品",
+    "navigation",
+    "rail"
+  ],
+  "useCases": [
+    "作業画面の主要ナビゲーション",
+    "本文幅を確保したい道具の画面"
+  ],
+  "cautions": [
+    "番号だけでは意味が分からないため、実際の製品では内容を表す記号と名前を選ぶ。",
+    "表示名を隠す場合も読み上げ名とツールチップを用意する。"
+  ],
+  "relatedIds": [
+    "sidebar",
+    "bottom-navigation"
+  ],
+  "demoId": "navigation-rail",
+  "controls": [
+    {
+      "id": "side",
+      "label": "列の位置",
+      "help": "列の幅は68px。",
+      "default": "start",
+      "options": [
+        {
+          "value": "start",
+          "label": "左",
+          "promptValue": "移動先の列を左に置いてください"
+        },
+        {
+          "value": "end",
+          "label": "右",
+          "promptValue": "移動先の列を右に置いてください"
+        }
+      ]
+    },
+    {
+      "id": "labels",
+      "label": "名前の表示",
+      "help": "非表示時も読み上げ名は残す。",
+      "default": "visible",
+      "options": [
+        {
+          "value": "visible",
+          "label": "名前あり",
+          "promptValue": "各項目の名前を常に表示してください"
+        },
+        {
+          "value": "hidden",
+          "label": "名前を隠す",
+          "promptValue": "見た目の名前を隠してaria-labelとtitleに残してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "ナビゲーションレールを作ってください。{{side}}。{{labels}}。概要・記録・資料を選ぶとデモ内の画面名を切り替えてください。現在位置をaria-current=pageで示し、各項目は通常のTab順で操作できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · nav",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

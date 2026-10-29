@@ -1,0 +1,59 @@
+{
+  "id": "legend-toggle",
+  "nameJa": "凡例から系列を切り替える",
+  "nameEn": "Interactive Chart Legend",
+  "category": "部品",
+  "summary": "系列ごとに表示と非表示を選ぶ。",
+  "description": "2系列の折れ線をチェックボックスから個別に表示する。すべて非表示にした場合にも復帰する操作を残す。",
+  "aliases": [
+    "凡例から系列を切り替える",
+    "interactive chart legend"
+  ],
+  "tags": [
+    "部品",
+    "複数系列の比較",
+    "グラフの混雑を抑える"
+  ],
+  "useCases": [
+    "複数系列の比較",
+    "グラフの混雑を抑える"
+  ],
+  "cautions": [
+    "非表示とデータなしを区別する。",
+    "軸の範囲は表示系列にかかわらず固定する。"
+  ],
+  "relatedIds": [
+    "line-chart",
+    "checkbox"
+  ],
+  "demoId": "legend-toggle",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の系列",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "both",
+      "options": [
+        {
+          "value": "both",
+          "label": "両方",
+          "promptValue": "開始時はA・B両系列を表示してください"
+        },
+        {
+          "value": "a",
+          "label": "Aのみ",
+          "promptValue": "開始時はA系列だけを表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "Aを20・40・60、Bを60・30・50とする自作折れ線を表示してください。A・Bのチェックボックスで系列と数表の列を切り替え、全非表示時はその旨を示してください。0〜100点の縦軸は固定してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

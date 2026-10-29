@@ -1,0 +1,59 @@
+{
+  "id": "venn-diagram",
+  "nameJa": "集合の重なりを示す図",
+  "nameEn": "Venn Diagram",
+  "category": "部品",
+  "summary": "2つの集合の共通部分と全体を見比べる。",
+  "description": "Aは1〜5、Bは4〜9という固定集合を使う。共通部分と和集合を切り替え、図の塗りと結果の一覧を連動させる。",
+  "aliases": [
+    "集合重なりを示す図",
+    "venn diagram"
+  ],
+  "tags": [
+    "部品",
+    "集合の重なり",
+    "条件のANDとOR"
+  ],
+  "useCases": [
+    "集合の重なり",
+    "条件のANDとOR"
+  ],
+  "cautions": [
+    "円の大きさは件数の比率を表さない。",
+    "選択結果を文字でも列挙する。"
+  ],
+  "relatedIds": [
+    "query-builder",
+    "checkbox"
+  ],
+  "demoId": "venn-diagram",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の集合演算",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "intersection",
+      "options": [
+        {
+          "value": "intersection",
+          "label": "共通部分",
+          "promptValue": "AとBの共通部分を表示して始めてください"
+        },
+        {
+          "value": "union",
+          "label": "和集合",
+          "promptValue": "AとBの和集合を表示して始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "A={1,2,3,4,5}とB={4,5,6,7,8,9}のベン図を自作SVGで表示してください。集合を切り替えるbuttonで共通部分4・5と和集合1〜9を行き来し、塗りの領域と結果一覧を更新してください。円の面積は件数に比例しないと明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "input-suggestions",
+  "nameJa": "入力候補",
+  "nameEn": "Input Suggestions",
+  "aliases": [
+    "入力候補"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "候補を選んで入力欄に反映する。",
+  "description": "入力文字に合う候補をボタンで選び、欄へ反映する。",
+  "useCases": [
+    "定型項目の入力補助",
+    "候補からの名称選択"
+  ],
+  "cautions": [
+    "comboboxと違い、候補をボタンの一覧として表示する。",
+    "候補は部分一致で絞り、手入力中と候補選択後を区別する。"
+  ],
+  "relatedIds": [
+    "combobox"
+  ],
+  "demoId": "input-suggestions",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "青いノートと赤いペンの候補を入力文字の部分一致で絞り、候補ボタンを押すと欄に反映してください。選択後だけ選択結果を表示し、再入力時に表示を消してください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · button",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

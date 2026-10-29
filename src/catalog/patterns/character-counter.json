@@ -1,0 +1,74 @@
+{
+  "id": "character-counter",
+  "nameJa": "文字数カウンター",
+  "nameEn": "Character Counter",
+  "aliases": [
+    "文字数カウンター"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "入力した文字数と残りを表示する。",
+  "description": "文字数を数え、20文字までの残りを表示する。",
+  "useCases": [
+    "短いメモの文字数確認",
+    "見出しの長さ確認"
+  ],
+  "cautions": [
+    "inline-validationと違い、入力中に文字数を常時表示する。",
+    "Unicodeコードポイント単位で数え、結合文字や絵文字の見た目の文字数とは異なる。"
+  ],
+  "relatedIds": [
+    "inline-validation"
+  ],
+  "demoId": "character-counter",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "文章のUnicodeコードポイント数を数え、20文字までの残りを表示してください。20を超えたら超過を表示し、入力自体は妨げないでください。例を入力するボタンで「青い空」を入れてください。 {{initial}}。{{layout}}。架空のデータだけを使い、キーボードでも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "MDN · textarea",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

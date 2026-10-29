@@ -1,0 +1,59 @@
+{
+  "id": "time-slot-picker",
+  "nameJa": "空いている時間帯を選ぶ",
+  "nameEn": "Time Slot Picker",
+  "category": "部品",
+  "summary": "候補から利用可能な時間帯を選ぶ。",
+  "description": "固定の時刻候補に空きと利用不可を表示する。候補の刻みを変え、選択した開始時刻と終了時刻を表示する。",
+  "aliases": [
+    "空いている時間帯を選ぶ",
+    "time slot picker"
+  ],
+  "tags": [
+    "部品",
+    "時間帯の選択",
+    "予約候補の確認"
+  ],
+  "useCases": [
+    "時間帯の選択",
+    "予約候補の確認"
+  ],
+  "cautions": [
+    "時刻だけで日付やタイムゾーンを推測させない。",
+    "このデモは架空の2026年10月29日・日本時間で固定する。"
+  ],
+  "relatedIds": [
+    "time-input",
+    "date-picker"
+  ],
+  "demoId": "time-slot-picker",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "時間帯の長さ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "30",
+      "options": [
+        {
+          "value": "30",
+          "label": "30分",
+          "promptValue": "30分ごとの時間帯を表示してください"
+        },
+        {
+          "value": "60",
+          "label": "60分",
+          "promptValue": "60分ごとの時間帯を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の2026年10月29日・日本時間の09:00〜12:00を候補にしてください。10:00開始の時間帯は利用不可とし、選択した時間帯の開始と終了を文字で表示してください。実際の予約処理は追加しないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

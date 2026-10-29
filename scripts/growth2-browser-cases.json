@@ -1,0 +1,122 @@
+[
+  {
+    "id": "floating-label",
+    "component": "FloatingLabelDemo",
+    "name": "入力後も残る浮動ラベル",
+    "action": "例を入れる",
+    "expected": "入力済み：架空のメモ",
+    "preview": [
+      "入力欄のラベルを、入力後は小さく上へ移す。",
+      "入力後も残る浮動ラベル",
+      "空欄 / 例あり"
+    ]
+  },
+  {
+    "id": "autosize-textarea",
+    "component": "AutosizeTextareaDemo",
+    "name": "文章量に合わせて伸びる入力欄",
+    "action": "長い例を入れる",
+    "expected": "行数 12",
+    "preview": [
+      "入力した行数に合わせて、高さを自動で変える。",
+      "文章量に合わせて伸びる入力欄",
+      "160px / 240px"
+    ]
+  },
+  {
+    "id": "card-list-toggle",
+    "component": "CardListToggleDemo",
+    "name": "カードとリストを切り替える",
+    "action": "表示形式を切り替える",
+    "expected": "形式：リスト",
+    "preview": [
+      "同じ項目を一覧性と詳細の読みやすさで並べ替える。",
+      "カードとリストを切り替える",
+      "カード / リスト"
+    ]
+  },
+  {
+    "id": "virtual-list",
+    "component": "VirtualListDemo",
+    "name": "見えている範囲だけ描く一覧",
+    "action": "一覧の末尾へ",
+    "expected": "末尾の記録を表示中",
+    "preview": [
+      "大量の行のうち、表示範囲とその前後だけを描く。",
+      "見えている範囲だけ描く一覧",
+      "100件 / 500件"
+    ]
+  },
+  {
+    "id": "infinite-scroll",
+    "component": "InfiniteScrollDemo",
+    "name": "末尾で次の項目を表示する",
+    "action": "次の4件を表示",
+    "expected": "表示 8 / 12件",
+    "preview": [
+      "一覧の末尾が見えたとき、続きの項目を増やす。",
+      "末尾で次の項目を表示する",
+      "手動 / 自動"
+    ]
+  },
+  {
+    "id": "scrollbar-gutter",
+    "component": "ScrollbarGutterDemo",
+    "name": "スクロールバーの場所を確保する",
+    "action": "文章量を切り替える",
+    "expected": "長い文章",
+    "preview": [
+      "スクロールの有無で本文幅が変わるのを抑える。",
+      "スクロールバーの場所を確保する",
+      "常に確保 / 自動"
+    ]
+  },
+  {
+    "id": "overscroll-containment",
+    "component": "OverscrollContainmentDemo",
+    "name": "スクロールを枠の中に留める",
+    "action": "内側の末尾へ",
+    "expected": "内側は末尾",
+    "preview": [
+      "内側の末尾で、外側までスクロールが伝わるかを変える。",
+      "スクロールを枠の中に留める",
+      "枠内に留める / 外側へ伝える"
+    ]
+  },
+  {
+    "id": "relative-time",
+    "component": "RelativeTimeDemo",
+    "name": "相対時刻と日時を切り替える",
+    "action": "記録を5分進める",
+    "expected": "12:05",
+    "preview": [
+      "何分前という表示と、正確な日時を使い分ける。",
+      "相対時刻と日時を切り替える",
+      "何分前 / 正確な日時"
+    ]
+  },
+  {
+    "id": "responsive-image",
+    "component": "ResponsiveImageDemo",
+    "name": "幅に応じて画像を選ぶ",
+    "action": "図の色を切り替える",
+    "expected": "図の色：赤系",
+    "preview": [
+      "画面幅に合わせて別の図を読み込む。",
+      "幅に応じて画像を選ぶ",
+      "幅で切替 / 横長に固定"
+    ]
+  },
+  {
+    "id": "easing-curves",
+    "component": "EasingCurvesDemo",
+    "name": "動きの速さの変化を比べる",
+    "action": "位置を切り替える",
+    "expected": "位置：右端",
+    "preview": [
+      "同じ距離と時間で、途中の速さだけを変える。",
+      "動きの速さの変化を比べる",
+      "一定 / 最後に減速"
+    ]
+  }
+]

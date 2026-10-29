@@ -1,0 +1,122 @@
+[
+  {
+    "id": "lollipop-chart",
+    "component": "LollipopChartDemo",
+    "name": "ロリポップチャート",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "棒の先端を点で示し、分類ごとの値を比較する。",
+      "ロリポップチャート",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "diverging-bar",
+    "component": "DivergingBarDemo",
+    "name": "左右に分かれる棒グラフ",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "増減を0の左右へ分けて表示する。",
+      "左右に分かれる棒グラフ",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "dumbbell-chart",
+    "component": "DumbbellChartDemo",
+    "name": "ダンベルチャート",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "同じ分類の2時点を点と線で比較する。",
+      "ダンベルチャート",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "slope-chart",
+    "component": "SlopeChartDemo",
+    "name": "スロープチャート",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "2時点の順位や値の変化を傾きで示す。",
+      "スロープチャート",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "radar-chart",
+    "component": "RadarChartDemo",
+    "name": "レーダーチャート",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "複数の評価軸を放射状に並べる。",
+      "レーダーチャート",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "box-plot",
+    "component": "BoxPlotDemo",
+    "name": "箱ひげ図",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "中央値・四分位数・範囲をまとめて示す。",
+      "箱ひげ図",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "bubble-chart",
+    "component": "BubbleChartDemo",
+    "name": "バブルチャート",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "点の位置に2つの値、面積に3つ目の値を割り当てる。",
+      "バブルチャート",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "gantt-chart",
+    "component": "GanttChartDemo",
+    "name": "ガントチャート",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "作業の開始日と終了日を横の帯で示す。",
+      "ガントチャート",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "range-band",
+    "component": "RangeBandDemo",
+    "name": "範囲帯付きの折れ線",
+    "action": "例を切り替える",
+    "expected": "別の例",
+    "preview": [
+      "代表値と、その上下の範囲を一緒に表示する。",
+      "範囲帯付きの折れ線",
+      "標準の値 / 別の値"
+    ]
+  },
+  {
+    "id": "legend-toggle",
+    "component": "LegendToggleDemo",
+    "name": "凡例から系列を切り替える",
+    "action": "Bを表示",
+    "expected": "表示中：A",
+    "preview": [
+      "系列ごとに表示と非表示を選ぶ。",
+      "凡例から系列を切り替える",
+      "両方 / Aのみ"
+    ]
+  }
+]

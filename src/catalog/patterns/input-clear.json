@@ -1,0 +1,74 @@
+{
+  "id": "input-clear",
+  "nameJa": "入力のクリア",
+  "nameEn": "Input Clear",
+  "aliases": [
+    "入力のクリア"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "入力欄をボタンで空にする。",
+  "description": "ボタンで入力欄を空にし、結果を知らせる。",
+  "useCases": [
+    "検索欄の再入力",
+    "下書き欄の内容を消す操作"
+  ],
+  "cautions": [
+    "input-maskと違い、書式の整形ではなく入力全体の消去を扱う。",
+    "空欄ではクリアを実行せず、消去後は入力欄にフォーカスを戻す。"
+  ],
+  "relatedIds": [
+    "input-mask"
+  ],
+  "demoId": "input-clear",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "入力欄と入力を消すボタンを用意し、押したら欄を空にして完了を表示し、入力欄にフォーカスを戻してください。空欄のときはaria-disabledで無効状態を示し、操作しても何も変えないでください。再入力時は完了表示を消してください。 {{initial}}。{{layout}}。",
+  "references": [
+    {
+      "title": "MDN · button",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

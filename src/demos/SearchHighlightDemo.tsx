@@ -1,0 +1,4 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+function Content({ settings }: { settings: Settings }) { const [query,setQuery]=useState(settings.initial==='sample'?'ノート':''); const word='青いノート'; const index=query?word.indexOf(query):-1; return <><label>検索語<input value={query} onChange={e=>setQuery(e.target.value)}/></label><button onClick={()=>setQuery('ノート')}>例を検索</button><p>{index>=0?<>{word.slice(0,index)}<mark>{word.slice(index,index+query.length)}</mark>{word.slice(index+query.length)}</>:word}</p><p role="status">{query?(index>=0?'1件一致':'一致なし'):'検索語を入力'}</p></>; }
+export function SearchHighlightDemo({ settings }: { settings: Settings }) { return <section className={`exinput-demo exinput-${settings.layout}`}><h1>検索語の強調</h1><Content settings={settings}/></section>; }

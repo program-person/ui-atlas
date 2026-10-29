@@ -1,0 +1,74 @@
+{
+  "id": "search-input",
+  "nameJa": "検索入力",
+  "nameEn": "Search Input",
+  "aliases": [
+    "検索入力"
+  ],
+  "tags": [
+    "入力",
+    "操作"
+  ],
+  "category": "部品",
+  "summary": "検索語を明示的に送信する。",
+  "description": "検索語を確定して架空の道具を検索し、件数と一覧を表示する。",
+  "useCases": [
+    "一覧のキーワード検索",
+    "資料名を指定する検索"
+  ],
+  "cautions": [
+    "search-filterは入力中に絞り込むが、こちらはボタンかEnterで確定して検索する。",
+    "空白だけの検索語は受け付けず、0件も表示する。"
+  ],
+  "relatedIds": [
+    "search-filter"
+  ],
+  "demoId": "search-input",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "開始時の値。",
+      "default": "sample",
+      "options": [
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "初期値に例を表示してください"
+        },
+        {
+          "value": "empty",
+          "label": "例なし",
+          "promptValue": "初期値を空にしてください"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "配置",
+      "help": "入力の並べ方。",
+      "default": "stack",
+      "options": [
+        {
+          "value": "stack",
+          "label": "縦",
+          "promptValue": "操作を縦に並べてください"
+        },
+        {
+          "value": "row",
+          "label": "横",
+          "promptValue": "操作を可能な範囲で横に並べてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "検索欄と検索ボタンをformに置き、クリックまたはEnterで確定してください。架空の青いノート・赤いペン・青いペンから部分一致で探し、件数と一覧を表示してください。空欄や空白のみは入力を促し、一致なしは0件と表示してください。 {{initial}}。{{layout}}。",
+  "references": [
+    {
+      "title": "MDN · HTML input",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/search",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

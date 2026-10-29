@@ -1,0 +1,59 @@
+{
+  "id": "color-mix",
+  "nameJa": "基準色から中間色を作る",
+  "nameEn": "Color Mix",
+  "category": "見た目",
+  "summary": "基準色と白を混ぜ、段階的な色を作る。",
+  "description": "CSSのcolor-mixで2色を混ぜる。混ぜる割合と色空間を切り替え、塗りの色とCSSの値を並べる。",
+  "aliases": [
+    "基準色から中間色を作る",
+    "color mix"
+  ],
+  "tags": [
+    "見た目",
+    "配色の段階を作る",
+    "色空間の比較"
+  ],
+  "useCases": [
+    "配色の段階を作る",
+    "色空間の比較"
+  ],
+  "cautions": [
+    "中間色でも文字とのコントラストを確認する。",
+    "色の見え方は環境によって異なる。"
+  ],
+  "relatedIds": [
+    "color-picker",
+    "contrast-checker"
+  ],
+  "demoId": "color-mix",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "色空間",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "srgb",
+      "options": [
+        {
+          "value": "srgb",
+          "label": "sRGB",
+          "promptValue": "sRGB色空間で混ぜてください"
+        },
+        {
+          "value": "oklab",
+          "label": "Oklab",
+          "promptValue": "Oklab色空間で混ぜてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "基準色#235b46と白をcolor-mixで混ぜてください。基準色の割合を25%と75%に切り替え、色見本と現在のCSS値を表示してください。色見本には文字を重ねないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · color-mix()",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

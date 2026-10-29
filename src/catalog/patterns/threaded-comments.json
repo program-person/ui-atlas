@@ -1,0 +1,59 @@
+{
+  "id": "threaded-comments",
+  "nameJa": "返信を階層で読む",
+  "nameEn": "Threaded Comments",
+  "category": "部品",
+  "summary": "返信先との関係を、段差とまとまりで示す。",
+  "description": "架空のコメントと2件の返信を入れ子のリストにする。返信の開閉と深さの表現を比較し、本文は読み順を保つ。",
+  "aliases": [
+    "返信を階層で読む",
+    "threaded comments"
+  ],
+  "tags": [
+    "部品",
+    "コメントの返信",
+    "議論のまとまり"
+  ],
+  "useCases": [
+    "コメントの返信",
+    "議論のまとまり"
+  ],
+  "cautions": [
+    "深い階層で本文幅を狭めすぎない。",
+    "表示名や実際の投稿を収集しない。"
+  ],
+  "relatedIds": [
+    "tree-view",
+    "activity-feed"
+  ],
+  "demoId": "threaded-comments",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "階層の見せ方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "indent",
+      "options": [
+        {
+          "value": "indent",
+          "label": "段差あり",
+          "promptValue": "返信を開始側へ16px字下げしてください"
+        },
+        {
+          "value": "flat",
+          "label": "段差なし",
+          "promptValue": "返信は字下げせず返信先を文字で示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のコメント1と返信1・返信2を入れ子のulで表してください。返信2件というbuttonで返信を開閉し、aria-expandedとaria-controlsを付けてください。返信先を文字でも示し、実際の投稿や個人情報は使わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Disclosure",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

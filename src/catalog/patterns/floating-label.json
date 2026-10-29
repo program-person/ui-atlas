@@ -1,0 +1,59 @@
+{
+  "id": "floating-label",
+  "nameJa": "入力後も残る浮動ラベル",
+  "nameEn": "Floating Label",
+  "category": "部品",
+  "summary": "入力欄のラベルを、入力後は小さく上へ移す。",
+  "description": "プレースホルダーだけに頼らず、入力中も項目名を残す。空欄・フォーカス・入力済みの3つの状態を比較する。",
+  "aliases": [
+    "入力後も残る浮動ラベル",
+    "floating label"
+  ],
+  "tags": [
+    "部品",
+    "入力欄の項目名表示",
+    "入力中の文脈保持"
+  ],
+  "useCases": [
+    "入力欄の項目名表示",
+    "入力中の文脈保持"
+  ],
+  "cautions": [
+    "ラベルと値を重ねない。",
+    "項目名をプレースホルダーだけにしない。"
+  ],
+  "relatedIds": [
+    "input-adornment",
+    "inline-validation"
+  ],
+  "demoId": "floating-label",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の内容",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "empty",
+      "options": [
+        {
+          "value": "empty",
+          "label": "空欄",
+          "promptValue": "空欄から始めてください"
+        },
+        {
+          "value": "sample",
+          "label": "例あり",
+          "promptValue": "架空のメモという値を入れて始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のメモ用の入力に、forとidで結び付けたlabelを置いてください。空欄では欄内の位置、フォーカス中または入力済みでは上側の小さい位置にラベルを表示し、値と重ならない余白を確保してください。ラベルの移動は即時とし、例を入れるbuttonを付けてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · :placeholder-shown",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

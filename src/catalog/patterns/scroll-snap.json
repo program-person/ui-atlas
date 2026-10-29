@@ -1,0 +1,78 @@
+{
+  "id": "scroll-snap",
+  "nameJa": "区切りに収まるスクロール",
+  "nameEn": "CSS scroll snap",
+  "category": "動き",
+  "summary": "手動スクロールの停止位置をカードの区切りへ寄せる。",
+  "description": "CSSのscroll-snap-typeとscroll-snap-alignで停止位置を調整する。カルーセルの自動再生やスライド置き換えを使わず、実際のスクロールを保つ。",
+  "aliases": [
+    "区切りに収まるスクロール",
+    "CSS scroll snap"
+  ],
+  "tags": [
+    "動き",
+    "css",
+    "scroll",
+    "snap"
+  ],
+  "useCases": [
+    "横方向の資料閲覧",
+    "画面の一部を見せるカード列"
+  ],
+  "cautions": [
+    "スクロール領域があることを隠さず、キーボードでも操作可能にする。",
+    "強制停止は長い内容の途中を読めなくしないか確認する。"
+  ],
+  "relatedIds": [
+    "carousel",
+    "thumbnail-gallery"
+  ],
+  "demoId": "scroll-snap",
+  "controls": [
+    {
+      "id": "strength",
+      "label": "停止の強さ",
+      "help": "止まり方はブラウザの操作に依存する。",
+      "default": "mandatory",
+      "options": [
+        {
+          "value": "mandatory",
+          "label": "必ず寄せる",
+          "promptValue": "横方向のscroll-snap-typeをmandatoryにしてください"
+        },
+        {
+          "value": "proximity",
+          "label": "近いときだけ",
+          "promptValue": "横方向のscroll-snap-typeをproximityにしてください"
+        }
+      ]
+    },
+    {
+      "id": "align",
+      "label": "停止位置",
+      "help": "カードを揃える位置。",
+      "default": "start",
+      "options": [
+        {
+          "value": "start",
+          "label": "先頭",
+          "promptValue": "scroll-snap-alignをstartにしてください"
+        },
+        {
+          "value": "center",
+          "label": "中央",
+          "promptValue": "scroll-snap-alignをcenterにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "区切りで停止するスクロール領域を作ってください。{{strength}}。{{align}}。3枚の資料を横スクロール領域に置き、Tabで領域へ入り矢印キーでスクロールできるようにしてください。2枚目へ移動するボタンと位置の表示を付け、自動再生は行わないでください。",
+  "references": [
+    {
+      "title": "MDN · Scroll snap",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll_snap",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

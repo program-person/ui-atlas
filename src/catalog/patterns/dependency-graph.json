@@ -1,0 +1,59 @@
+{
+  "id": "dependency-graph",
+  "nameJa": "前提を持つ作業の図",
+  "nameEn": "Dependency Graph",
+  "category": "部品",
+  "summary": "先に終える必要がある作業を線で結ぶ。",
+  "description": "調査・文章・図・確認の前提関係を表示する。前提が完了していない作業は実行できない状態にする。",
+  "aliases": [
+    "前提を持つ作業図",
+    "dependency graph"
+  ],
+  "tags": [
+    "部品",
+    "作業の前提関係",
+    "並行できる作業の確認"
+  ],
+  "useCases": [
+    "作業の前提関係",
+    "並行できる作業の確認"
+  ],
+  "cautions": [
+    "線の方向を文章でも説明する。",
+    "依存が輪になるケースはこのデモでは扱わない。"
+  ],
+  "relatedIds": [
+    "dependent-steps",
+    "gantt-chart"
+  ],
+  "demoId": "dependency-graph",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "前提の組み方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "parallel",
+      "options": [
+        {
+          "value": "parallel",
+          "label": "並行",
+          "promptValue": "調査の後に文章と図を並行し、両方の後に確認してください"
+        },
+        {
+          "value": "chain",
+          "label": "順番",
+          "promptValue": "調査・文章・図・確認の順に前提をつないでください"
+        }
+      ]
+    }
+  ],
+  "prompt": "調査・文章・図・確認の作業を自作SVGとbuttonで表示してください。前提の配列から線と実行可否を求め、完了した作業は再実行せず、現在実行できる作業を文字でも示してください。実際の作業や外部通信は行わないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

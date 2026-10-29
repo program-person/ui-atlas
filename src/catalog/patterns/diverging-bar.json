@@ -1,0 +1,59 @@
+{
+  "id": "diverging-bar",
+  "nameJa": "左右に分かれる棒グラフ",
+  "nameEn": "Diverging Bar Chart",
+  "category": "部品",
+  "summary": "増減を0の左右へ分けて表示する。",
+  "description": "正の値と負の値を同じ基準線から反対方向へ伸ばす。値の符号と大きさを分けて読めるようにする。",
+  "aliases": [
+    "左右に分かれる棒グラフ",
+    "diverging bar chart"
+  ],
+  "tags": [
+    "部品",
+    "前回との差",
+    "収支の増減"
+  ],
+  "useCases": [
+    "前回との差",
+    "収支の増減"
+  ],
+  "cautions": [
+    "0の位置と正負の方向を明示する。",
+    "色だけで符号を伝えない。"
+  ],
+  "relatedIds": [
+    "bar-chart",
+    "waterfall-chart"
+  ],
+  "demoId": "diverging-bar",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "−40〜+40件の横軸を使い、0を中心に増減を左右へ伸ばしてください。正負を文字でも表示してください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

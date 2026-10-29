@@ -1,0 +1,59 @@
+{
+  "id": "network-graph",
+  "nameJa": "つながりのネットワーク図",
+  "nameEn": "Network Graph",
+  "category": "部品",
+  "summary": "複数の項目どうしの接続を図で見る。",
+  "description": "A〜Dの架空の項目を点と線で結ぶ。選んだ項目に直接つながる相手を、図と一覧で示す。",
+  "aliases": [
+    "つながりネットワーク図",
+    "network graph"
+  ],
+  "tags": [
+    "部品",
+    "項目間の関係",
+    "直接の接続先の確認"
+  ],
+  "useCases": [
+    "項目間の関係",
+    "直接の接続先の確認"
+  ],
+  "cautions": [
+    "線の有無と方向の意味を説明する。",
+    "このデモは方向を持たない接続を扱う。"
+  ],
+  "relatedIds": [
+    "tree-view",
+    "scatter-plot"
+  ],
+  "demoId": "network-graph",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "接続の構造",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "ring",
+      "options": [
+        {
+          "value": "ring",
+          "label": "輪",
+          "promptValue": "A-B-C-D-Aの輪につないでください"
+        },
+        {
+          "value": "star",
+          "label": "中心から枝",
+          "promptValue": "Aを中心にB・C・Dへつないでください"
+        }
+      ]
+    }
+  ],
+  "prompt": "A〜Dの4点からなる方向を持たないネットワークを自作SVGで表示してください。項目を選ぶbuttonで直接の接続線を太くし、接続先を文字で示してください。図と接続表を同じ辺の配列から作ってください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "tabular-numbers",
+  "nameJa": "数字の幅を揃える",
+  "nameEn": "Tabular Numbers",
+  "category": "見た目",
+  "summary": "桁を揃え、数値の変化で表示幅が動くのを抑える。",
+  "description": "数値にtabular-numsを指定した表示と通常の表示を比べる。1と8の並びを切り替えて桁の位置を見る。",
+  "aliases": [
+    "数字幅を揃える",
+    "tabular numbers"
+  ],
+  "tags": [
+    "見た目",
+    "カウンターの表示",
+    "数値一覧の整列"
+  ],
+  "useCases": [
+    "カウンターの表示",
+    "数値一覧の整列"
+  ],
+  "cautions": [
+    "フォントが対応している場合に効果がある。",
+    "桁数の違いは右揃えなどで補う。"
+  ],
+  "relatedIds": [
+    "metric-card",
+    "data-table"
+  ],
+  "demoId": "tabular-numbers",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "数字の組み方",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "tabular",
+      "options": [
+        {
+          "value": "tabular",
+          "label": "等幅の数字",
+          "promptValue": "font-variant-numeric: tabular-numsを指定してください"
+        },
+        {
+          "value": "normal",
+          "label": "通常の数字",
+          "promptValue": "font-variant-numeric: normalを指定してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "11,111と88,888を切り替えるカウンターを作ってください。等幅数字と通常数字を比較できるようにし、使用フォントの対応によって見た目が変わると説明してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · font-variant-numeric",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

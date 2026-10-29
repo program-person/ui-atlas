@@ -1,0 +1,59 @@
+{
+  "id": "scroll-shadow",
+  "nameJa": "スクロールの続きの手がかり",
+  "nameEn": "Scroll Overflow Indicator",
+  "category": "動き",
+  "summary": "枠の上や下に続きがあることを示す。",
+  "description": "本文枠のスクロール位置から、上と下に続きがあるかを表示する。色の帯と文字の案内を併用する。",
+  "aliases": [
+    "スクロール続きの手がかり",
+    "scroll overflow indicator"
+  ],
+  "tags": [
+    "動き",
+    "枠内スクロールの案内",
+    "長い一覧の位置確認"
+  ],
+  "useCases": [
+    "枠内スクロールの案内",
+    "長い一覧の位置確認"
+  ],
+  "cautions": [
+    "案内で内容や操作を覆わない。",
+    "キーボードでも本文枠をスクロール可能にする。"
+  ],
+  "relatedIds": [
+    "reading-progress",
+    "back-to-top"
+  ],
+  "demoId": "scroll-shadow",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "本文量",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "long",
+      "options": [
+        {
+          "value": "long",
+          "label": "長い",
+          "promptValue": "12件の一覧を表示してください"
+        },
+        {
+          "value": "short",
+          "label": "短い",
+          "promptValue": "2件の一覧を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "高さ180pxの一覧枠を作り、スクロールイベントから上端と下端を判定してください。上に続く・下に続くを枠の外に文字と色の帯で表示し、短い一覧では上下とも続きなしと示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · scrollTop",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

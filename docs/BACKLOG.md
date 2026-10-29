@@ -1,5 +1,9 @@
 # 追加候補と段階
 
+## 2026-10-29：170項目からの継続追加
+
+ユーザーの「利用制限の限りUI増やしてよ」に基づき、Codexが70項目を追加し、ローカル版は240項目になった。対象はscripts/growth2-*-cases.jsonの7組・各10項目。固有JSONとDemo.tsx、新規CSS・プレビューおよび共通登録を担当し、既存の未コミット変更を保った。全項目の操作・リセット・141設定・3画面幅423通りと、境界47ケース・統合4ケースを確認済み。未コミット・未公開。項目一覧、検証範囲、未確認事項は[継続記録](continuation-2026-10-29.md)を参照。
+
 ## 段階1：最初の5項目
 
 - 完了：サイドバー、モーダル、ドロワー、ホバーと押下の反応、検索と絞り込み。
@@ -220,3 +224,63 @@
 2026-10-28：120項目版を公開済み。公開URLでは全120デモの表示とタイトル、検索・設定・コピーと代表操作、3画面幅を確認。各回の未公開記述は当時の記録で、現在の状態はこの行と冒頭の集計を参照。
 
 定期実行や自動公開は未設定。目標達成後に自動で追加を続けず、新たな依頼がある場合に候補を判断する。
+
+
+## 2026-10-29：追加50項目（完了）
+
+追加50 / 50を実装・検証し、ローカル版は合計170項目。追加分は未コミット・未公開。Terraは入力・表とグラフ・操作の流れを各13項目、Codexは配置とナビゲーション11項目および共通登録・統合検証を担当した。開始時の作業ツリーはクリーン。担当は新規ファイルを分け、既存の依存・DB・API・カテゴリを維持した。
+
+| ID | 名前 | 分類 |
+|---|---|---|
+| search-input | 検索入力 | 部品 |
+| duration-input | 時間量の入力 | 部品 |
+| character-counter | 文字数カウンター | 部品 |
+| input-clear | 入力のクリア | 部品 |
+| search-highlight | 検索語の強調 | 部品 |
+| tokenized-search | 検索語のトークン化 | 部品 |
+| query-builder | 検索条件ビルダー | 部品 |
+| date-presets | 日付のプリセット | 部品 |
+| unit-converter | 単位変換 | 部品 |
+| input-suggestions | 入力候補 | 部品 |
+| editable-table | 編集できる表 | 部品 |
+| repeatable-fields | 繰り返し入力欄 | 部品 |
+| checkbox-cards | チェックボックスカード | 部品 |
+| table-row-expansion | 行の展開 | 部品 |
+| column-visibility | 列の表示切替 | 部品 |
+| column-reorder | 列の並べ替え | 部品 |
+| pinned-columns | 列の固定 | 部品 |
+| table-footer | 表のフッター | 部品 |
+| sparkline | スパークライン | 部品 |
+| area-chart | 面グラフ | 部品 |
+| histogram | ヒストグラム | 部品 |
+| bullet-chart | バレットチャート | 部品 |
+| waterfall-chart | ウォーターフォールチャート | 部品 |
+| waffle-chart | ワッフルチャート | 部品 |
+| funnel-chart | ファネルチャート | 部品 |
+| treemap | ツリーマップ | 部品 |
+| retry-backoff | 再試行と待機 | UXの流れ |
+| request-cancellation | 処理のキャンセル | UXの流れ |
+| dependent-steps | 条件で変わる手順 | UXの流れ |
+| checkpoint-resume | 途中から再開 | UXの流れ |
+| batch-progress | 一括処理の進捗 | UXの流れ |
+| async-search | 非同期検索 | UXの流れ |
+| search-history | 検索履歴 | UXの流れ |
+| saved-filters | 条件の一時保存 | UXの流れ |
+| selection-limit | 選択数の上限 | UXの流れ |
+| conflict-resolution | 変更の競合解決 | UXの流れ |
+| version-comparison | 版の比較 | UXの流れ |
+| session-timeout | セッション期限の警告 | UXの流れ |
+| offline-fallback | オフライン時の代替表示 | UXの流れ |
+| masonry-columns | 高さの違うカードを詰める | レイアウト |
+| sticky-aside | スクロールに残る補足 | レイアウト |
+| bottom-navigation | 画面下のナビゲーション | 部品 |
+| navigation-rail | ナビゲーションレール | 部品 |
+| overflow-menu | その他の操作 | 部品 |
+| disclosure-navigation | 分類から開くナビゲーション | 部品 |
+| line-length | 文章の一行の長さ | 見た目 |
+| text-wrap | 見出しの折り返し | 見た目 |
+| logical-properties | 読む方向に沿った余白 | レイアウト |
+| subgrid | 内側の行を揃えるグリッド | レイアウト |
+| scroll-snap | 区切りに収まるスクロール | 動き |
+
+50項目すべての操作・リセット、全200設定と3画面幅600通りを確認。詳細とレビュー用メモは[追加記録](expansion-2026-10-29.md)を参照。次は170項目版の公開。コード分割と比較・指示文合成は別課題。

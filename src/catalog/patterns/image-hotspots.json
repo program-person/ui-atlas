@@ -1,0 +1,59 @@
+{
+  "id": "image-hotspots",
+  "nameJa": "図の印から説明を開く",
+  "nameEn": "Image Hotspots",
+  "category": "部品",
+  "summary": "図の位置と補足説明を対応させる。",
+  "description": "自作の配置図の印を押すと、その場所の説明を表示する。同じ説明へ進めるボタン一覧を併設する。",
+  "aliases": [
+    "図印から説明を開く",
+    "image hotspots"
+  ],
+  "tags": [
+    "部品",
+    "構成図の説明",
+    "場所ごとの補足"
+  ],
+  "useCases": [
+    "構成図の説明",
+    "場所ごとの補足"
+  ],
+  "cautions": [
+    "印の位置や色だけに依存しない。",
+    "図の印もキーボードで選べるようにする。"
+  ],
+  "relatedIds": [
+    "thumbnail-gallery",
+    "popover"
+  ],
+  "demoId": "image-hotspots",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の場所",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "見出し",
+          "promptValue": "最初は見出しの説明を表示してください"
+        },
+        {
+          "value": "2",
+          "label": "本文",
+          "promptValue": "最初は本文の説明を表示してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "見出し・本文・操作の3領域からなる自作の配置図に、番号付きのネイティブbuttonを重ねてください。同じ場所を選べるボタン一覧も置き、選択番号と説明を連動させてください。画像や外部コードは読み込まないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

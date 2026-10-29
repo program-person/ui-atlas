@@ -1,0 +1,76 @@
+{
+  "id": "column-visibility",
+  "nameJa": "列の表示切替",
+  "nameEn": "Column visibility",
+  "category": "部品",
+  "aliases": [
+    "列の表示切替",
+    "column visibility"
+  ],
+  "tags": [
+    "表",
+    "表示",
+    "比較"
+  ],
+  "summary": "表の列を表示・非表示にする。",
+  "description": "チェックボックスで記録数の列を表示・非表示にする。道具の列は常に表示する。",
+  "useCases": [
+    "必要な属性だけを表示する",
+    "狭い画面で列数を減らす"
+  ],
+  "cautions": [
+    "値や状態を色だけに頼らず文字で示す。",
+    "狭い画面でも操作と内容を確認できるようにする。"
+  ],
+  "relatedIds": [
+    "data-table"
+  ],
+  "demoId": "column-visibility",
+  "controls": [
+    {
+      "id": "initial",
+      "label": "初期状態",
+      "help": "最初の状態を選ぶ。",
+      "default": "first",
+      "options": [
+        {
+          "value": "first",
+          "label": "表示",
+          "promptValue": "初期状態を「表示」にしてください"
+        },
+        {
+          "value": "second",
+          "label": "非表示",
+          "promptValue": "初期状態を「非表示」にしてください"
+        }
+      ]
+    },
+    {
+      "id": "density",
+      "label": "行間",
+      "help": "表示方法を選ぶ。",
+      "default": "wide",
+      "options": [
+        {
+          "value": "wide",
+          "label": "広め",
+          "promptValue": "行間を広めにしてください"
+        },
+        {
+          "value": "compact",
+          "label": "狭め",
+          "promptValue": "行間を狭めにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の道具のHTML表を作ってください。記録数列をチェックボックスで表示・非表示にしてください。 {{initial}}。{{density}}。見出しとcaptionを設け、狭い画面でも操作できるようにしてください。",
+  "references": [
+    {
+      "title": "W3C WAI · Tables Tutorial",
+      "url": "https://www.w3.org/WAI/tutorials/tables/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

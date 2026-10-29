@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+import {DataFigure} from './DataFigure.tsx';
+export function NetworkGraphDemo({ settings }: { settings: Settings }) {
+const [selected,setSelected]=useState('A');const nodes=[{name:'A',x:180,y:25},{name:'B',x:315,y:100},{name:'C',x:180,y:175},{name:'D',x:45,y:100}];const edges=settings.mode==='star'?[['A','B'],['A','C'],['A','D']]:[['A','B'],['B','C'],['C','D'],['D','A']];const neighbors=edges.filter(edge=>edge.includes(selected)).map(edge=>edge.find(name=>name!==selected));
+return <div className="growth2-demo"><h1>つながりのネットワーク図</h1><div className="g2-actions">{nodes.map(node=><button key={node.name} aria-pressed={selected===node.name} onClick={()=>setSelected(node.name)}>{node.name}を選ぶ</button>)}</div><p role="status">選択：{selected} / 直接つながる項目：{neighbors.join('・')}</p><DataFigure caption="方向を持たない接続" headers={['一方','他方']} rows={edges}><svg viewBox="0 0 360 200" aria-hidden="true">{edges.map(([a,b])=>{const first=nodes.find(node=>node.name===a)!;const second=nodes.find(node=>node.name===b)!;return <line key={a+b} x1={first.x} y1={first.y} x2={second.x} y2={second.y} stroke="#52685c" strokeWidth={a===selected||b===selected?4:1}/>;})}{nodes.map(node=><g key={node.name}><circle cx={node.x} cy={node.y} r="20" fill={selected===node.name?'#d7e6df':'white'} stroke="#235b46"/><text x={node.x} y={node.y+5} textAnchor="middle">{node.name}</text></g>)}</svg></DataFigure></div>;
+}

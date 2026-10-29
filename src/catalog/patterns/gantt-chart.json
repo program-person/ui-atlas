@@ -1,0 +1,59 @@
+{
+  "id": "gantt-chart",
+  "nameJa": "ガントチャート",
+  "nameEn": "Gantt Chart",
+  "category": "部品",
+  "summary": "作業の開始日と終了日を横の帯で示す。",
+  "description": "固定の架空日程を、日付の共通軸と作業ごとの行で表示する。依存関係や自動スケジュール計算は含めない。",
+  "aliases": [
+    "ガントチャート",
+    "gantt chart"
+  ],
+  "tags": [
+    "部品",
+    "作業期間の一覧",
+    "日程の重なりの確認"
+  ],
+  "useCases": [
+    "作業期間の一覧",
+    "日程の重なりの確認"
+  ],
+  "cautions": [
+    "終了日を含むか明示する。",
+    "実際の予定や担当者情報を使わない。"
+  ],
+  "relatedIds": [
+    "timeline",
+    "calendar-grid"
+  ],
+  "demoId": "gantt-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "2026年10月1〜7日の固定軸に、調査・制作・確認の期間を帯で表示してください。終了日を含む幅を計算し、依存計算は追加しないでください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

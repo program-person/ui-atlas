@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+import { DataFigure } from './DataFigure.tsx';
+export function LegendToggleDemo({ settings }: { settings: Settings }) {
+const [showA, setShowA] = useState(true); const [showB, setShowB] = useState(settings.mode === 'both');
+return <div className="growth2-demo"><h1>凡例から系列を切り替える</h1><div className="g2-actions"><label><input type="checkbox" checked={showA} onChange={event=>setShowA(event.target.checked)}/> Aを表示</label><label><input type="checkbox" checked={showB} onChange={event=>setShowB(event.target.checked)}/> Bを表示</label></div><p role="status">表示中：{[showA ? 'A' : '',showB ? 'B' : ''].filter(Boolean).join('・') || 'なし'}</p>{!showA && !showB ? <p>系列が非表示です。チェックボックスで表示できます。</p> : <DataFigure caption="3時点の値・単位は点" headers={['時点',...(showA?['A']:[]),...(showB?['B']:[])]} rows={[0,1,2].map(index=>['時点'+(index+1),...(showA?[[20,40,60][index]]:[]),...(showB?[[60,30,50][index]]:[])])}><svg viewBox="0 0 360 200" aria-hidden="true"><path d="M40 15V170H330" className="g2-axis"/><text x="45" y="15">0〜100点</text>{showA && <polyline points="60,142 180,114 300,86" fill="none" stroke="#235b46" strokeWidth="3"/>}{showB && <polyline points="60,86 180,128 300,100" fill="none" stroke="#a24f31" strokeDasharray="5 3" strokeWidth="3"/>}{[1,2,3].map((value,index)=><text key={value} x={60+index*120} y="193" textAnchor="middle">時点{value}</text>)}</svg></DataFigure>}</div>;
+}

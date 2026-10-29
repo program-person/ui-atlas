@@ -1,0 +1,59 @@
+{
+  "id": "overscroll-containment",
+  "nameJa": "スクロールを枠の中に留める",
+  "nameEn": "Overscroll Containment",
+  "category": "動き",
+  "summary": "内側の末尾で、外側までスクロールが伝わるかを変える。",
+  "description": "入れ子になった本文枠でスクロールの連鎖を試す。内側が末尾に達してから、ポインターを置いてホイールを操作する。",
+  "aliases": [
+    "スクロールを枠中に留める",
+    "overscroll containment"
+  ],
+  "tags": [
+    "動き",
+    "入れ子のスクロール",
+    "背景の意図しない移動を抑える"
+  ],
+  "useCases": [
+    "入れ子のスクロール",
+    "背景の意図しない移動を抑える"
+  ],
+  "cautions": [
+    "実際のホイールやタッチで挙動を確認する。",
+    "内側をキーボードでも操作可能にする。"
+  ],
+  "relatedIds": [
+    "scroll-shadow",
+    "drawer"
+  ],
+  "demoId": "overscroll-containment",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "スクロールの連鎖",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "contain",
+      "options": [
+        {
+          "value": "contain",
+          "label": "枠内に留める",
+          "promptValue": "内側にoverscroll-behavior-y: containを指定してください"
+        },
+        {
+          "value": "auto",
+          "label": "外側へ伝える",
+          "promptValue": "内側にoverscroll-behavior-y: autoを指定してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "高さ260pxの外側枠の中に、高さ140pxの内側スクロール枠を置いてください。内側に指定のoverscroll-behavior-yを適用し、内側の末尾へ移動するbuttonと外側のスクロール位置を表示してください。枠の名前とフォーカスを持たせ、ホイールで比較できるようにしてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · overscroll-behavior",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

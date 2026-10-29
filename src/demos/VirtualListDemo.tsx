@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+import {useRef} from 'react';
+export function VirtualListDemo({ settings }: { settings: Settings }) {
+const rowHeight=48;const viewportHeight=240;const overscan=2;const total=Number(settings.mode);const container=useRef<HTMLDivElement>(null);const [scrollTop,setScrollTop]=useState(0);const first=Math.max(0,Math.floor(scrollTop/rowHeight)-overscan);const last=Math.min(total,Math.ceil((scrollTop+viewportHeight)/rowHeight)+overscan);const atEnd=scrollTop+viewportHeight>=total*rowHeight-1;
+return <div className="growth2-demo"><h1>見えている範囲だけ描く一覧</h1><button onClick={()=>{const top=total*rowHeight-viewportHeight;if(container.current)container.current.scrollTop=top;setScrollTop(top);}}>一覧の末尾へ</button><p role="status">{atEnd?'末尾の記録を表示中':'途中の記録を表示中'} / 範囲 {first+1}〜{last} / DOM {last-first}行</p><div ref={container} role="region" aria-label="仮想化した架空一覧" tabIndex={0} onScroll={event=>setScrollTop(event.currentTarget.scrollTop)} style={{height:viewportHeight,overflowY:'auto',border:'1px solid #81998a'}}><ul style={{height:total*rowHeight,position:'relative',margin:0,padding:0,listStyle:'none'}}>{Array.from({length:last-first},(_,index)=>first+index).map(index=><li key={index} aria-posinset={index+1} aria-setsize={total} style={{position:'absolute',top:index*rowHeight,height:rowHeight,boxSizing:'border-box',padding:12,width:'100%',borderBottom:'1px solid #bdcbbf'}}>記録 {index+1}</li>)}</ul></div></div>;
+}

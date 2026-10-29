@@ -1,0 +1,59 @@
+{
+  "id": "delivery-receipt",
+  "nameJa": "送信・到達・既読を分ける",
+  "nameEn": "Delivery Receipt",
+  "category": "UXの流れ",
+  "summary": "異なる到達段階を、別の状態として表示する。",
+  "description": "架空のメッセージの送信済み・到達済み・既読を手動で進める。失敗の例では再試行するまで進行しない。",
+  "aliases": [
+    "送信・到達・既読を分ける",
+    "delivery receipt"
+  ],
+  "tags": [
+    "UXの流れ",
+    "メッセージの状態表示",
+    "送信失敗からの再試行"
+  ],
+  "useCases": [
+    "メッセージの状態表示",
+    "送信失敗からの再試行"
+  ],
+  "cautions": [
+    "送信済みを相手の既読と扱わない。",
+    "実際のメッセージ送信は行わない。"
+  ],
+  "relatedIds": [
+    "connection-status",
+    "status-badge"
+  ],
+  "demoId": "delivery-receipt",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初の試行",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "success",
+      "options": [
+        {
+          "value": "success",
+          "label": "成功",
+          "promptValue": "最初の操作で送信済みにしてください"
+        },
+        {
+          "value": "failure",
+          "label": "失敗",
+          "promptValue": "最初の操作は失敗とし、次の操作で再試行してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のメッセージについて、未送信・送信済み・到達済み・既読を区別してください。次の状態へボタンで手動で進め、失敗例では失敗を明示して同じボタンで再試行してください。既読では進行を止め、通信や実際の送信はしないでください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Button Pattern",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/button/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "facet-counts",
+  "nameJa": "絞り込み候補の件数",
+  "nameEn": "Facet Counts",
+  "category": "UXの流れ",
+  "summary": "選ぶ前に、候補ごとの件数を示す。",
+  "description": "色の条件を反映した分類別件数を表示する。分類を選んだ状態でも、別の分類へ切り替えた場合の件数を残す。",
+  "aliases": [
+    "絞り込み候補件数",
+    "facet counts"
+  ],
+  "tags": [
+    "UXの流れ",
+    "絞り込み前の件数確認",
+    "0件になる条件の表示"
+  ],
+  "useCases": [
+    "絞り込み前の件数確認",
+    "0件になる条件の表示"
+  ],
+  "cautions": [
+    "件数にどの条件を反映したか説明する。",
+    "候補自身の選択条件は件数計算から外す。"
+  ],
+  "relatedIds": [
+    "search-filter",
+    "filter-chips"
+  ],
+  "demoId": "facet-counts",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "0件の候補",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "show",
+      "options": [
+        {
+          "value": "show",
+          "label": "表示",
+          "promptValue": "0件の分類も表示してください"
+        },
+        {
+          "value": "hide",
+          "label": "隠す",
+          "promptValue": "0件の分類は隠してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "紙の青2件・赤1件、筆記具の赤2件、布の青1件を用意してください。青だけのチェックを分類別件数へ反映し、分類自身の選択は件数に反映しないでください。0件を隠す設定でも選択中の分類は残してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Grouping Controls",
+      "url": "https://www.w3.org/WAI/tutorials/forms/grouping/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import type { Settings } from '../types.ts';
+import {useEffect,useRef} from 'react';
+export function InfiniteScrollDemo({ settings }: { settings: Settings }) {
+const [count,setCount]=useState(4);const [automatic,setAutomatic]=useState(settings.mode==='auto');const root=useRef<HTMLDivElement>(null);const sentinel=useRef<HTMLDivElement>(null);useEffect(()=>{if(!automatic||count>=12)return;const observer=new IntersectionObserver(events=>{if(events.some(event=>event.isIntersecting))setCount(value=>Math.min(12,value+4));},{root:root.current});if(sentinel.current)observer.observe(sentinel.current);return()=>observer.disconnect();},[automatic,count]);
+return <div className="growth2-demo"><h1>末尾で次の項目を表示する</h1><div className="g2-actions"><button aria-pressed={automatic} onClick={()=>setAutomatic(value=>!value)}>自動追加</button><button disabled={count===12} onClick={()=>setCount(value=>Math.min(12,value+4))}>次の4件を表示</button></div><p role="status">表示 {count} / 12件{count===12?'・末尾':''}</p><div ref={root} tabIndex={0} role="region" aria-label="続きが増える一覧" style={{height:220,overflowY:'auto',border:'1px solid #81998a'}}><ul style={{margin:0,padding:0,listStyle:'none'}}>{Array.from({length:count},(_,index)=><li key={index} style={{height:48,padding:12,boxSizing:'border-box',borderBottom:'1px solid #bdcbbf'}}>記録 {index+1}</li>)}</ul><div ref={sentinel} style={{height:1}} aria-hidden="true"/></div></div>;
+}

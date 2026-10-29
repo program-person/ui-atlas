@@ -1,0 +1,59 @@
+{
+  "id": "writing-mode",
+  "nameJa": "縦書きと横書き",
+  "nameEn": "Writing Mode",
+  "category": "レイアウト",
+  "summary": "日本語の文章を縦方向と横方向に組む。",
+  "description": "同じ本文にwriting-modeを適用する。縦書きは右から左へ列を進め、本文の量を切り替えて枠内のスクロールを確認する。",
+  "aliases": [
+    "縦書きと横書き",
+    "writing mode"
+  ],
+  "tags": [
+    "レイアウト",
+    "縦書きの記事",
+    "日本語の組版"
+  ],
+  "useCases": [
+    "縦書きの記事",
+    "日本語の組版"
+  ],
+  "cautions": [
+    "縦書きでも文字の読み順を保つ。",
+    "スクロールは本文の枠内に留める。"
+  ],
+  "relatedIds": [
+    "logical-properties",
+    "multi-column"
+  ],
+  "demoId": "writing-mode",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "文章の方向",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "horizontal",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "横書き",
+          "promptValue": "horizontal-tbで横書きにしてください"
+        },
+        {
+          "value": "vertical",
+          "label": "縦書き",
+          "promptValue": "vertical-rlで縦書きにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "同じ日本語本文をwriting-modeで横書きまたは縦書きにしてください。本文を増やす操作を設け、高さ240pxのフォーカス可能な枠内でスクロールできるようにしてください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · writing-mode",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/writing-mode",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

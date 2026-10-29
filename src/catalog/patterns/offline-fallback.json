@@ -1,0 +1,77 @@
+{
+  "id": "offline-fallback",
+  "nameJa": "オフライン時の代替表示",
+  "nameEn": "Offline Fallback",
+  "aliases": [
+    "オフライン時の代替表示",
+    "offline-fallback"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "接続できないときの代替表示と再試行を示す。",
+  "description": "接続が切れた場合の代替表示と復帰後の再試行を切り替える。接続状態の表示だけでなく、以前の内容を見せる場合も試せる。",
+  "useCases": [
+    "接続が不安定な環境での閲覧",
+    "前回表示した内容を使う画面"
+  ],
+  "cautions": [
+    "表示が古い内容であることを明示する。",
+    "実際のキャッシュには保存対象と更新方法の設計が必要。"
+  ],
+  "relatedIds": [
+    "connection-status",
+    "empty-state"
+  ],
+  "demoId": "offline-fallback",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "代替表示",
+      "help": "代替表示を切り替えます。",
+      "default": "cached",
+      "options": [
+        {
+          "value": "cached",
+          "label": "前回の内容",
+          "promptValue": "オフライン時に前回の内容を表示"
+        },
+        {
+          "value": "message",
+          "label": "案内のみ",
+          "promptValue": "オフライン時に案内のみ表示"
+        }
+      ]
+    },
+    {
+      "id": "recovery",
+      "label": "復帰",
+      "help": "復帰を切り替えます。",
+      "default": "manual",
+      "options": [
+        {
+          "value": "manual",
+          "label": "手動で再試行",
+          "promptValue": "接続復帰後に手動で再試行"
+        },
+        {
+          "value": "auto",
+          "label": "自動で復帰",
+          "promptValue": "接続復帰後に自動で最新内容を表示"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}し、{{recovery}}してください。接続中とオフラインの状態を区別してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://web.dev/articles/offline-fallback-page",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

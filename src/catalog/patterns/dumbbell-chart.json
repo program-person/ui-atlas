@@ -1,0 +1,59 @@
+{
+  "id": "dumbbell-chart",
+  "nameJa": "ダンベルチャート",
+  "nameEn": "Dumbbell Chart",
+  "category": "部品",
+  "summary": "同じ分類の2時点を点と線で比較する。",
+  "description": "各分類の前と後の値を2種類の点で示し、その間を線で結ぶ。両時点で共通の数値軸を使う。",
+  "aliases": [
+    "ダンベルチャート",
+    "dumbbell chart"
+  ],
+  "tags": [
+    "部品",
+    "変更前後の比較",
+    "2時点の差"
+  ],
+  "useCases": [
+    "変更前後の比較",
+    "2時点の差"
+  ],
+  "cautions": [
+    "前後が分かる凡例を付ける。",
+    "異なる単位の値を同じ線で結ばない。"
+  ],
+  "relatedIds": [
+    "lollipop-chart",
+    "line-chart"
+  ],
+  "demoId": "dumbbell-chart",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "最初のデータ",
+      "help": "デモと指示文へ反映する設定。",
+      "default": "base",
+      "options": [
+        {
+          "value": "base",
+          "label": "標準の値",
+          "promptValue": "標準の架空値から始めてください"
+        },
+        {
+          "value": "alternate",
+          "label": "別の値",
+          "promptValue": "別の架空値から始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "分類ごとの前後の値を、前は白抜きの丸、後は塗りの四角で示し、横線で結んでください。 自作SVGと見出し付きHTML表に同じ値を表示し、例を切り替えるボタンで両方を更新してください。軸と単位を明示してください。 {{mode}}。架空のデータだけを使い、操作はキーボードに対応させ、リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Complex Images",
+      "url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "version-comparison",
+  "nameJa": "版の比較",
+  "nameEn": "Version Comparison",
+  "aliases": [
+    "版の比較",
+    "version-comparison"
+  ],
+  "tags": [
+    "操作",
+    "状態",
+    "確認"
+  ],
+  "category": "UXの流れ",
+  "summary": "前後の版を比較し、変更箇所を確認する。",
+  "description": "現在の版と過去の版を並べて内容を比較する。変更を選んで確定する競合解決とは異なり、差を見る操作に集中する。",
+  "useCases": [
+    "文章の改訂内容の確認",
+    "設定変更前後の比較"
+  ],
+  "cautions": [
+    "どの版を比較しているか明示する。",
+    "狭い画面では比較内容が読めるよう折り返す。"
+  ],
+  "relatedIds": [
+    "comparison-table",
+    "history-controls"
+  ],
+  "demoId": "version-comparison",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "比較対象",
+      "help": "比較対象を切り替えます。",
+      "default": "previous",
+      "options": [
+        {
+          "value": "previous",
+          "label": "前の版",
+          "promptValue": "直前の版と現在の版を比較"
+        },
+        {
+          "value": "first",
+          "label": "初版",
+          "promptValue": "初版と現在の版を比較"
+        }
+      ]
+    },
+    {
+      "id": "view",
+      "label": "表示方法",
+      "help": "表示方法を切り替えます。",
+      "default": "side",
+      "options": [
+        {
+          "value": "side",
+          "label": "並べて表示",
+          "promptValue": "幅が許すときは左右に並べる"
+        },
+        {
+          "value": "stack",
+          "label": "上下に表示",
+          "promptValue": "上下に並べる"
+        }
+      ]
+    }
+  ],
+  "prompt": "{{mode}}し、{{view}}してください。比較対象と変更内容を明示してください。",
+  "references": [
+    {
+      "title": "公式資料",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Conditional_requests",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

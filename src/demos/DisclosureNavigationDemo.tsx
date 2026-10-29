@@ -1,0 +1,7 @@
+import { useId, useRef, useState } from 'react';
+import type { Settings } from '../types.ts';
+export function DisclosureNavigationDemo({ settings }: { settings: Settings }) {
+  const id = useId(); const triggers = useRef<(HTMLButtonElement | null)[]>([]); const [opened, setOpened] = useState<string[]>([]); const [page, setPage] = useState('概要');
+  const groups = [{ title: '作る', children: ['下書き', 'プレビュー'] }, { title: '調べる', children: ['用語', '参考資料'] }];
+  return <div className="expanded-demo exlayout"><h1>分類から移動先を開く</h1><nav aria-label="分類別のナビゲーション" className={settings.layout === 'horizontal' ? 'exlayout-nav-horizontal' : ''}>{groups.map((group, index) => <div key={group.title} onKeyDown={(event) => { if (event.key === 'Escape') { setOpened(opened.filter((value) => value !== group.title)); triggers.current[index]?.focus(); } }}><button ref={(element) => { triggers.current[index] = element; }} aria-expanded={opened.includes(group.title)} aria-controls={`${id}-${index}`} onClick={() => setOpened(opened.includes(group.title) ? opened.filter((value) => value !== group.title) : settings.mode === 'single' ? [group.title] : [...opened, group.title])}>{group.title}</button><ul id={`${id}-${index}`} hidden={!opened.includes(group.title)}>{group.children.map((child) => <li key={child}><a href={`#${id}-${child}`} aria-current={page === child ? 'page' : undefined} onClick={(event) => { event.preventDefault(); setPage(child); }}>{child}</a></li>)}</ul></div>)}</nav><p role="status">移動先：{page}</p><p>デモ内のページ名だけを切り替えます。</p></div>;
+}
