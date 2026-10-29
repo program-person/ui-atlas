@@ -1,0 +1,59 @@
+{
+  "id": "responsive-toolbar",
+  "nameJa": "幅に応じて操作をまとめる",
+  "nameEn": "Responsive Toolbar",
+  "category": "部品",
+  "aliases": [
+    "操作のオーバーフロー",
+    "幅に応じた操作一覧"
+  ],
+  "tags": [
+    "操作",
+    "幅",
+    "折りたたみ"
+  ],
+  "summary": "優先する操作を残し、他の操作を開閉領域へまとめる。",
+  "description": "枠が狭いときは2つの主要操作を表示し、残りをその他へまとめる。枠幅を切り替えても、すべての操作を使えるようにする。",
+  "useCases": [
+    "可変幅の操作欄",
+    "主要操作の優先表示"
+  ],
+  "cautions": [
+    "隠した操作にも名前付きボタンで到達できるようにする。",
+    "幅の変化でフォーカスを失わない。"
+  ],
+  "relatedIds": [
+    "toolbar",
+    "overflow-menu"
+  ],
+  "demoId": "responsive-toolbar",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "優先する操作",
+      "help": "狭い枠に残す2つの操作を選ぶ。",
+      "default": "create",
+      "options": [
+        {
+          "value": "create",
+          "label": "作成と複製",
+          "promptValue": "狭い枠には作成と複製を残してください"
+        },
+        {
+          "value": "view",
+          "label": "表示と説明",
+          "promptValue": "狭い枠には表示と説明を残してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "作成・複製・表示・説明の4操作を表示し、幅380px未満では優先する2操作だけを残して他をその他の操作から開閉してください。枠を260pxと520pxに切り替えられるようにし、親幅はResizeObserverで測ってください。Escで閉じて起点へ戻し、閉じた領域のボタンはフォーカス対象から外してください。幅の変化で起点が消えた場合は先頭の操作へフォーカスを移してください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Disclosure",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "position-picker",
+  "nameJa": "平面上の位置を選ぶ",
+  "nameEn": "Two Dimensional Position Picker",
+  "category": "部品",
+  "aliases": [
+    "XY位置の選択",
+    "横と縦の座標"
+  ],
+  "tags": [
+    "座標",
+    "入力",
+    "位置"
+  ],
+  "summary": "横と縦の位置を別々に指定し、印の場所を選ぶ。",
+  "description": "0〜100%の2つのスライダーを使い、枠の中の印を動かす。四隅と中央のプリセットでも同じ座標を選べる。",
+  "useCases": [
+    "表示原点の指定",
+    "図の位置の調整"
+  ],
+  "cautions": [
+    "左上を原点とすることを示す。",
+    "ポインターだけの操作にしない。"
+  ],
+  "relatedIds": [
+    "pan-controls",
+    "range-slider"
+  ],
+  "demoId": "position-picker",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "位置の刻み",
+      "help": "プリセットの0・50・100はいずれの刻みでも使える。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1%ずつ",
+          "promptValue": "座標を1%刻みで指定できるようにしてください"
+        },
+        {
+          "value": "10",
+          "label": "10%ずつ",
+          "promptValue": "座標を10%刻みで指定できるようにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "左上を原点として、横・縦0〜100%のネイティブrange入力で印の位置を指定してください。印が枠の外へ出ないよう、印の中心の移動範囲は内側へ収めてください。中央と右下のプリセットを置き、座標と印を連動させてください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · range input",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

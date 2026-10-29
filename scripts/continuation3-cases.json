@@ -1,0 +1,158 @@
+[
+  {
+    "id": "reading-ruler",
+    "component": "ReadingRulerDemo",
+    "name": "読む段落を示すガイド",
+    "action": "次の段落",
+    "expected": "現在：段落2",
+    "role": "button",
+    "preview": [
+      "段落1",
+      "［段落2］",
+      "段落3"
+    ]
+  },
+  {
+    "id": "log-tail",
+    "component": "LogTailDemo",
+    "name": "ログの末尾へ追従",
+    "action": "架空ログを追加",
+    "expected": "ログ 9 / 20件",
+    "role": "button",
+    "preview": [
+      "記録8 → 9",
+      "末尾へ追従",
+      "位置を保つ"
+    ]
+  },
+  {
+    "id": "markdown-preview",
+    "component": "MarkdownPreviewDemo",
+    "name": "限定した記法のプレビュー",
+    "action": "例の文章を表示",
+    "expected": "配置のメモ",
+    "role": "button",
+    "preview": [
+      "# 見出し",
+      "- 箇条書き",
+      "原文 ↔ 表示"
+    ]
+  },
+  {
+    "id": "input-normalization",
+    "component": "InputNormalizationDemo",
+    "name": "原文を残した入力の正規化",
+    "action": "変換結果を確認",
+    "expected": "変換後：ABC123",
+    "role": "button",
+    "preview": [
+      "ＡＢ１２",
+      "↓ NFKC",
+      "AB12"
+    ]
+  },
+  {
+    "id": "rule-checklist",
+    "component": "RuleChecklistDemo",
+    "name": "入力条件のチェックリスト",
+    "action": "有効な例を入れる",
+    "expected": "3 / 3条件を満たしています",
+    "role": "button",
+    "preview": [
+      "済 文字数",
+      "未 文字の種類",
+      "達成 2 / 3"
+    ]
+  },
+  {
+    "id": "responsive-toolbar",
+    "component": "ResponsiveToolbarDemo",
+    "name": "幅に応じて操作をまとめる",
+    "action": "枠を広げる",
+    "expected": "広い枠",
+    "role": "button",
+    "preview": [
+      "作成　複製",
+      "その他…",
+      "表示 / 説明"
+    ]
+  },
+  {
+    "id": "position-picker",
+    "component": "PositionPickerDemo",
+    "name": "平面上の位置を選ぶ",
+    "action": "右下へ",
+    "expected": "横 100% / 縦 100%",
+    "role": "button",
+    "preview": [
+      "横50%",
+      "＋",
+      "縦50%"
+    ]
+  },
+  {
+    "id": "variant-picker",
+    "component": "VariantPickerDemo",
+    "name": "有効な組み合わせから選ぶ",
+    "action": "赤",
+    "expected": "選択：赤・S",
+    "role": "radio",
+    "preview": [
+      "青：S / L",
+      "赤：Sのみ",
+      "有効な組合せ"
+    ]
+  },
+  {
+    "id": "recurrence-picker",
+    "component": "RecurrencePickerDemo",
+    "name": "繰り返す曜日を選ぶ",
+    "action": "平日すべてを選ぶ",
+    "expected": "月・火・水・木・金",
+    "role": "button",
+    "preview": [
+      "月　水　金",
+      "1週 / 2週",
+      "次の4日付"
+    ]
+  },
+  {
+    "id": "footnote-links",
+    "component": "FootnoteLinksDemo",
+    "name": "脚注へ移動して戻る",
+    "action": "脚注1を読む",
+    "expected": "補足：余白の意味",
+    "role": "link",
+    "preview": [
+      "本文［1］",
+      "↓　↑",
+      "脚注1"
+    ]
+  },
+  {
+    "id": "timeline-scrubber",
+    "component": "TimelineScrubberDemo",
+    "name": "時刻からプレビューを選ぶ",
+    "action": "5秒進む",
+    "expected": "位置 00:05",
+    "role": "button",
+    "preview": [
+      "00:05 / 00:30",
+      "━●━━━━",
+      "時刻と図"
+    ]
+  },
+  {
+    "id": "allocation-input",
+    "component": "AllocationInputDemo",
+    "name": "合計を持つ配分入力",
+    "action": "均等に配分",
+    "expected": "配分が揃いました",
+    "role": "button",
+    "preview": [
+      "文章4 図3",
+      "確認3",
+      "合計10点"
+    ]
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "id": "allocation-input",
+  "nameJa": "合計を持つ配分入力",
+  "nameEn": "Allocation Input",
+  "category": "UXの流れ",
+  "aliases": [
+    "合計のある入力",
+    "配分の残り"
+  ],
+  "tags": [
+    "入力",
+    "合計",
+    "配分"
+  ],
+  "summary": "複数の値を入力し、全体の合計に合うか確認する。",
+  "description": "文章・図・確認へ配る架空の点数を入力する。残りと超過を分けて表示し、指定合計と一致したときだけ確定できる。",
+  "useCases": [
+    "項目ごとの配分",
+    "全体の合計を保つ入力"
+  ],
+  "cautions": [
+    "入力値を自動で書き換えない。",
+    "空欄や不正な値を0として計算しない。"
+  ],
+  "relatedIds": [
+    "cross-field-validation",
+    "selection-summary"
+  ],
+  "demoId": "allocation-input",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "配分する全体",
+      "help": "点数は実際のお金や評価とは関係のない架空値。",
+      "default": "10",
+      "options": [
+        {
+          "value": "10",
+          "label": "10点",
+          "promptValue": "配分の合計を10点にしてください"
+        },
+        {
+          "value": "100",
+          "label": "100点",
+          "promptValue": "配分の合計を100点にしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "文章・図・確認の3つへ0以上の整数を配分し、指定合計に一致するか確認してください。初期はすべて0、均等に配分の操作では余りを先頭から割り振って合計を保ってください。空欄・小数・全角数字・範囲外は拒否し、未配分と超過を文字で区別してください。合計一致のときだけ確定できるようにしてください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Validating Input",
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

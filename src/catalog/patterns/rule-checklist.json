@@ -1,0 +1,59 @@
+{
+  "id": "rule-checklist",
+  "nameJa": "入力条件のチェックリスト",
+  "nameEn": "Validation Checklist",
+  "category": "UXの流れ",
+  "aliases": [
+    "条件ごとの入力検証",
+    "入力ルール一覧"
+  ],
+  "tags": [
+    "フォーム",
+    "条件",
+    "検証"
+  ],
+  "summary": "満たした条件と、まだ満たしていない条件を別々に示す。",
+  "description": "架空の整理コードの長さと文字種を個別に確認する。認証用の入力ではなく、条件を見ながら修正する表示のデモ。",
+  "useCases": [
+    "複数の入力条件",
+    "修正する条件の確認"
+  ],
+  "cautions": [
+    "実際のパスワードや認証情報は入力させない。",
+    "未達の条件を色だけで示さない。"
+  ],
+  "relatedIds": [
+    "inline-validation",
+    "error-summary"
+  ],
+  "demoId": "rule-checklist",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "使える文字",
+      "help": "長さは両設定とも2〜8コードポイント。",
+      "default": "alphanumeric",
+      "options": [
+        {
+          "value": "alphanumeric",
+          "label": "半角英数字",
+          "promptValue": "半角英数字だけを許可してください"
+        },
+        {
+          "value": "letters",
+          "label": "半角英字",
+          "promptValue": "半角英字だけを許可してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の整理コードを入力し、2文字以上・8文字以下・許可した文字種の3条件をそれぞれ満たすか文字で表示してください。Unicodeコードポイントで文字数を数え、空欄では文字種も未達にしてください。条件をすべて満たしたときだけ確定できるようにし、半角英数字の設定ではAB12、半角英字の設定ではABCDを入れるボタンを付けてください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Validating Input",
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

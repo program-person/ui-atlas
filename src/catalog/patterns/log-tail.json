@@ -1,0 +1,59 @@
+{
+  "id": "log-tail",
+  "nameJa": "ログの末尾へ追従",
+  "nameEn": "Follow Log Tail",
+  "category": "UXの流れ",
+  "aliases": [
+    "ログ追従",
+    "末尾に追従"
+  ],
+  "tags": [
+    "ログ",
+    "追従",
+    "スクロール"
+  ],
+  "summary": "記録の追加に合わせて、末尾へ進むかを選ぶ。",
+  "description": "手動で増やす架空ログを表示する。追従を有効にした場合だけ末尾へ移動し、無効中は読んでいる位置を保つ。上へスクロールしたときは追従を止める。",
+  "useCases": [
+    "処理ログの確認",
+    "追加される記録の閲覧"
+  ],
+  "cautions": [
+    "読んでいる途中で勝手に末尾へ戻さない。",
+    "このデモは実際のログや通信を読み込まない。"
+  ],
+  "relatedIds": [
+    "activity-feed",
+    "scroll-shadow"
+  ],
+  "demoId": "log-tail",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期の追従",
+      "help": "新しい記録が増えたときのスクロールを選ぶ。",
+      "default": "follow",
+      "options": [
+        {
+          "value": "follow",
+          "label": "末尾へ追従",
+          "promptValue": "末尾へ追従する状態で始めてください"
+        },
+        {
+          "value": "pause",
+          "label": "位置を保つ",
+          "promptValue": "追従を止めて始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "8件の架空ログを高さ200pxの枠に表示し、最大20件まで手動で追加できるようにしてください。追従が有効な場合だけ追加後に末尾へ移動してください。無効中の追加はスクロール位置を保ち、追従を再び有効にすると末尾へ移動してください。上へスクロールして末尾を離れたら自動で追従を止めてください。フォーカスは操作したボタンに残してください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · scrollTop",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

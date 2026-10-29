@@ -1,0 +1,59 @@
+{
+  "id": "reading-ruler",
+  "nameJa": "読む段落を示すガイド",
+  "nameEn": "Reading Ruler",
+  "category": "UXの流れ",
+  "aliases": [
+    "読書ガイド",
+    "段落の強調"
+  ],
+  "tags": [
+    "読書",
+    "段落",
+    "位置"
+  ],
+  "summary": "読んでいる段落を、その前後と区別する。",
+  "description": "3段落の架空の文章から、読む段落を手動で選ぶ。選択中の枠と文字を残し、必要に応じて前後の段落の色を弱める。",
+  "useCases": [
+    "長い文章の読書位置",
+    "段落ごとの読み進め"
+  ],
+  "cautions": [
+    "前後の文章も読める濃さを残す。",
+    "自動で段落を進めない。"
+  ],
+  "relatedIds": [
+    "reading-progress",
+    "focus-ring"
+  ],
+  "demoId": "reading-ruler",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "前後の見せ方",
+      "help": "現在の段落はどちらの設定でも枠と文字で示す。",
+      "default": "outline",
+      "options": [
+        {
+          "value": "outline",
+          "label": "枠で示す",
+          "promptValue": "現在の段落だけに枠を付けてください"
+        },
+        {
+          "value": "dim",
+          "label": "前後の色を弱める",
+          "promptValue": "現在の段落を枠で示し、他の段落の背景を薄くしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "3段落の架空の読み物を表示し、前へ・次へと段落ごとの選択ボタンで読む位置を変えてください。先頭と末尾の操作を無効にし、段落番号と現在の印を文字でも示してください。選択した段落を枠内で即時スクロールし、操作したボタンのフォーカスを保ってください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · scrollIntoView",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

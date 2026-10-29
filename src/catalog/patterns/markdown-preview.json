@@ -1,0 +1,59 @@
+{
+  "id": "markdown-preview",
+  "nameJa": "限定した記法のプレビュー",
+  "nameEn": "Restricted Markdown Preview",
+  "category": "部品",
+  "aliases": [
+    "マークダウンの表示",
+    "記法プレビュー"
+  ],
+  "tags": [
+    "文章",
+    "プレビュー",
+    "編集"
+  ],
+  "summary": "見出しと箇条書きの記法を、表示と並べて確認する。",
+  "description": "先頭の#・##と、-で始まる箇条書きだけを扱う。本文はReactの文字列として描画し、HTMLやスクリプトを解釈しない。",
+  "useCases": [
+    "文章の表示前確認",
+    "限られた記法の編集"
+  ],
+  "cautions": [
+    "完全なMarkdown互換ではない。",
+    "HTMLやリンクの自動解釈は追加しない。"
+  ],
+  "relatedIds": [
+    "code-block",
+    "textarea"
+  ],
+  "demoId": "markdown-preview",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "表示を更新する方法",
+      "help": "手動では更新ボタンを押すまで前の表示を保つ。",
+      "default": "live",
+      "options": [
+        {
+          "value": "live",
+          "label": "入力に合わせる",
+          "promptValue": "入力のたびにプレビューを更新してください"
+        },
+        {
+          "value": "manual",
+          "label": "ボタンで更新",
+          "promptValue": "更新ボタンを押したときだけプレビューを更新してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "先頭の#と##を見出し、-を箇条書き、残りを段落として表示する限定プレビューを作ってください。HTMLを解析せず、文字列はReact要素へ渡してください。対応する記法を明記し、原文とプレビューを並べ、狭い枠では縦にしてください。空欄はプレビューなしと示し、文字数は2,000コードポイントまでにしてください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · textarea",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

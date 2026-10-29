@@ -1,0 +1,59 @@
+{
+  "id": "input-normalization",
+  "nameJa": "原文を残した入力の正規化",
+  "nameEn": "Input Normalization",
+  "category": "UXの流れ",
+  "aliases": [
+    "全角半角の変換",
+    "NFKC変換"
+  ],
+  "tags": [
+    "入力",
+    "正規化",
+    "全角"
+  ],
+  "summary": "入力した文字を残し、変換結果を別に確認する。",
+  "description": "確定時にNFKC正規化し、原文と変換後を並べる。入力中やIME変換中の文字を自動で置き換えない。",
+  "useCases": [
+    "コードの形式確認",
+    "変換前後の比較"
+  ],
+  "cautions": [
+    "NFKCは半角化以外にも文字を変える。",
+    "原文を変換後の値で上書きしない。"
+  ],
+  "relatedIds": [
+    "input-mask",
+    "form-review"
+  ],
+  "demoId": "input-normalization",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "余白の扱い",
+      "help": "NFKC変換に加えて前後の余白を除くかを選ぶ。",
+      "default": "preserve",
+      "options": [
+        {
+          "value": "preserve",
+          "label": "余白を残す",
+          "promptValue": "NFKC変換後も前後の余白を残してください"
+        },
+        {
+          "value": "trim",
+          "label": "前後を除く",
+          "promptValue": "NFKC変換後に前後の余白を除いてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "初期値を全角ＡＢＣ１２３の架空コードにし、確定ボタンでNFKC正規化してください。入力値は変更せず、原文と変換後を別の表示欄に示してください。入力を編集したら古い変換結果を解除し、IME変換中の確定をガードしてください。空白だけの入力は拒否してください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · String.normalize",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

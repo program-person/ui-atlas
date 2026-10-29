@@ -1,0 +1,59 @@
+{
+  "id": "footnote-links",
+  "nameJa": "脚注へ移動して戻る",
+  "nameEn": "Footnote Links",
+  "category": "部品",
+  "aliases": [
+    "脚注リンク",
+    "参照元へ戻る"
+  ],
+  "tags": [
+    "読書",
+    "脚注",
+    "フォーカス"
+  ],
+  "summary": "本文の参照位置と、補足の説明を往復する。",
+  "description": "本文の参照リンクから脚注へ移り、参照元へ戻る。画面のスクロールに加えてキーボードのフォーカスも移す。",
+  "useCases": [
+    "記事の補足",
+    "注釈と本文の往復"
+  ],
+  "cautions": [
+    "戻り先を明示する。",
+    "デモの移動で辞典本体のURLを変えない。"
+  ],
+  "relatedIds": [
+    "skip-link",
+    "anchor-offset"
+  ],
+  "demoId": "footnote-links",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "脚注の位置",
+      "help": "狭い幅ではどちらも本文の後に並べる。",
+      "default": "below",
+      "options": [
+        {
+          "value": "below",
+          "label": "本文の後",
+          "promptValue": "脚注は本文の後に配置してください"
+        },
+        {
+          "value": "aside",
+          "label": "本文の隣",
+          "promptValue": "広い枠では脚注を本文の隣に配置してください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空の本文の参照リンク1から脚注1へ移動し、脚注の戻るリンクから参照元へ戻れるようにしてください。ネイティブaを使い、クリック時はデモ内だけを即時スクロールして対象へフォーカスし、辞典のハッシュルートを変更しないでください。参照元と脚注をaria-labelで区別してください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · anchor element",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

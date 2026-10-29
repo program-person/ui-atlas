@@ -1,0 +1,59 @@
+{
+  "id": "variant-picker",
+  "nameJa": "有効な組み合わせから選ぶ",
+  "nameEn": "Variant Picker",
+  "category": "部品",
+  "aliases": [
+    "バリエーション選択",
+    "組み合わせの制約"
+  ],
+  "tags": [
+    "選択",
+    "組み合わせ",
+    "条件"
+  ],
+  "summary": "選択肢どうしの組み合わせの可否を伝える。",
+  "description": "架空のカードの色とサイズを選ぶ。赤はLに対応しないという条件を示し、色を変えて無効になるサイズを自動でSへ戻す。",
+  "useCases": [
+    "色とサイズの選択",
+    "利用できない組み合わせの表示"
+  ],
+  "cautions": [
+    "選択が変わった理由を文字で知らせる。",
+    "実際の在庫や注文を扱わない。"
+  ],
+  "relatedIds": [
+    "dependent-select",
+    "radio-group"
+  ],
+  "demoId": "variant-picker",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "初期のサイズ",
+      "help": "青はSとL、赤はSだけを選べる。",
+      "default": "S",
+      "options": [
+        {
+          "value": "S",
+          "label": "S",
+          "promptValue": "青のSサイズから始めてください"
+        },
+        {
+          "value": "L",
+          "label": "L",
+          "promptValue": "青のLサイズから始めてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "架空のカードの色を青・赤、サイズをS・Lのネイティブラジオで選んでください。赤とLは組み合わせ不可としてLを無効にし、青Lから赤へ変えた場合はSへ変更して理由をstatusで知らせてください。現在の組み合わせと無効な理由を近くに表示してください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "W3C WAI · Validating Input",
+      "url": "https://www.w3.org/WAI/tutorials/forms/validation/",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

@@ -1,9 +1,11 @@
+import { Continuation3Thumbnail } from './Continuation3Thumbnail.tsx';
 import { Growth2Thumbnail } from './Growth2Thumbnail.tsx';
 import { ExpansionThumbnail } from './ExpansionThumbnail.tsx';
 import type { DemoId } from '../types.ts';
 
 export function Thumbnail({ id }: { id: DemoId }) {
   return <div className={`thumbnail thumbnail-${id}`} aria-hidden="true">
+    <Continuation3Thumbnail id={id} />
     <Growth2Thumbnail id={id} />
     <ExpansionThumbnail id={id} />
     {id === 'input-mask' && <div className="mini-workflow"><span>整理コード</span><b>123-456</b><span>6桁で入力完了</span></div>}

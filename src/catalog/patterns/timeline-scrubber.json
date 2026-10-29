@@ -1,0 +1,59 @@
+{
+  "id": "timeline-scrubber",
+  "nameJa": "時刻からプレビューを選ぶ",
+  "nameEn": "Timeline Scrubber",
+  "category": "部品",
+  "aliases": [
+    "タイムラインの位置指定",
+    "シークバーの操作"
+  ],
+  "tags": [
+    "時刻",
+    "プレビュー",
+    "スライダー"
+  ],
+  "summary": "時間軸上の位置を指定して、その時点の図を表示する。",
+  "description": "0〜30秒に対応する3つの自作図を切り替える。静止画の位置指定だけを扱い、動画や音声は読み込まない。",
+  "useCases": [
+    "時点別のプレビュー",
+    "キーボードでの位置指定"
+  ],
+  "cautions": [
+    "動画の再生機能を持つとは表示しない。",
+    "時間と選ばれている図の関係を示す。"
+  ],
+  "relatedIds": [
+    "range-slider",
+    "thumbnail-gallery"
+  ],
+  "demoId": "timeline-scrubber",
+  "controls": [
+    {
+      "id": "mode",
+      "label": "時刻の刻み",
+      "help": "どちらの設定でも前後5秒のボタンを使える。",
+      "default": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "1秒",
+          "promptValue": "1秒刻みで位置を指定できるようにしてください"
+        },
+        {
+          "value": "5",
+          "label": "5秒",
+          "promptValue": "5秒刻みで位置を指定できるようにしてください"
+        }
+      ]
+    }
+  ],
+  "prompt": "0〜30秒のネイティブrangeで時刻を指定し、0〜9秒は余白、10〜19秒は配色、20〜30秒は文章の自作図を表示してください。現在の秒と図名を文字で示し、前後5秒のボタンは範囲で止めてください。動画や音声を読み込まず、再生ボタンは追加しないでください。 {{mode}}。架空の内容だけを使い、キーボードで操作できるようにしてください。リセットで初期状態へ戻してください。",
+  "references": [
+    {
+      "title": "MDN · range input",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/range",
+      "checkedAt": "2026-10-29"
+    }
+  ],
+  "verifiedAt": "2026-10-29"
+}

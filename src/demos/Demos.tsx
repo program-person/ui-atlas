@@ -1,3 +1,15 @@
+import { ReadingRulerDemo } from './ReadingRulerDemo.tsx';
+import { LogTailDemo } from './LogTailDemo.tsx';
+import { MarkdownPreviewDemo } from './MarkdownPreviewDemo.tsx';
+import { InputNormalizationDemo } from './InputNormalizationDemo.tsx';
+import { RuleChecklistDemo } from './RuleChecklistDemo.tsx';
+import { ResponsiveToolbarDemo } from './ResponsiveToolbarDemo.tsx';
+import { PositionPickerDemo } from './PositionPickerDemo.tsx';
+import { VariantPickerDemo } from './VariantPickerDemo.tsx';
+import { RecurrencePickerDemo } from './RecurrencePickerDemo.tsx';
+import { FootnoteLinksDemo } from './FootnoteLinksDemo.tsx';
+import { TimelineScrubberDemo } from './TimelineScrubberDemo.tsx';
+import { AllocationInputDemo } from './AllocationInputDemo.tsx';
 import { FloatingLabelDemo } from './FloatingLabelDemo.tsx';
 import { AutosizeTextareaDemo } from './AutosizeTextareaDemo.tsx';
 import { CardListToggleDemo } from './CardListToggleDemo.tsx';
@@ -335,6 +347,18 @@ function SearchDemo({ settings }: { settings: Settings }) {
 
 export function Demo({ pattern, settings }: { pattern: Pattern; settings: Settings }) {
   switch (pattern.demoId) {
+    case 'reading-ruler': return <ReadingRulerDemo settings={settings} />;
+    case 'log-tail': return <LogTailDemo settings={settings} />;
+    case 'markdown-preview': return <MarkdownPreviewDemo settings={settings} />;
+    case 'input-normalization': return <InputNormalizationDemo settings={settings} />;
+    case 'rule-checklist': return <RuleChecklistDemo settings={settings} />;
+    case 'responsive-toolbar': return <ResponsiveToolbarDemo settings={settings} />;
+    case 'position-picker': return <PositionPickerDemo settings={settings} />;
+    case 'variant-picker': return <VariantPickerDemo settings={settings} />;
+    case 'recurrence-picker': return <RecurrencePickerDemo settings={settings} />;
+    case 'footnote-links': return <FootnoteLinksDemo settings={settings} />;
+    case 'timeline-scrubber': return <TimelineScrubberDemo settings={settings} />;
+    case 'allocation-input': return <AllocationInputDemo settings={settings} />;
     case 'floating-label': return <FloatingLabelDemo settings={settings} />;
     case 'autosize-textarea': return <AutosizeTextareaDemo settings={settings} />;
     case 'card-list-toggle': return <CardListToggleDemo settings={settings} />;
